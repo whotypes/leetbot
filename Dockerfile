@@ -13,7 +13,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o bot ./cmd/bot
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o server ./cmd/server
 
-FROM alpine:latest
+FROM --platform=linux/amd64 alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /app
 COPY --from=go-builder /app/bot .

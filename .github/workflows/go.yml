@@ -14,20 +14,40 @@ jobs:
       frontend: ${{ steps.changes.outputs.frontend }}
     steps:
     - uses: actions/checkout@v4
-    - uses: dorny/paths-filter@v2
+    - name: Get changed files
       id: changes
+      uses: tj-actions/changed-files@v46
       with:
-        filters: |
-          backend:
-            - 'cmd/**'
-            - 'internal/**'
-            - 'go.mod'
-            - 'go.sum'
-            - 'Makefile'
-            - 'Dockerfile'
-            - '*.go'
-          frontend:
-            - 'web/**'
+        files: |
+          cmd/**
+          internal/**
+          go.mod
+          go.sum
+          Makefile
+          Dockerfile
+          *.go
+        files_ignore: |
+          web/**
+    - name: Get changed frontend files
+      id: frontend-changes
+      uses: tj-actions/changed-files@v46
+      with:
+        files: |
+          web/**
+    - name: Set backend output
+      run: |
+        if [ "${{ steps.changes.outputs.any_changed }}" == "true" ]; then
+          echo "backend=true" >> $GITHUB_OUTPUT
+        else
+          echo "backend=false" >> $GITHUB_OUTPUT
+        fi
+    - name: Set frontend output
+      run: |
+        if [ "${{ steps.frontend-changes.outputs.any_changed }}" == "true" ]; then
+          echo "frontend=true" >> $GITHUB_OUTPUT
+        else
+          echo "frontend=false" >> $GITHUB_OUTPUT
+        fi
 
   test:
     runs-on: ubuntu-latest
