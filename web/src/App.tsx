@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
 import { CompanySelector } from './components/CompanySelector'
 import { LoadingSpinner } from './components/LoadingSpinner'
@@ -5,46 +6,89 @@ import { ProblemsTable } from './components/ProblemsTable'
 import { ThemeToggle } from './components/ThemeToggle'
 import { TimeframeSelector } from './components/TimeframeSelector'
 import { useTheme } from './hooks/useTheme'
+import type { APIResponse, Problem } from './types'
 
-interface Problem {
-  id: number
-  url: string
-  title: string
-  difficulty: string
-  acceptance: number
-  frequency: number
+// Query functions
+const fetchCompanies = async (): Promise<{ companies: string[] }> => {
+  const response = await fetch('/api/companies')
+  const data = await response.json()
+  if (!data.success) {
+    throw new Error('Failed to load companies')
+  }
+  return data.data
 }
 
-interface APIResponse {
-  success: boolean
-  data?: {
-    company: string
-    timeframe: string
-    problems: Problem[]
-    count: number
+const fetchTimeframes = async (company: string): Promise<{ timeframes: string[] }> => {
+  const response = await fetch(`/api/companies/${company}/timeframes`)
+  const data = await response.json()
+  if (!data.success) {
+    throw new Error('Failed to load timeframes')
   }
-  error?: string
+  return data.data
+}
+
+const fetchProblems = async ({
+  company,
+  timeframe,
+}: {
+  company: string
+  timeframe: string
+}): Promise<{
+  company: string
+  timeframe: string
+  problems: Problem[]
+  count: number
+}> => {
+  const response = await fetch(`/api/companies/${company}/timeframes/${timeframe}/problems`)
+  const data: APIResponse = await response.json()
+  if (!data.success) {
+    throw new Error(data.error || 'Failed to load problems')
+  }
+  return data.data!
 }
 
 function App() {
   const { theme, toggleTheme } = useTheme()
-  const [companies, setCompanies] = useState<string[]>([])
+
   const [selectedCompany, setSelectedCompany] = useState<string>(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('selectedCompany') || ''
     }
     return ''
   })
-  const [timeframes, setTimeframes] = useState<string[]>([])
   const [selectedTimeframe, setSelectedTimeframe] = useState<string>(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('selectedTimeframe') || ''
     }
     return ''
   })
-  const [problems, setProblems] = useState<Problem[]>([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string>('')
+
+  // Query for companies - runs once on mount
+  const { data: companiesData, error: companiesError } = useQuery({
+    queryKey: ['companies'],
+    queryFn: fetchCompanies,
+    staleTime: 1000 * 60 * 10, // 10 minutes - companies don't change often
+  })
+
+  // Query for timeframes - runs when company changes
+  const { data: timeframesData, error: timeframesError } = useQuery({
+    queryKey: ['timeframes', selectedCompany],
+    queryFn: () => fetchTimeframes(selectedCompany),
+    enabled: !!selectedCompany,
+  })
+
+  // Query for problems - runs when both company and timeframe are selected
+  const { data: problemsData, isLoading: problemsLoading, error: problemsError } = useQuery({
+    queryKey: ['problems', selectedCompany, selectedTimeframe],
+    queryFn: () => fetchProblems({ company: selectedCompany, timeframe: selectedTimeframe }),
+    enabled: !!selectedCompany && !!selectedTimeframe,
+  })
+
+  // Derived state
+  const companies = companiesData?.companies || []
+  const timeframes = timeframesData?.timeframes || []
+  const problems = problemsData?.problems || []
+  const error = companiesError?.message || timeframesError?.message || problemsError?.message || ''
 
   const handleCompanyChange = (company: string) => {
     setSelectedCompany(company)
@@ -60,76 +104,18 @@ function App() {
     }
   }
 
+  // Handle timeframe clearing when timeframes change for a company
   useEffect(() => {
-    const loadCompanies = async () => {
-      try {
-        const response = await fetch('/api/companies')
-        const data = await response.json()
-        if (data.success) {
-          setCompanies(data.data.companies)
-        } else {
-          setError('Failed to load companies')
-        }
-      } catch {
-        setError('Failed to load companies')
+    if (selectedCompany && timeframesData && typeof window !== 'undefined') {
+      const currentTimeframes = timeframesData.timeframes || []
+      const savedTimeframe = localStorage.getItem('selectedTimeframe')
+      if (savedTimeframe && !currentTimeframes.includes(savedTimeframe)) {
+        setSelectedTimeframe('')
+        localStorage.removeItem('selectedTimeframe')
       }
     }
-    loadCompanies()
-  }, [])
+  }, [selectedCompany, timeframesData])
 
-  useEffect(() => {
-    if (selectedCompany) {
-      const loadTimeframes = async () => {
-        try {
-          const response = await fetch(`/api/companies/${selectedCompany}/timeframes`)
-          const data = await response.json()
-          if (data.success) {
-            setTimeframes(data.data.timeframes)
-            setProblems([])
-
-            // only clear timeframe if it's not available for the new company
-            if (typeof window !== 'undefined') {
-              const savedTimeframe = localStorage.getItem('selectedTimeframe')
-              if (savedTimeframe && !data.data.timeframes.includes(savedTimeframe)) {
-                setSelectedTimeframe('')
-                localStorage.removeItem('selectedTimeframe')
-              }
-            } else {
-              setSelectedTimeframe('')
-            }
-          } else {
-            setError('Failed to load timeframes')
-          }
-        } catch {
-          setError('Failed to load timeframes')
-        }
-      }
-      loadTimeframes()
-    }
-  }, [selectedCompany])
-
-  useEffect(() => {
-    if (selectedCompany && selectedTimeframe) {
-      const loadProblems = async () => {
-        setLoading(true)
-        setError('')
-        try {
-          const response = await fetch(`/api/companies/${selectedCompany}/timeframes/${selectedTimeframe}/problems`)
-          const data: APIResponse = await response.json()
-          if (data.success && data.data) {
-            setProblems(data.data.problems)
-          } else {
-            setError(data.error || 'Failed to load problems')
-          }
-        } catch {
-          setError('Failed to load problems')
-        } finally {
-          setLoading(false)
-        }
-      }
-      loadProblems()
-    }
-  }, [selectedCompany, selectedTimeframe])
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-background)' }}>
@@ -164,13 +150,13 @@ function App() {
           </div>
         )}
 
-        {loading && <LoadingSpinner />}
+        {problemsLoading && <LoadingSpinner />}
 
-        {!loading && problems.length > 0 && (
+        {!problemsLoading && problems.length > 0 && (
           <ProblemsTable problems={problems} />
         )}
 
-        {!loading && selectedCompany && selectedTimeframe && problems.length === 0 && !error && (
+        {!problemsLoading && selectedCompany && selectedTimeframe && problems.length === 0 && !error && (
           <div className="rounded-lg p-4 border" style={{ backgroundColor: '#fffbeb', borderColor: '#fbbf24' }}>
             <p style={{ color: '#d97706' }}>No problems found for the selected company and timeframe.</p>
           </div>

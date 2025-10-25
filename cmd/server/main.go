@@ -7,6 +7,9 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/signal"
+	"syscall"
+	"time"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
@@ -88,8 +91,42 @@ func main() {
 		port = "8080"
 	}
 
-	fmt.Printf("Server starting on port %s\n", port)
-	log.Fatal(http.ListenAndServe(":"+port, corsHandler))
+	// Create HTTP server with timeouts
+	srv := &http.Server{
+		Addr:         ":" + port,
+		Handler:      corsHandler,
+		ReadTimeout:  30 * time.Second,
+		WriteTimeout: 30 * time.Second,
+		IdleTimeout:  120 * time.Second,
+	}
+
+	// Channel to listen for interrupt signal
+	done := make(chan os.Signal, 1)
+	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
+
+	// Start server in a goroutine
+	go func() {
+		fmt.Printf("Server starting on port %s\n", port)
+		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+			log.Fatalf("Server failed to start: %v", err)
+		}
+	}()
+
+	// Wait for interrupt signal
+	fmt.Println("Server is running. Press CTRL-C to exit.")
+	<-done
+	fmt.Println("Shutting down server...")
+
+	// Create a context with timeout for graceful shutdown
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
+	// Attempt graceful shutdown
+	if err := srv.Shutdown(ctx); err != nil {
+		log.Fatalf("Server forced to shutdown: %v", err)
+	}
+
+	fmt.Println("Server exited")
 }
 
 func getCompanies(w http.ResponseWriter, r *http.Request) {
