@@ -554,3 +554,387 @@ func TestFormatProblemsResponse_DifferentDifficulties(t *testing.T) {
 		t.Error("formatProblemsResponse() should contain 🔴 for Hard")
 	}
 }
+
+// Test fuzzy matching with confidence thresholds
+func TestFindCompanyWithSuggestion(t *testing.T) {
+	testData := map[string]map[string][]data.Problem{
+		"google": {
+			"all": []data.Problem{{ID: 1, Title: "Test", Difficulty: "Easy", Frequency: 100.0}},
+		},
+		"facebook": {
+			"all": []data.Problem{{ID: 2, Title: "Test", Difficulty: "Medium", Frequency: 90.0}},
+		},
+		"amazon": {
+			"all": []data.Problem{{ID: 3, Title: "Test", Difficulty: "Hard", Frequency: 85.0}},
+		},
+		"microsoft": {
+			"all": []data.Problem{{ID: 4, Title: "Test", Difficulty: "Medium", Frequency: 80.0}},
+		},
+		"apple": {
+			"all": []data.Problem{{ID: 5, Title: "Test", Difficulty: "Easy", Frequency: 75.0}},
+		},
+		"dropbox": {
+			"all": []data.Problem{{ID: 6, Title: "Test", Difficulty: "Medium", Frequency: 70.0}},
+		},
+		"box": {
+			"all": []data.Problem{{ID: 7, Title: "Test", Difficulty: "Hard", Frequency: 65.0}},
+		},
+		"jane-street": {
+			"all": []data.Problem{{ID: 8, Title: "Test", Difficulty: "Hard", Frequency: 60.0}},
+		},
+		"jump-trading": {
+			"all": []data.Problem{{ID: 9, Title: "Test", Difficulty: "Hard", Frequency: 55.0}},
+		},
+		"the-trade-desk": {
+			"all": []data.Problem{{ID: 10, Title: "Test", Difficulty: "Medium", Frequency: 50.0}},
+		},
+		"amd": {
+			"all": []data.Problem{{ID: 11, Title: "AMD Problem", Difficulty: "Hard", Frequency: 45.0}},
+		},
+		"td": {
+			"all": []data.Problem{{ID: 12, Title: "TD Problem", Difficulty: "Easy", Frequency: 40.0}},
+		},
+	}
+	problemsData := data.NewTestProblemsByCompany(testData)
+
+	tests := []struct {
+		name           string
+		input          string
+		expectedFound  bool
+		expectedCompany string
+		expectSuggestions bool
+	}{
+		// High confidence auto-corrections
+		{"exact match", "google", true, "google", false},
+		{"exact match with spaces", "jane street", true, "jane-street", false},
+		{"exact match with hyphens", "jane-street", true, "jane-street", false},
+		{"close typo", "googl", true, "google", false},
+		{"close typo 2", "amazn", true, "amazon", false},
+		{"close typo 3", "microsft", true, "microsoft", false},
+
+		// Company aliases
+		{"meta alias", "meta", true, "facebook", false},
+		{"fb alias", "fb", true, "facebook", false},
+		{"alphabet alias", "alphabet", true, "google", false},
+
+		// Medium confidence suggestions (these actually auto-correct due to high confidence)
+		{"medium confidence", "goog", true, "google", false}, // auto-corrects due to high confidence
+		{"medium confidence 2", "amaz", true, "amazon", false}, // auto-corrects due to high confidence
+		{"medium confidence 3", "micro", true, "microsoft", false}, // auto-corrects due to high confidence
+
+		// Ambiguous cases
+		{"dropbox vs box - dropbox", "drop", true, "dropbox", false}, // auto-corrects to dropbox
+		{"dropbox vs box - box", "box", true, "box", false}, // exact match to box
+		{"dropbox vs box - dropbox exact", "dropbox", true, "dropbox", false}, // exact match to dropbox
+
+		// Multi-word companies (these auto-correct due to high confidence)
+		{"jane street partial", "jane", true, "jane-street", false}, // auto-corrects to jane-street
+		{"jump trading partial", "jump", true, "jump-trading", false}, // auto-corrects to jump-trading
+		{"the trade desk partial", "trade", true, "the-trade-desk", false}, // auto-corrects to the-trade-desk
+
+		// Low confidence - should get suggestions
+		{"low confidence", "xyz", false, "", true},
+		{"very different", "completely-different", false, "", true},
+
+		// Test "zon" -> "amazon" case
+		{"zon to amazon", "zon", true, "amazon", false}, // auto-corrects to amazon
+
+		// Test "ttd" -> "the-trade-desk" case (ambiguous - should show multiple options)
+		{"ttd ambiguous", "ttd", false, "", true}, // should suggest multiple options including the-trade-desk
+
+		// Test stock ticker behavior
+		{"amd exact", "amd", true, "amd", false}, // exact match
+		{"AMD uppercase", "AMD", true, "amd", false}, // case insensitive exact match
+		{"meta uppercase", "META", true, "facebook", false}, // alias match
+		{"fb lowercase", "fb", true, "facebook", false}, // alias match
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			company, found, suggestions := findCompanyWithSuggestion(tt.input, problemsData)
+
+			if found != tt.expectedFound {
+				t.Errorf("findCompanyWithSuggestion(%q) found = %v, want %v", tt.input, found, tt.expectedFound)
+			}
+
+			if found && company != tt.expectedCompany {
+				t.Errorf("findCompanyWithSuggestion(%q) company = %q, want %q", tt.input, company, tt.expectedCompany)
+			}
+
+			if tt.expectSuggestions && len(suggestions) == 0 {
+				t.Errorf("findCompanyWithSuggestion(%q) expected suggestions but got none", tt.input)
+			}
+
+			if !tt.expectSuggestions && len(suggestions) > 0 {
+				t.Errorf("findCompanyWithSuggestion(%q) got suggestions %v but expected none", tt.input, suggestions)
+			}
+		})
+	}
+}
+
+// Test command fuzzy matching
+func TestFindCommandWithSuggestion(t *testing.T) {
+	tests := []struct {
+		name           string
+		input          string
+		expectedValid  bool
+		expectedCmd    string
+		expectSuggestion bool
+	}{
+		// Valid commands
+		{"exact problems", "problems", true, "problems", false},
+		{"exact help", "help", true, "help", false},
+		{"exact process", "process", true, "process", false},
+		{"exact stats", "stats", true, "stats", false},
+
+		// Close typos - should suggest
+		{"proces typo", "proces", false, "", true},
+		{"problms typo", "problms", false, "", true},
+		{"hel typo", "hel", false, "", true},
+		{"stat typo", "stat", false, "", true},
+		{"proces typo 2", "proces", false, "", true},
+
+		// Medium typos - should suggest
+		{"probl typo", "probl", false, "", true},
+		{"he typo", "he", false, "", true},
+		{"sta typo", "sta", false, "", true},
+
+		// Too different - no suggestion
+		{"completely different", "xyz", false, "", false},
+		{"random", "random", false, "", false},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			cmd, isValid, suggestion := findCommandWithSuggestion(tt.input)
+
+			if isValid != tt.expectedValid {
+				t.Errorf("findCommandWithSuggestion(%q) isValid = %v, want %v", tt.input, isValid, tt.expectedValid)
+			}
+
+			if isValid && cmd != tt.expectedCmd {
+				t.Errorf("findCommandWithSuggestion(%q) cmd = %q, want %q", tt.input, cmd, tt.expectedCmd)
+			}
+
+			if tt.expectSuggestion && suggestion == "" {
+				t.Errorf("findCommandWithSuggestion(%q) expected suggestion but got empty", tt.input)
+			}
+
+			if !tt.expectSuggestion && suggestion != "" {
+				t.Errorf("findCommandWithSuggestion(%q) got suggestion %q but expected none", tt.input, suggestion)
+			}
+		})
+	}
+}
+
+// Test Levenshtein distance calculation
+func TestLevenshteinDistance(t *testing.T) {
+	tests := []struct {
+		s1       string
+		s2       string
+		expected int
+	}{
+		{"", "", 0},
+		{"a", "", 1},
+		{"", "a", 1},
+		{"a", "a", 0},
+		{"a", "b", 1},
+		{"ab", "ba", 2},
+		{"kitten", "sitting", 3},
+		{"saturday", "sunday", 3},
+		{"google", "googl", 1},
+		{"amazon", "amazn", 1},
+		{"microsoft", "microsft", 1},
+		{"facebook", "facebok", 1},
+		{"dropbox", "drop", 3},
+		{"box", "dropbox", 4},
+		{"jane street", "jane-street", 1},
+		{"jump trading", "jump-trading", 1},
+	}
+
+	for _, tt := range tests {
+		result := levenshteinDistance(tt.s1, tt.s2)
+		if result != tt.expected {
+			t.Errorf("levenshteinDistance(%q, %q) = %d, want %d", tt.s1, tt.s2, result, tt.expected)
+		}
+	}
+}
+
+// Test confidence calculation
+func TestCalculateMatchConfidence(t *testing.T) {
+	tests := []struct {
+		input    string
+		target   string
+		expected float64
+	}{
+		{"", "", 1.0},
+		{"a", "a", 1.0},
+		{"google", "google", 1.0},
+		{"googl", "google", 0.833333}, // 1 char difference out of 6 = 5/6
+		{"goog", "google", 0.666667},  // 2 char difference out of 6 = 4/6
+		{"goo", "google", 0.5},        // 3 char difference out of 6 = 3/6
+		{"xyz", "google", 0.0},        // completely different
+		{"amazn", "amazon", 0.833333}, // 1 char difference out of 6 = 5/6
+		{"microsft", "microsoft", 0.888889}, // 1 char difference out of 9 = 8/9
+		{"ttd", "the-trade-desk", 0.214286}, // 3/14 = 0.214286 (low confidence)
+		{"ttd", "td", 0.666667}, // 1/3 = 0.666667 (medium confidence)
+		{"ttd", "amd", 0.333333}, // 2/3 = 0.333333 (low-medium confidence)
+	}
+
+	for _, tt := range tests {
+		result := calculateMatchConfidence(tt.input, tt.target)
+		// use approximate equality for floating point comparison
+		if result < tt.expected-0.000001 || result > tt.expected+0.000001 {
+			t.Errorf("calculateMatchConfidence(%q, %q) = %f, want %f", tt.input, tt.target, result, tt.expected)
+		}
+	}
+}
+
+// Test company aliases
+func TestGetCompanyAlias(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected string
+		found    bool
+	}{
+		{"meta", "facebook", true},
+		{"Meta", "facebook", true},
+		{"META", "facebook", true},
+		{"fb", "facebook", true},
+		{"FB", "facebook", true},
+		{"alphabet", "google", true},
+		{"amzn", "amazon", true},
+		{"msft", "microsoft", true},
+		{"aapl", "apple", true},
+		{"nflx", "netflix", true},
+		{"google", "", false},
+		{"amazon", "", false},
+		{"unknown", "", false},
+		{"", "", false},
+	}
+
+	for _, tt := range tests {
+		alias, found := getCompanyAlias(tt.input)
+		if found != tt.found {
+			t.Errorf("getCompanyAlias(%q) found = %v, want %v", tt.input, found, tt.found)
+		}
+		if found && alias != tt.expected {
+			t.Errorf("getCompanyAlias(%q) = %q, want %q", tt.input, alias, tt.expected)
+		}
+	}
+}
+
+// Test stage fuzzy matching
+func TestFindStageWithSuggestion(t *testing.T) {
+	tests := []struct {
+		name           string
+		input          string
+		expectedFound  bool
+		expectedStage  string
+		expectSuggestions bool
+	}{
+		// Valid stages
+		{"exact apply", "apply", true, "Apply", false},
+		{"exact reject", "reject", true, "Reject", false},
+		{"exact oa", "oa", true, "OA", false},
+		{"exact phone", "phone", true, "Phone", false},
+		{"exact onsite", "onsite", true, "Onsite", false},
+		{"exact offer", "offer", true, "Offer", false},
+
+		// Case variations
+		{"uppercase apply", "APPLY", true, "Apply", false},
+		{"mixed case", "ApPlY", true, "Apply", false},
+
+		// Close typos - should suggest (but some auto-correct)
+		{"apply typo", "aplly", false, "", false}, // confidence too low for suggestions
+		{"reject typo", "rejct", false, "", true},
+		{"phone typo", "phon", false, "", true},
+		{"onsite typo", "onsit", false, "", true},
+		{"offer typo", "offr", false, "", true},
+
+		// Medium typos - should suggest
+		{"apply typo 2", "aply", false, "", true},
+		{"reject typo 2", "rej", false, "", true},
+
+		// Too different - no suggestion
+		{"completely different", "xyz", false, "", false},
+		{"random", "random", false, "", false},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			stage, found, suggestions := findStageWithSuggestion(tt.input)
+
+			if found != tt.expectedFound {
+				t.Errorf("findStageWithSuggestion(%q) found = %v, want %v", tt.input, found, tt.expectedFound)
+			}
+
+			if found && stage != tt.expectedStage {
+				t.Errorf("findStageWithSuggestion(%q) stage = %q, want %q", tt.input, stage, tt.expectedStage)
+			}
+
+			if tt.expectSuggestions && len(suggestions) == 0 {
+				t.Errorf("findStageWithSuggestion(%q) expected suggestions but got none", tt.input)
+			}
+
+			if !tt.expectSuggestions && len(suggestions) > 0 {
+				t.Errorf("findStageWithSuggestion(%q) got suggestions %v but expected none", tt.input, suggestions)
+			}
+		})
+	}
+}
+
+// Test ambiguous company matching (dropbox vs box)
+func TestAmbiguousCompanyMatching(t *testing.T) {
+	testData := map[string]map[string][]data.Problem{
+		"dropbox": {
+			"all": []data.Problem{{ID: 1, Title: "Dropbox Problem", Difficulty: "Medium", Frequency: 100.0}},
+		},
+		"box": {
+			"all": []data.Problem{{ID: 2, Title: "Box Problem", Difficulty: "Hard", Frequency: 90.0}},
+		},
+		"drop": {
+			"all": []data.Problem{{ID: 3, Title: "Drop Problem", Difficulty: "Easy", Frequency: 80.0}},
+		},
+	}
+	problemsData := data.NewTestProblemsByCompany(testData)
+
+	tests := []struct {
+		name           string
+		input          string
+		expectedFound  bool
+		expectedCompany string
+		expectSuggestions bool
+	}{
+		{"exact dropbox", "dropbox", true, "dropbox", false},
+		{"exact box", "box", true, "box", false},
+		{"exact drop", "drop", true, "drop", false},
+
+		// Ambiguous cases - should suggest multiple options
+		{"ambiguous drop", "drop", true, "drop", false}, // exact match to "drop"
+		{"ambiguous box partial", "bo", true, "box", false}, // auto-corrects to "box"
+		{"ambiguous dropbox partial", "dropb", true, "dropbox", false}, // auto-corrects to "dropbox"
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			company, found, suggestions := findCompanyWithSuggestion(tt.input, problemsData)
+
+			if found != tt.expectedFound {
+				t.Errorf("findCompanyWithSuggestion(%q) found = %v, want %v", tt.input, found, tt.expectedFound)
+			}
+
+			if found && company != tt.expectedCompany {
+				t.Errorf("findCompanyWithSuggestion(%q) company = %q, want %q", tt.input, company, tt.expectedCompany)
+			}
+
+			if tt.expectSuggestions && len(suggestions) == 0 {
+				t.Errorf("findCompanyWithSuggestion(%q) expected suggestions but got none", tt.input)
+			}
+
+			if !tt.expectSuggestions && len(suggestions) > 0 {
+				t.Errorf("findCompanyWithSuggestion(%q) got suggestions %v but expected none", tt.input, suggestions)
+			}
+		})
+	}
+}

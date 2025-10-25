@@ -21,3 +21,4 @@ coverage.out
 coverage.html
 *.cover
 tmp/
+service-account.json
