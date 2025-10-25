@@ -1,10 +1,11 @@
-import { useQuery } from '@tanstack/react-query'
-import { useEffect, useState } from 'react'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { useEffect, useRef } from 'react'
 import { CompanySelector } from './components/CompanySelector'
 import { LoadingSpinner } from './components/LoadingSpinner'
 import { ProblemsTable } from './components/ProblemsTable'
 import { ThemeToggle } from './components/ThemeToggle'
 import { TimeframeSelector } from './components/TimeframeSelector'
+import { useLocalStorage } from './hooks/useLocalStorage'
 import { useTheme } from './hooks/useTheme'
 import type { APIResponse, Problem } from './types'
 
@@ -47,21 +48,14 @@ const fetchProblems = async ({
   return data.data!
 }
 
+
 function App() {
   const { theme, toggleTheme } = useTheme()
+  const queryClient = useQueryClient()
+  const hasClearedCache = useRef(false)
 
-  const [selectedCompany, setSelectedCompany] = useState<string>(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('selectedCompany') || ''
-    }
-    return ''
-  })
-  const [selectedTimeframe, setSelectedTimeframe] = useState<string>(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('selectedTimeframe') || ''
-    }
-    return ''
-  })
+  const [selectedCompany, setSelectedCompany] = useLocalStorage<string>('selectedCompany', '')
+  const [selectedTimeframe, setSelectedTimeframe] = useLocalStorage<string>('selectedTimeframe', '')
 
   // Query for companies - runs once on mount
   const { data: companiesData, error: companiesError } = useQuery({
@@ -82,6 +76,14 @@ function App() {
     queryKey: ['problems', selectedCompany, selectedTimeframe],
     queryFn: () => fetchProblems({ company: selectedCompany, timeframe: selectedTimeframe }),
     enabled: !!selectedCompany && !!selectedTimeframe,
+    retry: (failureCount, error) => {
+      // Don't retry if it's a "no problems found" error
+      if (error instanceof Error && error.message.includes('No problems found')) {
+        return false
+      }
+      return failureCount < 2
+    },
+    staleTime: 1000 * 60 * 2, // 2 minutes for problems data
   })
 
   // Derived state
@@ -92,29 +94,30 @@ function App() {
 
   const handleCompanyChange = (company: string) => {
     setSelectedCompany(company)
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedCompany', company)
-    }
   }
 
   const handleTimeframeChange = (timeframe: string) => {
     setSelectedTimeframe(timeframe)
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedTimeframe', timeframe)
-    }
   }
 
   // Handle timeframe clearing when timeframes change for a company
   useEffect(() => {
-    if (selectedCompany && timeframesData && typeof window !== 'undefined') {
+    if (selectedCompany && timeframesData) {
       const currentTimeframes = timeframesData.timeframes || []
-      const savedTimeframe = localStorage.getItem('selectedTimeframe')
-      if (savedTimeframe && !currentTimeframes.includes(savedTimeframe)) {
+      if (selectedTimeframe && !currentTimeframes.includes(selectedTimeframe)) {
         setSelectedTimeframe('')
-        localStorage.removeItem('selectedTimeframe')
       }
     }
-  }, [selectedCompany, timeframesData])
+  }, [selectedCompany, timeframesData, selectedTimeframe, setSelectedTimeframe])
+
+  // Clear cache on component mount to prevent stale data issues
+  useEffect(() => {
+    if (!hasClearedCache.current && (selectedCompany || selectedTimeframe)) {
+      hasClearedCache.current = true
+      queryClient.invalidateQueries({ queryKey: ['problems'] })
+      queryClient.invalidateQueries({ queryKey: ['timeframes'] })
+    }
+  }, [queryClient, selectedCompany, selectedTimeframe])
 
 
   return (
@@ -158,7 +161,38 @@ function App() {
 
         {!problemsLoading && selectedCompany && selectedTimeframe && problems.length === 0 && !error && (
           <div className="rounded-lg p-4 border" style={{ backgroundColor: '#fffbeb', borderColor: '#fbbf24' }}>
-            <p style={{ color: '#d97706' }}>No problems found for the selected company and timeframe.</p>
+            <div className="flex items-center justify-between">
+              <div>
+                <p style={{ color: '#d97706' }}>No problems found for the selected company and timeframe.</p>
+                <p className="text-sm mt-2" style={{ color: '#92400e' }}>
+                  This could mean no problems were asked in this timeframe, or the data is still being updated.
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  // Clear cache and refetch data
+                  queryClient.invalidateQueries({ queryKey: ['problems'] })
+                  queryClient.invalidateQueries({ queryKey: ['timeframes'] })
+                  queryClient.invalidateQueries({ queryKey: ['companies'] })
+                }}
+                className="px-3 py-2 text-sm rounded-md border hover:opacity-80"
+                style={{
+                  backgroundColor: 'var(--color-surface)',
+                  borderColor: 'var(--color-muted)',
+                  color: 'var(--color-content)'
+                }}
+                aria-label="Refresh data"
+              >
+                🔄 Refresh
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Show loading state for timeframes if company is selected but timeframes are still loading */}
+        {selectedCompany && !timeframesData && !timeframesError && (
+          <div className="rounded-lg p-4 border" style={{ backgroundColor: 'var(--color-surface)', borderColor: 'var(--color-muted)' }}>
+            <p style={{ color: 'var(--color-tertiary)' }}>Loading timeframes...</p>
           </div>
         )}
       </div>

@@ -19,7 +19,7 @@ export const ThemeToggle = ({ theme, onToggle }: ThemeToggleProps) => {
     <button
       onClick={handleClick}
       onKeyDown={handleKeyDown}
-      className="p-2 rounded-lg border transition-colors hover:opacity-80"
+      className="p-2 rounded-lg border transition-colors hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-blue-500"
       style={{
         borderColor: 'var(--color-muted)',
         backgroundColor: 'var(--color-surface)',
