@@ -1,8 +1,17 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
+  --color-primary: #0f172a;
+  --color-muted: #e2e8f0;
+  --color-tertiary: #64748b;
+  --color-surface: #ffffff;
+  --color-accent: #3b82f6;
+  --color-secondary: #f1f5f9;
+  --color-content: #0f172a;
+  --color-background: #ffffff;
+}
+
+.light {
   --color-primary: #0f172a;
   --color-muted: #e2e8f0;
   --color-tertiary: #64748b;
@@ -24,6 +33,7 @@
   --color-background: #000000;
 }
 
+/* Ensure smooth transitions for theme changes */
 * {
   transition-property: background-color, border-color, color;
   transition-duration: 200ms;

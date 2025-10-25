@@ -34,8 +34,8 @@
       content="See the LeetCode problems that have been asked at your favorite companies." />
     <meta property="twitter:image" content="https://leetbot.org/og.webp" />
 
-    <meta name="theme-color" content="#1f2937" />
-    <meta name="msapplication-TileColor" content="#1f2937" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="application-name" content="Leetbot.org - a leetcode problem data explorer" />
 
     <script type="application/ld+json">
@@ -61,11 +61,23 @@
 
     <script>
       (function() {
+        // Prevent flash of unstyled content by applying theme immediately
         const savedTheme = localStorage.getItem('theme');
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-          document.documentElement.classList.add('dark');
+        let initialTheme = 'light';
+        if (savedTheme) {
+          initialTheme = savedTheme;
+        } else if (systemPrefersDark) {
+          initialTheme = 'dark';
+        }
+
+        document.documentElement.classList.add(initialTheme);
+
+        // Update theme-color meta tag
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute('content', initialTheme === 'dark' ? '#000000' : '#ffffff');
         }
       })();
     </script>

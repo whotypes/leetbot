@@ -8,8 +8,22 @@ const queryClient = new QueryClient({
     queries: {
       staleTime: 1000 * 60 * 5, // 5 minutes
       gcTime: 1000 * 60 * 30, // 30 minutes (formerly cacheTime)
-      retry: 1,
+      retry: (failureCount, error) => {
+        // Don't retry on 404 or client errors
+        if (error instanceof Error && error.message.includes('404')) {
+          return false
+        }
+        // Don't retry on "no problems found" errors
+        if (error instanceof Error && error.message.includes('No problems found')) {
+          return false
+        }
+        return failureCount < 2
+      },
       refetchOnWindowFocus: false,
+      refetchOnMount: true,
+      refetchOnReconnect: true,
+      // Enable network mode to always fetch fresh data
+      networkMode: 'online',
     },
   },
 })
