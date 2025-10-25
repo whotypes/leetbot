@@ -11,7 +11,7 @@ import (
 
 const (
 	problemsPerPage     = 10
-	paginationThreshold = 20
+	paginationThreshold = 10
 )
 
 var PaginatorManager *paginator.Manager
