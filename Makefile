@@ -1,4 +1,4 @@
-.PHONY: help dev lint test build run clean docker-build docker-run
+.PHONY: help dev dev-all lint test build run clean docker-build docker-run
 
 help: ## Show this help message
 	@echo 'Usage: make [target]'
@@ -10,6 +10,14 @@ dev: ## Run the application in development mode with live reload
 	@echo "Starting development server..."
 	@which air > /dev/null || (echo "Installing air..." && go install github.com/air-verse/air@latest)
 	@air
+
+dev-all: ## Run both bot and web server simultaneously
+	@echo "Starting bot and web server..."
+	@echo "Bot will run on port 8080, web dev server will run on port 5173"
+	@trap 'kill %1; kill %2' INT; \
+		cd web && bun run dev & \
+		which air > /dev/null || (echo "Installing air..." && go install github.com/air-verse/air@latest); \
+		air
 
 lint: ## Run linter
 	@echo "Running linter..."

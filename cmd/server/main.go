@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"os"
 
-	firebase "firebase.google.com/go"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/whotypes/leetbot/internal/config"
@@ -58,21 +57,14 @@ func main() {
 		log.Fatalf("Failed to load configuration: %v", err)
 	}
 
-	fmt.Println("Creating Firebase app...")
-
-	app, err := firebase.NewApp(ctx, &firebase.Config{
-		ProjectID: cfg.FirestoreProjectID,
-	})
-
+	// Initialize Firestore client with explicit database ID
+	fireStoreClient, err := data.NewFirestoreClient(ctx, cfg.FirestoreProjectID, cfg.FirestoreDatabaseID, cfg.GoogleApplicationCredentialsPath)
 	if err != nil {
-		log.Fatalf("Failed to create Firebase app: %v", err)
-	}
-
-	fireStoreClient, err := app.Firestore(ctx)
-	if err != nil {
-		log.Fatalf("Firestore client creation failed: %v", err)
+		log.Fatalf("Failed to create Firestore client: %v", err)
 	}
 	defer fireStoreClient.Close()
+
+	fmt.Println("Firestore client created")
 
 	r := mux.NewRouter()
 

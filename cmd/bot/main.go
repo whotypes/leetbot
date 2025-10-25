@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -32,7 +33,21 @@ func main() {
 
 	fmt.Printf("Loaded data for %d companies\n", len(problemsData.GetAvailableCompanies()))
 
-	handler := discord.NewHandler(problemsData, cfg.BotPrefix)
+    handler := discord.NewHandler(problemsData, cfg.BotPrefix)
+
+    // Wire up process storage if configured
+    if cfg.FirestoreProjectID != "" {
+        ctx := context.Background()
+        fs, err := data.NewFirestoreClient(ctx, cfg.FirestoreProjectID, cfg.FirestoreDatabaseID, cfg.GoogleApplicationCredentialsPath)
+        if err != nil {
+            log.Printf("Warning: failed to initialize Firestore storage: %v", err)
+        } else {
+            handler.SetProcessStorage(fs)
+            log.Println("✓ Process storage configured (Firestore)")
+        }
+    } else {
+        log.Println("Process storage not configured; !process command will be disabled")
+    }
 	dg, err := discordgo.New("Bot " + cfg.DiscordToken)
 	if err != nil {
 		log.Fatalf("Failed to create Discord session: %v", err)
@@ -40,20 +55,19 @@ func main() {
 
 	dg.AddHandler(handler.HandleMessage)
 
-	dg.AddHandler(discord.PaginatorManager.OnInteractionCreate)
-
 	dg.AddHandler(func(s *discordgo.Session, i *discordgo.InteractionCreate) {
 		switch i.Type {
+		case discordgo.InteractionMessageComponent:
+			// let the paginator handle button clicks
+			discord.PaginatorManager.OnInteractionCreate(s, i)
 		case discordgo.InteractionApplicationCommand:
-			if h, ok := discord.SlashCommandHandlers[i.ApplicationCommandData().Name]; ok {
-				h(s, i, problemsData, cfg.BotPrefix)
-			}
+			handler.HandleSlashCommand(s, i)
 		case discordgo.InteractionApplicationCommandAutocomplete:
 			discord.HandleAutocomplete(s, i, problemsData)
 		}
 	})
 
-	dg.Identify.Intents = discordgo.IntentsGuildMessages
+	dg.Identify.Intents = discordgo.IntentsGuildMessages | discordgo.IntentsMessageContent
 	dg.AddHandler(func(s *discordgo.Session, event *discordgo.Ready) {
 		log.Printf("Leetbot logged in as: %v#%v", s.State.User.Username, s.State.User.Discriminator)
 
