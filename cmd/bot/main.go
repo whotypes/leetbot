@@ -7,6 +7,7 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/whotypes/leetbot/internal/config"
@@ -53,6 +54,10 @@ func main() {
 		log.Fatalf("Failed to create Discord session: %v", err)
 	}
 
+	// create a channel to signal reconnection
+	reconnectChan := make(chan bool)
+	handler.SetReconnectChannel(reconnectChan)
+
 	dg.AddHandler(handler.HandleMessage)
 
 	dg.AddHandler(func(s *discordgo.Session, i *discordgo.InteractionCreate) {
@@ -67,11 +72,46 @@ func main() {
 		}
 	})
 
-	dg.Identify.Intents = discordgo.IntentsGuildMessages | discordgo.IntentsMessageContent
+	// add reconnection handler
 	dg.AddHandler(func(s *discordgo.Session, event *discordgo.Ready) {
+		// check if this is a reconnection
+		select {
+		case <-reconnectChan:
+			log.Println("🔄 Bot reconnected to Discord successfully")
+			return
+		default:
+		}
+
 		log.Printf("Leetbot logged in as: %v#%v", s.State.User.Username, s.State.User.Discriminator)
 
 		commands := discord.GetSlashCommands(problemsData)
+
+		log.Println("Clearing old slash commands...")
+		// Get all currently registered commands
+		registeredCommands, err := s.ApplicationCommands(s.State.User.ID, "")
+		if err != nil {
+			log.Printf("Warning: failed to get registered commands: %v", err)
+		} else {
+			// Delete commands that are no longer in our code
+			for _, registeredCmd := range registeredCommands {
+				// Check if this command should still exist
+				shouldExist := false
+				for _, currentCmd := range commands {
+					if registeredCmd.Name == currentCmd.Name {
+						shouldExist = true
+						break
+					}
+				}
+
+				if !shouldExist {
+					log.Printf("Removing old command: /%v", registeredCmd.Name)
+					err := s.ApplicationCommandDelete(s.State.User.ID, "", registeredCmd.ID)
+					if err != nil {
+						log.Printf("Failed to delete command '%v': %v", registeredCmd.Name, err)
+					}
+				}
+			}
+		}
 
 		log.Println("Registering slash commands...")
 		for _, v := range commands {
@@ -85,11 +125,42 @@ func main() {
 		log.Printf("Finished registering slash commands")
 	})
 
+	dg.Identify.Intents = discordgo.IntentsGuildMessages | discordgo.IntentsMessageContent
+
 	err = dg.Open()
 	if err != nil {
 		log.Fatalf("Failed to open Discord connection: %v", err)
 	}
 	defer dg.Close()
+
+	// start a goroutine to handle reconnection signals
+	go func() {
+		for {
+			select {
+			case <-reconnectChan:
+				log.Println("🔄 Received restart signal, restarting Discord session...")
+
+				// close current session
+				err := dg.Close()
+				if err != nil {
+					log.Printf("Error closing Discord session: %v", err)
+				}
+
+				// wait a bit before reconnecting
+				time.Sleep(1 * time.Second)
+
+				// reopen the session
+				err = dg.Open()
+				if err != nil {
+					log.Printf("Error reopening Discord session: %v", err)
+					// if reconnection fails, we can't really do much more from here
+					// the main process will need to be restarted
+				} else {
+					log.Println("✅ Bot restarted successfully")
+				}
+			}
+		}
+	}()
 
 	fmt.Println("Bot is now running. Press CTRL-C to exit.")
 	sc := make(chan os.Signal, 1)

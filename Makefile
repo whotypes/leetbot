@@ -1,4 +1,4 @@
-.PHONY: help dev dev-all lint test build run clean docker-build docker-run
+.PHONY: help dev dev-all lint test build run clean docker-build docker-run cleanup-commands cleanup-commands-list cleanup-commands-delete
 
 help: ## Show this help message
 	@echo 'Usage: make [target]'
@@ -101,3 +101,25 @@ validate-data: ## Validate all CSV files in data directory
 demo: ## Run the bot demo
 	@echo "Running bot demo..."
 	@go run scripts/demo_bot/main.go
+
+cleanup-commands: ## List or delete Discord slash commands
+	@echo "Discord Command Cleanup Tool"
+	@echo "Usage: make cleanup-commands-list or make cleanup-commands-delete command=shutdown"
+	@if [ "$(command)" = "" ]; then \
+		go run scripts/cleanup_commands/main.go -list; \
+	else \
+		go run scripts/cleanup_commands/main.go -command $(command); \
+	fi
+
+cleanup-commands-list: ## List all registered Discord slash commands
+	@echo "Listing registered Discord commands..."
+	@go run scripts/cleanup_commands/main.go -list
+
+cleanup-commands-delete: ## Delete a specific Discord slash command (requires command= parameter)
+	@if [ "$(command)" = "" ]; then \
+		echo "Error: Please specify command=shutdown (or other command name)"; \
+		echo "Usage: make cleanup-commands-delete command=shutdown"; \
+		exit 1; \
+	fi
+	@echo "Deleting Discord command: $(command)"
+	@go run scripts/cleanup_commands/main.go -command $(command)

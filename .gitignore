@@ -22,3 +22,6 @@ coverage.html
 *.cover
 tmp/
 service-account.json
+bot
+cleanup_commands
+server

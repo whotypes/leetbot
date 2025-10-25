@@ -3,6 +3,7 @@ package discord
 import (
 	"context"
 	"fmt"
+	"os"
 	"strings"
 	"time"
 
@@ -506,7 +507,7 @@ func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompan
 }
 
 // validCommands lists all valid bot commands
-var validCommands = []string{"problems", "help", "process", "stats"}
+var validCommands = []string{"problems", "help", "process", "stats", "shutdown", "startup"}
 
 // findCommandWithSuggestion attempts to match a command and returns suggestions if it's a typo
 // returns: (correctCommand, isValidCommand, didYouMeanSuggestion)
@@ -683,6 +684,7 @@ type Handler struct {
 	problemsData   *data.ProblemsByCompany
 	processStorage data.Storage
 	prefix         string
+	reconnectChan  chan bool
 }
 
 func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
@@ -690,6 +692,10 @@ func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
 		problemsData: problemsData,
 		prefix:       prefix,
 	}
+}
+
+func (h *Handler) SetReconnectChannel(ch chan bool) {
+	h.reconnectChan = ch
 }
 
 func (h *Handler) SetProcessStorage(storage data.Storage) {
@@ -1047,6 +1053,10 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 		h.handleProcessMessageCommand(s, m, args)
 	case "stats":
 		h.handleStatsCommand(s, m, args)
+	case "shutdown":
+		h.handleShutdownMessage(s, m)
+	case "startup":
+		h.handleStartupMessage(s, m)
 	default:
 		h.sendErrorMessage(s, m.ChannelID, fmt.Sprintf("Unknown command '%s'. Use `%shelp` for available commands.", command, h.prefix))
 	}
@@ -1310,6 +1320,8 @@ func (h *Handler) handleHelpCommand(s *discordgo.Session, m *discordgo.MessageCr
 • **%sproblems <company> [timeframe]** - Show interview problems
 • **%sprocess <company> <stage>** - Track interview stage
 • **%sstats <company>** - View process statistics
+• **%sshutdown** - Shutdown the bot (admin only)
+• **%sstartup** - Restart the bot (admin only)
 
 **Slash Commands:**
 • **/problems** - Show interview problems (with dropdown options)
@@ -1354,7 +1366,7 @@ When no timeframe is specified, the bot automatically tries:
 **Supported Companies:**
 • Use the slash command dropdown to see all available companies!
 
-*Problems are sorted by interview frequency (most popular first)*`, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix)
+*Problems are sorted by interview frequency (most popular first)*`, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix)
 
 	h.sendMessage(s, m.ChannelID, helpMsg)
 }
@@ -1450,6 +1462,8 @@ func (h *Handler) handleHelpSlash(s *discordgo.Session, i *discordgo.Interaction
 • **%sproblems <company> [timeframe]** - Show interview problems
 • **%sprocess <company> <stage>** - Track interview stage
 • **%sstats <company>** - View process statistics
+• **%sshutdown** - Shutdown the bot (admin only)
+• **%sstartup** - Restart the bot (admin only)
 
 **Slash Commands:**
 • **/problems** - Show interview problems (with dropdown options)
@@ -1494,7 +1508,7 @@ When no timeframe is specified, the bot automatically tries:
 **Supported Companies:**
 • Use the slash command dropdown to see all available companies!
 
-*Problems are sorted by interview frequency (most popular first)*`, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix)
+*Problems are sorted by interview frequency (most popular first)*`, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix)
 
 	err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 		Type: discordgo.InteractionResponseChannelMessageWithSource,
@@ -1713,6 +1727,81 @@ func (h *Handler) handleStatsSlash(s *discordgo.Session, i *discordgo.Interactio
 
 	// send stats as embed
 	h.sendProcessStatsForInteraction(s, i, company)
+}
+
+
+func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
+	// check if the user is authorized (nyumat's user ID)
+	if m.Author.ID != "700444827287945316" {
+		h.sendErrorMessage(s, m.ChannelID, "❌ Only the bot owner can use this command.")
+		return
+	}
+
+	// send confirmation message first
+	h.sendMessage(s, m.ChannelID, "🛑 Shutting down bot...")
+
+	// close the session to disconnect from Discord
+	// use a goroutine with a small delay to ensure the message is sent
+	go func() {
+		time.Sleep(100 * time.Millisecond)
+		err := s.Close()
+		if err != nil {
+			fmt.Printf("Error closing Discord session: %v\n", err)
+		}
+		// exit the program
+		os.Exit(0)
+	}()
+}
+
+func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
+	// check if the user is authorized (nyumat's user ID)
+	if m.Author.ID != "700444827287945316" {
+		h.sendErrorMessage(s, m.ChannelID, "❌ Only the bot owner can use this command.")
+		return
+	}
+
+	// send confirmation message first
+	h.sendMessage(s, m.ChannelID, "🚀 Restarting bot...")
+
+	// signal the main function to restart the session
+	if h.reconnectChan != nil {
+		select {
+		case h.reconnectChan <- true:
+			// signal sent successfully
+		default:
+			// channel is full or closed, fallback to manual restart
+			h.restartSession(s)
+		}
+	} else {
+		// fallback if reconnect channel is not set
+		h.restartSession(s)
+	}
+}
+
+func (h *Handler) restartSession(s *discordgo.Session) {
+	// use a goroutine to restart the session
+	go func() {
+		time.Sleep(100 * time.Millisecond)
+
+		// close current session
+		err := s.Close()
+		if err != nil {
+			fmt.Printf("Error closing Discord session: %v\n", err)
+		}
+
+		// wait a bit before reconnecting
+		time.Sleep(1 * time.Second)
+
+		// attempt to reopen the session
+		err = s.Open()
+		if err != nil {
+			fmt.Printf("Error reopening Discord session: %v\n", err)
+			// if reconnection fails, we can't really do much more from here
+			// the main process will need to be restarted
+		} else {
+			fmt.Println("✓ Bot restarted successfully")
+		}
+	}()
 }
 
 func (h *Handler) formatAvailableTimeframesSuggestionSlash(company, requestedTimeframe string, availableTimeframes []string) string {
