@@ -1,11 +1,4 @@
-interface Problem {
-  id: number
-  url: string
-  title: string
-  difficulty: string
-  acceptance: number
-  frequency: number
-}
+import type { Problem } from '../types'
 
 interface ProblemsTableProps {
   problems: Problem[]
