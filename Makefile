@@ -71,7 +71,11 @@ docker-build: ## Build Docker image
 
 docker-run: ## Run Docker container
 	@echo "Running Docker container..."
-	@docker run -p 8080:8080 --env-file .env leetbot
+	@docker run -p 8080:8080 \
+		--env-file .env \
+		-e GOOGLE_APPLICATION_CREDENTIALS=/app/service-account.json \
+		-v $(PWD)/service-account.json:/app/service-account.json \
+		leetbot
 
 validate: lint test ## Run linting and tests
 	@echo "Validation complete!"

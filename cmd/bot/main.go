@@ -38,7 +38,7 @@ func main() {
     // Wire up process storage if configured
     if cfg.FirestoreProjectID != "" {
         ctx := context.Background()
-        fs, err := data.NewFirestoreClient(ctx, cfg.FirestoreProjectID, cfg.FirestoreDatabaseID, cfg.GoogleApplicationCredentialsPath)
+        fs, err := data.NewFirestoreClient(ctx, cfg.FirestoreProjectID, cfg.FirestoreDatabaseID)
         if err != nil {
             log.Printf("Warning: failed to initialize Firestore storage: %v", err)
         } else {
