@@ -8,9 +8,9 @@ import (
 	"syscall"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/dotcomnerd/leetbot/internal/config"
-	"github.com/dotcomnerd/leetbot/internal/data"
-	"github.com/dotcomnerd/leetbot/internal/discord"
+	"github.com/whotypes/leetbot/internal/config"
+	"github.com/whotypes/leetbot/internal/data"
+	"github.com/whotypes/leetbot/internal/discord"
 )
 
 func main() {

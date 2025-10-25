@@ -69,7 +69,7 @@ The bot supports both text commands (with prefix `!`) and slash commands (with p
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/dotcomnerd/leetbot
+git clone https://github.com/whotypes/leetbot
 cd leetbot
 ```
 

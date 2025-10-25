@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/dotcomnerd/leetbot/internal/data"
 	paginator "github.com/topi314/dgo-paginator"
+	"github.com/whotypes/leetbot/internal/data"
 )
 
 const (

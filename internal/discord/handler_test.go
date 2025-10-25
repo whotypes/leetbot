@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/dotcomnerd/leetbot/internal/data"
+	"github.com/whotypes/leetbot/internal/data"
 )
 
 func createTestProblemsData() *data.ProblemsByCompany {

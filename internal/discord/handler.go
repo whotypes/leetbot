@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/dotcomnerd/leetbot/internal/data"
 	"github.com/lithammer/fuzzysearch/fuzzy"
+	"github.com/whotypes/leetbot/internal/data"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )
