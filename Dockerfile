@@ -20,7 +20,6 @@ COPY --from=go-builder /app/bot .
 COPY --from=go-builder /app/server .
 COPY --from=web-builder /app/web/dist ./web/dist
 COPY start-all.sh .
-COPY service-account.json .
 RUN chmod +x start-all.sh
 
 EXPOSE 8080
