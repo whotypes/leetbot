@@ -5,7 +5,6 @@ import (
 	"fmt"
 
 	"cloud.google.com/go/firestore"
-	"google.golang.org/api/option"
 )
 
 type FirestoreStorage struct {
@@ -16,7 +15,7 @@ func (fs *FirestoreStorage) Close() error {
     return fs.client.Close()
 }
 
-func NewFirestoreClient(ctx context.Context, projectID string, databaseID string, credentialsPath string) (*FirestoreStorage, error) {
+func NewFirestoreClient(ctx context.Context, projectID string, databaseID string) (*FirestoreStorage, error) {
     if projectID == "" {
         return nil, fmt.Errorf("projectID is required")
     }
@@ -24,12 +23,8 @@ func NewFirestoreClient(ctx context.Context, projectID string, databaseID string
         return nil, fmt.Errorf("databaseID is required - we do not allow connections to the default database")
     }
 
-    var opts []option.ClientOption
-    if credentialsPath != "" {
-        opts = append(opts, option.WithCredentialsFile(credentialsPath))
-    }
-
-    client, err := firestore.NewClientWithDatabase(ctx, projectID, databaseID, opts...)
+    // Using Application Default Credentials (ADC) - no explicit credentials needed
+    client, err := firestore.NewClientWithDatabase(ctx, projectID, databaseID)
     if err != nil {
         return nil, err
     }

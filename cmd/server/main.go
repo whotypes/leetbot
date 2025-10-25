@@ -60,8 +60,8 @@ func main() {
 		log.Fatalf("Failed to load configuration: %v", err)
 	}
 
-	// Initialize Firestore client with explicit database ID
-	fireStoreClient, err := data.NewFirestoreClient(ctx, cfg.FirestoreProjectID, cfg.FirestoreDatabaseID, cfg.GoogleApplicationCredentialsPath)
+	// Initialize Firestore client with explicit database ID using Application Default Credentials
+	fireStoreClient, err := data.NewFirestoreClient(ctx, cfg.FirestoreProjectID, cfg.FirestoreDatabaseID)
 	if err != nil {
 		log.Fatalf("Failed to create Firestore client: %v", err)
 	}
