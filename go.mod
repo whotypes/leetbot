@@ -1,4 +1,4 @@
-module github.com/dotcomnerd/leetbot
+module github.com/whotypes/leetbot
 
 go 1.24.0
 

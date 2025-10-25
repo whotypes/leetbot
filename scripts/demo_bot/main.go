@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/dotcomnerd/leetbot/internal/data"
+	"github.com/whotypes/leetbot/internal/data"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )

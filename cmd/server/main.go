@@ -9,10 +9,10 @@ import (
 	"os"
 
 	firebase "firebase.google.com/go"
-	"github.com/dotcomnerd/leetbot/internal/config"
-	"github.com/dotcomnerd/leetbot/internal/data"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
+	"github.com/whotypes/leetbot/internal/config"
+	"github.com/whotypes/leetbot/internal/data"
 )
 
 type APIResponse struct {
