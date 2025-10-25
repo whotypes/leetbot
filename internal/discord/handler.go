@@ -685,6 +685,7 @@ type Handler struct {
 	processStorage data.Storage
 	prefix         string
 	reconnectChan  chan bool
+	disabled       bool
 }
 
 func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
@@ -1044,6 +1045,14 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 	// use the validated command
 	command = correctCommand
 
+	// check if bot is disabled (but allow shutdown, startup, and help commands)
+	if h.disabled {
+		// only allow shutdown, startup, and help commands when disabled
+		if command != "shutdown" && command != "startup" && command != "help" {
+			return
+		}
+	}
+
 	switch command {
 	case "problems":
 		h.handleProblemsCommand(s, m, args)
@@ -1054,9 +1063,9 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 	case "stats":
 		h.handleStatsCommand(s, m, args)
 	case "shutdown":
-		h.handleShutdownMessage(s, m)
+		h.handleShutdownMessage(s, m, args)
 	case "startup":
-		h.handleStartupMessage(s, m)
+		h.handleStartupMessage(s, m, args)
 	default:
 		h.sendErrorMessage(s, m.ChannelID, fmt.Sprintf("Unknown command '%s'. Use `%shelp` for available commands.", command, h.prefix))
 	}
@@ -1320,8 +1329,8 @@ func (h *Handler) handleHelpCommand(s *discordgo.Session, m *discordgo.MessageCr
 • **%sproblems <company> [timeframe]** - Show interview problems
 • **%sprocess <company> <stage>** - Track interview stage
 • **%sstats <company>** - View process statistics
-• **%sshutdown** - Shutdown the bot (admin only)
-• **%sstartup** - Restart the bot (admin only)
+• **%sshutdown [indef]** - Shutdown the bot (admin only) - use 'indef' to disable without exiting
+• **%sstartup** - Restart the bot or re-enable if disabled (admin only)
 
 **Slash Commands:**
 • **/problems** - Show interview problems (with dropdown options)
@@ -1462,8 +1471,8 @@ func (h *Handler) handleHelpSlash(s *discordgo.Session, i *discordgo.Interaction
 • **%sproblems <company> [timeframe]** - Show interview problems
 • **%sprocess <company> <stage>** - Track interview stage
 • **%sstats <company>** - View process statistics
-• **%sshutdown** - Shutdown the bot (admin only)
-• **%sstartup** - Restart the bot (admin only)
+• **%sshutdown [indef]** - Shutdown the bot (admin only) - use 'indef' to disable without exiting
+• **%sstartup** - Restart the bot or re-enable if disabled (admin only)
 
 **Slash Commands:**
 • **/problems** - Show interview problems (with dropdown options)
@@ -1730,13 +1739,22 @@ func (h *Handler) handleStatsSlash(s *discordgo.Session, i *discordgo.Interactio
 }
 
 
-func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
+func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
 	// check if the user is authorized (nyumat's user ID)
 	if m.Author.ID != "700444827287945316" {
 		h.sendErrorMessage(s, m.ChannelID, "❌ Only the bot owner can use this command.")
 		return
 	}
 
+	// check if indefinite shutdown is requested
+	if len(args) > 0 && args[0] == "indef" {
+		// indefinite shutdown - disable bot but don't exit process
+		h.disabled = true
+		h.sendMessage(s, m.ChannelID, "🛑 Bot disabled indefinitely. Use `!startup` to re-enable.")
+		return
+	}
+
+	// regular shutdown - exit the process
 	// send confirmation message first
 	h.sendMessage(s, m.ChannelID, "🛑 Shutting down bot...")
 
@@ -1753,10 +1771,18 @@ func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.Messa
 	}()
 }
 
-func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
+func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
 	// check if the user is authorized (nyumat's user ID)
 	if m.Author.ID != "700444827287945316" {
 		h.sendErrorMessage(s, m.ChannelID, "❌ Only the bot owner can use this command.")
+		return
+	}
+
+	// check if bot is disabled
+	if h.disabled {
+		// re-enable the bot
+		h.disabled = false
+		h.sendMessage(s, m.ChannelID, "✅ Bot re-enabled successfully!")
 		return
 	}
 
