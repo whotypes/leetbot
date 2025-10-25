@@ -9,6 +9,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/lithammer/fuzzysearch/fuzzy"
+	paginator "github.com/topi314/dgo-paginator"
 	"github.com/whotypes/leetbot/internal/data"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
@@ -1322,23 +1323,42 @@ func (h *Handler) sendMessage(s *discordgo.Session, channelID, message string) {
 	}
 }
 
-func (h *Handler) handleHelpCommand(s *discordgo.Session, m *discordgo.MessageCreate) {
-    helpMsg := fmt.Sprintf(`**Leetbot Commands:**
-
-**Text Commands (prefix: %s):**
+func (h *Handler) createHelpPaginator(isAdmin bool) *paginator.Paginator {
+	return &paginator.Paginator{
+		PageFunc: func(page int, embed *discordgo.MessageEmbed) {
+			switch page {
+			case 0:
+				// Page 1: Basic Commands
+				embed.Title = "Basic Commands"
+				embed.Color = 0x5865F2
+				embed.Description = fmt.Sprintf(`**Text Commands (prefix: %s):**
 • **%sproblems <company> [timeframe]** - Show interview problems
 • **%sprocess <company> <stage>** - Track interview stage
 • **%sstats <company>** - View process statistics
-• **%sshutdown [indef]** - Shutdown the bot (admin only) - use 'indef' to disable without exiting
-• **%sstartup** - Restart the bot or re-enable if disabled (admin only)
 
 **Slash Commands:**
 • **/problems** - Show interview problems (with dropdown options)
 • **/process** - Track new interview process
 • **/stats** - View interview process statistics
-• **/help** - Show this help message
+• **/help** - Show this help message`, h.prefix, h.prefix, h.prefix, h.prefix)
 
-**Problems Command Usage:**
+				if isAdmin {
+					embed.Description += fmt.Sprintf(`
+
+**Admin Commands:**
+• **%sshutdown [indef]** - Shutdown the bot (admin only)
+• **%sstartup** - Restart the bot or re-enable if disabled (admin only)`, h.prefix, h.prefix)
+				}
+
+				embed.Footer = &discordgo.MessageEmbedFooter{
+					Text: "Page 1/4 • Use the buttons below to navigate",
+				}
+
+			case 1:
+				// Page 2: Problems Command Usage
+				embed.Title = "Problems Command & Timeframe Options"
+				embed.Color = 0x5865F2
+				embed.Description = `**Problems Command Usage:**
 • *company*: Company name (e.g., airbnb, amazon, google)
 • *timeframe*: Optional timeframe filter (if not specified, uses smart priority system)
 
@@ -1355,29 +1375,79 @@ When no timeframe is specified, the bot automatically tries:
 2. Last 3 months (if 30d has no data)
 3. Last 6 months (if 3mo has no data)
 4. More than 6 months (if 6mo has no data)
-5. All time (fallback)
+5. All time (fallback)`
 
-**Process Tracking:**
+				embed.Footer = &discordgo.MessageEmbedFooter{
+					Text: "Page 2/4 • Use the buttons below to navigate",
+				}
+
+			case 2:
+				// Page 3: Process Tracking
+				embed.Title = "Process Tracking & Examples"
+				embed.Color = 0x5865F2
+				embed.Description = `**Process Tracking:**
 • **Stages:** Apply, Reject, OA, Phone, Onsite, Offer
-• Track your interview progress with **%sprocess**
-• View statistics with **%sstats**
+• Track your interview progress with **` + h.prefix + `process**
+• View statistics with **` + h.prefix + `stats**
 
 **Examples:**
-• %sproblems airbnb (uses smart priority)
-• %sproblems amazon 30d (forces 30 days)
-• %sproblems google 3mo (forces 3 months)
-• %sprocess google apply (track application)
-• %sstats google (view statistics)
+• ` + h.prefix + `problems airbnb (uses smart priority)
+• ` + h.prefix + `problems amazon 30d (forces 30 days)
+• ` + h.prefix + `problems google 3mo (forces 3 months)
+• ` + h.prefix + `process google apply (track application)
+• ` + h.prefix + `stats google (view statistics)
 • /problems company:airbnb (uses smart priority)
 • /problems company:amazon timeframe:thirty-days
-• /stats company:google
+• /stats company:google`
 
-**Supported Companies:**
+				embed.Footer = &discordgo.MessageEmbedFooter{
+					Text: "Page 3/4 • Use the buttons below to navigate",
+				}
+
+			case 3:
+				// Page 4: Additional Info
+				embed.Title = "Additional Information & Need Help?"
+				embed.Color = 0x5865F2
+				embed.Description = `**Supported Companies:**
 • Use the slash command dropdown to see all available companies!
 
-*Problems are sorted by interview frequency (most popular first)*`, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix)
+**Notes:**
+• Problems are sorted by interview frequency (most popular first)
+• The bot uses smart priority system for better results
+• All commands support both text and slash command formats
 
-	h.sendMessage(s, m.ChannelID, helpMsg)
+**Need Help?**
+• Use the pagination buttons to navigate through this help
+• Try the slash commands for better user experience
+• Check the dropdown options for available companies`
+
+				embed.Footer = &discordgo.MessageEmbedFooter{
+					Text: "Page 4/4 • Use the buttons below to navigate",
+				}
+			}
+
+			embed.Timestamp = time.Now().Format(time.RFC3339)
+		},
+		MaxPages:        4,
+		ExpiryLastUsage: true,
+		Expiry:          time.Now().Add(10 * time.Minute),
+	}
+}
+
+func (h *Handler) handleHelpCommand(s *discordgo.Session, m *discordgo.MessageCreate) {
+	// check if user is admin
+	isAdmin := m.Author.ID == "700444827287945316"
+
+	// create help paginator
+	pg := h.createHelpPaginator(isAdmin)
+
+	// send paginated help
+	err := PaginatorManager.CreateMessage(s, m.ChannelID, pg)
+	if err != nil {
+		fmt.Printf("Error creating help paginator: %v\n", err)
+		// fallback to simple message
+		h.sendMessage(s, m.ChannelID, "❌ Error displaying help. Please try again.")
+	}
 }
 
 func (h *Handler) handleProblemsSlash(s *discordgo.Session, i *discordgo.InteractionCreate) {
@@ -1465,69 +1535,27 @@ func (h *Handler) handleProblemsSlash(s *discordgo.Session, i *discordgo.Interac
 }
 
 func (h *Handler) handleHelpSlash(s *discordgo.Session, i *discordgo.InteractionCreate) {
-    helpMsg := fmt.Sprintf(`**Leetbot Commands:**
+	// check if user is admin
+	isAdmin := i.Member != nil && i.Member.User.ID == "700444827287945316"
 
-**Text Commands (prefix: %s):**
-• **%sproblems <company> [timeframe]** - Show interview problems
-• **%sprocess <company> <stage>** - Track interview stage
-• **%sstats <company>** - View process statistics
-• **%sshutdown [indef]** - Shutdown the bot (admin only) - use 'indef' to disable without exiting
-• **%sstartup** - Restart the bot or re-enable if disabled (admin only)
+	// create help paginator
+	pg := h.createHelpPaginator(isAdmin)
 
-**Slash Commands:**
-• **/problems** - Show interview problems (with dropdown options)
-• **/process** - Track new interview process
-• **/stats** - View interview process statistics
-• **/help** - Show this help message
-
-**Problems Command Usage:**
-• *company*: Company name (e.g., airbnb, amazon, google)
-• *timeframe*: Optional timeframe filter (if not specified, uses smart priority system)
-
-**Timeframe Options:**
-• **all** - All time
-• **30d** or **thirty-days** - Last 30 days
-• **3mo** or **three-months** - Last 3 months
-• **6mo** or **six-months** - Last 6 months
-• **>6mo** or **more-than-six-months** - More than 6 months ago
-
-**Smart Priority System:**
-When no timeframe is specified, the bot automatically tries:
-1. Last 30 days (most recent)
-2. Last 3 months (if 30d has no data)
-3. Last 6 months (if 3mo has no data)
-4. More than 6 months (if 6mo has no data)
-5. All time (fallback)
-
-**Process Tracking:**
-• **Stages:** Apply, Reject, OA, Phone, Onsite, Offer
-• Track your interview progress with **%sprocess**
-• View statistics with **%sstats**
-
-**Examples:**
-• %sproblems airbnb (uses smart priority)
-• %sproblems amazon 30d (forces 30 days)
-• %sproblems google 3mo (forces 3 months)
-• %sprocess google apply (track application)
-• %sstats google (view statistics)
-• /problems company:airbnb (uses smart priority)
-• /problems company:amazon timeframe:thirty-days
-• /stats company:google
-
-**Supported Companies:**
-• Use the slash command dropdown to see all available companies!
-
-*Problems are sorted by interview frequency (most popular first)*`, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix)
-
-	err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
-		Type: discordgo.InteractionResponseChannelMessageWithSource,
-		Data: &discordgo.InteractionResponseData{
-			Content: helpMsg,
-			Flags:   discordgo.MessageFlagsEphemeral | discordgo.MessageFlagsSuppressEmbeds,
-		},
-	})
+	// send paginated help
+	err := PaginatorManager.CreateInteraction(s, i.Interaction, pg, false)
 	if err != nil {
-		fmt.Printf("Error responding to interaction: %v\n", err)
+		fmt.Printf("Error creating help paginator: %v\n", err)
+		// fallback to simple message
+		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+			Type: discordgo.InteractionResponseChannelMessageWithSource,
+			Data: &discordgo.InteractionResponseData{
+				Content: "❌ Error displaying help. Please try again.",
+				Flags:   discordgo.MessageFlagsEphemeral,
+			},
+		})
+		if err != nil {
+			fmt.Printf("Error responding to interaction: %v\n", err)
+		}
 	}
 }
 
