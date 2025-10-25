@@ -115,13 +115,6 @@ func getCompanyAlias(input string) (string, bool) {
 	return "", false
 }
 
-// matchResult holds information about a fuzzy match
-type matchResult struct {
-	target     string
-	confidence float64
-	distance   int
-}
-
 // SlashCommandHandlers maps command names to their handler methods
 // we use this to dispatch slash commands to the appropriate handler
 var SlashCommandHandlers = map[string]string{
