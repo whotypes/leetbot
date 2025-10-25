@@ -1750,6 +1750,15 @@ func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.Messa
 	if len(args) > 0 && args[0] == "indef" {
 		// indefinite shutdown - disable bot but don't exit process
 		h.disabled = true
+
+		// set bot status to invisible
+		err := s.UpdateStatusComplex(discordgo.UpdateStatusData{
+			Status: "invisible",
+		})
+		if err != nil {
+			fmt.Printf("Error setting bot status to invisible: %v\n", err)
+		}
+
 		h.sendMessage(s, m.ChannelID, "🛑 Bot disabled indefinitely. Use `!startup` to re-enable.")
 		return
 	}
@@ -1782,6 +1791,15 @@ func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.Messag
 	if h.disabled {
 		// re-enable the bot
 		h.disabled = false
+
+		// restore normal bot status (online)
+		err := s.UpdateStatusComplex(discordgo.UpdateStatusData{
+			Status: "online",
+		})
+		if err != nil {
+			fmt.Printf("Error setting bot status to online: %v\n", err)
+		}
+
 		h.sendMessage(s, m.ChannelID, "✅ Bot re-enabled successfully!")
 		return
 	}
