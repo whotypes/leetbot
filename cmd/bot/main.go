@@ -153,10 +153,13 @@ func main() {
 			if err != nil {
 				log.Printf("Error closing Discord session: %v", err)
 				// Send error message
-				dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
+				_, err := dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
 					Content: "**Restart Complete** - Failed to close session",
 					Flags:   discordgo.MessageFlagsSuppressEmbeds,
 				})
+				if err != nil {
+					log.Printf("Error sending restart failure message: %v", err)
+				}
 				continue
 			}
 
@@ -168,10 +171,13 @@ func main() {
 			if err != nil {
 				log.Printf("Error reopening Discord session: %v", err)
 				// Send error message
-				dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
+				_, err := dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
 					Content: "**Restart Complete** - Failed to reconnect to Discord",
 					Flags:   discordgo.MessageFlagsSuppressEmbeds,
 				})
+				if err != nil {
+					log.Printf("Error sending reconnection failure message: %v", err)
+				}
 				// if reconnection fails, we can't really do much more from here
 				// the main process will need to be restarted
 			} else {
@@ -180,10 +186,13 @@ func main() {
 				handler.SetSession(dg)
 
 				// Send success confirmation
-				dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
+				_, err := dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
 					Content: "**Restart Complete** - Leetbot has restarted successfully!",
 					Flags:   discordgo.MessageFlagsSuppressEmbeds,
 				})
+				if err != nil {
+					log.Printf("Error sending restart success message: %v", err)
+				}
 			}
 		}
 	}()
