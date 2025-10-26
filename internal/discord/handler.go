@@ -729,6 +729,12 @@ func (h *Handler) GetSession() *discordgo.Session {
 func (h *Handler) HandleSlashCommand(s *discordgo.Session, i *discordgo.InteractionCreate) {
 	commandName := i.ApplicationCommandData().Name
 
+	// if bot is disabled, only allow help command
+	if h.disabled && commandName != "help" {
+		// silently ignore all other slash commands when disabled
+		return
+	}
+
 	switch commandName {
 	case "problems":
 		h.handleProblemsSlash(s, i)
@@ -1074,7 +1080,7 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 	if h.disabled {
 		// only allow shutdown, startup, and help commands when disabled
 		if command != "shutdown" && command != "startup" && command != "help" {
-			return
+			return // silently ignore all other commands
 		}
 	}
 
@@ -1467,6 +1473,12 @@ When no timeframe is specified, Leetbot automatically tries:
 }
 
 func (h *Handler) handleHelpCommand(s *discordgo.Session, m *discordgo.MessageCreate) {
+	// if bot is disabled, send short offline message
+	if h.disabled {
+		h.sendMessage(s, m.ChannelID, "Leetbot is currently offline. Please try again later.")
+		return
+	}
+
 	// check if user is admin
 	isAdmin := m.Author.ID == "700444827287945316"
 
@@ -1567,6 +1579,21 @@ func (h *Handler) handleProblemsSlash(s *discordgo.Session, i *discordgo.Interac
 }
 
 func (h *Handler) handleHelpSlash(s *discordgo.Session, i *discordgo.InteractionCreate) {
+	// if bot is disabled, send short offline message
+	if h.disabled {
+		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+			Type: discordgo.InteractionResponseChannelMessageWithSource,
+			Data: &discordgo.InteractionResponseData{
+				Content: "Leetbot is currently offline. Please try again later.",
+				Flags:   discordgo.MessageFlagsEphemeral,
+			},
+		})
+		if err != nil {
+			fmt.Printf("Error responding to interaction: %v\n", err)
+		}
+		return
+	}
+
 	// check if user is admin
 	isAdmin := i.Member != nil && i.Member.User.ID == "700444827287945316"
 
@@ -1811,8 +1838,18 @@ func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.Messa
 		// indefinite shutdown - disable Leetbot but don't exit process
 		h.disabled = true
 
+		// unregister all slash commands except help
+		h.sendMessage(s, m.ChannelID, "Unregistering commands...")
+		err := h.unregisterCommandsExceptHelp(s)
+		if err != nil {
+			fmt.Printf("Error unregistering commands: %v\n", err)
+			h.sendErrorMessage(s, m.ChannelID, fmt.Sprintf("Failed to unregister commands: %v", err))
+			h.disabled = false // revert disabled state on error
+			return
+		}
+
 		// set Leetbot status to invisible
-		err := s.UpdateStatusComplex(discordgo.UpdateStatusData{
+		err = s.UpdateStatusComplex(discordgo.UpdateStatusData{
 			Status: "invisible",
 		})
 		if err != nil {
@@ -1849,11 +1886,20 @@ func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.Messag
 
 	// check if Leetbot is disabled
 	if h.disabled {
+		// re-register slash commands
+		h.sendMessage(s, m.ChannelID, "Re-registering commands...")
+		err := h.registerAllCommands(s)
+		if err != nil {
+			fmt.Printf("Error re-registering commands: %v\n", err)
+			h.sendErrorMessage(s, m.ChannelID, fmt.Sprintf("Failed to re-register commands: %v", err))
+			return
+		}
+
 		// re-enable Leetbot
 		h.disabled = false
 
 		// restore normal Leetbot status (online)
-		err := s.UpdateStatusComplex(discordgo.UpdateStatusData{
+		err = s.UpdateStatusComplex(discordgo.UpdateStatusData{
 			Status: "online",
 		})
 		if err != nil {
@@ -1934,4 +1980,56 @@ func (h *Handler) formatAvailableTimeframesSuggestionSlash(company, requestedTim
 func (h *Handler) sendErrorMessage(s *discordgo.Session, channelID, message string) {
 
 	h.sendMessage(s, channelID, message)
+}
+
+// unregisterCommandsExceptHelp removes all slash commands except the help command
+func (h *Handler) unregisterCommandsExceptHelp(s *discordgo.Session) error {
+	// get all currently registered commands
+	registeredCommands, err := s.ApplicationCommands(s.State.User.ID, "")
+	if err != nil {
+		return fmt.Errorf("failed to get registered commands: %w", err)
+	}
+
+	// delete all commands except help
+	for _, cmd := range registeredCommands {
+		if cmd.Name != "help" {
+			fmt.Printf("Unregistering command: /%s\n", cmd.Name)
+			err := s.ApplicationCommandDelete(s.State.User.ID, "", cmd.ID)
+			if err != nil {
+				return fmt.Errorf("failed to delete command '%s': %w", cmd.Name, err)
+			}
+		}
+	}
+
+	return nil
+}
+
+// registerAllCommands registers all slash commands
+func (h *Handler) registerAllCommands(s *discordgo.Session) error {
+	commands := GetSlashCommands(h.problemsData)
+
+	// get currently registered commands to avoid duplicates
+	registeredCommands, err := s.ApplicationCommands(s.State.User.ID, "")
+	if err != nil {
+		return fmt.Errorf("failed to get registered commands: %w", err)
+	}
+
+	// create a map of registered command names
+	registeredMap := make(map[string]bool)
+	for _, cmd := range registeredCommands {
+		registeredMap[cmd.Name] = true
+	}
+
+	// register commands that aren't already registered
+	for _, cmd := range commands {
+		if !registeredMap[cmd.Name] {
+			fmt.Printf("Registering command: /%s\n", cmd.Name)
+			_, err := s.ApplicationCommandCreate(s.State.User.ID, "", cmd)
+			if err != nil {
+				return fmt.Errorf("failed to create command '%s': %w", cmd.Name, err)
+			}
+		}
+	}
+
+	return nil
 }
