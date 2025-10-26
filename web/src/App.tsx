@@ -119,6 +119,8 @@ function App() {
     }
   }, [queryClient, selectedCompany, selectedTimeframe])
 
+  const isDev = import.meta.env.DEV;
+
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--color-background)' }}>
@@ -126,7 +128,7 @@ function App() {
         <header className="mb-8 flex items-start justify-between">
           <div>
             <h1 className="text-4xl font-bold mb-2" style={{ color: 'var(--color-content)' }}>Leetbot.org - a leetcode problem data explorer</h1>
-            <p className='max-w-4xl' style={{ color: 'var(--color-tertiary)' }}>See all of the problems that have been asked at your favorite companies. <br /><a href="https://discord.com/oauth2/authorize?client_id=1431162839187460126&permissions=2147559424&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400">Add leetbot to your discord servers</a> to expose the problems in your own communities.</p>
+            <p className='max-w-4xl' style={{ color: 'var(--color-tertiary)' }}>See all of the problems that have been asked at your favorite companies. <br /><a href={isDev ? "https://discord.com/oauth2/authorize?client_id=1431162839187460126&permissions=277025736768&integration_type=0&scope=applications.commands+bot" : "https://discord.com/oauth2/authorize?client_id=1431596971767894036&permissions=277025736768&integration_type=0&scope=applications.commands+bot"} target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400">Add leetbot to your discord servers</a> to expose the problems in your own communities.</p>
           </div>
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </header>

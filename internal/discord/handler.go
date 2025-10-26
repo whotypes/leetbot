@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/bwmarrin/discordgo"
@@ -215,7 +216,7 @@ func GetSlashCommands(problemsData *data.ProblemsByCompany) []*discordgo.Applica
 		},
 		{
 			Name:        "help",
-			Description: "Show available bot commands and usage",
+			Description: "Show available Leetbot commands and usage",
 		},
 		{
 			Name:        "process",
@@ -507,7 +508,7 @@ func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompan
 	return "", false, suggestions
 }
 
-// validCommands lists all valid bot commands
+// validCommands lists all valid Leetbot commands
 var validCommands = []string{"problems", "help", "process", "stats", "shutdown", "startup"}
 
 // findCommandWithSuggestion attempts to match a command and returns suggestions if it's a typo
@@ -681,12 +682,20 @@ func getCompanyAutocompleteChoices(input string, problemsData *data.ProblemsByCo
 	return choices
 }
 
+type RestartRequest struct {
+	ChannelID string
+	Success   bool
+	Message   string
+}
+
 type Handler struct {
 	problemsData   *data.ProblemsByCompany
 	processStorage data.Storage
 	prefix         string
-	reconnectChan  chan bool
+	reconnectChan  chan RestartRequest
 	disabled       bool
+	session        *discordgo.Session
+	sessionMutex   sync.RWMutex
 }
 
 func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
@@ -696,12 +705,24 @@ func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
 	}
 }
 
-func (h *Handler) SetReconnectChannel(ch chan bool) {
+func (h *Handler) SetReconnectChannel(ch chan RestartRequest) {
 	h.reconnectChan = ch
 }
 
 func (h *Handler) SetProcessStorage(storage data.Storage) {
 	h.processStorage = storage
+}
+
+func (h *Handler) SetSession(session *discordgo.Session) {
+	h.sessionMutex.Lock()
+	defer h.sessionMutex.Unlock()
+	h.session = session
+}
+
+func (h *Handler) GetSession() *discordgo.Session {
+	h.sessionMutex.RLock()
+	defer h.sessionMutex.RUnlock()
+	return h.session
 }
 
 // HandleSlashCommand routes slash commands to appropriate handlers
@@ -738,7 +759,7 @@ func (h *Handler) handleProcessMessageCommand(s *discordgo.Session, m *discordgo
     }
 
     if h.processStorage == nil {
-        h.sendErrorMessage(s, m.ChannelID, "Process tracking is not configured on this bot.")
+        h.sendErrorMessage(s, m.ChannelID, "Process tracking is not configured on Leetbot.")
         return
     }
 
@@ -814,10 +835,10 @@ func (h *Handler) handleStatsCommand(s *discordgo.Session, m *discordgo.MessageC
 		return
 	}
 
-	if h.processStorage == nil {
-		h.sendErrorMessage(s, m.ChannelID, "Process tracking is not configured on this bot.")
-		return
-	}
+    if h.processStorage == nil {
+        h.sendErrorMessage(s, m.ChannelID, "Process tracking is not configured on Leetbot.")
+        return
+    }
 
 	// join all args to support multi-word company names like "jump trading"
 	companyInput := strings.Join(args, " ")
@@ -999,6 +1020,9 @@ func (h *Handler) buildCompanyStatsContent(company, channelID string, processes 
 }
 
 func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
+	// Update the handler's session reference
+	h.SetSession(s)
+
 	if m.Author.Bot {
 		return
 	}
@@ -1046,7 +1070,7 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 	// use the validated command
 	command = correctCommand
 
-	// check if bot is disabled (but allow shutdown, startup, and help commands)
+	// check if Leetbot is disabled (but allow shutdown, startup, and help commands)
 	if h.disabled {
 		// only allow shutdown, startup, and help commands when disabled
 		if command != "shutdown" && command != "startup" && command != "help" {
@@ -1305,16 +1329,24 @@ func (h *Handler) getTimeframeShortAlias(timeframe string) string {
 }
 
 func (h *Handler) sendMessage(s *discordgo.Session, channelID, message string) {
-	if s == nil {
+	session := h.GetSession()
+	if session == nil {
 		fmt.Printf("[TEST] Would send to %s: %s\n", channelID, message)
 		return
 	}
 
-	if s.Token == "" {
+	if session.Token == "" {
 		fmt.Printf("[TEST] Would send to %s: %s\n", channelID, message)
 		return
 	}
-	_, err := s.ChannelMessageSendComplex(channelID, &discordgo.MessageSend{
+
+	// Update session reference to the latest one
+	if s != nil && s != session {
+		h.SetSession(s)
+		session = s
+	}
+
+	_, err := session.ChannelMessageSendComplex(channelID, &discordgo.MessageSend{
 		Content: message,
 		Flags:   discordgo.MessageFlagsSuppressEmbeds,
 	})
@@ -1346,8 +1378,8 @@ func (h *Handler) createHelpPaginator(isAdmin bool) *paginator.Paginator {
 					embed.Description += fmt.Sprintf(`
 
 **Admin Commands:**
-• **%sshutdown [indef]** - Shutdown the bot (admin only)
-• **%sstartup** - Restart the bot or re-enable if disabled (admin only)`, h.prefix, h.prefix)
+• **%sshutdown [indef]** - Shutdown Leetbot (admin only)
+• **%sstartup** - Restart Leetbot or re-enable if disabled (admin only)`, h.prefix, h.prefix)
 				}
 
 				embed.Footer = &discordgo.MessageEmbedFooter{
@@ -1370,7 +1402,7 @@ func (h *Handler) createHelpPaginator(isAdmin bool) *paginator.Paginator {
 • **>6mo** or **more-than-six-months** - More than 6 months ago
 
 **Smart Priority System:**
-When no timeframe is specified, the bot automatically tries:
+When no timeframe is specified, Leetbot automatically tries:
 1. Last 30 days (most recent)
 2. Last 3 months (if 30d has no data)
 3. Last 6 months (if 3mo has no data)
@@ -1413,7 +1445,7 @@ When no timeframe is specified, the bot automatically tries:
 
 **Notes:**
 • Problems are sorted by interview frequency (most popular first)
-• The bot uses smart priority system for better results
+• Leetbot uses smart priority system for better results
 • All commands support both text and slash command formats
 
 **Need Help?**
@@ -1446,7 +1478,7 @@ func (h *Handler) handleHelpCommand(s *discordgo.Session, m *discordgo.MessageCr
 	if err != nil {
 		fmt.Printf("Error creating help paginator: %v\n", err)
 		// fallback to simple message
-		h.sendMessage(s, m.ChannelID, "❌ Error displaying help. Please try again.")
+		h.sendMessage(s, m.ChannelID, "Error displaying help. Please try again.")
 	}
 }
 
@@ -1549,7 +1581,7 @@ func (h *Handler) handleHelpSlash(s *discordgo.Session, i *discordgo.Interaction
 		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
 			Data: &discordgo.InteractionResponseData{
-				Content: "❌ Error displaying help. Please try again.",
+				Content: "Error displaying help. Please try again.",
 				Flags:   discordgo.MessageFlagsEphemeral,
 			},
 		})
@@ -1629,7 +1661,7 @@ func (h *Handler) handleProcessSlash(s *discordgo.Session, i *discordgo.Interact
 		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
 			Data: &discordgo.InteractionResponseData{
-				Content: "Process tracking is not configured on this bot.",
+				Content: "Process tracking is not configured on Leetbot.",
 				Flags:   discordgo.MessageFlagsEphemeral | discordgo.MessageFlagsSuppressEmbeds,
 			},
 		})
@@ -1752,7 +1784,7 @@ func (h *Handler) handleStatsSlash(s *discordgo.Session, i *discordgo.Interactio
 		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
 			Data: &discordgo.InteractionResponseData{
-				Content: "Process tracking is not configured on this bot.",
+				Content: "Process tracking is not configured on Leetbot.",
 				Flags:   discordgo.MessageFlagsEphemeral | discordgo.MessageFlagsSuppressEmbeds,
 			},
 		})
@@ -1770,30 +1802,30 @@ func (h *Handler) handleStatsSlash(s *discordgo.Session, i *discordgo.Interactio
 func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
 	// check if the user is authorized (nyumat's user ID)
 	if m.Author.ID != "700444827287945316" {
-		h.sendErrorMessage(s, m.ChannelID, "❌ Only the bot owner can use this command.")
+		h.sendErrorMessage(s, m.ChannelID, "Only the owner of Leetbot can use this command.")
 		return
 	}
 
 	// check if indefinite shutdown is requested
 	if len(args) > 0 && args[0] == "indef" {
-		// indefinite shutdown - disable bot but don't exit process
+		// indefinite shutdown - disable Leetbot but don't exit process
 		h.disabled = true
 
-		// set bot status to invisible
+		// set Leetbot status to invisible
 		err := s.UpdateStatusComplex(discordgo.UpdateStatusData{
 			Status: "invisible",
 		})
 		if err != nil {
-			fmt.Printf("Error setting bot status to invisible: %v\n", err)
+			fmt.Printf("Error setting Leetbot status to invisible: %v\n", err)
 		}
 
-		h.sendMessage(s, m.ChannelID, "🛑 Bot disabled indefinitely. Use `!startup` to re-enable.")
+		h.sendMessage(s, m.ChannelID, "Leetbot is now disabled indefinitely. Use `!startup` to re-enable.")
 		return
 	}
 
 	// regular shutdown - exit the process
 	// send confirmation message first
-	h.sendMessage(s, m.ChannelID, "🛑 Shutting down bot...")
+	h.sendMessage(s, m.ChannelID, "Leetbot is now shutting down...")
 
 	// close the session to disconnect from Discord
 	// use a goroutine with a small delay to ensure the message is sent
@@ -1811,70 +1843,46 @@ func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.Messa
 func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
 	// check if the user is authorized (nyumat's user ID)
 	if m.Author.ID != "700444827287945316" {
-		h.sendErrorMessage(s, m.ChannelID, "❌ Only the bot owner can use this command.")
+		h.sendErrorMessage(s, m.ChannelID, "Only the owner of Leetbot can use this command.")
 		return
 	}
 
-	// check if bot is disabled
+	// check if Leetbot is disabled
 	if h.disabled {
-		// re-enable the bot
+		// re-enable Leetbot
 		h.disabled = false
 
-		// restore normal bot status (online)
+		// restore normal Leetbot status (online)
 		err := s.UpdateStatusComplex(discordgo.UpdateStatusData{
 			Status: "online",
 		})
 		if err != nil {
-			fmt.Printf("Error setting bot status to online: %v\n", err)
+			fmt.Printf("Error setting Leetbot status to online: %v\n", err)
 		}
 
-		h.sendMessage(s, m.ChannelID, "✅ Bot re-enabled successfully!")
+		h.sendMessage(s, m.ChannelID, "Leetbot is now back online.")
 		return
 	}
 
-	// send confirmation message first
-	h.sendMessage(s, m.ChannelID, "🚀 Restarting bot...")
-
-	// signal the main function to restart the session
+	// Send restart request through the channel
 	if h.reconnectChan != nil {
 		select {
-		case h.reconnectChan <- true:
-			// signal sent successfully
+		case h.reconnectChan <- RestartRequest{
+			ChannelID: m.ChannelID,
+			Success:   false,
+			Message:   "Leetbot is restarting...",
+		}:
+			// Signal sent successfully
 		default:
-			// channel is full or closed, fallback to manual restart
-			h.restartSession(s)
+			// Channel full, send error message
+			h.sendErrorMessage(s, m.ChannelID, "Restart already in progress, please wait.")
 		}
 	} else {
-		// fallback if reconnect channel is not set
-		h.restartSession(s)
+		// No channel configured, send error
+		h.sendErrorMessage(s, m.ChannelID, "Restart mechanism not available.")
 	}
 }
 
-func (h *Handler) restartSession(s *discordgo.Session) {
-	// use a goroutine to restart the session
-	go func() {
-		time.Sleep(100 * time.Millisecond)
-
-		// close current session
-		err := s.Close()
-		if err != nil {
-			fmt.Printf("Error closing Discord session: %v\n", err)
-		}
-
-		// wait a bit before reconnecting
-		time.Sleep(1 * time.Second)
-
-		// attempt to reopen the session
-		err = s.Open()
-		if err != nil {
-			fmt.Printf("Error reopening Discord session: %v\n", err)
-			// if reconnection fails, we can't really do much more from here
-			// the main process will need to be restarted
-		} else {
-			fmt.Println("✓ Bot restarted successfully")
-		}
-	}()
-}
 
 func (h *Handler) formatAvailableTimeframesSuggestionSlash(company, requestedTimeframe string, availableTimeframes []string) string {
 	var message strings.Builder

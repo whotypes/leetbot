@@ -25,7 +25,7 @@ func main() {
 		log.Fatalf("Invalid configuration: %v", err)
 	}
 
-	fmt.Printf("Starting leetbot with prefix '%s'...\n", cfg.BotPrefix)
+	fmt.Printf("Starting Leetbot with prefix '%s'...\n", cfg.BotPrefix)
 	fmt.Println("Loading problems data...")
 	problemsData, err := data.LoadAllProblems()
 	if err != nil {
@@ -34,7 +34,7 @@ func main() {
 
 	fmt.Printf("Loaded data for %d companies\n", len(problemsData.GetAvailableCompanies()))
 
-    handler := discord.NewHandler(problemsData, cfg.BotPrefix)
+	handler := discord.NewHandler(problemsData, cfg.BotPrefix)
 
     // Wire up process storage if configured
     if cfg.FirestoreProjectID != "" {
@@ -54,13 +54,19 @@ func main() {
 		log.Fatalf("Failed to create Discord session: %v", err)
 	}
 
+	// Set the session in the handler for restart functionality
+	handler.SetSession(dg)
+
 	// create a channel to signal reconnection
-	reconnectChan := make(chan bool)
+	reconnectChan := make(chan discord.RestartRequest)
 	handler.SetReconnectChannel(reconnectChan)
 
 	dg.AddHandler(handler.HandleMessage)
 
 	dg.AddHandler(func(s *discordgo.Session, i *discordgo.InteractionCreate) {
+		// Update handler's session reference for slash commands and interactions
+		handler.SetSession(s)
+
 		switch i.Type {
 		case discordgo.InteractionMessageComponent:
 			// let the paginator handle button clicks
@@ -72,15 +78,10 @@ func main() {
 		}
 	})
 
-	// add reconnection handler
+	// add ready handler
 	dg.AddHandler(func(s *discordgo.Session, event *discordgo.Ready) {
-		// check if this is a reconnection
-		select {
-		case <-reconnectChan:
-			log.Println("🔄 Bot reconnected to Discord successfully")
-			return
-		default:
-		}
+		// Update handler's session reference on ready
+		handler.SetSession(s)
 
 		log.Printf("Leetbot logged in as: %v#%v", s.State.User.Username, s.State.User.Discriminator)
 
@@ -135,37 +136,62 @@ func main() {
 
 	// start a goroutine to handle reconnection signals
 	go func() {
-		for {
-			select {
-			case <-reconnectChan:
-				log.Println("🔄 Received restart signal, restarting Discord session...")
+		for restartReq := range reconnectChan {
+			log.Println("Received restart signal, restarting Discord session...")
 
-				// close current session
-				err := dg.Close()
-				if err != nil {
-					log.Printf("Error closing Discord session: %v", err)
-				}
+			// Send the initial restart message
+			_, err := dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
+				Content: restartReq.Message,
+				Flags:   discordgo.MessageFlagsSuppressEmbeds,
+			})
+			if err != nil {
+				log.Printf("Error sending restart message: %v", err)
+			}
 
-				// wait a bit before reconnecting
-				time.Sleep(1 * time.Second)
+			// close current session
+			err = dg.Close()
+			if err != nil {
+				log.Printf("Error closing Discord session: %v", err)
+				// Send error message
+				dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
+					Content: "**Restart Complete** - Failed to close session",
+					Flags:   discordgo.MessageFlagsSuppressEmbeds,
+				})
+				continue
+			}
 
-				// reopen the session
-				err = dg.Open()
-				if err != nil {
-					log.Printf("Error reopening Discord session: %v", err)
-					// if reconnection fails, we can't really do much more from here
-					// the main process will need to be restarted
-				} else {
-					log.Println("✅ Bot restarted successfully")
-				}
+			// wait a bit before reconnecting
+			time.Sleep(2 * time.Second)
+
+			// reopen the session
+			err = dg.Open()
+			if err != nil {
+				log.Printf("Error reopening Discord session: %v", err)
+				// Send error message
+				dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
+					Content: "**Restart Complete** - Failed to reconnect to Discord",
+					Flags:   discordgo.MessageFlagsSuppressEmbeds,
+				})
+				// if reconnection fails, we can't really do much more from here
+				// the main process will need to be restarted
+			} else {
+				log.Println("Leetbot restarted successfully")
+				// Update the handler's session reference
+				handler.SetSession(dg)
+
+				// Send success confirmation
+				dg.ChannelMessageSendComplex(restartReq.ChannelID, &discordgo.MessageSend{
+					Content: "**Restart Complete** - Leetbot has restarted successfully!",
+					Flags:   discordgo.MessageFlagsSuppressEmbeds,
+				})
 			}
 		}
 	}()
 
-	fmt.Println("Bot is now running. Press CTRL-C to exit.")
+	fmt.Println("Leetbot is now running. Press CTRL-C to exit.")
 	sc := make(chan os.Signal, 1)
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt)
 	<-sc
 
-	fmt.Println("Shutting down bot...")
+	fmt.Println("Shutting down Leetbot...")
 }
