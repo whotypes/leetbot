@@ -47,8 +47,8 @@ BOT_PID=$!
 ./server &
 SERVER_PID=$!
 
-echo "Bot started (PID: $BOT_PID)"
-echo "Server started (PID: $SERVER_PID)"
+echo "Leetbot started (PID: $BOT_PID)"
+echo "Leetbot web server started (PID: $SERVER_PID)"
 
 # wait for any process to exit
 wait -n

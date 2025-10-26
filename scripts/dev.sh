@@ -18,7 +18,7 @@ cleanup() {
 # Set up signal handlers
 trap cleanup SIGINT SIGTERM
 
-echo "Starting Discord bot and web server..."
+echo "Starting leetbot and web server..."
 
 # Start the Discord bot in the background
 go run ./cmd/bot &
