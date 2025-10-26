@@ -59,10 +59,10 @@ The bot supports both text commands (with prefix `!`) and slash commands (with p
 ### Discord Bot Setup
 
 1. Go to [Discord Developer Portal](https://discord.com/developers/applications)
-2. Create a new application or use existing bot
+2. Create a new application or use an existing bot
 3. Go to **OAuth2** → **URL Generator**
 4. Select scopes: `bot` and `applications.commands`
-5. Select permissions: `Send Messages`, `Use Slash Commands`, `Read Message History`
+5. Select permissions: `Send Messages`, `Use Slash Commands`, `Send Messages in Threads`, `Read Message History`, `Embed Links`, `Use External Emojis`, and `Add Reactions`
 6. Use the generated URL to add the bot to your server
 
 ### Installation
