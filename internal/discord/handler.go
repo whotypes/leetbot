@@ -648,7 +648,7 @@ func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompan
 }
 
 // validCommands lists all valid Leetbot commands
-var validCommands = []string{"problems", "help", "process", "shutdown", "startup"}
+var validCommands = []string{"problems", "help", "process", "shutdown", "startup", "init"}
 
 // findCommandWithSuggestion attempts to match a command and returns suggestions if it's a typo
 // returns: (correctCommand, isValidCommand, didYouMeanSuggestion)
@@ -878,19 +878,45 @@ type RestartRequest struct {
 }
 
 type Handler struct {
-	problemsData   *data.ProblemsByCompany
-	processStorage data.Storage
-	prefix         string
-	reconnectChan  chan RestartRequest
-	disabled       bool
-	session        *discordgo.Session
-	sessionMutex   sync.RWMutex
+	problemsData     *data.ProblemsByCompany
+	processStorage   data.Storage
+	prefix           string
+	reconnectChan    chan RestartRequest
+	disabled         bool
+	session          *discordgo.Session
+	sessionMutex     sync.RWMutex
+	enabledChannels  map[string]bool // tracks which channels leetbot is enabled in
+	channelsMutex    sync.RWMutex    // protects enabledChannels map
+}
+
+const (
+	// admin user ID (nyumat)
+	adminUserID = "700444827287945316"
+	// specific server where channels are pre-initialized
+	specificServerID = "698366411864670250"
+)
+
+// pre-initialized channels for the specific server and test channel
+var preInitializedChannels = []string{
+	"947389742859812884",  // production channel 1
+	"1395661511950729308", // production channel 2
+	"1242309460689424504", // production channel 3
+	"971974276859170886",  // production channel 4
+	"905854653571420190",  // production channel 5
+	"channel123",          // test channel
 }
 
 func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
+	// initialize the enabled channels map with pre-initialized channels
+	enabledChannels := make(map[string]bool)
+	for _, channelID := range preInitializedChannels {
+		enabledChannels[channelID] = true
+	}
+
 	return &Handler{
-		problemsData: problemsData,
-		prefix:       prefix,
+		problemsData:    problemsData,
+		prefix:          prefix,
+		enabledChannels: enabledChannels,
 	}
 }
 
@@ -912,6 +938,32 @@ func (h *Handler) GetSession() *discordgo.Session {
 	h.sessionMutex.RLock()
 	defer h.sessionMutex.RUnlock()
 	return h.session
+}
+
+// isChannelEnabled checks if leetbot is enabled in the given channel
+func (h *Handler) isChannelEnabled(channelID string) bool {
+	h.channelsMutex.RLock()
+	defer h.channelsMutex.RUnlock()
+	return h.enabledChannels[channelID]
+}
+
+// enableChannel enables leetbot in the given channel
+func (h *Handler) enableChannel(channelID string) {
+	h.channelsMutex.Lock()
+	defer h.channelsMutex.Unlock()
+	h.enabledChannels[channelID] = true
+}
+
+// disableChannel disables leetbot in the given channel
+func (h *Handler) disableChannel(channelID string) {
+	h.channelsMutex.Lock()
+	defer h.channelsMutex.Unlock()
+	delete(h.enabledChannels, channelID)
+}
+
+// isAdmin checks if the user is the admin (nyumat)
+func isAdmin(userID string) bool {
+	return userID == adminUserID
 }
 
 // HandleSlashCommand routes slash commands to appropriate handlers
@@ -1094,10 +1146,18 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 	// use the validated command
 	command = correctCommand
 
-	// check if Leetbot is disabled (but allow shutdown, startup, and help commands)
+	// check if channel is enabled (init and help are always allowed)
+	if command != "init" && command != "help" {
+		if !h.isChannelEnabled(m.ChannelID) {
+			// silently ignore commands in non-initialized channels
+			return
+		}
+	}
+
+	// check if Leetbot is disabled (but allow shutdown, startup, help, and init commands)
 	if h.disabled {
-		// only allow shutdown, startup, and help commands when disabled
-		if command != "shutdown" && command != "startup" && command != "help" {
+		// only allow shutdown, startup, help, and init commands when disabled
+		if command != "shutdown" && command != "startup" && command != "help" && command != "init" {
 			return // silently ignore all other commands
 		}
 	}
@@ -1113,6 +1173,8 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 		h.handleShutdownMessage(s, m, args)
 	case "startup":
 		h.handleStartupMessage(s, m, args)
+	case "init":
+		h.handleInitCommand(s, m, args)
 	default:
 		h.sendErrorMessage(s, m.ChannelID, fmt.Sprintf("Unknown command '%s'. Use `%shelp` for available commands.", command, h.prefix))
 	}
@@ -1415,8 +1477,14 @@ func (h *Handler) createHelpPaginator(isAdmin bool) *paginator.Paginator {
 					embed.Description += fmt.Sprintf(`
 
 **Admin Commands:**
+• **%sinit** - Enable Leetbot in current channel (admin only)
+• **%sinit enable** - Enable Leetbot in current channel (admin only)
+• **%sinit disable** - Disable Leetbot in current channel (admin only)
+• **%sinit status** - Check if Leetbot is enabled in current channel (admin only)
 • **%sshutdown [indef]** - Shutdown Leetbot (admin only)
-• **%sstartup** - Restart Leetbot or re-enable if disabled (admin only)`, h.prefix, h.prefix)
+• **%sstartup** - Restart Leetbot or re-enable if disabled (admin only)
+
+**Note:** Leetbot only responds in channels that have been initialized by the admin.`, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix)
 				}
 
 				embed.Footer = &discordgo.MessageEmbedFooter{
@@ -1508,10 +1576,10 @@ func (h *Handler) handleHelpCommand(s *discordgo.Session, m *discordgo.MessageCr
 	}
 
 	// check if user is admin
-	isAdmin := m.Author.ID == "700444827287945316"
+	isAdminUser := isAdmin(m.Author.ID)
 
 	// create help paginator
-	pg := h.createHelpPaginator(isAdmin)
+	pg := h.createHelpPaginator(isAdminUser)
 
 	// send paginated help
 	err := PaginatorManager.CreateMessage(s, m.ChannelID, pg)
@@ -1623,10 +1691,13 @@ func (h *Handler) handleHelpSlash(s *discordgo.Session, i *discordgo.Interaction
 	}
 
 	// check if user is admin
-	isAdmin := i.Member != nil && i.Member.User.ID == "700444827287945316"
+	var isAdminUser bool
+	if i.Member != nil {
+		isAdminUser = isAdmin(i.Member.User.ID)
+	}
 
 	// create help paginator
-	pg := h.createHelpPaginator(isAdmin)
+	pg := h.createHelpPaginator(isAdminUser)
 
 	// send paginated help
 	err := PaginatorManager.CreateInteraction(s, i.Interaction, pg, false)
@@ -1795,8 +1866,8 @@ func formatTimeframeDisplay(timeframe string) string {
 }
 
 func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
-	// check if the user is authorized (nyumat's user ID)
-	if m.Author.ID != "700444827287945316" {
+	// check if the user is authorized (admin only)
+	if !isAdmin(m.Author.ID) {
 		h.sendErrorMessage(s, m.ChannelID, "Only the owner of Leetbot can use this command.")
 		return
 	}
@@ -1846,8 +1917,8 @@ func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.Messa
 }
 
 func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
-	// check if the user is authorized (nyumat's user ID)
-	if m.Author.ID != "700444827287945316" {
+	// check if the user is authorized (admin only)
+	if !isAdmin(m.Author.ID) {
 		h.sendErrorMessage(s, m.ChannelID, "Only the owner of Leetbot can use this command.")
 		return
 	}
@@ -1894,6 +1965,40 @@ func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.Messag
 	} else {
 		// No channel configured, send error
 		h.sendErrorMessage(s, m.ChannelID, "Restart mechanism not available.")
+	}
+}
+
+func (h *Handler) handleInitCommand(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
+	// check if the user is authorized (nyumat's user ID)
+	if !isAdmin(m.Author.ID) {
+		h.sendErrorMessage(s, m.ChannelID, "Only the admin can initialize channels.")
+		return
+	}
+
+	// check if there's a subcommand (enable/disable)
+	if len(args) == 0 {
+		// enable the current channel
+		h.enableChannel(m.ChannelID)
+		h.sendMessage(s, m.ChannelID, "✓ Leetbot is now enabled in this channel.")
+		return
+	}
+
+	subcommand := strings.ToLower(args[0])
+	switch subcommand {
+	case "enable":
+		h.enableChannel(m.ChannelID)
+		h.sendMessage(s, m.ChannelID, "✓ Leetbot is now enabled in this channel.")
+	case "disable":
+		h.disableChannel(m.ChannelID)
+		h.sendMessage(s, m.ChannelID, "✓ Leetbot is now disabled in this channel.")
+	case "status":
+		if h.isChannelEnabled(m.ChannelID) {
+			h.sendMessage(s, m.ChannelID, "✓ Leetbot is enabled in this channel.")
+		} else {
+			h.sendMessage(s, m.ChannelID, "✗ Leetbot is not enabled in this channel.")
+		}
+	default:
+		h.sendErrorMessage(s, m.ChannelID, fmt.Sprintf("Unknown subcommand '%s'. Usage: !init [enable|disable|status]", subcommand))
 	}
 }
 
