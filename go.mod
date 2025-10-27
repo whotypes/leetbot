@@ -12,7 +12,6 @@ require (
 	github.com/lithammer/fuzzysearch v1.1.8
 	github.com/topi314/dgo-paginator v0.0.0-20240808185922-2102ebe1a287
 	golang.org/x/text v0.30.0
-	google.golang.org/api v0.253.0
 )
 
 require (
@@ -34,7 +33,6 @@ require (
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
-	github.com/schollz/closestmatch v2.1.0+incompatible // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.61.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.61.0 // indirect
@@ -47,6 +45,7 @@ require (
 	golang.org/x/sync v0.17.0 // indirect
 	golang.org/x/sys v0.37.0 // indirect
 	golang.org/x/time v0.14.0 // indirect
+	google.golang.org/api v0.253.0 // indirect
 	google.golang.org/genproto v0.0.0-20250603155806-513f23925822 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250818200422-3122310a409c // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20251014184007-4626949a642f // indirect
