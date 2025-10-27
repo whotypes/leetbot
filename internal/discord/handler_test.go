@@ -1,6 +1,7 @@
 package discord
 
 import (
+	"strings"
 	"testing"
 
 	"github.com/bwmarrin/discordgo"
@@ -598,10 +599,10 @@ func TestFindCompanyWithSuggestion(t *testing.T) {
 	problemsData := data.NewTestProblemsByCompany(testData)
 
 	tests := []struct {
-		name           string
-		input          string
-		expectedFound  bool
-		expectedCompany string
+		name              string
+		input             string
+		expectedFound     bool
+		expectedCompany   string
 		expectSuggestions bool
 	}{
 		// High confidence auto-corrections
@@ -618,18 +619,18 @@ func TestFindCompanyWithSuggestion(t *testing.T) {
 		{"alphabet alias", "alphabet", true, "google", false},
 
 		// Medium confidence suggestions (these actually auto-correct due to high confidence)
-		{"medium confidence", "goog", true, "google", false}, // auto-corrects due to high confidence
-		{"medium confidence 2", "amaz", true, "amazon", false}, // auto-corrects due to high confidence
+		{"medium confidence", "goog", true, "google", false},       // auto-corrects due to high confidence
+		{"medium confidence 2", "amaz", true, "amazon", false},     // auto-corrects due to high confidence
 		{"medium confidence 3", "micro", true, "microsoft", false}, // auto-corrects due to high confidence
 
 		// Ambiguous cases
-		{"dropbox vs box - dropbox", "drop", true, "dropbox", false}, // auto-corrects to dropbox
-		{"dropbox vs box - box", "box", true, "box", false}, // exact match to box
+		{"dropbox vs box - dropbox", "drop", true, "dropbox", false},          // auto-corrects to dropbox
+		{"dropbox vs box - box", "box", true, "box", false},                   // exact match to box
 		{"dropbox vs box - dropbox exact", "dropbox", true, "dropbox", false}, // exact match to dropbox
 
 		// Multi-word companies (these auto-correct due to high confidence)
-		{"jane street partial", "jane", true, "jane-street", false}, // auto-corrects to jane-street
-		{"jump trading partial", "jump", true, "jump-trading", false}, // auto-corrects to jump-trading
+		{"jane street partial", "jane", true, "jane-street", false},        // auto-corrects to jane-street
+		{"jump trading partial", "jump", true, "jump-trading", false},      // auto-corrects to jump-trading
 		{"the trade desk partial", "trade", true, "the-trade-desk", false}, // auto-corrects to the-trade-desk
 
 		// Low confidence - should get suggestions
@@ -643,10 +644,10 @@ func TestFindCompanyWithSuggestion(t *testing.T) {
 		{"ttd ambiguous", "ttd", false, "", true}, // should suggest multiple options including the-trade-desk
 
 		// Test stock ticker behavior
-		{"amd exact", "amd", true, "amd", false}, // exact match
-		{"AMD uppercase", "AMD", true, "amd", false}, // case insensitive exact match
+		{"amd exact", "amd", true, "amd", false},            // exact match
+		{"AMD uppercase", "AMD", true, "amd", false},        // case insensitive exact match
 		{"meta uppercase", "META", true, "facebook", false}, // alias match
-		{"fb lowercase", "fb", true, "facebook", false}, // alias match
+		{"fb lowercase", "fb", true, "facebook", false},     // alias match
 	}
 
 	for _, tt := range tests {
@@ -675,29 +676,26 @@ func TestFindCompanyWithSuggestion(t *testing.T) {
 // Test command fuzzy matching
 func TestFindCommandWithSuggestion(t *testing.T) {
 	tests := []struct {
-		name           string
-		input          string
-		expectedValid  bool
-		expectedCmd    string
+		name             string
+		input            string
+		expectedValid    bool
+		expectedCmd      string
 		expectSuggestion bool
 	}{
 		// Valid commands
 		{"exact problems", "problems", true, "problems", false},
 		{"exact help", "help", true, "help", false},
 		{"exact process", "process", true, "process", false},
-		{"exact stats", "stats", true, "stats", false},
 
 		// Close typos - should suggest
 		{"proces typo", "proces", false, "", true},
 		{"problms typo", "problms", false, "", true},
 		{"hel typo", "hel", false, "", true},
-		{"stat typo", "stat", false, "", true},
 		{"proces typo 2", "proces", false, "", true},
 
 		// Medium typos - should suggest
 		{"probl typo", "probl", false, "", true},
 		{"he typo", "he", false, "", true},
-		{"sta typo", "sta", false, "", true},
 
 		// Too different - no suggestion
 		{"completely different", "xyz", false, "", false},
@@ -770,15 +768,15 @@ func TestCalculateMatchConfidence(t *testing.T) {
 		{"", "", 1.0},
 		{"a", "a", 1.0},
 		{"google", "google", 1.0},
-		{"googl", "google", 0.833333}, // 1 char difference out of 6 = 5/6
-		{"goog", "google", 0.666667},  // 2 char difference out of 6 = 4/6
-		{"goo", "google", 0.5},        // 3 char difference out of 6 = 3/6
-		{"xyz", "google", 0.0},        // completely different
-		{"amazn", "amazon", 0.833333}, // 1 char difference out of 6 = 5/6
+		{"googl", "google", 0.833333},       // 1 char difference out of 6 = 5/6
+		{"goog", "google", 0.666667},        // 2 char difference out of 6 = 4/6
+		{"goo", "google", 0.5},              // 3 char difference out of 6 = 3/6
+		{"xyz", "google", 0.0},              // completely different
+		{"amazn", "amazon", 0.833333},       // 1 char difference out of 6 = 5/6
 		{"microsft", "microsoft", 0.888889}, // 1 char difference out of 9 = 8/9
 		{"ttd", "the-trade-desk", 0.214286}, // 3/14 = 0.214286 (low confidence)
-		{"ttd", "td", 0.666667}, // 1/3 = 0.666667 (medium confidence)
-		{"ttd", "amd", 0.333333}, // 2/3 = 0.333333 (low-medium confidence)
+		{"ttd", "td", 0.666667},             // 1/3 = 0.666667 (medium confidence)
+		{"ttd", "amd", 0.333333},            // 2/3 = 0.333333 (low-medium confidence)
 	}
 
 	for _, tt := range tests {
@@ -827,10 +825,10 @@ func TestGetCompanyAlias(t *testing.T) {
 // Test stage fuzzy matching
 func TestFindStageWithSuggestion(t *testing.T) {
 	tests := []struct {
-		name           string
-		input          string
-		expectedFound  bool
-		expectedStage  string
+		name              string
+		input             string
+		expectedFound     bool
+		expectedStage     string
 		expectSuggestions bool
 	}{
 		// Valid stages
@@ -900,10 +898,10 @@ func TestAmbiguousCompanyMatching(t *testing.T) {
 	problemsData := data.NewTestProblemsByCompany(testData)
 
 	tests := []struct {
-		name           string
-		input          string
-		expectedFound  bool
-		expectedCompany string
+		name              string
+		input             string
+		expectedFound     bool
+		expectedCompany   string
 		expectSuggestions bool
 	}{
 		{"exact dropbox", "dropbox", true, "dropbox", false},
@@ -911,8 +909,8 @@ func TestAmbiguousCompanyMatching(t *testing.T) {
 		{"exact drop", "drop", true, "drop", false},
 
 		// Ambiguous cases - should suggest multiple options
-		{"ambiguous drop", "drop", true, "drop", false}, // exact match to "drop"
-		{"ambiguous box partial", "bo", true, "box", false}, // auto-corrects to "box"
+		{"ambiguous drop", "drop", true, "drop", false},                // exact match to "drop"
+		{"ambiguous box partial", "bo", true, "box", false},            // auto-corrects to "box"
 		{"ambiguous dropbox partial", "dropb", true, "dropbox", false}, // auto-corrects to "dropbox"
 	}
 
@@ -934,6 +932,212 @@ func TestAmbiguousCompanyMatching(t *testing.T) {
 
 			if !tt.expectSuggestions && len(suggestions) > 0 {
 				t.Errorf("findCompanyWithSuggestion(%q) got suggestions %v but expected none", tt.input, suggestions)
+			}
+		})
+	}
+}
+
+// Test parsing logic for process command with trailing text
+func TestProcessCommandParsing(t *testing.T) {
+	tests := []struct {
+		name            string
+		input           string
+		expectedCompany string
+		expectedStage   string
+		expectError     bool
+	}{
+		// Basic cases
+		{"basic case", "google oa", "google", "OA", false},
+		{"meta alias", "meta offer", "facebook", "Offer", false},
+		{"multi-word company", "jump trading phone", "jump trading", "Phone", false},
+
+		// Cases with trailing text
+		{"trailing text", "google oa (has anyone done this", "google", "OA", false},
+		{"trailing text multi-word", "jump trading oa (what about onsite", "jump trading", "OA", false},
+		{"long trailing text", "google oa (dm if youve done this interview before", "google", "OA", false},
+
+		// Cases with job-related words (should be cleaned, but stages preserved)
+		{"new grad swe", "pure storage new grad swe oa", "pure storage oa", "OA", false},
+		{"software engineer", "google software engineer phone", "google phone", "Phone", false},
+		{"internship", "facebook internship offer", "facebook offer", "Offer", false},
+		{"senior role", "apple senior software engineer onsite", "apple onsite", "Onsite", false},
+
+		// Edge cases
+		{"only company no stage", "google", "", "", true},
+		{"invalid stage", "google invalid", "", "", true},
+		{"stage in middle", "google apply oa extra", "google apply", "OA", false},
+		{"multiple valid stages", "google oa phone onsite", "google oa phone", "Onsite", false},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// Simulate the parsing logic from handleProcessMessageCommand
+			args := strings.Fields(tt.input)
+			if len(args) < 2 {
+				if !tt.expectError {
+					t.Errorf("Expected no error for input %q, but got insufficient args", tt.input)
+				}
+				return
+			}
+
+			// Use the same parsing logic as the actual handler
+			var stageIndex = -1
+			maxSearchDistance := 4
+			if len(args) < maxSearchDistance {
+				maxSearchDistance = len(args)
+			}
+
+			for i := 1; i <= maxSearchDistance && i <= len(args); i++ {
+				candidateStage := args[len(args)-i]
+				if _, found, _ := findStageWithSuggestion(candidateStage); found {
+					stageIndex = len(args) - i
+					break
+				}
+			}
+
+			if stageIndex == -1 {
+				if !tt.expectError {
+					t.Errorf("Expected to find valid stage in %q, but none found", tt.input)
+				}
+				return
+			}
+
+			companyInput := strings.Join(args[:stageIndex], " ")
+			stageInput := args[stageIndex]
+			stage, _, _ := findStageWithSuggestion(stageInput)
+
+			if tt.expectError {
+				t.Errorf("Expected error for input %q, but parsing succeeded", tt.input)
+				return
+			}
+
+			// Test the cleaned company input (this is what the actual handler uses)
+			cleanedCompanyInput := cleanCompanyInput(companyInput)
+			if cleanedCompanyInput != tt.expectedCompany {
+				t.Errorf("Expected cleaned company %q, got %q (from raw: %q)", tt.expectedCompany, cleanedCompanyInput, companyInput)
+			}
+
+			if stage != tt.expectedStage {
+				t.Errorf("Expected stage %q, got %q", tt.expectedStage, stage)
+			}
+		})
+	}
+}
+
+// Test parsing logic for problems command with trailing text
+func TestProblemsCommandParsing(t *testing.T) {
+	handler := NewHandler(createTestProblemsData(), "!")
+
+	tests := []struct {
+		name              string
+		input             string
+		expectedCompany   string
+		expectedTimeframe string
+	}{
+		// Basic cases
+		{"basic case", "google", "google", ""},
+		{"with timeframe", "amazon 30d", "amazon", "30d"},
+		{"multi-word company", "jump trading", "jump trading", ""},
+
+		// Cases with trailing text
+		{"trailing text", "google (what are the best problems", "google", ""},
+		{"trailing text with timeframe", "amazon 30d (show me the hardest", "amazon", "30d"},
+		{"multi-word with timeframe", "jump trading 3mo (any system design", "jump trading", "3mo"},
+		{"trailing text only", "facebook (show me everything", "facebook", ""},
+
+		// Cases with job-related words (should be cleaned, but timeframes preserved if present)
+		{"new grad", "pure storage new grad swe", "pure storage", ""},
+		{"software engineer", "google software engineer", "google", ""},
+		{"internship", "facebook internship", "facebook", ""},
+		{"senior role", "apple senior software engineer", "apple", ""},
+
+		// Edge cases
+		{"timeframe in middle", "google 30d extra stuff", "google", "30d"},
+		{"multiple timeframes", "google 30d 3mo extra", "google 30d", "3mo"},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			args := strings.Fields(tt.input)
+
+			// Use the same parsing logic as the actual handler
+			var companyInput, timeframeArg string
+			var timeframeIndex = -1
+			maxSearchDistance := 4
+			if len(args) < maxSearchDistance {
+				maxSearchDistance = len(args)
+			}
+
+			for i := 1; i <= maxSearchDistance && i <= len(args); i++ {
+				candidateTimeframe := strings.ToLower(args[len(args)-i])
+				if handler.isTimeframeKeyword(candidateTimeframe) {
+					timeframeIndex = len(args) - i
+					timeframeArg = candidateTimeframe
+					break
+				}
+			}
+
+			if timeframeIndex != -1 {
+				companyInput = strings.Join(args[:timeframeIndex], " ")
+			} else {
+				companyInput = strings.Join(args, " ")
+			}
+
+			// Test the cleaned company input (this is what the actual handler uses)
+			cleanedCompanyInput := cleanCompanyInput(companyInput)
+			if cleanedCompanyInput != tt.expectedCompany {
+				t.Errorf("Expected cleaned company %q, got %q (from raw: %q)", tt.expectedCompany, cleanedCompanyInput, companyInput)
+			}
+
+			if timeframeArg != tt.expectedTimeframe {
+				t.Errorf("Expected timeframe %q, got %q", tt.expectedTimeframe, timeframeArg)
+			}
+		})
+	}
+}
+
+// Test company input cleaning function
+func TestCleanCompanyInput(t *testing.T) {
+	tests := []struct {
+		name     string
+		input    string
+		expected string
+	}{
+		// Basic cases
+		{"simple company", "google", "google"},
+		{"spaced company", "pure storage", "pure storage"},
+		{"company with punctuation", "google.", "google"},
+		{"company with parentheses", "google (inc)", "google"},
+
+		// Job-related words to filter (but stages preserved)
+		{"new grad", "pure storage new grad swe", "pure storage"},
+		{"software engineer", "google software engineer", "google"},
+		{"internship", "facebook internship", "facebook"},
+		{"full time", "amazon full time", "amazon"},
+		{"senior role", "apple senior software engineer", "apple"},
+		{"multiple job words", "microsoft new grad software engineer intern", "microsoft"},
+
+		// Stages should be preserved
+		{"stage preserved", "google oa", "google oa"},
+		{"stage with job words", "facebook software engineer phone", "facebook phone"},
+		{"stage with trailing", "meta offer (best company", "meta offer"},
+
+		// Complex cases
+		{"mixed case", "Pure Storage New Grad SWE", "pure storage"},
+		{"with extra words", "meta software engineer intern (remote)", "meta"},
+		{"all job words", "new grad swe intern", ""},
+
+		// Edge cases
+		{"empty string", "", ""},
+		{"only job words", "swe engineer developer", ""},
+		{"company with numbers", "google 2024", "google 2024"},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := cleanCompanyInput(tt.input)
+			if result != tt.expected {
+				t.Errorf("cleanCompanyInput(%q) = %q, want %q", tt.input, result, tt.expected)
 			}
 		})
 	}

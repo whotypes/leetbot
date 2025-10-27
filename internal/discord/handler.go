@@ -1,8 +1,12 @@
 package discord
 
 import (
+	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
+	"io"
+	"net/http"
 	"os"
 	"strings"
 	"sync"
@@ -15,6 +19,80 @@ import (
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )
+
+// CompanyEnrichResponse represents the response from the Company Enrich API
+type CompanyEnrichResponse struct {
+	Items      []CompanyEnrichItem `json:"items"`
+	Page       int                 `json:"page"`
+	TotalPages int                 `json:"totalPages"`
+	TotalItems int                 `json:"totalItems"`
+}
+
+// CompanyEnrichItem represents a single company from the API response
+type CompanyEnrichItem struct {
+	ID     string  `json:"id"`
+	Name   *string `json:"name"`
+	Domain *string `json:"domain"`
+}
+
+// searchCompanyEnrichAPI calls the Company Enrich API to find companies
+func searchCompanyEnrichAPI(query string) ([]CompanyEnrichItem, error) {
+	apiKey := os.Getenv("COMPANY_ENRICH_API_KEY")
+	if apiKey == "" {
+		return nil, fmt.Errorf("COMPANY_ENRICH_API_KEY not set")
+	}
+
+	url := "https://api.companyenrich.com/companies/search"
+
+	// create the request payload
+	payload := map[string]string{
+		"semanticQuery": query,
+		"query":         query,
+	}
+	payloadBytes, err := json.Marshal(payload)
+	if err != nil {
+		return nil, fmt.Errorf("failed to marshal payload: %w", err)
+	}
+
+	// create the HTTP request
+	req, err := http.NewRequest("POST", url, bytes.NewReader(payloadBytes))
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %w", err)
+	}
+
+	req.Header.Add("accept", "application/json")
+	req.Header.Add("content-type", "application/json")
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", apiKey))
+
+	// send the request
+	client := &http.Client{
+		Timeout: 5 * time.Second, // add timeout to prevent hanging
+	}
+	res, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to send request: %w", err)
+	}
+	defer res.Body.Close()
+
+	// check response status
+	if res.StatusCode != http.StatusOK {
+		body, _ := io.ReadAll(res.Body)
+		return nil, fmt.Errorf("API returned non-200 status: %d, body: %s", res.StatusCode, string(body))
+	}
+
+	// read and parse response
+	body, err := io.ReadAll(res.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read response body: %w", err)
+	}
+
+	var response CompanyEnrichResponse
+	if err := json.Unmarshal(body, &response); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal response: %w", err)
+	}
+
+	return response.Items, nil
+}
 
 // levenshteinDistance calculates the edit distance between two strings
 func levenshteinDistance(s1, s2 string) int {
@@ -124,14 +202,13 @@ var SlashCommandHandlers = map[string]string{
 	"problems": "problems",
 	"help":     "help",
 	"process":  "process",
-	"stats":    "stats",
 }
 
 func HandleAutocomplete(s *discordgo.Session, i *discordgo.InteractionCreate, problemsData *data.ProblemsByCompany) {
 	data := i.ApplicationCommandData()
 
 	// handle autocomplete for commands that use company autocomplete
-	if data.Name != "problems" && data.Name != "process" && data.Name != "stats" {
+	if data.Name != "problems" && data.Name != "process" {
 		return
 	}
 
@@ -235,19 +312,6 @@ func GetSlashCommands(problemsData *data.ProblemsByCompany) []*discordgo.Applica
 					Description: "Interview stage",
 					Required:    true,
 					Choices:     getStageChoices(),
-				},
-			},
-		},
-		{
-			Name:        "stats",
-			Description: "View interview process statistics",
-			Options: []*discordgo.ApplicationCommandOption{
-				{
-					Type:         discordgo.ApplicationCommandOptionString,
-					Name:         "company",
-					Description:  "Company name (start typing to search)",
-					Required:     true,
-					Autocomplete: true,
 				},
 			},
 		},
@@ -430,7 +494,7 @@ func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompan
 		// check if this is an ambiguous case (multiple matches with similar confidence)
 		// or if input looks like a stock ticker/abbreviation (3-4 characters, all caps or mixed)
 		ambiguousThreshold := 0.2 // matches within 20% confidence are considered ambiguous
-		ambiguousMatches := 1 // count the best match
+		ambiguousMatches := 1     // count the best match
 		isLikelyTicker := len(input) <= 5 && len(input) >= 2 && strings.ContainsAny(strings.ToUpper(input), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
 		// count how many matches are within ambiguous threshold
@@ -498,7 +562,82 @@ func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompan
 			return "", false, suggestions
 		}
 
-		// low confidence: provide top 3 suggestions
+		// low confidence: try the company enrich API as a fallback
+		apiResults, err := searchCompanyEnrichAPI(input)
+		if err == nil && len(apiResults) > 0 {
+			// we got API results, now combine them with our internal companies
+			// and re-run matching on the combined list
+			var combinedCandidates []string
+
+			// add API results (company names) to candidates
+			for _, item := range apiResults {
+				if item.Name != nil && *item.Name != "" {
+					// normalize the API company name for matching
+					apiCompanyName := strings.ToLower(*item.Name)
+					apiCompanyName = strings.ReplaceAll(apiCompanyName, " ", "-")
+					apiCompanyName = strings.TrimSpace(apiCompanyName)
+					combinedCandidates = append(combinedCandidates, apiCompanyName)
+				}
+			}
+
+			// now match the combined candidates against our internal company list
+			var enrichedMatches []scoredMatch
+			for _, candidate := range combinedCandidates {
+				for _, c := range companies {
+					// check if the API result matches any of our internal companies
+					slugConfidence := calculateMatchConfidence(candidate, c)
+					slugDistance := levenshteinDistance(candidate, c)
+
+					displayName := formatCompanyName(c)
+					displayNameNormalized := strings.ToLower(strings.ReplaceAll(displayName, " ", "-"))
+					displayConfidence := calculateMatchConfidence(candidate, displayNameNormalized)
+					displayDistance := levenshteinDistance(candidate, displayNameNormalized)
+
+					// use the better of the two
+					confidence := slugConfidence
+					distance := slugDistance
+					if displayConfidence > confidence {
+						confidence = displayConfidence
+						distance = displayDistance
+					}
+
+					// only consider if this is a reasonably good match
+					if confidence > 0.5 {
+						enrichedMatches = append(enrichedMatches, scoredMatch{
+							company:    c,
+							confidence: confidence,
+							distance:   distance,
+						})
+					}
+				}
+			}
+
+			// sort enriched matches
+			for i := 0; i < len(enrichedMatches)-1; i++ {
+				for j := i + 1; j < len(enrichedMatches); j++ {
+					if enrichedMatches[j].confidence > enrichedMatches[i].confidence ||
+						(enrichedMatches[j].confidence == enrichedMatches[i].confidence && enrichedMatches[j].distance < enrichedMatches[i].distance) {
+						enrichedMatches[i], enrichedMatches[j] = enrichedMatches[j], enrichedMatches[i]
+					}
+				}
+			}
+
+			// if we found good matches from the API, use them
+			if len(enrichedMatches) > 0 && enrichedMatches[0].confidence > 0.7 {
+				// high confidence match from API, return it
+				return enrichedMatches[0].company, true, nil
+			} else if len(enrichedMatches) > 0 {
+				// medium confidence from API, provide as suggestions
+				maxSuggestions := 3
+				var apiSuggestions []string
+				for i := 0; i < len(enrichedMatches) && i < maxSuggestions; i++ {
+					apiSuggestions = append(apiSuggestions, enrichedMatches[i].company)
+				}
+				return "", false, apiSuggestions
+			}
+		}
+
+		// if API didn't help, provide top 3 suggestions from original matches
 		maxSuggestions := 3
 		for i := 0; i < len(matches) && i < maxSuggestions; i++ {
 			suggestions = append(suggestions, matches[i].company)
@@ -509,7 +648,7 @@ func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompan
 }
 
 // validCommands lists all valid Leetbot commands
-var validCommands = []string{"problems", "help", "process", "stats", "shutdown", "startup"}
+var validCommands = []string{"problems", "help", "process", "shutdown", "startup"}
 
 // findCommandWithSuggestion attempts to match a command and returns suggestions if it's a typo
 // returns: (correctCommand, isValidCommand, didYouMeanSuggestion)
@@ -562,6 +701,56 @@ func normalizeStage(input string) (string, bool) {
 		return canonical, true
 	}
 	return "", false
+}
+
+// cleanCompanyInput removes common job-related words and normalizes company names for better matching
+func cleanCompanyInput(input string) string {
+	// Valid stages that should NOT be filtered out (even if they appear in company names)
+	validStages := map[string]bool{
+		"apply": true, "reject": true, "oa": true,
+		"phone": true, "onsite": true, "offer": true,
+	}
+
+	// Common job-related words to filter out
+	jobWords := map[string]bool{
+		"new": true, "grad": true, "graduate": true,
+		"swe": true, "software": true, "engineer": true, "engineering": true,
+		"intern": true, "internship": true, "full": true, "time": true,
+		"senior": true, "junior": true, "principal": true, "staff": true,
+		"frontend": true, "backend": true, "fullstack": true,
+		"data": true, "scientist": true, "analyst": true,
+		"product": true, "manager": true, "pm": true,
+		"devops": true, "site": true, "reliability": true, "sre": true,
+		"mobile": true, "ios": true, "android": true,
+		"web": true, "developer": true, "tech": true, "lead": true,
+		"summer": true, "winter": true, "fall": true, "spring": true,
+		"entry": true, "level": true, "experienced": true,
+		"remote": true, "hybrid": true, "office": true,
+	}
+
+	// Split into words and filter out job-related terms
+	words := strings.Fields(strings.ToLower(input))
+	var cleanWords []string
+
+	for _, word := range words {
+		// Remove punctuation and normalize
+		word = strings.Trim(word, ".,!?()[]{}")
+		if len(word) > 0 && (!jobWords[word] || validStages[word]) {
+			cleanWords = append(cleanWords, word)
+		}
+	}
+
+	// Normalize spaces in company names (e.g., "pure storage" -> "purestorage")
+	companyName := strings.Join(cleanWords, " ")
+	// Also create a no-spaces version for better matching
+	normalizedName := strings.ReplaceAll(companyName, " ", "")
+
+	// Return the spaced version if it exists, otherwise the normalized version
+	// This helps with companies like "Pure Storage" vs "purestorage"
+	if companyName != "" {
+		return companyName
+	}
+	return normalizedName
 }
 
 // findStageWithSuggestion attempts to normalize stage and returns suggestions if invalid
@@ -742,8 +931,6 @@ func (h *Handler) HandleSlashCommand(s *discordgo.Session, i *discordgo.Interact
 		h.handleHelpSlash(s, i)
 	case "process":
 		h.handleProcessSlash(s, i)
-	case "stats":
-		h.handleStatsSlash(s, i)
 	default:
 		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
@@ -759,59 +946,81 @@ func (h *Handler) HandleSlashCommand(s *discordgo.Session, i *discordgo.Interact
 }
 
 func (h *Handler) handleProcessMessageCommand(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
-    if len(args) < 2 {
-        h.sendErrorMessage(s, m.ChannelID, "Please specify a company and stage. Usage: !process <company> <Apply|Reject|OA|Phone|Onsite|Offer>")
-        return
-    }
+	if len(args) < 2 {
+		h.sendErrorMessage(s, m.ChannelID, "Please specify a company and stage. Usage: !process <company> <Apply|Reject|OA|Phone|Onsite|Offer>")
+		return
+	}
 
-    if h.processStorage == nil {
-        h.sendErrorMessage(s, m.ChannelID, "Process tracking is not configured on Leetbot.")
-        return
-    }
+	if h.processStorage == nil {
+		h.sendErrorMessage(s, m.ChannelID, "Process tracking is not configured on Leetbot.")
+		return
+	}
 
-    // the stage is always the last argument, everything else is the company name
-    // this handles multi-word companies like "jump trading" or "jane street"
-    stageInput := args[len(args)-1]
-    companyInput := strings.Join(args[:len(args)-1], " ")
+	// Smart parsing: find stage in the last few arguments, use everything before as company
+	// This handles multi-word companies and ignores trailing text
+	var companyInput, stageInput string
+	var stage string
+	var stageFound bool
 
-    // validate and fuzzy match company
-    company, companyFound, companySuggestions := findCompanyWithSuggestion(companyInput, h.problemsData)
-    if !companyFound {
-        var errorMsg strings.Builder
-        errorMsg.WriteString(fmt.Sprintf("Could not find company matching '%s'.", companyInput))
-        if len(companySuggestions) > 0 {
-            errorMsg.WriteString("\n\nDid you mean:")
-            for _, suggestion := range companySuggestions {
-                errorMsg.WriteString(fmt.Sprintf("\n• %s", formatCompanyName(suggestion)))
-            }
-        }
-        h.sendErrorMessage(s, m.ChannelID, errorMsg.String())
-        return
-    }
+	// Strategy: scan backwards from the end to find the rightmost valid stage
+	// This handles multi-word companies and ignores trailing text
+	// Limit search to last 4 arguments to avoid parsing too much trailing text
+	var stageIndex = -1
+	maxSearchDistance := 4
+	if len(args) < maxSearchDistance {
+		maxSearchDistance = len(args)
+	}
 
-    // validate and normalize stage
-    stage, stageFound, stageSuggestions := findStageWithSuggestion(stageInput)
-    if !stageFound {
-        var errorMsg strings.Builder
-        errorMsg.WriteString(fmt.Sprintf("Invalid stage '%s'.", stageInput))
-        if len(stageSuggestions) > 0 {
-            errorMsg.WriteString("\n\nDid you mean:")
-            for _, suggestion := range stageSuggestions {
-                errorMsg.WriteString(fmt.Sprintf("\n• %s", suggestion))
-            }
-        } else {
-            errorMsg.WriteString("\n\nValid stages: Apply, Reject, OA, Phone, Onsite, Offer")
-        }
-        h.sendErrorMessage(s, m.ChannelID, errorMsg.String())
-        return
-    }
+	// Scan backwards from the end to find the rightmost valid stage
+	for i := 1; i <= maxSearchDistance && i <= len(args); i++ {
+		candidateStage := args[len(args)-i]
+		if _, found, _ := findStageWithSuggestion(candidateStage); found {
+			stageIndex = len(args) - i
+			stageInput = candidateStage
+			break
+		}
+	}
 
-    process := data.Process{
-        Company:   company,
-        Stage:     stage,
-        CreatedAt: time.Now(),
-        UpdatedAt: time.Now(),
-    }
+	if stageIndex == -1 {
+		// No valid stage found in the last few arguments
+		h.sendErrorMessage(s, m.ChannelID, "Please specify a valid stage. Usage: !process <company> <Apply|Reject|OA|Phone|Onsite|Offer>")
+		return
+	}
+
+	// Use everything before the found stage as company name
+	companyInput = strings.Join(args[:stageIndex], " ")
+	stage, stageFound, _ = findStageWithSuggestion(stageInput)
+
+	if !stageFound {
+		// This shouldn't happen since we already validated above, but just in case
+		h.sendErrorMessage(s, m.ChannelID, "Please specify a valid stage. Usage: !process <company> <Apply|Reject|OA|Phone|Onsite|Offer>")
+		return
+	}
+
+	// Clean the company input to remove job-related words and normalize for better matching
+	cleanedCompanyInput := cleanCompanyInput(companyInput)
+
+	// now try to match the company with the validated stage
+	company, companyFound, companySuggestions := findCompanyWithSuggestion(cleanedCompanyInput, h.problemsData)
+	if !companyFound {
+		var errorMsg strings.Builder
+		errorMsg.WriteString(fmt.Sprintf("Could not find company matching '%s'.", cleanedCompanyInput))
+		if len(companySuggestions) > 0 {
+			errorMsg.WriteString("\n\nDid you mean:")
+			for _, suggestion := range companySuggestions {
+				errorMsg.WriteString(fmt.Sprintf("\n• %s", formatCompanyName(suggestion)))
+			}
+		}
+		h.sendErrorMessage(s, m.ChannelID, errorMsg.String())
+		return
+	}
+
+	process := data.Process{
+		Company:   company,
+		Stage:     stage,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
+	}
 
 	ctx := context.Background()
 	_, err := h.processStorage.AddProcess(ctx, process)
@@ -832,197 +1041,6 @@ func (h *Handler) handleProcessMessageCommand(s *discordgo.Session, m *discordgo
 	}
 
 	// for text commands, we just react with checkmark to avoid clutter
-	// slash commands will show stats as ephemeral embeds
-}
-
-func (h *Handler) handleStatsCommand(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
-	if len(args) < 1 {
-		h.sendErrorMessage(s, m.ChannelID, "Please specify a company. Usage: !stats <company>")
-		return
-	}
-
-    if h.processStorage == nil {
-        h.sendErrorMessage(s, m.ChannelID, "Process tracking is not configured on Leetbot.")
-        return
-    }
-
-	// join all args to support multi-word company names like "jump trading"
-	companyInput := strings.Join(args, " ")
-
-	// validate and fuzzy match company
-	company, companyFound, companySuggestions := findCompanyWithSuggestion(companyInput, h.problemsData)
-	if !companyFound {
-		var errorMsg strings.Builder
-		errorMsg.WriteString(fmt.Sprintf("Could not find company matching '%s'.", companyInput))
-		if len(companySuggestions) > 0 {
-			errorMsg.WriteString("\n\nDid you mean:")
-			for _, suggestion := range companySuggestions {
-				errorMsg.WriteString(fmt.Sprintf("\n• %s", formatCompanyName(suggestion)))
-			}
-		}
-		h.sendErrorMessage(s, m.ChannelID, errorMsg.String())
-		return
-	}
-
-	h.sendProcessStats(s, m.ChannelID, company, false)
-}
-
-// sendProcessStats sends stats for a specific company across all stages
-func (h *Handler) sendProcessStats(s *discordgo.Session, channelID, company string, isEmbed bool) {
-	ctx := context.Background()
-
-	// get all processes for this company
-	allProcesses, err := h.processStorage.GetProcessesByCompany(ctx, company)
-	if err != nil {
-		h.sendErrorMessage(s, channelID, fmt.Sprintf("Failed to retrieve stats: %v", err))
-		return
-	}
-
-	// build stats content
-	content := h.buildCompanyStatsContent(company, channelID, allProcesses)
-
-	if isEmbed {
-		// send as embed
-		embed := &discordgo.MessageEmbed{
-			Title:       fmt.Sprintf("Stats for %s", formatCompanyName(company)),
-			Description: content,
-			Color:       0x5865F2, // discord blurple
-		}
-		_, err := s.ChannelMessageSendEmbed(channelID, embed)
-		if err != nil {
-			fmt.Printf("Error sending embed: %v\n", err)
-		}
-	} else {
-		// send as regular message with company name header
-		header := fmt.Sprintf("**Stats for %s**\n", formatCompanyName(company))
-		h.sendMessage(s, channelID, header+content)
-	}
-}
-
-// sendProcessStatsForInteraction sends stats as a response to an interaction
-func (h *Handler) sendProcessStatsForInteraction(s *discordgo.Session, i *discordgo.InteractionCreate, company string) {
-	ctx := context.Background()
-
-	// we collect all data first, then respond once
-	// this avoids the double acknowledgment error
-	var responseContent string
-	var responseEmbed *discordgo.MessageEmbed
-
-	// get all processes for this company
-	allProcesses, err := h.processStorage.GetProcessesByCompany(ctx, company)
-	if err != nil {
-		responseContent = fmt.Sprintf("Failed to retrieve stats: %v", err)
-	} else {
-		// build stats content
-		content := h.buildCompanyStatsContent(company, i.ChannelID, allProcesses)
-
-		// send as embed
-		responseEmbed = &discordgo.MessageEmbed{
-			Title:       fmt.Sprintf("Stats for %s", formatCompanyName(company)),
-			Description: content,
-			Color:       0x5865F2, // discord blurple
-		}
-	}
-
-	// single response path - either error or success
-	response := &discordgo.InteractionResponse{
-		Type: discordgo.InteractionResponseChannelMessageWithSource,
-		Data: &discordgo.InteractionResponseData{
-			Flags: discordgo.MessageFlagsEphemeral,
-		},
-	}
-
-	if responseEmbed != nil {
-		response.Data.Embeds = []*discordgo.MessageEmbed{responseEmbed}
-	} else {
-		response.Data.Content = responseContent
-	}
-
-	err = s.InteractionRespond(i.Interaction, response)
-	if err != nil {
-		fmt.Printf("Error responding to interaction: %v\n", err)
-	}
-}
-
-// sendProcessStatsForInteractionWithSuccessHeader sends stats as a response to an interaction with success header
-func (h *Handler) sendProcessStatsForInteractionWithSuccessHeader(s *discordgo.Session, i *discordgo.InteractionCreate, company string) {
-	ctx := context.Background()
-
-	// we collect all data first, then respond once
-	// this avoids the double acknowledgment error
-	var responseContent string
-	var responseEmbed *discordgo.MessageEmbed
-
-	// get all processes for this company
-	allProcesses, err := h.processStorage.GetProcessesByCompany(ctx, company)
-	if err != nil {
-		responseContent = fmt.Sprintf("Failed to retrieve stats: %v", err)
-	} else {
-		// build stats content
-		content := h.buildCompanyStatsContent(company, i.ChannelID, allProcesses)
-
-		// send as embed with success header
-		responseEmbed = &discordgo.MessageEmbed{
-			Title:       fmt.Sprintf("Process Successfully Logged for %s", formatCompanyName(company)),
-			Description: content,
-			Color:       0x00FF00, // green color for success
-		}
-	}
-
-	// single response path - either error or success
-	response := &discordgo.InteractionResponse{
-		Type: discordgo.InteractionResponseChannelMessageWithSource,
-		Data: &discordgo.InteractionResponseData{
-			Flags: discordgo.MessageFlagsEphemeral,
-		},
-	}
-
-	if responseEmbed != nil {
-		response.Data.Embeds = []*discordgo.MessageEmbed{responseEmbed}
-	} else {
-		response.Data.Content = responseContent
-	}
-
-	err = s.InteractionRespond(i.Interaction, response)
-	if err != nil {
-		fmt.Printf("Error responding to interaction: %v\n", err)
-	}
-}
-
-
-// buildCompanyStatsContent builds the stats content for a company across all stages
-func (h *Handler) buildCompanyStatsContent(company, channelID string, processes []data.Process) string {
-	var content strings.Builder
-
-	// count processes by stage
-	stageCounts := make(map[string]int)
-	for _, p := range processes {
-		stageCounts[p.Stage]++
-	}
-
-	// format the output according to the specified format with inline monospace
-	content.WriteString(fmt.Sprintf("(<#%s>)\n", channelID))
-	content.WriteString("`-----------------`\n")
-	content.WriteString("`Stage       Count`\n")
-	content.WriteString("`-----------------`\n")
-
-	// define stage order and display names
-	stageOrder := []string{"Apply", "OA", "Phone", "Onsite", "Offer"}
-	stageDisplayNames := map[string]string{
-		"Apply":  "Apply",
-		"OA":     "OA",
-		"Phone":  "Phone",
-		"Onsite": "Final", // map Onsite to Final as per the format
-		"Offer":  "Offer",
-	}
-
-	for _, stage := range stageOrder {
-		count := stageCounts[stage]
-		displayName := stageDisplayNames[stage]
-		content.WriteString(fmt.Sprintf("`%-10s    %3d`\n", displayName, count))
-	}
-
-	return content.String()
 }
 
 func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
@@ -1091,8 +1109,6 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 		h.handleHelpCommand(s, m)
 	case "process":
 		h.handleProcessMessageCommand(s, m, args)
-	case "stats":
-		h.handleStatsCommand(s, m, args)
 	case "shutdown":
 		h.handleShutdownMessage(s, m, args)
 	case "startup":
@@ -1108,26 +1124,45 @@ func (h *Handler) handleProblemsCommand(s *discordgo.Session, m *discordgo.Messa
 		return
 	}
 
-	companyInput := args[0]
-	timeframeArg := ""
+	// Smart parsing: find timeframe in the last few arguments, use everything before as company
+	// This handles multi-word companies and ignores trailing text
+	var companyInput, timeframeArg string
 
-	if len(args) >= 2 {
-		lastArg := strings.ToLower(args[len(args)-1])
-		if h.isTimeframeKeyword(lastArg) {
-			timeframeArg = lastArg
-			if len(args) > 2 {
-				companyInput = strings.Join(args[:len(args)-1], " ")
-			}
-		} else {
-			companyInput = strings.Join(args, " ")
+	// Strategy: scan backwards from the end to find the rightmost valid timeframe
+	// This handles multi-word companies and ignores trailing text
+	// Limit search to last 4 arguments to avoid parsing too much trailing text
+	var timeframeIndex = -1
+	maxSearchDistance := 4
+	if len(args) < maxSearchDistance {
+		maxSearchDistance = len(args)
+	}
+
+	// Scan backwards from the end to find the rightmost valid timeframe
+	for i := 1; i <= maxSearchDistance && i <= len(args); i++ {
+		candidateTimeframe := strings.ToLower(args[len(args)-i])
+		if h.isTimeframeKeyword(candidateTimeframe) {
+			timeframeIndex = len(args) - i
+			timeframeArg = candidateTimeframe
+			break
 		}
 	}
 
+	if timeframeIndex != -1 {
+		// Found a timeframe, use everything before it as company name
+		companyInput = strings.Join(args[:timeframeIndex], " ")
+	} else {
+		// No timeframe found, treat everything as company name
+		companyInput = strings.Join(args, " ")
+	}
+
+	// Clean the company input to remove job-related words and normalize for better matching
+	cleanedCompanyInput := cleanCompanyInput(companyInput)
+
 	// use enhanced fuzzy matching with suggestions
-	company, companyFound, companySuggestions := findCompanyWithSuggestion(companyInput, h.problemsData)
+	company, companyFound, companySuggestions := findCompanyWithSuggestion(cleanedCompanyInput, h.problemsData)
 	if !companyFound {
 		var errorMsg strings.Builder
-		errorMsg.WriteString(fmt.Sprintf("Could not find company matching '%s'.", companyInput))
+		errorMsg.WriteString(fmt.Sprintf("Could not find company matching '%s'.", cleanedCompanyInput))
 		if len(companySuggestions) > 0 {
 			errorMsg.WriteString("\n\nDid you mean:")
 			for _, suggestion := range companySuggestions {
@@ -1266,8 +1301,6 @@ func (h *Handler) formatTimeframeDisplay(timeframe string) string {
 	}
 }
 
-
-
 func (h *Handler) formatAvailableTimeframesSuggestion(company, requestedTimeframe string, availableTimeframes []string) string {
 	var message strings.Builder
 	message.WriteString(fmt.Sprintf("No data found for %s (%s).\n\n",
@@ -1372,13 +1405,11 @@ func (h *Handler) createHelpPaginator(isAdmin bool) *paginator.Paginator {
 				embed.Description = fmt.Sprintf(`**Text Commands (prefix: %s):**
 • **%sproblems <company> [timeframe]** - Show interview problems
 • **%sprocess <company> <stage>** - Track interview stage
-• **%sstats <company>** - View process statistics
 
 **Slash Commands:**
 • **/problems** - Show interview problems (with dropdown options)
 • **/process** - Track new interview process
-• **/stats** - View interview process statistics
-• **/help** - Show this help message`, h.prefix, h.prefix, h.prefix, h.prefix)
+• **/help** - Show this help message`, h.prefix, h.prefix, h.prefix)
 
 				if isAdmin {
 					embed.Description += fmt.Sprintf(`
@@ -1426,17 +1457,14 @@ When no timeframe is specified, Leetbot automatically tries:
 				embed.Description = `**Process Tracking:**
 • **Stages:** Apply, Reject, OA, Phone, Onsite, Offer
 • Track your interview progress with **` + h.prefix + `process**
-• View statistics with **` + h.prefix + `stats**
 
 **Examples:**
 • ` + h.prefix + `problems airbnb (uses smart priority)
 • ` + h.prefix + `problems amazon 30d (forces 30 days)
 • ` + h.prefix + `problems google 3mo (forces 3 months)
 • ` + h.prefix + `process google apply (track application)
-• ` + h.prefix + `stats google (view statistics)
 • /problems company:airbnb (uses smart priority)
-• /problems company:amazon timeframe:thirty-days
-• /stats company:google`
+• /problems company:amazon timeframe:thirty-days`
 
 				embed.Footer = &discordgo.MessageEmbedFooter{
 					Text: "Page 3/4 • Use the buttons below to navigate",
@@ -1709,7 +1737,7 @@ func (h *Handler) handleProcessSlash(s *discordgo.Session, i *discordgo.Interact
 	ctx := context.Background()
 	_, err := h.processStorage.AddProcess(ctx, process)
 	if err != nil {
-		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+		err = s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
 			Data: &discordgo.InteractionResponseData{
 				Content: fmt.Sprintf("Failed to add process: %v", err),
@@ -1724,7 +1752,7 @@ func (h *Handler) handleProcessSlash(s *discordgo.Session, i *discordgo.Interact
 
 	// if it's an offer, send congrats message
 	if stage == "Offer" {
-		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+		err = s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
 			Data: &discordgo.InteractionResponseData{
 				Content: "Congrats! 🎉",
@@ -1736,10 +1764,18 @@ func (h *Handler) handleProcessSlash(s *discordgo.Session, i *discordgo.Interact
 		return
 	}
 
-	// otherwise, respond with stats in embed with success header
-	h.sendProcessStatsForInteractionWithSuccessHeader(s, i, company)
+	// send success message
+	err = s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+		Type: discordgo.InteractionResponseChannelMessageWithSource,
+		Data: &discordgo.InteractionResponseData{
+			Content: "Process logged.",
+			Flags:   discordgo.MessageFlagsEphemeral,
+		},
+	})
+	if err != nil {
+		fmt.Printf("Error responding to interaction: %v\n", err)
+	}
 }
-
 
 func formatTimeframeDisplay(timeframe string) string {
 	switch timeframe {
@@ -1757,74 +1793,6 @@ func formatTimeframeDisplay(timeframe string) string {
 		return strings.ToLower(strings.ReplaceAll(timeframe, "-", " "))
 	}
 }
-
-func (h *Handler) handleStatsSlash(s *discordgo.Session, i *discordgo.InteractionCreate) {
-	options := i.ApplicationCommandData().Options
-	optionMap := make(map[string]*discordgo.ApplicationCommandInteractionDataOption, len(options))
-	for _, opt := range options {
-		optionMap[opt.Name] = opt
-	}
-
-	companyOpt, ok := optionMap["company"]
-	if !ok {
-		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
-			Type: discordgo.InteractionResponseChannelMessageWithSource,
-			Data: &discordgo.InteractionResponseData{
-				Content: "Company is required!",
-				Flags:   discordgo.MessageFlagsEphemeral | discordgo.MessageFlagsSuppressEmbeds,
-			},
-		})
-		if err != nil {
-			fmt.Printf("Error responding to interaction: %v\n", err)
-		}
-		return
-	}
-
-	companyInput := strings.ToLower(companyOpt.StringValue())
-
-	// validate and fuzzy match company
-	company, companyFound, companySuggestions := findCompanyWithSuggestion(companyInput, h.problemsData)
-	if !companyFound {
-		var errorMsg strings.Builder
-		errorMsg.WriteString(fmt.Sprintf("Could not find company matching '%s'.", companyInput))
-		if len(companySuggestions) > 0 {
-			errorMsg.WriteString("\n\nDid you mean:")
-			for _, suggestion := range companySuggestions {
-				errorMsg.WriteString(fmt.Sprintf("\n• %s", formatCompanyName(suggestion)))
-			}
-		}
-		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
-			Type: discordgo.InteractionResponseChannelMessageWithSource,
-			Data: &discordgo.InteractionResponseData{
-				Content: errorMsg.String(),
-				Flags:   discordgo.MessageFlagsEphemeral | discordgo.MessageFlagsSuppressEmbeds,
-			},
-		})
-		if err != nil {
-			fmt.Printf("Error responding to interaction: %v\n", err)
-		}
-		return
-	}
-
-	// check if process storage is configured
-	if h.processStorage == nil {
-		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
-			Type: discordgo.InteractionResponseChannelMessageWithSource,
-			Data: &discordgo.InteractionResponseData{
-				Content: "Process tracking is not configured on Leetbot.",
-				Flags:   discordgo.MessageFlagsEphemeral | discordgo.MessageFlagsSuppressEmbeds,
-			},
-		})
-		if err != nil {
-			fmt.Printf("Error responding to interaction: %v\n", err)
-		}
-		return
-	}
-
-	// send stats as embed
-	h.sendProcessStatsForInteraction(s, i, company)
-}
-
 
 func (h *Handler) handleShutdownMessage(s *discordgo.Session, m *discordgo.MessageCreate, args []string) {
 	// check if the user is authorized (nyumat's user ID)
@@ -1928,7 +1896,6 @@ func (h *Handler) handleStartupMessage(s *discordgo.Session, m *discordgo.Messag
 		h.sendErrorMessage(s, m.ChannelID, "Restart mechanism not available.")
 	}
 }
-
 
 func (h *Handler) formatAvailableTimeframesSuggestionSlash(company, requestedTimeframe string, availableTimeframes []string) string {
 	var message strings.Builder
