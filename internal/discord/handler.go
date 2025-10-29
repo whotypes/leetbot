@@ -1096,8 +1096,11 @@ func (h *Handler) handleProcessMessageCommand(s *discordgo.Session, m *discordgo
 }
 
 func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
-	// Update the handler's session reference
 	h.SetSession(s)
+
+	if m == nil || m.Author == nil {
+		return
+	}
 
 	if m.Author.Bot {
 		return
