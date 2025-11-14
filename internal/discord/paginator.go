@@ -61,6 +61,12 @@ func createProblemsPaginator(company, timeframe string, problems []data.Problem)
 
 	return &paginator.Paginator{
 		PageFunc: func(page int, embed *discordgo.MessageEmbed) {
+			if page < 0 {
+				page = 0
+			}
+			if page >= totalPages && totalPages > 0 {
+				page = totalPages - 1
+			}
 
 			start := page * problemsPerPage
 			end := start + problemsPerPage
