@@ -2,6 +2,7 @@ package discord
 
 import (
 	"fmt"
+	"log"
 	"sync"
 	"time"
 
@@ -128,7 +129,16 @@ func (m *Manager) createButtons(messageID string, page, maxPages int) []discordg
 }
 
 func (m *Manager) updateMessage(s *discordgo.Session, state *paginatorState) error {
+	log.Printf("[PAGINATOR] Updating message %s to page %d/%d", state.messageID, state.currentPage+1, state.paginator.MaxPages)
+
 	embed := &discordgo.MessageEmbed{}
+
+	defer func() {
+		if r := recover(); r != nil {
+			log.Printf("[PAGINATOR] PANIC in PageFunc for message %s: %v", state.messageID, r)
+		}
+	}()
+
 	state.paginator.PageFunc(state.currentPage, embed)
 
 	components := m.createButtons(state.messageID, state.currentPage, state.paginator.MaxPages)
@@ -140,11 +150,28 @@ func (m *Manager) updateMessage(s *discordgo.Session, state *paginatorState) err
 		Embeds:     &embeds,
 		Components: &components,
 	})
-	return err
+
+	if err != nil {
+		log.Printf("[PAGINATOR] ERROR updating message %s: %v (channel: %s, page: %d/%d)",
+			state.messageID, err, state.channelID, state.currentPage+1, state.paginator.MaxPages)
+		return fmt.Errorf("failed to update message %s: %w", state.messageID, err)
+	}
+
+	log.Printf("[PAGINATOR] Successfully updated message %s to page %d/%d", state.messageID, state.currentPage+1, state.paginator.MaxPages)
+	return nil
 }
 
 func (m *Manager) CreateInteraction(s *discordgo.Session, i *discordgo.Interaction, pg *Paginator, ephemeral bool) error {
+	log.Printf("[PAGINATOR] Creating interaction paginator (maxPages: %d, ephemeral: %v)", pg.MaxPages, ephemeral)
+
 	embed := &discordgo.MessageEmbed{}
+
+	defer func() {
+		if r := recover(); r != nil {
+			log.Printf("[PAGINATOR] PANIC in PageFunc during CreateInteraction: %v", r)
+		}
+	}()
+
 	pg.PageFunc(0, embed)
 
 	var userID string
@@ -153,6 +180,7 @@ func (m *Manager) CreateInteraction(s *discordgo.Session, i *discordgo.Interacti
 	} else if i.User != nil {
 		userID = i.User.ID
 	}
+	log.Printf("[PAGINATOR] User ID: %s", userID)
 
 	var flags discordgo.MessageFlags
 	if ephemeral {
@@ -171,13 +199,16 @@ func (m *Manager) CreateInteraction(s *discordgo.Session, i *discordgo.Interacti
 		},
 	})
 	if err != nil {
-		return err
+		log.Printf("[PAGINATOR] ERROR responding to interaction: %v", err)
+		return fmt.Errorf("failed to respond to interaction: %w", err)
 	}
 
 	msg, err := s.InteractionResponse(i)
 	if err != nil {
-		return err
+		log.Printf("[PAGINATOR] ERROR getting interaction response: %v", err)
+		return fmt.Errorf("failed to get interaction response: %w", err)
 	}
+	log.Printf("[PAGINATOR] Created message %s in channel %s", msg.ID, msg.ChannelID)
 
 	components = m.createButtons(msg.ID, 0, pg.MaxPages)
 	_, err = s.ChannelMessageEditComplex(&discordgo.MessageEdit{
@@ -186,7 +217,8 @@ func (m *Manager) CreateInteraction(s *discordgo.Session, i *discordgo.Interacti
 		Components: &components,
 	})
 	if err != nil {
-		return err
+		log.Printf("[PAGINATOR] ERROR updating components for message %s: %v", msg.ID, err)
+		return fmt.Errorf("failed to update message components: %w", err)
 	}
 
 	m.mu.Lock()
@@ -199,11 +231,22 @@ func (m *Manager) CreateInteraction(s *discordgo.Session, i *discordgo.Interacti
 	}
 	m.mu.Unlock()
 
+	log.Printf("[PAGINATOR] Registered paginator for message %s (user: %s, pages: %d)", msg.ID, userID, pg.MaxPages)
+
 	return nil
 }
 
 func (m *Manager) CreateMessage(s *discordgo.Session, channelID string, pg *Paginator) error {
+	log.Printf("[PAGINATOR] Creating message paginator in channel %s (maxPages: %d)", channelID, pg.MaxPages)
+
 	embed := &discordgo.MessageEmbed{}
+
+	defer func() {
+		if r := recover(); r != nil {
+			log.Printf("[PAGINATOR] PANIC in PageFunc during CreateMessage: %v", r)
+		}
+	}()
+
 	pg.PageFunc(0, embed)
 
 	tempID := fmt.Sprintf("temp_%d", time.Now().UnixNano())
@@ -214,8 +257,10 @@ func (m *Manager) CreateMessage(s *discordgo.Session, channelID string, pg *Pagi
 		Components: components,
 	})
 	if err != nil {
-		return err
+		log.Printf("[PAGINATOR] ERROR sending message to channel %s: %v", channelID, err)
+		return fmt.Errorf("failed to send message: %w", err)
 	}
+	log.Printf("[PAGINATOR] Created message %s in channel %s", msg.ID, channelID)
 
 	components = m.createButtons(msg.ID, 0, pg.MaxPages)
 	_, err = s.ChannelMessageEditComplex(&discordgo.MessageEdit{
@@ -224,7 +269,8 @@ func (m *Manager) CreateMessage(s *discordgo.Session, channelID string, pg *Pagi
 		Components: &components,
 	})
 	if err != nil {
-		return err
+		log.Printf("[PAGINATOR] ERROR updating components for message %s: %v", msg.ID, err)
+		return fmt.Errorf("failed to update message components: %w", err)
 	}
 
 	m.mu.Lock()
@@ -237,6 +283,8 @@ func (m *Manager) CreateMessage(s *discordgo.Session, channelID string, pg *Pagi
 	}
 	m.mu.Unlock()
 
+	log.Printf("[PAGINATOR] Registered paginator for message %s (pages: %d)", msg.ID, pg.MaxPages)
+
 	return nil
 }
 
@@ -246,7 +294,10 @@ func (m *Manager) OnInteractionCreate(s *discordgo.Session, i *discordgo.Interac
 	}
 
 	customID := i.MessageComponentData().CustomID
+	log.Printf("[PAGINATOR] Received interaction: customID=%s, messageID=%s", customID, i.Message.ID)
+
 	if len(customID) < 10 || customID[:10] != "paginator:" {
+		log.Printf("[PAGINATOR] Ignoring non-paginator interaction: %s", customID)
 		return
 	}
 
@@ -255,6 +306,13 @@ func (m *Manager) OnInteractionCreate(s *discordgo.Session, i *discordgo.Interac
 	m.mu.RUnlock()
 
 	if !exists {
+		log.Printf("[PAGINATOR] WARNING: No paginator state found for message %s (customID: %s). Available paginators: %d",
+			i.Message.ID, customID, len(m.paginators))
+		m.mu.RLock()
+		for msgID := range m.paginators {
+			log.Printf("[PAGINATOR]   - Registered message ID: %s", msgID)
+		}
+		m.mu.RUnlock()
 		return
 	}
 
@@ -264,8 +322,11 @@ func (m *Manager) OnInteractionCreate(s *discordgo.Session, i *discordgo.Interac
 	} else if i.User != nil {
 		userID = i.User.ID
 	}
+	log.Printf("[PAGINATOR] Processing interaction: messageID=%s, userID=%s, stateUserID=%s, currentPage=%d/%d",
+		i.Message.ID, userID, state.userID, state.currentPage+1, state.paginator.MaxPages)
 
 	if state.userID != "" && state.userID != userID {
+		log.Printf("[PAGINATOR] User mismatch: expected %s, got %s", state.userID, userID)
 		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 			Type: discordgo.InteractionResponseChannelMessageWithSource,
 			Data: &discordgo.InteractionResponseData{
@@ -274,45 +335,71 @@ func (m *Manager) OnInteractionCreate(s *discordgo.Session, i *discordgo.Interac
 			},
 		})
 		if err != nil {
-			fmt.Printf("Error responding to interaction: %v\n", err)
+			log.Printf("[PAGINATOR] ERROR responding to user mismatch: %v", err)
 		}
 		return
 	}
 
 	messageID := i.Message.ID
 	var newPage int
+	var action string
+	var currentPage int
+
+	m.mu.RLock()
+	currentPage = state.currentPage
+	maxPages := state.paginator.MaxPages
+	m.mu.RUnlock()
+
 	switch {
 	case customID == fmt.Sprintf("paginator:%s:first", messageID):
 		newPage = 0
+		action = "first"
 	case customID == fmt.Sprintf("paginator:%s:back", messageID):
-		newPage = state.currentPage - 1
+		newPage = currentPage - 1
 		if newPage < 0 {
 			newPage = 0
 		}
+		action = "back"
 	case customID == fmt.Sprintf("paginator:%s:next", messageID):
-		newPage = state.currentPage + 1
-		if newPage >= state.paginator.MaxPages {
-			newPage = state.paginator.MaxPages - 1
+		newPage = currentPage + 1
+		if newPage >= maxPages {
+			newPage = maxPages - 1
 		}
+		action = "next"
 	case customID == fmt.Sprintf("paginator:%s:last", messageID):
-		newPage = state.paginator.MaxPages - 1
+		newPage = maxPages - 1
+		action = "last"
 	default:
+		log.Printf("[PAGINATOR] WARNING: Unknown customID format: %s (expected format: paginator:%s:{action})", customID, messageID)
+		log.Printf("[PAGINATOR]   Expected IDs: first=%s, back=%s, next=%s, last=%s",
+			fmt.Sprintf("paginator:%s:first", messageID),
+			fmt.Sprintf("paginator:%s:back", messageID),
+			fmt.Sprintf("paginator:%s:next", messageID),
+			fmt.Sprintf("paginator:%s:last", messageID))
 		return
 	}
 
+	log.Printf("[PAGINATOR] Action: %s, moving from page %d to %d", action, currentPage+1, newPage+1)
+
+	m.mu.Lock()
 	state.currentPage = newPage
+	m.mu.Unlock()
 
 	err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 		Type: discordgo.InteractionResponseDeferredMessageUpdate,
 	})
 	if err != nil {
-		fmt.Printf("Error responding to interaction: %v\n", err)
+		log.Printf("[PAGINATOR] ERROR responding to interaction (DeferredMessageUpdate): %v (messageID: %s, customID: %s)",
+			err, messageID, customID)
+		log.Printf("[PAGINATOR]   This error will cause 'This interaction failed' message")
+		log.Printf("[PAGINATOR]   Interaction details: Type=%d, Token=%s", i.Type, i.Token)
 		return
 	}
+	log.Printf("[PAGINATOR] Successfully deferred message update for message %s", messageID)
 
 	err = m.updateMessage(s, state)
 	if err != nil {
-		fmt.Printf("Error updating paginator message: %v\n", err)
+		log.Printf("[PAGINATOR] ERROR updating message after deferred response: %v (messageID: %s)", err, messageID)
 	}
 }
 
