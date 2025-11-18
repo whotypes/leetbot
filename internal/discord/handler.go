@@ -14,7 +14,6 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/lithammer/fuzzysearch/fuzzy"
-	paginator "github.com/topi314/dgo-paginator"
 	"github.com/whotypes/leetbot/internal/data"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
@@ -1459,8 +1458,8 @@ func (h *Handler) sendMessage(s *discordgo.Session, channelID, message string) {
 	}
 }
 
-func (h *Handler) createHelpPaginator(isAdmin bool) *paginator.Paginator {
-	return &paginator.Paginator{
+func (h *Handler) createHelpPaginator(isAdmin bool) *Paginator {
+	return &Paginator{
 		PageFunc: func(page int, embed *discordgo.MessageEmbed) {
 			switch page {
 			case 0:
@@ -1565,9 +1564,7 @@ When no timeframe is specified, Leetbot automatically tries:
 
 			embed.Timestamp = time.Now().Format(time.RFC3339)
 		},
-		MaxPages:        4,
-		ExpiryLastUsage: true,
-		Expiry:          time.Now().Add(10 * time.Minute),
+		MaxPages: 4,
 	}
 }
 
