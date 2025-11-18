@@ -649,6 +649,36 @@ func findCommandWithSuggestion(input string) (string, bool, string) {
 	return "", false, ""
 }
 
+// parseProblemsCommandArgs extracts company name and optional timeframe from command arguments.
+//   - Scans backwards from the end to find the rightmost valid timeframe (within last 4 args)
+//   - Returns everything before the timeframe as companyInput
+//   - Returns empty string for timeframeArg if no timeframe found
+//   - Handles multi-word companies and ignores trailing text
+func parseProblemsCommandArgs(args []string, isTimeframeKeyword func(string) bool) (companyInput, timeframeArg string) {
+	maxSearchDistance := 4
+	if len(args) < maxSearchDistance {
+		maxSearchDistance = len(args)
+	}
+
+	var timeframeIndex = -1
+	for i := 1; i <= maxSearchDistance && i <= len(args); i++ {
+		candidateTimeframe := strings.ToLower(args[len(args)-i])
+		if isTimeframeKeyword(candidateTimeframe) {
+			timeframeIndex = len(args) - i
+			timeframeArg = candidateTimeframe
+			break
+		}
+	}
+
+	if timeframeIndex != -1 {
+		companyInput = strings.Join(args[:timeframeIndex], " ")
+	} else {
+		companyInput = strings.Join(args, " ")
+	}
+
+	return companyInput, timeframeArg
+}
+
 // cleanCompanyInput removes common job-related words and normalizes company names for better matching
 func cleanCompanyInput(input string) string {
 	// Common job-related words to filter out
@@ -811,8 +841,6 @@ type Handler struct {
 const (
 	// admin user ID (nyumat)
 	adminUserID = "700444827287945316"
-	// specific server where channels are pre-initialized
-	specificServerID = "698366411864670250"
 )
 
 // pre-initialized channels for the specific server and test channel
@@ -1025,36 +1053,8 @@ func (h *Handler) handleProblemsCommand(s *discordgo.Session, m *discordgo.Messa
 		return
 	}
 
-	// Smart parsing: find timeframe in the last few arguments, use everything before as company
-	// This handles multi-word companies and ignores trailing text
-	var companyInput, timeframeArg string
-
-	// Strategy: scan backwards from the end to find the rightmost valid timeframe
-	// This handles multi-word companies and ignores trailing text
-	// Limit search to last 4 arguments to avoid parsing too much trailing text
-	var timeframeIndex = -1
-	maxSearchDistance := 4
-	if len(args) < maxSearchDistance {
-		maxSearchDistance = len(args)
-	}
-
-	// Scan backwards from the end to find the rightmost valid timeframe
-	for i := 1; i <= maxSearchDistance && i <= len(args); i++ {
-		candidateTimeframe := strings.ToLower(args[len(args)-i])
-		if h.isTimeframeKeyword(candidateTimeframe) {
-			timeframeIndex = len(args) - i
-			timeframeArg = candidateTimeframe
-			break
-		}
-	}
-
-	if timeframeIndex != -1 {
-		// Found a timeframe, use everything before it as company name
-		companyInput = strings.Join(args[:timeframeIndex], " ")
-	} else {
-		// No timeframe found, treat everything as company name
-		companyInput = strings.Join(args, " ")
-	}
+	// Parse command arguments to extract company name and optional timeframe
+	companyInput, timeframeArg := parseProblemsCommandArgs(args, h.isTimeframeKeyword)
 
 	// Clean the company input to remove job-related words and normalize for better matching
 	cleanedCompanyInput := cleanCompanyInput(companyInput)
