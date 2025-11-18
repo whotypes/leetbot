@@ -294,7 +294,15 @@ func (m *Manager) OnInteractionCreate(s *discordgo.Session, i *discordgo.Interac
 	}
 
 	customID := i.MessageComponentData().CustomID
-	log.Printf("[PAGINATOR] Received interaction: customID=%s, messageID=%s", customID, i.Message.ID)
+
+	var username string
+	if i.Member != nil {
+		username = i.Member.User.Username
+	} else if i.User != nil {
+		username = i.User.Username
+	}
+
+	log.Printf("[PAGINATOR] Received interaction: customID=%s, messageID=%s, username=%s", customID, i.Message.ID, username)
 
 	if len(customID) < 10 || customID[:10] != "paginator:" {
 		log.Printf("[PAGINATOR] Ignoring non-paginator interaction: %s", customID)
@@ -322,23 +330,8 @@ func (m *Manager) OnInteractionCreate(s *discordgo.Session, i *discordgo.Interac
 	} else if i.User != nil {
 		userID = i.User.ID
 	}
-	log.Printf("[PAGINATOR] Processing interaction: messageID=%s, userID=%s, stateUserID=%s, currentPage=%d/%d",
-		i.Message.ID, userID, state.userID, state.currentPage+1, state.paginator.MaxPages)
-
-	if state.userID != "" && state.userID != userID {
-		log.Printf("[PAGINATOR] User mismatch: expected %s, got %s", state.userID, userID)
-		err := s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
-			Type: discordgo.InteractionResponseChannelMessageWithSource,
-			Data: &discordgo.InteractionResponseData{
-				Content: m.notYourPaginatorMessage,
-				Flags:   discordgo.MessageFlagsEphemeral,
-			},
-		})
-		if err != nil {
-			log.Printf("[PAGINATOR] ERROR responding to user mismatch: %v", err)
-		}
-		return
-	}
+	log.Printf("[PAGINATOR] Processing interaction: messageID=%s, userID=%s, username=%s, stateUserID=%s, currentPage=%d/%d",
+		i.Message.ID, userID, username, state.userID, state.currentPage+1, state.paginator.MaxPages)
 
 	messageID := i.Message.ID
 	var newPage int
