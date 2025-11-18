@@ -685,7 +685,6 @@ func TestFindCommandWithSuggestion(t *testing.T) {
 		// Valid commands
 		{"exact problems", "problems", true, "problems", false},
 		{"exact help", "help", true, "help", false},
-		{"exact process", "process", true, "process", false},
 
 		// Close typos - should suggest
 		{"proces typo", "proces", false, "", true},
@@ -822,66 +821,6 @@ func TestGetCompanyAlias(t *testing.T) {
 	}
 }
 
-// Test stage fuzzy matching
-func TestFindStageWithSuggestion(t *testing.T) {
-	tests := []struct {
-		name              string
-		input             string
-		expectedFound     bool
-		expectedStage     string
-		expectSuggestions bool
-	}{
-		// Valid stages
-		{"exact apply", "apply", true, "Apply", false},
-		{"exact reject", "reject", true, "Reject", false},
-		{"exact oa", "oa", true, "OA", false},
-		{"exact phone", "phone", true, "Phone", false},
-		{"exact onsite", "onsite", true, "Onsite", false},
-		{"exact offer", "offer", true, "Offer", false},
-
-		// Case variations
-		{"uppercase apply", "APPLY", true, "Apply", false},
-		{"mixed case", "ApPlY", true, "Apply", false},
-
-		// Close typos - should suggest (but some auto-correct)
-		{"apply typo", "aplly", false, "", false}, // confidence too low for suggestions
-		{"reject typo", "rejct", false, "", true},
-		{"phone typo", "phon", false, "", true},
-		{"onsite typo", "onsit", false, "", true},
-		{"offer typo", "offr", false, "", true},
-
-		// Medium typos - should suggest
-		{"apply typo 2", "aply", false, "", true},
-		{"reject typo 2", "rej", false, "", true},
-
-		// Too different - no suggestion
-		{"completely different", "xyz", false, "", false},
-		{"random", "random", false, "", false},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			stage, found, suggestions := findStageWithSuggestion(tt.input)
-
-			if found != tt.expectedFound {
-				t.Errorf("findStageWithSuggestion(%q) found = %v, want %v", tt.input, found, tt.expectedFound)
-			}
-
-			if found && stage != tt.expectedStage {
-				t.Errorf("findStageWithSuggestion(%q) stage = %q, want %q", tt.input, stage, tt.expectedStage)
-			}
-
-			if tt.expectSuggestions && len(suggestions) == 0 {
-				t.Errorf("findStageWithSuggestion(%q) expected suggestions but got none", tt.input)
-			}
-
-			if !tt.expectSuggestions && len(suggestions) > 0 {
-				t.Errorf("findStageWithSuggestion(%q) got suggestions %v but expected none", tt.input, suggestions)
-			}
-		})
-	}
-}
-
 // Test ambiguous company matching (dropbox vs box)
 func TestAmbiguousCompanyMatching(t *testing.T) {
 	testData := map[string]map[string][]data.Problem{
@@ -932,93 +871,6 @@ func TestAmbiguousCompanyMatching(t *testing.T) {
 
 			if !tt.expectSuggestions && len(suggestions) > 0 {
 				t.Errorf("findCompanyWithSuggestion(%q) got suggestions %v but expected none", tt.input, suggestions)
-			}
-		})
-	}
-}
-
-// Test parsing logic for process command with trailing text
-func TestProcessCommandParsing(t *testing.T) {
-	tests := []struct {
-		name            string
-		input           string
-		expectedCompany string
-		expectedStage   string
-		expectError     bool
-	}{
-		// Basic cases
-		{"basic case", "google oa", "google", "OA", false},
-		{"meta alias", "meta offer", "facebook", "Offer", false},
-		{"multi-word company", "jump trading phone", "jump trading", "Phone", false},
-
-		// Cases with trailing text
-		{"trailing text", "google oa (has anyone done this", "google", "OA", false},
-		{"trailing text multi-word", "jump trading oa (what about onsite", "jump trading", "OA", false},
-		{"long trailing text", "google oa (dm if youve done this interview before", "google", "OA", false},
-
-		// Cases with job-related words (should be cleaned, but stages preserved)
-		{"new grad swe", "pure storage new grad swe oa", "pure storage oa", "OA", false},
-		{"software engineer", "google software engineer phone", "google phone", "Phone", false},
-		{"internship", "facebook internship offer", "facebook offer", "Offer", false},
-		{"senior role", "apple senior software engineer onsite", "apple onsite", "Onsite", false},
-
-		// Edge cases
-		{"only company no stage", "google", "", "", true},
-		{"invalid stage", "google invalid", "", "", true},
-		{"stage in middle", "google apply oa extra", "google apply", "OA", false},
-		{"multiple valid stages", "google oa phone onsite", "google oa phone", "Onsite", false},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			// Simulate the parsing logic from handleProcessMessageCommand
-			args := strings.Fields(tt.input)
-			if len(args) < 2 {
-				if !tt.expectError {
-					t.Errorf("Expected no error for input %q, but got insufficient args", tt.input)
-				}
-				return
-			}
-
-			// Use the same parsing logic as the actual handler
-			var stageIndex = -1
-			maxSearchDistance := 4
-			if len(args) < maxSearchDistance {
-				maxSearchDistance = len(args)
-			}
-
-			for i := 1; i <= maxSearchDistance && i <= len(args); i++ {
-				candidateStage := args[len(args)-i]
-				if _, found, _ := findStageWithSuggestion(candidateStage); found {
-					stageIndex = len(args) - i
-					break
-				}
-			}
-
-			if stageIndex == -1 {
-				if !tt.expectError {
-					t.Errorf("Expected to find valid stage in %q, but none found", tt.input)
-				}
-				return
-			}
-
-			companyInput := strings.Join(args[:stageIndex], " ")
-			stageInput := args[stageIndex]
-			stage, _, _ := findStageWithSuggestion(stageInput)
-
-			if tt.expectError {
-				t.Errorf("Expected error for input %q, but parsing succeeded", tt.input)
-				return
-			}
-
-			// Test the cleaned company input (this is what the actual handler uses)
-			cleanedCompanyInput := cleanCompanyInput(companyInput)
-			if cleanedCompanyInput != tt.expectedCompany {
-				t.Errorf("Expected cleaned company %q, got %q (from raw: %q)", tt.expectedCompany, cleanedCompanyInput, companyInput)
-			}
-
-			if stage != tt.expectedStage {
-				t.Errorf("Expected stage %q, got %q", tt.expectedStage, stage)
 			}
 		})
 	}
@@ -1091,53 +943,6 @@ func TestProblemsCommandParsing(t *testing.T) {
 
 			if timeframeArg != tt.expectedTimeframe {
 				t.Errorf("Expected timeframe %q, got %q", tt.expectedTimeframe, timeframeArg)
-			}
-		})
-	}
-}
-
-// Test company input cleaning function
-func TestCleanCompanyInput(t *testing.T) {
-	tests := []struct {
-		name     string
-		input    string
-		expected string
-	}{
-		// Basic cases
-		{"simple company", "google", "google"},
-		{"spaced company", "pure storage", "pure storage"},
-		{"company with punctuation", "google.", "google"},
-		{"company with parentheses", "google (inc)", "google"},
-
-		// Job-related words to filter (but stages preserved)
-		{"new grad", "pure storage new grad swe", "pure storage"},
-		{"software engineer", "google software engineer", "google"},
-		{"internship", "facebook internship", "facebook"},
-		{"full time", "amazon full time", "amazon"},
-		{"senior role", "apple senior software engineer", "apple"},
-		{"multiple job words", "microsoft new grad software engineer intern", "microsoft"},
-
-		// Stages should be preserved
-		{"stage preserved", "google oa", "google oa"},
-		{"stage with job words", "facebook software engineer phone", "facebook phone"},
-		{"stage with trailing", "meta offer (best company", "meta offer"},
-
-		// Complex cases
-		{"mixed case", "Pure Storage New Grad SWE", "pure storage"},
-		{"with extra words", "meta software engineer intern (remote)", "meta"},
-		{"all job words", "new grad swe intern", ""},
-
-		// Edge cases
-		{"empty string", "", ""},
-		{"only job words", "swe engineer developer", ""},
-		{"company with numbers", "google 2024", "google 2024"},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			result := cleanCompanyInput(tt.input)
-			if result != tt.expected {
-				t.Errorf("cleanCompanyInput(%q) = %q, want %q", tt.input, result, tt.expected)
 			}
 		})
 	}
