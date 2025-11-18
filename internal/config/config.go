@@ -8,10 +8,8 @@ import (
 )
 
 type Config struct {
-	DiscordToken                     string
-	BotPrefix                        string
-	FirestoreProjectID               string
-    FirestoreDatabaseID              string
+	DiscordToken string
+	BotPrefix    string
 }
 
 func Load() (*Config, error) {
@@ -19,10 +17,8 @@ func Load() (*Config, error) {
 	_ = godotenv.Load()
 
 	config := &Config{
-		DiscordToken:                     getEnvVar("DISCORD_TOKEN", ""),
-		BotPrefix:                        getEnvVar("BOT_PREFIX", "!"),
-		FirestoreProjectID:               getEnvVar("FIRESTORE_PROJECT_ID", ""),
-        FirestoreDatabaseID:              getEnvVar("FIRESTORE_DATABASE_ID", ""),
+		DiscordToken: getEnvVar("DISCORD_TOKEN", ""),
+		BotPrefix:    getEnvVar("BOT_PREFIX", "!"),
 	}
 
 	if config.DiscordToken == "" {

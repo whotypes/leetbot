@@ -13,7 +13,6 @@ import (
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"github.com/whotypes/leetbot/internal/config"
 	"github.com/whotypes/leetbot/internal/data"
 )
 
@@ -53,21 +52,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to load problems data: %v", err)
 	}
-
-	ctx := context.Background()
-	cfg, err := config.Load()
-	if err != nil {
-		log.Fatalf("Failed to load configuration: %v", err)
-	}
-
-	// Initialize Firestore client with explicit database ID using Application Default Credentials
-	fireStoreClient, err := data.NewFirestoreClient(ctx, cfg.FirestoreProjectID, cfg.FirestoreDatabaseID)
-	if err != nil {
-		log.Fatalf("Failed to create Firestore client: %v", err)
-	}
-	defer fireStoreClient.Close()
-
-	fmt.Println("Firestore client created")
 
 	r := mux.NewRouter()
 

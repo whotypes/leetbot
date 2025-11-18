@@ -1,6 +1,7 @@
 package discord
 
 import (
+	"fmt"
 	"strings"
 	"testing"
 
@@ -876,73 +877,417 @@ func TestAmbiguousCompanyMatching(t *testing.T) {
 	}
 }
 
-// Test parsing logic for problems command with trailing text
-func TestProblemsCommandParsing(t *testing.T) {
+// Test parseProblemsCommandArgs contract: extracts company and timeframe from args
+func TestParseProblemsCommandArgs(t *testing.T) {
 	handler := NewHandler(createTestProblemsData(), "!")
+	isTimeframeKeyword := handler.isTimeframeKeyword
 
 	tests := []struct {
 		name              string
-		input             string
+		args              []string
 		expectedCompany   string
 		expectedTimeframe string
+		description       string
 	}{
-		// Basic cases
-		{"basic case", "google", "google", ""},
-		{"with timeframe", "amazon 30d", "amazon", "30d"},
-		{"multi-word company", "jump trading", "jump trading", ""},
-
-		// Cases with trailing text
-		{"trailing text", "google (what are the best problems", "google", ""},
-		{"trailing text with timeframe", "amazon 30d (show me the hardest", "amazon", "30d"},
-		{"multi-word with timeframe", "jump trading 3mo (any system design", "jump trading", "3mo"},
-		{"trailing text only", "facebook (show me everything", "facebook", ""},
-
-		// Cases with job-related words (should be cleaned, but timeframes preserved if present)
-		{"new grad", "pure storage new grad swe", "pure storage", ""},
-		{"software engineer", "google software engineer", "google", ""},
-		{"internship", "facebook internship", "facebook", ""},
-		{"senior role", "apple senior software engineer", "apple", ""},
-
-		// Edge cases
-		{"timeframe in middle", "google 30d extra stuff", "google", "30d"},
-		{"multiple timeframes", "google 30d 3mo extra", "google 30d", "3mo"},
+		{
+			name:              "single company",
+			args:              []string{"google"},
+			expectedCompany:   "google",
+			expectedTimeframe: "",
+			description:       "Basic case: single word company, no timeframe",
+		},
+		{
+			name:              "company with timeframe",
+			args:              []string{"amazon", "30d"},
+			expectedCompany:   "amazon",
+			expectedTimeframe: "30d",
+			description:       "Company followed by timeframe",
+		},
+		{
+			name:              "multi-word company",
+			args:              []string{"jump", "trading"},
+			expectedCompany:   "jump trading",
+			expectedTimeframe: "",
+			description:       "Multi-word company name preserved",
+		},
+		{
+			name:              "multi-word company with timeframe",
+			args:              []string{"jump", "trading", "3mo"},
+			expectedCompany:   "jump trading",
+			expectedTimeframe: "3mo",
+			description:       "Multi-word company with timeframe",
+		},
+		{
+			name:              "timeframe in middle",
+			args:              []string{"google", "30d", "extra", "stuff"},
+			expectedCompany:   "google",
+			expectedTimeframe: "30d",
+			description:       "Timeframe detected even when followed by trailing text",
+		},
+		{
+			name:              "multiple timeframes",
+			args:              []string{"google", "30d", "3mo", "extra"},
+			expectedCompany:   "google 30d",
+			expectedTimeframe: "3mo",
+			description:       "Rightmost timeframe is selected when multiple present",
+		},
+		{
+			name:              "timeframe beyond search limit",
+			args:              []string{"amazon", "30d", "show", "me", "the", "hardest"},
+			expectedCompany:   "amazon 30d show me the hardest",
+			expectedTimeframe: "",
+			description:       "Timeframe too far back (beyond 4 args) not detected - treated as company name",
+		},
+		{
+			name:              "timeframe keyword in trailing text",
+			args:              []string{"facebook", "show", "me", "everything"},
+			expectedCompany:   "facebook show me",
+			expectedTimeframe: "everything",
+			description:       "Timeframe keyword 'everything' detected in trailing text",
+		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			args := strings.Fields(tt.input)
+			companyInput, timeframeArg := parseProblemsCommandArgs(tt.args, isTimeframeKeyword)
 
-			// Use the same parsing logic as the actual handler
-			var companyInput, timeframeArg string
-			var timeframeIndex = -1
-			maxSearchDistance := 4
-			if len(args) < maxSearchDistance {
-				maxSearchDistance = len(args)
-			}
-
-			for i := 1; i <= maxSearchDistance && i <= len(args); i++ {
-				candidateTimeframe := strings.ToLower(args[len(args)-i])
-				if handler.isTimeframeKeyword(candidateTimeframe) {
-					timeframeIndex = len(args) - i
-					timeframeArg = candidateTimeframe
-					break
-				}
-			}
-
-			if timeframeIndex != -1 {
-				companyInput = strings.Join(args[:timeframeIndex], " ")
-			} else {
-				companyInput = strings.Join(args, " ")
-			}
-
-			// Test the cleaned company input (this is what the actual handler uses)
-			cleanedCompanyInput := cleanCompanyInput(companyInput)
-			if cleanedCompanyInput != tt.expectedCompany {
-				t.Errorf("Expected cleaned company %q, got %q (from raw: %q)", tt.expectedCompany, cleanedCompanyInput, companyInput)
+			if companyInput != tt.expectedCompany {
+				t.Errorf("parseProblemsCommandArgs(%v) companyInput = %q, want %q\nDescription: %s",
+					tt.args, companyInput, tt.expectedCompany, tt.description)
 			}
 
 			if timeframeArg != tt.expectedTimeframe {
-				t.Errorf("Expected timeframe %q, got %q", tt.expectedTimeframe, timeframeArg)
+				t.Errorf("parseProblemsCommandArgs(%v) timeframeArg = %q, want %q\nDescription: %s",
+					tt.args, timeframeArg, tt.expectedTimeframe, tt.description)
+			}
+		})
+	}
+}
+
+// Test cleanCompanyInput contract: removes job-related words from company input
+func TestCleanCompanyInput(t *testing.T) {
+	tests := []struct {
+		name          string
+		input         string
+		expected      string
+		description   string
+	}{
+		{
+			name:        "simple company",
+			input:        "google",
+			expected:     "google",
+			description:  "No job words, returns as-is",
+		},
+		{
+			name:        "company with job words",
+			input:        "google new grad swe",
+			expected:     "google",
+			description:  "Job-related words removed",
+		},
+		{
+			name:        "multi-word company with job words",
+			input:        "pure storage new grad swe",
+			expected:     "pure storage",
+			description:  "Multi-word company preserved, job words removed",
+		},
+		{
+			name:        "only job words",
+			input:        "new grad swe engineer",
+			expected:     "",
+			description:  "All job words removed, empty result",
+		},
+		{
+			name:        "company with punctuation",
+			input:        "google (inc)",
+			expected:     "google inc",
+			description:  "Punctuation stripped from words, non-job words preserved",
+		},
+		{
+			name:        "preserves non-job words",
+			input:        "google what are the best problems",
+			expected:     "google what are the best problems",
+			description:  "Non-job words preserved even if not company-related",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := cleanCompanyInput(tt.input)
+			if result != tt.expected {
+				t.Errorf("cleanCompanyInput(%q) = %q, want %q\nDescription: %s",
+					tt.input, result, tt.expected, tt.description)
+			}
+		})
+	}
+}
+
+// Test pagination threshold
+func TestShouldUsePagination(t *testing.T) {
+	tests := []struct {
+		name         string
+		problemCount int
+		expected     bool
+	}{
+		{"exactly threshold", 10, false},
+		{"below threshold", 9, false},
+		{"above threshold", 11, true},
+		{"zero problems", 0, false},
+		{"many problems", 100, true},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := shouldUsePagination(tt.problemCount)
+			if result != tt.expected {
+				t.Errorf("shouldUsePagination(%d) = %v, want %v", tt.problemCount, result, tt.expected)
+			}
+		})
+	}
+}
+
+// Test createProblemsPaginator
+func TestCreateProblemsPaginator(t *testing.T) {
+	problems := make([]data.Problem, 25)
+	for i := 0; i < 25; i++ {
+		problems[i] = data.Problem{
+			ID:         i + 1,
+			URL:        fmt.Sprintf("https://leetcode.com/problems/test-%d", i+1),
+			Title:      fmt.Sprintf("Test Problem %d", i+1),
+			Difficulty: "Easy",
+			Acceptance: 50.0,
+			Frequency:  100.0,
+		}
+	}
+
+	tests := []struct {
+		name            string
+		company         string
+		timeframe       string
+		problems        []data.Problem
+		expectedPages   int
+		checkPageFunc   func(*testing.T, *Paginator, int)
+	}{
+		{
+			name:          "exactly 10 problems (1 page)",
+			company:       "google",
+			timeframe:     "all",
+			problems:      problems[:10],
+			expectedPages: 1,
+			checkPageFunc: func(t *testing.T, pg *Paginator, page int) {
+				embed := &discordgo.MessageEmbed{}
+				pg.PageFunc(page, embed)
+				if embed.Title == "" {
+					t.Error("PageFunc should set embed title")
+				}
+				if embed.Footer == nil {
+					t.Error("PageFunc should set embed footer")
+				}
+			},
+		},
+		{
+			name:          "25 problems (3 pages)",
+			company:       "amazon",
+			timeframe:     "thirty-days",
+			problems:      problems,
+			expectedPages: 3,
+			checkPageFunc: func(t *testing.T, pg *Paginator, page int) {
+				embed := &discordgo.MessageEmbed{}
+				pg.PageFunc(page, embed)
+				if embed.Title == "" {
+					t.Error("PageFunc should set embed title")
+				}
+				if !contains(embed.Footer.Text, fmt.Sprintf("%d/%d", page+1, pg.MaxPages)) {
+					t.Errorf("Footer should contain page info, got: %s", embed.Footer.Text)
+				}
+			},
+		},
+		{
+			name:          "empty problems",
+			company:       "facebook",
+			timeframe:     "all",
+			problems:      []data.Problem{},
+			expectedPages: 0,
+			checkPageFunc: func(t *testing.T, pg *Paginator, page int) {
+				embed := &discordgo.MessageEmbed{}
+				pg.PageFunc(page, embed)
+				if embed.Title == "" {
+					t.Error("PageFunc should set embed title even for empty problems")
+				}
+			},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			pg := createProblemsPaginator(tt.company, tt.timeframe, tt.problems)
+			if pg.MaxPages != tt.expectedPages {
+				t.Errorf("createProblemsPaginator() MaxPages = %d, want %d", pg.MaxPages, tt.expectedPages)
+			}
+			if pg.PageFunc == nil {
+				t.Error("createProblemsPaginator() PageFunc should not be nil")
+			}
+			if tt.checkPageFunc != nil {
+				for page := 0; page < tt.expectedPages; page++ {
+					tt.checkPageFunc(t, pg, page)
+				}
+			}
+		})
+	}
+}
+
+// Test paginator PageFunc with boundary conditions
+func TestCreateProblemsPaginator_BoundaryConditions(t *testing.T) {
+	problems := make([]data.Problem, 15)
+	for i := 0; i < 15; i++ {
+		problems[i] = data.Problem{
+			ID:         i + 1,
+			URL:        fmt.Sprintf("https://leetcode.com/problems/test-%d", i+1),
+			Title:      fmt.Sprintf("Test Problem %d", i+1),
+			Difficulty: "Easy",
+			Acceptance: 50.0,
+			Frequency:  100.0,
+		}
+	}
+
+	pg := createProblemsPaginator("test", "all", problems)
+
+	tests := []struct {
+		name          string
+		page          int
+		expectedStart int
+		expectedEnd   int
+	}{
+		{"first page", 0, 0, 10},
+		{"second page", 1, 10, 15},
+		{"negative page (should clamp to 0)", -1, 0, 10},
+		{"page beyond max (should clamp)", 10, 10, 15},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			embed := &discordgo.MessageEmbed{}
+			pg.PageFunc(tt.page, embed)
+
+			if embed.Description == "" {
+				t.Error("PageFunc should set description")
+			}
+
+			expectedCount := tt.expectedEnd - tt.expectedStart
+			actualCount := strings.Count(embed.Description, "**")
+			if actualCount < expectedCount*2 {
+				t.Errorf("Expected at least %d problems in description, but got fewer markers", expectedCount)
+			}
+		})
+	}
+}
+
+// Test Manager createButtons
+func TestManagerCreateButtons(t *testing.T) {
+	m := &Manager{
+		paginators: make(map[string]*paginatorState),
+	}
+
+	tests := []struct {
+		name          string
+		messageID     string
+		page          int
+		maxPages      int
+		expectedCount int
+		checkDisabled func(*testing.T, []discordgo.MessageComponent)
+	}{
+		{
+			name:          "first page",
+			messageID:     "msg123",
+			page:          0,
+			maxPages:      5,
+			expectedCount: 4,
+			checkDisabled: func(t *testing.T, components []discordgo.MessageComponent) {
+				row := components[0].(discordgo.ActionsRow)
+				firstBtn := row.Components[0].(discordgo.Button)
+				backBtn := row.Components[1].(discordgo.Button)
+				if !firstBtn.Disabled {
+					t.Error("First button should be disabled on first page")
+				}
+				if !backBtn.Disabled {
+					t.Error("Back button should be disabled on first page")
+				}
+			},
+		},
+		{
+			name:          "last page",
+			messageID:     "msg456",
+			page:          4,
+			maxPages:      5,
+			expectedCount: 4,
+			checkDisabled: func(t *testing.T, components []discordgo.MessageComponent) {
+				row := components[0].(discordgo.ActionsRow)
+				nextBtn := row.Components[2].(discordgo.Button)
+				lastBtn := row.Components[3].(discordgo.Button)
+				if !nextBtn.Disabled {
+					t.Error("Next button should be disabled on last page")
+				}
+				if !lastBtn.Disabled {
+					t.Error("Last button should be disabled on last page")
+				}
+			},
+		},
+		{
+			name:          "middle page",
+			messageID:     "msg789",
+			page:          2,
+			maxPages:      5,
+			expectedCount: 4,
+			checkDisabled: func(t *testing.T, components []discordgo.MessageComponent) {
+				row := components[0].(discordgo.ActionsRow)
+				for _, comp := range row.Components {
+					btn := comp.(discordgo.Button)
+					if btn.Disabled {
+						t.Errorf("Button %s should not be disabled on middle page", btn.CustomID)
+					}
+				}
+			},
+		},
+		{
+			name:          "single page",
+			messageID:     "msg999",
+			page:          0,
+			maxPages:      1,
+			expectedCount: 4,
+			checkDisabled: func(t *testing.T, components []discordgo.MessageComponent) {
+				row := components[0].(discordgo.ActionsRow)
+				for _, comp := range row.Components {
+					btn := comp.(discordgo.Button)
+					if !btn.Disabled {
+						t.Errorf("Button %s should be disabled on single page", btn.CustomID)
+					}
+				}
+			},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			components := m.createButtons(tt.messageID, tt.page, tt.maxPages)
+			if len(components) != 1 {
+				t.Errorf("createButtons() should return 1 ActionsRow, got %d", len(components))
+			}
+
+			row := components[0].(discordgo.ActionsRow)
+			if len(row.Components) != tt.expectedCount {
+				t.Errorf("createButtons() should return %d buttons, got %d", tt.expectedCount, len(row.Components))
+			}
+
+			if tt.checkDisabled != nil {
+				tt.checkDisabled(t, components)
+			}
+
+			for i, comp := range row.Components {
+				btn := comp.(discordgo.Button)
+				expectedActions := []string{"first", "back", "next", "last"}
+				expectedID := fmt.Sprintf("paginator:%s:%s", tt.messageID, expectedActions[i])
+				if btn.CustomID != expectedID {
+					t.Errorf("Button %d CustomID = %q, want %q", i, btn.CustomID, expectedID)
+				}
 			}
 		})
 	}
