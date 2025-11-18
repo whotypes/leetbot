@@ -902,7 +902,7 @@ var preInitializedChannels = []string{
 	"1242309460689424504", // production channel 3
 	"971974276859170886",  // production channel 4
 	"905854653571420190",  // production channel 5
-	"channel123",          // test channel
+	"1431649138084155403",          // test channel
 }
 
 func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
@@ -1116,11 +1116,34 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 	}
 
 	parts := strings.Fields(content)
+	if len(parts) == 0 {
+		return
+	}
+
 	command := strings.ToLower(parts[0])
 	args := parts[1:]
 
+	// ignore messages where the command part is just punctuation/symbols (like "!!!" or "!@#$")
+	// only process if the command contains at least one alphanumeric character
+	hasAlphanumeric := false
+	for _, r := range command {
+		if (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z') || (r >= '0' && r <= '9') {
+			hasAlphanumeric = true
+			break
+		}
+	}
+	if !hasAlphanumeric {
+		return
+	}
+
 	// check if command is valid or a typo
 	correctCommand, isValid, suggestion := findCommandWithSuggestion(command)
+
+	// if not valid and no suggestion (meaning it's too far from any valid command),
+	// silently ignore it to avoid responding to casual exclamations like "!omg"
+	if !isValid && suggestion == "" {
+		return
+	}
 
 	if !isValid {
 		// command is not valid
