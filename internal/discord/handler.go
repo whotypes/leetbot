@@ -1310,22 +1310,8 @@ func (h *Handler) createHelpPaginator(isAdmin bool) *Paginator {
 • **/problems** - Show interview problems (with dropdown options)
 • **/help** - Show this help message`, h.prefix, h.prefix)
 
-				if isAdmin {
-					embed.Description += fmt.Sprintf(`
-
-**Admin Commands:**
-• **%sinit** - Enable Leetbot in current channel (admin only)
-• **%sinit enable** - Enable Leetbot in current channel (admin only)
-• **%sinit disable** - Disable Leetbot in current channel (admin only)
-• **%sinit status** - Check if Leetbot is enabled in current channel (admin only)
-• **%sshutdown [indef]** - Shutdown Leetbot (admin only)
-• **%sstartup** - Restart Leetbot or re-enable if disabled (admin only)
-
-**Note:** Leetbot only responds in channels that have been initialized by the admin.`, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix, h.prefix)
-				}
-
 				embed.Footer = &discordgo.MessageEmbedFooter{
-					Text: "Page 1/3 • Use the buttons below to navigate",
+					Text: "Page 1/2 • Use the buttons below to navigate",
 				}
 
 			case 1:
@@ -1352,28 +1338,13 @@ When no timeframe is specified, Leetbot automatically tries:
 5. All time (fallback)`
 
 				embed.Footer = &discordgo.MessageEmbedFooter{
-					Text: "Page 2/3 • Use the buttons below to navigate",
-				}
-
-			case 2:
-				// Page 3: Examples
-				embed.Title = "Examples & Usage"
-				embed.Color = 0x5865F2
-				embed.Description = `**Examples:**
-• ` + h.prefix + `problems airbnb (uses smart priority)
-• ` + h.prefix + `problems amazon 30d (forces 30 days)
-• ` + h.prefix + `problems google 3mo (forces 3 months)
-• /problems company:airbnb (uses smart priority)
-• /problems company:amazon timeframe:thirty-days`
-
-				embed.Footer = &discordgo.MessageEmbedFooter{
-					Text: "Page 3/3 • Use the buttons below to navigate",
+					Text: "Page 2/2 • Use the buttons below to navigate",
 				}
 			}
 
 			embed.Timestamp = time.Now().Format(time.RFC3339)
 		},
-		MaxPages: 3,
+		MaxPages: 2,
 	}
 }
 
