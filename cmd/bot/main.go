@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"log"
 	"os"
@@ -36,19 +35,6 @@ func main() {
 
 	handler := discord.NewHandler(problemsData, cfg.BotPrefix)
 
-    // Wire up process storage if configured
-    if cfg.FirestoreProjectID != "" {
-        ctx := context.Background()
-        fs, err := data.NewFirestoreClient(ctx, cfg.FirestoreProjectID, cfg.FirestoreDatabaseID)
-        if err != nil {
-            log.Printf("Warning: failed to initialize Firestore storage: %v", err)
-        } else {
-            handler.SetProcessStorage(fs)
-            log.Println("✓ Process storage configured (Firestore)")
-        }
-    } else {
-        log.Println("Process storage not configured; !process command will be disabled")
-    }
 	dg, err := discordgo.New("Bot " + cfg.DiscordToken)
 	if err != nil {
 		log.Fatalf("Failed to create Discord session: %v", err)
