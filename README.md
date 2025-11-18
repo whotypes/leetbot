@@ -9,7 +9,7 @@ A [Discord bot](https://discord.com/oauth2/authorize?client_id=14311628391874601
 <img src="./internal/docs/example2.webp" alt="Leetbot No Data Example (Jump)" width="350" height="auto">
 
 - leetbot [embeds](https://pkg.go.dev/embed) `csv` files within the compiled binary keeping latency near zero ✅
-- leetbot uses the [dgo-paginator](https://github.com/topi314/dgo-paginator) library to paginate the results ✅
+- leetbot uses a custom paginator implementation [inspired by `dgo-paginator`](https://github.com/topi314/dgo-paginator) to paginate results ✅
 - leetbot supports both text (`!problems google`) and slash commands (`/problems google`) ✅
 - leetbot supports suggestions, autocompletion, [fuzzy search](https://pkg.go.dev/github.com/lithammer/fuzzysearch@v1.1.8), and validation for company names ✅
 - leetbot supports multiple timeframes (`all`, `30d`, `3mo`, `6mo`, `>6mo`) ✅

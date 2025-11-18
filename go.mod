@@ -10,7 +10,6 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/joho/godotenv v1.4.0
 	github.com/lithammer/fuzzysearch v1.1.8
-	github.com/topi314/dgo-paginator v0.0.0-20240808185922-2102ebe1a287
 	golang.org/x/text v0.30.0
 )
 
