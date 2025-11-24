@@ -1,10 +1,14 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query'
-import { useEffect, useRef } from 'react'
+import { RefreshCw } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 import { CompanySelector } from './components/CompanySelector'
 import { LoadingSpinner } from './components/LoadingSpinner'
 import { ProblemsTable } from './components/ProblemsTable'
 import { ThemeToggle } from './components/ThemeToggle'
 import { TimeframeSelector } from './components/TimeframeSelector'
+import { Alert, AlertDescription } from './components/ui/alert'
+import { Button } from './components/ui/button'
+import { Card, CardContent } from './components/ui/card'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useTheme } from './hooks/useTheme'
 import type { APIResponse, Problem } from './types'
@@ -56,6 +60,7 @@ function App() {
 
   const [selectedCompany, setSelectedCompany] = useLocalStorage<string>('selectedCompany', '')
   const [selectedTimeframe, setSelectedTimeframe] = useLocalStorage<string>('selectedTimeframe', '')
+  const [previewCompany, setPreviewCompany] = useState<string>('')
 
   // Query for companies - runs once on mount
   const { data: companiesData, error: companiesError } = useQuery({
@@ -64,18 +69,23 @@ function App() {
     staleTime: 1000 * 60 * 10, // 10 minutes - companies don't change often
   })
 
-  // Query for timeframes - runs when company changes
+  // Use preview company for fetching if available, otherwise use selected company
+  const activeCompany = previewCompany || selectedCompany
+
+  // Query for timeframes - runs when company changes (including preview)
   const { data: timeframesData, error: timeframesError } = useQuery({
-    queryKey: ['timeframes', selectedCompany],
-    queryFn: () => fetchTimeframes(selectedCompany),
-    enabled: !!selectedCompany,
+    queryKey: ['timeframes', activeCompany],
+    queryFn: () => fetchTimeframes(activeCompany),
+    enabled: !!activeCompany,
   })
 
   // Query for problems - runs when both company and timeframe are selected
+  // Only use preview company if timeframe is also selected
+  const activeTimeframe = selectedTimeframe
   const { data: problemsData, isLoading: problemsLoading, error: problemsError } = useQuery({
-    queryKey: ['problems', selectedCompany, selectedTimeframe],
-    queryFn: () => fetchProblems({ company: selectedCompany, timeframe: selectedTimeframe }),
-    enabled: !!selectedCompany && !!selectedTimeframe,
+    queryKey: ['problems', activeCompany, activeTimeframe],
+    queryFn: () => fetchProblems({ company: activeCompany, timeframe: activeTimeframe }),
+    enabled: !!activeCompany && !!activeTimeframe,
     retry: (failureCount, error) => {
       // Don't retry if it's a "no problems found" error
       if (error instanceof Error && error.message.includes('No problems found')) {
@@ -94,6 +104,15 @@ function App() {
 
   const handleCompanyChange = (company: string) => {
     setSelectedCompany(company)
+    setPreviewCompany('')
+  }
+
+  const handleCompanyPreview = (company: string) => {
+    if (company) {
+      setPreviewCompany(company)
+    } else {
+      setPreviewCompany('')
+    }
   }
 
   const handleTimeframeChange = (timeframe: string) => {
@@ -124,79 +143,86 @@ function App() {
   const discordInviteUrl = isProd ? "https://discord.com/oauth2/authorize?client_id=1431162839187460126&permissions=277025736768&integration_type=0&scope=applications.commands+bot" : "https://discord.com/oauth2/authorize?client_id=1431596971767894036&permissions=277025736768&integration_type=0&scope=applications.commands+bot";
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-background)' }}>
+    <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8 flex items-start justify-between">
           <div>
-            <h1 className="text-4xl font-bold mb-2" style={{ color: 'var(--color-content)' }}>Leetbot.org - a leetcode problem data explorer</h1>
-            <p className='max-w-4xl' style={{ color: 'var(--color-tertiary)' }}>See all of the problems that have been asked at your favorite companies. <br /><a href={discordInviteUrl} target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400">Add leetbot to your discord servers</a> to expose the problems in your own communities.</p>
+            <h1 className="text-4xl font-bold mb-2 text-foreground">Leetbot.org - a leetcode problem data explorer</h1>
+            <p className='max-w-4xl text-muted-foreground'>See all of the problems that have been asked at your favorite companies. <br /><a href={discordInviteUrl} target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400">Add leetbot to your discord servers</a> to expose the problems in your own communities.</p>
           </div>
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </header>
 
-        <div className="rounded-lg border p-6 mb-8" style={{ backgroundColor: 'var(--color-surface)', borderColor: 'var(--color-muted)' }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <CompanySelector
-              companies={companies}
-              selectedCompany={selectedCompany}
-              onCompanyChange={handleCompanyChange}
-            />
-            <TimeframeSelector
-              timeframes={timeframes}
-              selectedTimeframe={selectedTimeframe}
-              onTimeframeChange={handleTimeframeChange}
-              disabled={!selectedCompany}
-            />
-          </div>
-        </div>
+        <Card className="mb-8">
+          <CardContent className="pt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <CompanySelector
+                companies={companies}
+                selectedCompany={selectedCompany}
+                onCompanyChange={handleCompanyChange}
+                onCompanyPreview={handleCompanyPreview}
+              />
+              <TimeframeSelector
+                timeframes={timeframes}
+                selectedTimeframe={selectedTimeframe}
+                onTimeframeChange={handleTimeframeChange}
+                disabled={!selectedCompany}
+              />
+            </div>
+          </CardContent>
+        </Card>
 
         {error && (
-          <div className="rounded-lg p-4 mb-6 border" style={{ backgroundColor: '#fef2f2', borderColor: '#fca5a5' }}>
-            <p style={{ color: '#dc2626' }}>{error}</p>
-          </div>
+          <Alert variant="destructive" className="mb-6">
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
         )}
 
-        {problemsLoading && <LoadingSpinner />}
+        <div className="min-h-[600px]">
+          {problemsLoading && <LoadingSpinner />}
 
-        {!problemsLoading && problems.length > 0 && (
-          <ProblemsTable problems={problems} />
-        )}
+          {!problemsLoading && problems.length > 0 && (
+            <ProblemsTable problems={problems} />
+          )}
 
-        {!problemsLoading && selectedCompany && selectedTimeframe && problems.length === 0 && !error && (
-          <div className="rounded-lg p-4 border" style={{ backgroundColor: '#fffbeb', borderColor: '#fbbf24' }}>
-            <div className="flex items-center justify-between">
-              <div>
-                <p style={{ color: '#d97706' }}>No problems found for the selected company and timeframe.</p>
-                <p className="text-sm mt-2" style={{ color: '#92400e' }}>
-                  This could mean no problems were asked in this timeframe, or the data is still being updated.
-                </p>
+          {!problemsLoading && selectedCompany && selectedTimeframe && problems.length === 0 && !error && (
+            <Alert className="mb-6">
+              <div className="flex items-center justify-between w-full">
+                <div>
+                  <AlertDescription>
+                    No problems found for the selected company and timeframe.
+                  </AlertDescription>
+                  <p className="text-sm mt-2 text-muted-foreground">
+                    This could mean no problems were asked in this timeframe, or the data is still being updated.
+                  </p>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    queryClient.invalidateQueries({ queryKey: ['problems'] })
+                    queryClient.invalidateQueries({ queryKey: ['timeframes'] })
+                    queryClient.invalidateQueries({ queryKey: ['companies'] })
+                  }}
+                  aria-label="Refresh data"
+                >
+                  <RefreshCw className="h-4 w-4 mr-2" />
+                  Refresh
+                </Button>
               </div>
-              <button
-                onClick={() => {
-                  // Clear cache and refetch data
-                  queryClient.invalidateQueries({ queryKey: ['problems'] })
-                  queryClient.invalidateQueries({ queryKey: ['timeframes'] })
-                  queryClient.invalidateQueries({ queryKey: ['companies'] })
-                }}
-                className="px-3 py-2 text-sm rounded-md border hover:opacity-80"
-                style={{
-                  backgroundColor: 'var(--color-surface)',
-                  borderColor: 'var(--color-muted)',
-                  color: 'var(--color-content)'
-                }}
-                aria-label="Refresh data"
-              >
-                🔄 Refresh
-              </button>
-            </div>
-          </div>
-        )}
+            </Alert>
+          )}
+        </div>
 
-        {/* Show loading state for timeframes if company is selected but timeframes are still loading */}
         {selectedCompany && !timeframesData && !timeframesError && (
-          <div className="rounded-lg p-4 border" style={{ backgroundColor: 'var(--color-surface)', borderColor: 'var(--color-muted)' }}>
-            <p style={{ color: 'var(--color-tertiary)' }}>Loading timeframes...</p>
-          </div>
+          <Card className="mb-6">
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-2">
+                <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
+                <p className="text-sm text-muted-foreground">Loading timeframes...</p>
+              </div>
+            </CardContent>
+          </Card>
         )}
       </div>
     </div>

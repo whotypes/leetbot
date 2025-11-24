@@ -1,3 +1,12 @@
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import { Label } from '@/components/ui/label'
+
 interface TimeframeSelectorProps {
   timeframes: string[]
   selectedTimeframe: string
@@ -14,33 +23,25 @@ const timeframeLabels: Record<string, string> = {
 }
 
 export const TimeframeSelector = ({ timeframes, selectedTimeframe, onTimeframeChange, disabled }: TimeframeSelectorProps) => {
+  const handleValueChange = (value: string) => {
+    onTimeframeChange(value)
+  }
+
   return (
-    <div>
-      <label htmlFor="timeframe-select" className="block text-sm font-medium mb-2" style={{ color: 'var(--color-content)' }}>
-        Timeframe
-      </label>
-      <select
-        id="timeframe-select"
-        value={selectedTimeframe}
-        onChange={(e) => onTimeframeChange(e.target.value)}
-        disabled={disabled}
-        className={`w-full p-4 border rounded-md focus:outline-none focus:ring-2 ${
-          disabled ? 'cursor-not-allowed opacity-60' : ''
-        }`}
-        style={{
-          borderColor: 'var(--color-muted)',
-          backgroundColor: disabled ? 'var(--color-muted)' : 'var(--color-surface)',
-          color: 'var(--color-content)',
-          '--tw-ring-color': 'var(--color-primary)'
-        } as React.CSSProperties & { '--tw-ring-color': string }}
-      >
-        <option value="">Select a timeframe</option>
-        {timeframes.map((timeframe) => (
-          <option key={timeframe} value={timeframe}>
-            {timeframeLabels[timeframe] || timeframe}
-          </option>
-        ))}
-      </select>
+    <div className="space-y-2">
+      <Label htmlFor="timeframe-select">Timeframe</Label>
+      <Select value={selectedTimeframe || undefined} onValueChange={handleValueChange} disabled={disabled}>
+        <SelectTrigger id="timeframe-select" className="w-full" disabled={disabled}>
+          <SelectValue placeholder="Select a timeframe" />
+        </SelectTrigger>
+        <SelectContent>
+          {timeframes.map((timeframe) => (
+            <SelectItem key={timeframe} value={timeframe}>
+              {timeframeLabels[timeframe] || timeframe}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
     </div>
   )
 }
