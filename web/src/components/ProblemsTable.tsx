@@ -1,85 +1,77 @@
+import { Badge } from '@/components/ui/badge'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import type { Problem } from '../types'
 
 interface ProblemsTableProps {
   problems: Problem[]
 }
 
-const getDifficultyColor = (difficulty: string) => {
+const getDifficultyClassName = (difficulty: string): string => {
   switch (difficulty.toLowerCase()) {
     case 'easy':
-      return { backgroundColor: '#dcfce7', color: '#166534' }
+      return 'bg-green-100 text-green-800 border-green-200 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800'
     case 'medium':
-      return { backgroundColor: '#fef3c7', color: '#d97706' }
+      return 'bg-yellow-100 text-yellow-800 border-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-400 dark:border-yellow-800'
     case 'hard':
-      return { backgroundColor: '#fee2e2', color: '#dc2626' }
+      return 'bg-red-100 text-red-800 border-red-200 dark:bg-red-900/30 dark:text-red-400 dark:border-red-800'
     default:
-      return { backgroundColor: 'var(--color-muted)', color: 'var(--color-content)' }
+      return ''
   }
 }
 
 export const ProblemsTable = ({ problems }: ProblemsTableProps) => {
   return (
-    <div className="rounded-lg border overflow-hidden" style={{ backgroundColor: 'var(--color-surface)', borderColor: 'var(--color-muted)' }}>
-      <div className="px-6 py-4 border-b" style={{ borderColor: 'var(--color-muted)' }}>
-        <h2 className="text-lg font-semibold" style={{ color: 'var(--color-content)' }}>
-          Problems ({problems.length})
-        </h2>
-      </div>
-
-      <div className="overflow-x-auto">
-        <table className="min-w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
-          <thead style={{ backgroundColor: 'var(--color-surface)' }}>
-            <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--color-tertiary)' }}>
-                ID
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--color-tertiary)' }}>
-                Title
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--color-tertiary)' }}>
-                Difficulty
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--color-tertiary)' }}>
-                Acceptance
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--color-tertiary)' }}>
-                Frequency
-              </th>
-            </tr>
-          </thead>
-          <tbody style={{ backgroundColor: 'var(--color-surface)' }}>
-            {problems.map((problem) => (
-              <tr key={problem.id} className="hover:opacity-80" style={{ borderBottom: '1px solid var(--color-muted)' }}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium" style={{ color: 'var(--color-content)' }}>
-                  {problem.id}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <a
-                    href={problem.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm hover:underline"
-                    style={{ color: 'var(--color-primary)' }}
-                  >
-                    {problem.title}
-                  </a>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full" style={getDifficultyColor(problem.difficulty)}>
-                    {problem.difficulty}
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm" style={{ color: 'var(--color-content)' }}>
-                  {problem.acceptance.toFixed(1)}%
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm" style={{ color: 'var(--color-content)' }}>
-                  {problem.frequency.toFixed(1)}%
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <Card>
+      <CardHeader>
+        <CardTitle>Problems ({problems.length})</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="max-h-[600px] overflow-auto">
+          <Table>
+            <TableHeader className="sticky top-0 bg-card z-10">
+              <TableRow>
+                <TableHead>ID</TableHead>
+                <TableHead>Title</TableHead>
+                <TableHead>Difficulty</TableHead>
+                <TableHead>Acceptance</TableHead>
+                <TableHead>Frequency</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {problems.map((problem) => (
+                <TableRow key={problem.id}>
+                  <TableCell className="font-medium">{problem.id}</TableCell>
+                  <TableCell>
+                    <a
+                      href={problem.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm hover:underline text-primary"
+                    >
+                      {problem.title}
+                    </a>
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="outline" className={getDifficultyClassName(problem.difficulty)}>
+                      {problem.difficulty}
+                    </Badge>
+                  </TableCell>
+                  <TableCell>{problem.acceptance.toFixed(1)}%</TableCell>
+                  <TableCell>{problem.frequency.toFixed(1)}%</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </CardContent>
+    </Card>
   )
 }
