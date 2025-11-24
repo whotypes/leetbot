@@ -58,8 +58,8 @@ function App() {
   const queryClient = useQueryClient()
   const hasClearedCache = useRef(false)
 
-  const [selectedCompany, setSelectedCompany] = useLocalStorage<string>('selectedCompany', '')
-  const [selectedTimeframe, setSelectedTimeframe] = useLocalStorage<string>('selectedTimeframe', '')
+  const [selectedCompany, setSelectedCompany] = useLocalStorage<string>('selectedCompany', 'google')
+  const [selectedTimeframe, setSelectedTimeframe] = useLocalStorage<string>('selectedTimeframe', 'all')
   const [previewCompany, setPreviewCompany] = useState<string>('')
 
   // Query for companies - runs once on mount
