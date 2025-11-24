@@ -18,3 +18,4 @@ export interface APIResponse {
   error?: string
 }
 
+export type AllProblemsData = Record<string, Record<string, Problem[]>>

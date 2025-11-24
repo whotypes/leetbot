@@ -60,6 +60,7 @@ func main() {
 	api.HandleFunc("/companies/{company}/timeframes", getTimeframes).Methods("GET")
 	api.HandleFunc("/companies/{company}/problems", getProblems).Methods("GET")
 	api.HandleFunc("/companies/{company}/timeframes/{timeframe}/problems", getProblemsByTimeframe).Methods("GET")
+	api.HandleFunc("/all-problems", getAllProblems).Methods("GET")
 
 	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./web/dist/")))
 
@@ -237,6 +238,40 @@ func getProblemsByTimeframe(w http.ResponseWriter, r *http.Request) {
 			"problems":  apiProblems,
 			"count":     len(apiProblems),
 		},
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	if err := json.NewEncoder(w).Encode(response); err != nil {
+		http.Error(w, "Failed to encode response", http.StatusInternalServerError)
+		return
+	}
+}
+
+func getAllProblems(w http.ResponseWriter, r *http.Request) {
+	allProblems := problemsData.GetAllProblems()
+
+	allProblemsMap := make(map[string]map[string][]Problem)
+	for company, timeframes := range allProblems {
+		allProblemsMap[company] = make(map[string][]Problem)
+		for timeframe, problems := range timeframes {
+			apiProblems := make([]Problem, len(problems))
+			for i, p := range problems {
+				apiProblems[i] = Problem{
+					ID:         p.ID,
+					URL:        p.URL,
+					Title:      p.Title,
+					Difficulty: p.Difficulty,
+					Acceptance: p.Acceptance,
+					Frequency:  p.Frequency,
+				}
+			}
+			allProblemsMap[company][timeframe] = apiProblems
+		}
+	}
+
+	response := APIResponse{
+		Success: true,
+		Data:    allProblemsMap,
 	}
 
 	w.Header().Set("Content-Type", "application/json")

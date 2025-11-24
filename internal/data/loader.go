@@ -100,6 +100,17 @@ func (pbc *ProblemsByCompany) GetProblemsWithPriority(company string) ([]Problem
 	return nil, ""
 }
 
+func (pbc *ProblemsByCompany) GetAllProblems() map[string]map[string][]Problem {
+	result := make(map[string]map[string][]Problem)
+	for company, timeframes := range pbc.data {
+		result[company] = make(map[string][]Problem)
+		for timeframe, problems := range timeframes {
+			result[company][timeframe] = problems
+		}
+	}
+	return result
+}
+
 func normalizeTimeframe(timeframe string) string {
 	timeframe = strings.ToLower(strings.TrimSpace(timeframe))
 	timeframe = strings.ReplaceAll(timeframe, " ", "-")

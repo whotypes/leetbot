@@ -1,5 +1,5 @@
-import { useQuery, useQueryClient } from '@tanstack/react-query'
-import { RefreshCw } from 'lucide-react'
+import { QueryClient, useQuery, useQueryClient } from '@tanstack/react-query'
+import { ExternalLink, RefreshCw } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { CompanySelector } from './components/CompanySelector'
 import { LoadingSpinner } from './components/LoadingSpinner'
@@ -11,7 +11,7 @@ import { Button } from './components/ui/button'
 import { Card, CardContent } from './components/ui/card'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useTheme } from './hooks/useTheme'
-import type { APIResponse, Problem } from './types'
+import type { AllProblemsData, APIResponse, Problem } from './types'
 
 // Query functions
 const fetchCompanies = async (): Promise<{ companies: string[] }> => {
@@ -32,18 +32,91 @@ const fetchTimeframes = async (company: string): Promise<{ timeframes: string[] 
   return data.data
 }
 
+const normalizeTimeframe = (timeframe: string): string => {
+  const normalized = timeframe.toLowerCase().trim().replace(/\s+/g, '-')
+  const mapping: Record<string, string> = {
+    '30': 'thirty-days',
+    '30days': 'thirty-days',
+    '30-days': 'thirty-days',
+    'thirty': 'thirty-days',
+    'thirtydays': 'thirty-days',
+    'thirty-days': 'thirty-days',
+    '30d': 'thirty-days',
+    '90': 'three-months',
+    '90days': 'three-months',
+    '90-days': 'three-months',
+    'three': 'three-months',
+    'threemonths': 'three-months',
+    'three-months': 'three-months',
+    '3months': 'three-months',
+    '3-months': 'three-months',
+    '3mo': 'three-months',
+    '90d': 'three-months',
+    '180': 'six-months',
+    '180days': 'six-months',
+    '180-days': 'six-months',
+    'six': 'six-months',
+    'sixmonths': 'six-months',
+    'six-months': 'six-months',
+    '6months': 'six-months',
+    '6-months': 'six-months',
+    '6mo': 'six-months',
+    'all': 'all',
+    'alltime': 'all',
+    'all-time': 'all',
+    'everything': 'all',
+    'more-than-six-months': 'more-than-six-months',
+    'morethan6months': 'more-than-six-months',
+    'more-than-6-months': 'more-than-six-months',
+    '>6mo': 'more-than-six-months',
+    '>6months': 'more-than-six-months',
+  }
+  return mapping[normalized] || 'all'
+}
+
+const fetchAllProblems = async (): Promise<AllProblemsData> => {
+  const response = await fetch('/api/all-problems')
+  const data = await response.json()
+  if (!data.success) {
+    throw new Error('Failed to load all problems')
+  }
+  return data.data
+}
+
 const fetchProblems = async ({
   company,
   timeframe,
+  queryClient,
 }: {
   company: string
   timeframe: string
+    queryClient: QueryClient
 }): Promise<{
   company: string
   timeframe: string
   problems: Problem[]
   count: number
 }> => {
+  const normalizedCompany = company.toLowerCase().trim()
+  const normalizedTimeframe = normalizeTimeframe(timeframe)
+
+  const allProblemsData = queryClient.getQueryData<AllProblemsData>(['all-problems'])
+
+  if (allProblemsData) {
+    const companyData = allProblemsData[normalizedCompany]
+    if (companyData) {
+      const problems = companyData[normalizedTimeframe]
+      if (problems !== undefined) {
+        return {
+          company: normalizedCompany,
+          timeframe: normalizedTimeframe,
+          problems,
+          count: problems.length,
+        }
+      }
+    }
+  }
+
   const response = await fetch(`/api/companies/${company}/timeframes/${timeframe}/problems`)
   const data: APIResponse = await response.json()
   if (!data.success) {
@@ -61,6 +134,16 @@ function App() {
   const [selectedCompany, setSelectedCompany] = useLocalStorage<string>('selectedCompany', 'google')
   const [selectedTimeframe, setSelectedTimeframe] = useLocalStorage<string>('selectedTimeframe', 'all')
   const [previewCompany, setPreviewCompany] = useState<string>('')
+
+  // Prefetch all problems in the background
+  useQuery({
+    queryKey: ['all-problems'],
+    queryFn: fetchAllProblems,
+    staleTime: 1000 * 60 * 60, // 1 hour - all problems don't change often
+    gcTime: 1000 * 60 * 60 * 24, // 24 hours cache time
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+  })
 
   // Query for companies - runs once on mount
   const { data: companiesData, error: companiesError } = useQuery({
@@ -84,7 +167,7 @@ function App() {
   const activeTimeframe = selectedTimeframe
   const { data: problemsData, isLoading: problemsLoading, error: problemsError } = useQuery({
     queryKey: ['problems', activeCompany, activeTimeframe],
-    queryFn: () => fetchProblems({ company: activeCompany, timeframe: activeTimeframe }),
+    queryFn: () => fetchProblems({ company: activeCompany, timeframe: activeTimeframe, queryClient }),
     enabled: !!activeCompany && !!activeTimeframe,
     retry: (failureCount, error) => {
       // Don't retry if it's a "no problems found" error
@@ -148,7 +231,7 @@ function App() {
         <header className="mb-8 flex items-start justify-between">
           <div>
             <h1 className="text-4xl font-bold mb-2 text-foreground">Leetbot.org - a leetcode problem data explorer</h1>
-            <p className='max-w-4xl text-muted-foreground'>See all of the problems that have been asked at your favorite companies. <br /><a href={discordInviteUrl} target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400">Add leetbot to your discord servers</a> to expose the problems in your own communities.</p>
+            <p className='max-w-4xl text-muted-foreground'>See all of the problems that have been asked at your favorite companies. <br /><a href={discordInviteUrl} target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400 inline-flex items-center gap-1">Add leetbot to your discord servers <ExternalLink className="h-3 w-3" /></a> to expose the problems in your own communities.</p>
           </div>
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </header>
@@ -203,6 +286,7 @@ function App() {
                     queryClient.invalidateQueries({ queryKey: ['problems'] })
                     queryClient.invalidateQueries({ queryKey: ['timeframes'] })
                     queryClient.invalidateQueries({ queryKey: ['companies'] })
+                    queryClient.invalidateQueries({ queryKey: ['all-problems'] })
                   }}
                   aria-label="Refresh data"
                 >

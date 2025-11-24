@@ -1,12 +1,13 @@
-import { Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Moon, Sun } from 'lucide-react'
+import { memo } from 'react'
 
 interface ThemeToggleProps {
   theme: 'light' | 'dark'
   onToggle: () => void
 }
 
-export const ThemeToggle = ({ theme, onToggle }: ThemeToggleProps) => {
+export const ThemeToggle = memo(({ theme, onToggle }: ThemeToggleProps) => {
   const handleClick = () => {
     onToggle()
   }
@@ -33,4 +34,4 @@ export const ThemeToggle = ({ theme, onToggle }: ThemeToggleProps) => {
       )}
     </Button>
   )
-}
+})

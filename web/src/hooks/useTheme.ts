@@ -10,19 +10,22 @@ export const useTheme = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    const root = document.documentElement
+    // Use requestAnimationFrame for smoother DOM updates
+    requestAnimationFrame(() => {
+      const root = document.documentElement
 
-    // Remove existing theme classes
-    root.classList.remove('light', 'dark')
+      // Remove existing theme classes
+      root.classList.remove('light', 'dark')
 
-    // Add current theme class
-    root.classList.add(theme)
+      // Add current theme class
+      root.classList.add(theme)
 
-    // Update meta theme-color for mobile browsers
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-    if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff')
-    }
+      // Update meta theme-color for mobile browsers
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff')
+      }
+    })
   }, [theme])
 
   // Listen for system theme changes when user hasn't manually set a preference

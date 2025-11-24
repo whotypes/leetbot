@@ -29,11 +29,19 @@ function useLocalStorage<T>(
     try {
       // Allow value to be a function so we have the same API as useState
       const valueToStore = value instanceof Function ? value(storedValue) : value
-      // Save state
+      // Save state immediately for responsive UI
       setStoredValue(valueToStore)
-      // Save to local storage
+      // Defer localStorage write to avoid blocking the main thread
       if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore))
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(() => {
+            window.localStorage.setItem(key, JSON.stringify(valueToStore))
+          })
+        } else {
+          setTimeout(() => {
+            window.localStorage.setItem(key, JSON.stringify(valueToStore))
+          }, 0)
+        }
       }
     } catch (error) {
       // A more advanced implementation would handle the error case
