@@ -81,13 +81,6 @@
   }
 }
 
-/* Ensure smooth transitions for theme changes */
-* {
-  transition-property: background-color, border-color, color;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-}
-
 @theme inline {
   --font-sans: Plus Jakarta Sans, sans-serif;
   --font-mono: JetBrains Mono, monospace;
