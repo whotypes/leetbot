@@ -967,6 +967,14 @@ func (h *Handler) HandleMessage(s *discordgo.Session, m *discordgo.MessageCreate
 	command := strings.ToLower(parts[0])
 	args := parts[1:]
 
+	// ignore specific commands that shouldn't trigger responses
+	ignoredCommands := []string{"process"}
+	for _, ignored := range ignoredCommands {
+		if command == ignored {
+			return // silently ignore
+		}
+	}
+
 	// ignore messages where the command part is just punctuation/symbols (like "!!!" or "!@#$")
 	// only process if the command contains at least one alphanumeric character
 	hasAlphanumeric := false
