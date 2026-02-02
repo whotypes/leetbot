@@ -1,37 +1,29 @@
 import { Button } from '@/components/ui/button'
-import { Moon, Sun } from 'lucide-react'
-import { memo } from 'react'
+import type { ThemePreference } from '@/hooks/useTheme'
+import { Monitor, Moon, Sun } from 'lucide-react'
 
 interface ThemeToggleProps {
-  theme: 'light' | 'dark'
+  theme: ThemePreference
   onToggle: () => void
 }
 
-export const ThemeToggle = memo(({ theme, onToggle }: ThemeToggleProps) => {
-  const handleClick = () => {
-    onToggle()
-  }
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      onToggle()
-    }
-  }
+export const ThemeToggle = ({ theme, onToggle }: ThemeToggleProps) => {
+  const label =
+    theme === 'light' ? 'Light mode (click for dark)' :
+    theme === 'dark' ? 'Dark mode (click for system)' :
+    'System mode (click for light)'
 
   return (
     <Button
       variant="outline"
       size="icon"
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      onClick={onToggle}
+      aria-label={label}
+      title={label}
     >
-      {theme === 'light' ? (
-        <Moon className="h-4 w-4" />
-      ) : (
-        <Sun className="h-4 w-4" />
-      )}
+      {theme === 'light' && <Sun className="h-4 w-4" />}
+      {theme === 'dark' && <Moon className="h-4 w-4" />}
+      {theme === 'system' && <Monitor className="h-4 w-4" />}
     </Button>
   )
-})
+}

@@ -1,58 +1,56 @@
-import { useEffect } from 'react'
-import { useLocalStorage } from './useLocalStorage'
+import { useEffect, useState } from 'react'
 
-type Theme = 'light' | 'dark'
+export type ThemePreference = 'light' | 'dark' | 'system'
+
+const getStoredTheme = (): ThemePreference => {
+  const stored = localStorage.getItem('theme')
+  if (stored === 'light' || stored === 'dark') {
+    return stored
+  }
+  return 'system'
+}
+
+const getSystemTheme = (): 'light' | 'dark' => {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+const applyTheme = (preference: ThemePreference) => {
+  const root = document.documentElement
+  root.classList.remove('light', 'dark')
+  const effectiveTheme = preference === 'system' ? getSystemTheme() : preference
+  root.classList.add(effectiveTheme)
+}
 
 export const useTheme = () => {
-  const [theme, setTheme] = useLocalStorage<Theme>('theme', 'light')
+  const [theme, setTheme] = useState<ThemePreference>(getStoredTheme)
 
-  // Apply theme to document and handle system preference fallback
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    // Use requestAnimationFrame for smoother DOM updates
-    requestAnimationFrame(() => {
-      const root = document.documentElement
-
-      // Remove existing theme classes
-      root.classList.remove('light', 'dark')
-
-      // Add current theme class
-      root.classList.add(theme)
-
-      // Update meta theme-color for mobile browsers
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-      if (metaThemeColor) {
-        metaThemeColor.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff')
-      }
-    })
-  }, [theme])
-
-  // Listen for system theme changes when user hasn't manually set a preference
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    // Only listen if we don't have a stored preference
-    const storedTheme = localStorage.getItem('theme')
-    if (storedTheme) return
+    if (theme !== 'system') return
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
-    const handleSystemThemeChange = (e: MediaQueryListEvent) => {
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light')
-      }
+    const handleChange = () => {
+      applyTheme('system')
     }
 
-    mediaQuery.addEventListener('change', handleSystemThemeChange)
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleSystemThemeChange)
-    }
-  }, [setTheme])
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [theme])
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
+    const nextTheme: ThemePreference =
+      theme === 'light' ? 'dark' :
+      theme === 'dark' ? 'system' :
+      'light'
+
+    if (nextTheme === 'system') {
+      localStorage.removeItem('theme')
+    } else {
+      localStorage.setItem('theme', nextTheme)
+    }
+
+    applyTheme(nextTheme)
+    setTheme(nextTheme)
   }
 
   return { theme, toggleTheme }
