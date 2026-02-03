@@ -8,6 +8,7 @@ interface CompanySelectorProps {
   selectedCompany: string
   onCompanyChange: (company: string) => void
   onCompanyPreview?: (company: string) => void
+  compact?: boolean
 }
 
 const ITEM_HEIGHT = 36
@@ -369,6 +370,7 @@ export const CompanySelector = ({
   companies,
   selectedCompany,
   onCompanyChange,
+  compact = false,
 }: CompanySelectorProps) => {
   const [isOpen, setIsOpen] = React.useState(false)
   const [search, setSearch] = React.useState('')
@@ -438,8 +440,8 @@ export const CompanySelector = ({
 
   return (
     <div className="relative">
-      <div className="space-y-2">
-        <Label htmlFor="company-select">Company</Label>
+      <div className={compact ? '' : 'space-y-2'}>
+        {!compact && <Label htmlFor="company-select">Company</Label>}
         <button
           ref={triggerRef}
           id="company-select"

@@ -1,19 +1,16 @@
 import { QueryClient, useQuery, useQueryClient } from '@tanstack/react-query'
-import { ExternalLink, RefreshCw } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
-import { CompanySelector } from './components/CompanySelector'
+import { RefreshCw } from 'lucide-react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import type { Difficulty } from './components/DifficultyFilter'
 import { LoadingSpinner } from './components/LoadingSpinner'
-import { ProblemsTable } from './components/ProblemsTable'
-import { ThemeToggle } from './components/ThemeToggle'
-import { TimeframeSelector } from './components/TimeframeSelector'
+import { Navbar } from './components/Navbar'
+import { ProblemsDataTable } from './components/ProblemsDataTable'
 import { Alert, AlertDescription } from './components/ui/alert'
 import { Button } from './components/ui/button'
-import { Card, CardContent } from './components/ui/card'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useTheme } from './hooks/useTheme'
 import type { AllProblemsData, APIResponse, Problem } from './types'
 
-// Query functions
 const fetchCompanies = async (): Promise<{ companies: string[] }> => {
   const response = await fetch('/api/companies')
   const data = await response.json()
@@ -90,7 +87,7 @@ const fetchProblems = async ({
 }: {
   company: string
   timeframe: string
-    queryClient: QueryClient
+  queryClient: QueryClient
 }): Promise<{
   company: string
   timeframe: string
@@ -125,7 +122,6 @@ const fetchProblems = async ({
   return data.data!
 }
 
-
 function App() {
   const { theme, toggleTheme } = useTheme()
   const queryClient = useQueryClient()
@@ -134,56 +130,71 @@ function App() {
   const [selectedCompany, setSelectedCompany] = useLocalStorage<string>('selectedCompany', 'google')
   const [selectedTimeframe, setSelectedTimeframe] = useLocalStorage<string>('selectedTimeframe', 'all')
   const [previewCompany, setPreviewCompany] = useState<string>('')
+  const [selectedDifficulties, setSelectedDifficulties] = useState<Difficulty[]>([])
+  const [searchQuery, setSearchQuery] = useState<string>('')
 
-  // Prefetch all problems in the background
   useQuery({
     queryKey: ['all-problems'],
     queryFn: fetchAllProblems,
-    staleTime: 1000 * 60 * 60, // 1 hour - all problems don't change often
-    gcTime: 1000 * 60 * 60 * 24, // 24 hours cache time
+    staleTime: 1000 * 60 * 60,
+    gcTime: 1000 * 60 * 60 * 24,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
   })
 
-  // Query for companies - runs once on mount
   const { data: companiesData, error: companiesError } = useQuery({
     queryKey: ['companies'],
     queryFn: fetchCompanies,
-    staleTime: 1000 * 60 * 10, // 10 minutes - companies don't change often
+    staleTime: 1000 * 60 * 10,
   })
 
-  // Use preview company for fetching if available, otherwise use selected company
   const activeCompany = previewCompany || selectedCompany
 
-  // Query for timeframes - runs when company changes (including preview)
   const { data: timeframesData, error: timeframesError } = useQuery({
     queryKey: ['timeframes', activeCompany],
     queryFn: () => fetchTimeframes(activeCompany),
     enabled: !!activeCompany,
   })
 
-  // Query for problems - runs when both company and timeframe are selected
-  // Only use preview company if timeframe is also selected
   const activeTimeframe = selectedTimeframe
   const { data: problemsData, isLoading: problemsLoading, error: problemsError } = useQuery({
     queryKey: ['problems', activeCompany, activeTimeframe],
     queryFn: () => fetchProblems({ company: activeCompany, timeframe: activeTimeframe, queryClient }),
     enabled: !!activeCompany && !!activeTimeframe,
     retry: (failureCount, error) => {
-      // Don't retry if it's a "no problems found" error
       if (error instanceof Error && error.message.includes('No problems found')) {
         return false
       }
       return failureCount < 2
     },
-    staleTime: 1000 * 60 * 2, // 2 minutes for problems data
+    staleTime: 1000 * 60 * 2,
   })
 
-  // Derived state
   const companies = companiesData?.companies || []
   const timeframes = timeframesData?.timeframes || []
   const problems = problemsData?.problems || []
   const error = companiesError?.message || timeframesError?.message || problemsError?.message || ''
+
+  const filteredProblems = useMemo(() => {
+    let result = problems
+
+    if (selectedDifficulties.length > 0) {
+      result = result.filter((p) =>
+        selectedDifficulties.includes(p.difficulty.toLowerCase() as Difficulty)
+      )
+    }
+
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase().trim()
+      result = result.filter(
+        (p) =>
+          p.title.toLowerCase().includes(query) ||
+          p.id.toString().includes(query)
+      )
+    }
+
+    return result
+  }, [problems, selectedDifficulties, searchQuery])
 
   const handleCompanyChange = (company: string) => {
     setSelectedCompany(company)
@@ -202,7 +213,6 @@ function App() {
     setSelectedTimeframe(timeframe)
   }
 
-  // Handle timeframe clearing when timeframes change for a company
   useEffect(() => {
     if (selectedCompany && timeframesData) {
       const currentTimeframes = timeframesData.timeframes || []
@@ -212,7 +222,6 @@ function App() {
     }
   }, [selectedCompany, timeframesData, selectedTimeframe, setSelectedTimeframe])
 
-  // Clear cache on component mount to prevent stale data issues
   useEffect(() => {
     if (!hasClearedCache.current && (selectedCompany || selectedTimeframe)) {
       hasClearedCache.current = true
@@ -221,96 +230,95 @@ function App() {
     }
   }, [queryClient, selectedCompany, selectedTimeframe])
 
-  const isProd = import.meta.env.PROD;
-
-  const discordInviteUrl = isProd ? "https://discord.com/oauth2/authorize?client_id=1431162839187460126&permissions=277025736768&integration_type=0&scope=applications.commands+bot" : "https://discord.com/oauth2/authorize?client_id=1431596971767894036&permissions=277025736768&integration_type=0&scope=applications.commands+bot";
+  const isProd = import.meta.env.PROD
+  const discordInviteUrl = isProd
+    ? 'https://discord.com/oauth2/authorize?client_id=1431162839187460126&permissions=277025736768&integration_type=0&scope=applications.commands+bot'
+    : 'https://discord.com/oauth2/authorize?client_id=1431596971767894036&permissions=277025736768&integration_type=0&scope=applications.commands+bot'
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8">
-        <header className="mb-8 flex items-start justify-between">
-          <div>
-            <h1 className="text-4xl font-bold mb-2 text-foreground">leetbot.org</h1>
-            <p className='max-w-xl text-muted-foreground'>See all of the problems that have been asked at your favorite companies. <span aria-disabled={true}><br /><a href={discordInviteUrl} target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400 inline-flex items-center gap-1">Add leetbot to your discord servers <ExternalLink className="h-3 w-3" /></a> to expose the problems in your own communities.
-            </span>
-            </p>
-          </div>
-          <ThemeToggle theme={theme} onToggle={toggleTheme} />
-        </header>
+    <div className="flex h-screen flex-col bg-background">
+      <Navbar
+        companies={companies}
+        selectedCompany={selectedCompany}
+        onCompanyChange={handleCompanyChange}
+        onCompanyPreview={handleCompanyPreview}
+        timeframes={timeframes}
+        selectedTimeframe={selectedTimeframe}
+        onTimeframeChange={handleTimeframeChange}
+        selectedDifficulties={selectedDifficulties}
+        onDifficultyChange={setSelectedDifficulties}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        theme={theme}
+        onThemeToggle={toggleTheme}
+        discordInviteUrl={discordInviteUrl}
+      />
 
-        <Card className="mb-8">
-          <CardContent className="pt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <CompanySelector
-                companies={companies}
-                selectedCompany={selectedCompany}
-                onCompanyChange={handleCompanyChange}
-                onCompanyPreview={handleCompanyPreview}
-              />
-              <TimeframeSelector
-                timeframes={timeframes}
-                selectedTimeframe={selectedTimeframe}
-                onTimeframeChange={handleTimeframeChange}
-                disabled={!selectedCompany}
-              />
-            </div>
-          </CardContent>
-        </Card>
-
+      <main className="flex-1 overflow-hidden">
         {error && (
-          <Alert variant="destructive" className="mb-6">
-            <AlertDescription>{error}</AlertDescription>
-          </Alert>
+          <div className="px-4 py-3">
+            <Alert variant="destructive">
+              <AlertDescription>{error}</AlertDescription>
+            </Alert>
+          </div>
         )}
 
-        <div className="min-h-[600px]">
-          {problemsLoading && <LoadingSpinner />}
+        {problemsLoading && (
+          <div className="flex h-full items-center justify-center">
+            <LoadingSpinner />
+          </div>
+        )}
 
-          {!problemsLoading && problems.length > 0 && (
-            <ProblemsTable problems={problems} />
-          )}
+        {!problemsLoading && filteredProblems.length > 0 && (
+          <ProblemsDataTable problems={filteredProblems} />
+        )}
 
-          {!problemsLoading && selectedCompany && selectedTimeframe && problems.length === 0 && !error && (
-            <Alert className="mb-6">
-              <div className="flex items-center justify-between w-full">
+        {!problemsLoading && selectedCompany && selectedTimeframe && filteredProblems.length === 0 && !error && (
+          <div className="flex h-full items-center justify-center px-4">
+            <Alert className="max-w-md">
+              <div className="flex items-center justify-between gap-4">
                 <div>
                   <AlertDescription>
-                    No problems found for the selected company and timeframe.
+                    {problems.length === 0
+                      ? 'No problems found for the selected company and timeframe.'
+                      : 'No problems match your current filters.'}
                   </AlertDescription>
                   <p className="text-sm mt-2 text-muted-foreground">
-                    This could mean no problems were asked in this timeframe, or the data is still being updated.
+                    {problems.length === 0
+                      ? 'This could mean no problems were asked in this timeframe, or the data is still being updated.'
+                      : 'Try adjusting your difficulty or search filters.'}
                   </p>
                 </div>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => {
-                    queryClient.invalidateQueries({ queryKey: ['problems'] })
-                    queryClient.invalidateQueries({ queryKey: ['timeframes'] })
-                    queryClient.invalidateQueries({ queryKey: ['companies'] })
-                    queryClient.invalidateQueries({ queryKey: ['all-problems'] })
-                  }}
-                  aria-label="Refresh data"
-                >
-                  <RefreshCw className="h-4 w-4 mr-2" />
-                  Refresh
-                </Button>
+                {problems.length === 0 && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => {
+                      queryClient.invalidateQueries({ queryKey: ['problems'] })
+                      queryClient.invalidateQueries({ queryKey: ['timeframes'] })
+                      queryClient.invalidateQueries({ queryKey: ['companies'] })
+                      queryClient.invalidateQueries({ queryKey: ['all-problems'] })
+                    }}
+                    aria-label="Refresh data"
+                  >
+                    <RefreshCw className="h-4 w-4 mr-2" />
+                    Refresh
+                  </Button>
+                )}
               </div>
             </Alert>
-          )}
-        </div>
-
-        {selectedCompany && !timeframesData && !timeframesError && (
-          <Card className="mb-6">
-            <CardContent className="pt-6">
-              <div className="flex items-center gap-2">
-                <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
-                <p className="text-sm text-muted-foreground">Loading timeframes...</p>
-              </div>
-            </CardContent>
-          </Card>
+          </div>
         )}
-      </div>
+
+        {selectedCompany && !timeframesData && !timeframesError && !problemsLoading && (
+          <div className="flex h-full items-center justify-center">
+            <div className="flex items-center gap-2">
+              <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
+              <p className="text-sm text-muted-foreground">Loading timeframes...</p>
+            </div>
+          </div>
+        )}
+      </main>
     </div>
   )
 }
