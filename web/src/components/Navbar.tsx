@@ -5,6 +5,7 @@ import { DifficultyFilter, type Difficulty } from './DifficultyFilter'
 import { ThemeToggle } from './ThemeToggle'
 import { TimeframeSelector } from './TimeframeSelector'
 import { Input } from './ui/input'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip'
 
 interface NavbarProps {
   companies: string[]
@@ -58,19 +59,29 @@ export const Navbar = ({
             <h1 className="text-xl font-bold text-foreground whitespace-nowrap">
               leetbot.org
             </h1>
-            <a
-              href={discordInviteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-fuchsia-400 transition-colors"
-              aria-label="Add leetbot to your Discord server"
-              tabIndex={0}
-            >
-              <DiscordIcon className="h-5 w-5" />
-            </a>
+
+            <TooltipProvider delayDuration={100}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href={discordInviteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-fuchsia-400 transition-colors"
+                    aria-label="Add leetbot to your Discord server"
+                    tabIndex={0}
+                  >
+                    <DiscordIcon className="h-5 w-5" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Add leetbot to your Discord servers</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
 
-          <div className="flex flex-1 items-center gap-3">
+          <div className="hidden sm:flex flex-1 items-center gap-3">
             <div className="w-48">
               <CompanySelector
                 companies={companies}
@@ -91,12 +102,14 @@ export const Navbar = ({
               />
             </div>
 
-            <DifficultyFilter
-              selectedDifficulties={selectedDifficulties}
-              onDifficultyChange={onDifficultyChange}
-            />
+            <div className="hidden lg:block">
+              <DifficultyFilter
+                selectedDifficulties={selectedDifficulties}
+                onDifficultyChange={onDifficultyChange}
+              />
+            </div>
 
-            <div className="relative flex-1 max-w-xs">
+            <div className="hidden lg:block relative flex-1 max-w-xs">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <Input
                 type="text"
@@ -118,6 +131,8 @@ export const Navbar = ({
               )}
             </div>
           </div>
+
+          <div className="flex-1 sm:hidden" />
 
           <ThemeToggle theme={theme} onToggle={onThemeToggle} />
         </div>

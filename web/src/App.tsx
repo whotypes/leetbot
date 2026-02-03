@@ -266,7 +266,16 @@ function App() {
         )}
 
         {(problemsLoading || filteredProblems.length > 0) && (
-          <ProblemsDataTable problems={filteredProblems} isLoading={problemsLoading} />
+          <ProblemsDataTable
+            problems={filteredProblems}
+            isLoading={problemsLoading}
+            companies={companies}
+            selectedCompany={selectedCompany}
+            onCompanyChange={handleCompanyChange}
+            timeframes={timeframes}
+            selectedTimeframe={selectedTimeframe}
+            onTimeframeChange={handleTimeframeChange}
+          />
         )}
 
         {!problemsLoading && selectedCompany && selectedTimeframe && filteredProblems.length === 0 && !error && (

@@ -26,10 +26,18 @@ import { useVirtualizer } from '@tanstack/react-virtual'
 import { ArrowDown, ArrowUp, ArrowUpDown, ExternalLink } from 'lucide-react'
 import * as React from 'react'
 import type { Problem } from '../types'
+import { MobileCompanySelector } from './CompanySelector'
+import { MobileTimeframeSelector } from './TimeframeSelector'
 
 interface ProblemsDataTableProps {
   problems: Problem[]
   isLoading?: boolean
+  companies?: string[]
+  selectedCompany?: string
+  onCompanyChange?: (company: string) => void
+  timeframes?: string[]
+  selectedTimeframe?: string
+  onTimeframeChange?: (timeframe: string) => void
 }
 
 const getDifficultyClassName = (difficulty: string): string => {
@@ -236,7 +244,16 @@ const SkeletonRow = ({ index }: { index: number }) => (
   </TableRow>
 )
 
-export const ProblemsDataTable = ({ problems, isLoading = false }: ProblemsDataTableProps) => {
+export const ProblemsDataTable = ({
+  problems,
+  isLoading = false,
+  companies = [],
+  selectedCompany = '',
+  onCompanyChange,
+  timeframes = [],
+  selectedTimeframe = '',
+  onTimeframeChange,
+}: ProblemsDataTableProps) => {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const tableContainerRef = React.useRef<HTMLDivElement>(null)
 
@@ -273,10 +290,30 @@ export const ProblemsDataTable = ({ problems, isLoading = false }: ProblemsDataT
     )
   }
 
+  const showMobileFilters = companies.length > 0 && onCompanyChange && onTimeframeChange
+
   return (
     <div className="flex h-full flex-col">
       <div className="flex items-center justify-between border-b px-4 py-3">
-        <div className="text-sm text-muted-foreground">
+        {showMobileFilters && (
+          <div className="flex items-center gap-2 sm:hidden">
+            <MobileCompanySelector
+              companies={companies}
+              selectedCompany={selectedCompany}
+              onCompanyChange={onCompanyChange}
+            />
+            <MobileTimeframeSelector
+              timeframes={timeframes}
+              selectedTimeframe={selectedTimeframe}
+              onTimeframeChange={onTimeframeChange}
+              disabled={!selectedCompany}
+            />
+          </div>
+        )}
+        <div className={cn(
+          "text-sm text-muted-foreground",
+          showMobileFilters && "ml-auto sm:ml-0"
+        )}>
           {isLoading ? (
             <div className="h-4 w-24 rounded bg-muted" />
           ) : (

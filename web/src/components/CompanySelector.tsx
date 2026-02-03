@@ -366,6 +366,163 @@ const VirtualizedList = ({
   )
 }
 
+interface MobileCompanySelectorProps {
+  companies: string[]
+  selectedCompany: string
+  onCompanyChange: (company: string) => void
+}
+
+export const MobileCompanySelector = ({
+  companies,
+  selectedCompany,
+  onCompanyChange,
+}: MobileCompanySelectorProps) => {
+  const [isOpen, setIsOpen] = React.useState(false)
+  const [search, setSearch] = React.useState('')
+  const triggerRef = React.useRef<HTMLButtonElement>(null)
+  const dropdownRef = React.useRef<HTMLDivElement>(null)
+  const inputRef = React.useRef<HTMLInputElement>(null)
+
+  const items = React.useMemo(() => {
+    return companies.map((company) => ({
+      value: company,
+      label: formatLabel(company),
+      searchLabel: `${company} ${formatLabel(company)}`,
+    }))
+  }, [companies])
+
+  const handleSelect = React.useCallback(
+    (value: string) => {
+      onCompanyChange(value)
+      setIsOpen(false)
+      setSearch('')
+    },
+    [onCompanyChange]
+  )
+
+  React.useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(() => inputRef.current?.focus(), 0)
+      return () => clearTimeout(timer)
+    }
+  }, [isOpen])
+
+  React.useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node) &&
+        triggerRef.current &&
+        !triggerRef.current.contains(e.target as Node)
+      ) {
+        setIsOpen(false)
+        setSearch('')
+      }
+    }
+
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false)
+        setSearch('')
+        triggerRef.current?.focus()
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('keydown', handleEscape)
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+        document.removeEventListener('keydown', handleEscape)
+      }
+    }
+  }, [isOpen])
+
+  const selectedLabel = React.useMemo(() => {
+    if (!selectedCompany) return null
+    return formatLabel(selectedCompany)
+  }, [selectedCompany])
+
+  return (
+    <div className="relative">
+      <button
+        ref={triggerRef}
+        type="button"
+        role="combobox"
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        aria-label="Select company"
+        className={cn(
+          'inline-flex h-8 items-center gap-1.5 rounded-md border border-input bg-background px-2.5 text-sm font-medium shadow-sm transition-colors',
+          'hover:bg-accent hover:text-accent-foreground',
+          'focus:outline-none focus:ring-1 focus:ring-ring',
+          'active:scale-[0.98]',
+          !selectedCompany && 'text-muted-foreground'
+        )}
+        onClick={() => setIsOpen(!isOpen)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            setIsOpen(!isOpen)
+          }
+        }}
+      >
+        <span className="max-w-[140px] truncate">
+          {selectedLabel ?? 'Company'}
+        </span>
+        <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-60" />
+      </button>
+
+      {isOpen && (
+        <div
+          ref={dropdownRef}
+          className="absolute left-0 top-full z-50 mt-1 w-[280px] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg animate-in fade-in-0 zoom-in-95"
+          role="listbox"
+        >
+          <div className="flex items-center border-b px-3 py-2">
+            <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+            <input
+              ref={inputRef}
+              type="text"
+              className="flex h-8 w-full rounded-md bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+              placeholder="Search company..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                  e.preventDefault()
+                  dropdownRef.current?.querySelector('[tabindex="0"]')?.dispatchEvent(
+                    new KeyboardEvent('keydown', { key: e.key, bubbles: true })
+                  )
+                }
+              }}
+            />
+            {search && (
+              <button
+                type="button"
+                className="ml-2 rounded p-0.5 hover:bg-accent"
+                onClick={() => setSearch('')}
+                aria-label="Clear search"
+              >
+                <X className="h-4 w-4 opacity-50" />
+              </button>
+            )}
+          </div>
+          <div className="p-1">
+            <VirtualizedList
+              items={items}
+              selectedValue={selectedCompany}
+              onSelect={handleSelect}
+              search={search}
+              maxHeight={280}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export const CompanySelector = ({
   companies,
   selectedCompany,
