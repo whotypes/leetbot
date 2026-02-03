@@ -55,8 +55,8 @@ const VirtualizedList = ({
 
   React.useEffect(() => {
     setVirtualPosition(0)
-    setFocusedIndex(-1)
-  }, [search])
+    setFocusedIndex(filteredItems.length > 0 ? 0 : -1)
+  }, [search, filteredItems.length])
 
   React.useEffect(() => {
     if (selectedValue && !search) {
@@ -288,8 +288,21 @@ const VirtualizedList = ({
     )
   }
 
+  const handleFocus = React.useCallback(() => {
+    if (focusedIndex === -1 && filteredItems.length > 0) {
+      const selectedIdx = filteredItems.findIndex((item) => item.value === selectedValue)
+      setFocusedIndex(selectedIdx !== -1 ? selectedIdx : 0)
+    }
+  }, [focusedIndex, filteredItems, selectedValue])
+
   return (
-    <div className="flex" onKeyDown={handleKeyDown} tabIndex={0}>
+    <div
+      className="flex"
+      data-list-container
+      onKeyDown={handleKeyDown}
+      onFocus={handleFocus}
+      tabIndex={0}
+    >
       <div
         ref={containerRef}
         className="flex-1 overflow-hidden outline-none"
@@ -489,9 +502,9 @@ export const MobileCompanySelector = ({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === 'Enter') {
                   e.preventDefault()
-                  dropdownRef.current?.querySelector('[tabindex="0"]')?.dispatchEvent(
+                  dropdownRef.current?.querySelector('[data-list-container]')?.dispatchEvent(
                     new KeyboardEvent('keydown', { key: e.key, bubbles: true })
                   )
                 }
@@ -642,9 +655,9 @@ export const CompanySelector = ({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === 'Enter') {
                   e.preventDefault()
-                  dropdownRef.current?.querySelector('[tabindex="0"]')?.dispatchEvent(
+                  dropdownRef.current?.querySelector('[data-list-container]')?.dispatchEvent(
                     new KeyboardEvent('keydown', { key: e.key, bubbles: true })
                   )
                 }
