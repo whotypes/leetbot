@@ -2,7 +2,6 @@ import { QueryClient, useQuery, useQueryClient } from '@tanstack/react-query'
 import { RefreshCw } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Difficulty } from './components/DifficultyFilter'
-import { LoadingSpinner } from './components/LoadingSpinner'
 import { Navbar } from './components/Navbar'
 import { ProblemsDataTable } from './components/ProblemsDataTable'
 import { Alert, AlertDescription } from './components/ui/alert'
@@ -263,14 +262,8 @@ function App() {
           </div>
         )}
 
-        {problemsLoading && (
-          <div className="flex h-full items-center justify-center">
-            <LoadingSpinner />
-          </div>
-        )}
-
-        {!problemsLoading && filteredProblems.length > 0 && (
-          <ProblemsDataTable problems={filteredProblems} />
+        {(problemsLoading || filteredProblems.length > 0) && (
+          <ProblemsDataTable problems={filteredProblems} isLoading={problemsLoading} />
         )}
 
         {!problemsLoading && selectedCompany && selectedTimeframe && filteredProblems.length === 0 && !error && (

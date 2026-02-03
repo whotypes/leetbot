@@ -23,6 +23,7 @@ import type { Problem } from '../types'
 
 interface ProblemsDataTableProps {
   problems: Problem[]
+  isLoading?: boolean
 }
 
 const getDifficultyClassName = (difficulty: string): string => {
@@ -172,8 +173,42 @@ const columns: ColumnDef<Problem>[] = [
 ]
 
 const ROW_HEIGHT = 48
+const SKELETON_ROW_COUNT = 10
 
-export const ProblemsDataTable = ({ problems }: ProblemsDataTableProps) => {
+const SkeletonCell = ({ width, className }: { width: string; className?: string }) => (
+  <div className={cn('h-4 rounded bg-muted', className)} style={{ width }} />
+)
+
+const SkeletonRow = ({ index }: { index: number }) => (
+  <TableRow
+    className={cn(
+      'transition-colors',
+      index % 2 === 0 ? 'bg-background' : 'bg-muted/30'
+    )}
+    style={{ height: `${ROW_HEIGHT}px` }}
+  >
+    <TableCell style={{ width: 80 }}>
+      <SkeletonCell width="40px" />
+    </TableCell>
+    <TableCell style={{ width: 400 }}>
+      <SkeletonCell width={`${180 + (index % 3) * 60}px`} />
+    </TableCell>
+    <TableCell style={{ width: 120 }}>
+      <SkeletonCell width="60px" className="h-5 rounded-full" />
+    </TableCell>
+    <TableCell style={{ width: 120 }}>
+      <SkeletonCell width="50px" />
+    </TableCell>
+    <TableCell style={{ width: 180 }}>
+      <div className="flex items-center gap-2">
+        <div className="h-2 w-16 rounded-full bg-muted" />
+        <SkeletonCell width="45px" className="h-4" />
+      </div>
+    </TableCell>
+  </TableRow>
+)
+
+export const ProblemsDataTable = ({ problems, isLoading = false }: ProblemsDataTableProps) => {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const tableContainerRef = React.useRef<HTMLDivElement>(null)
 
@@ -202,7 +237,7 @@ export const ProblemsDataTable = ({ problems }: ProblemsDataTableProps) => {
   const paddingBottom =
     virtualRows.length > 0 ? totalSize - (virtualRows[virtualRows.length - 1]?.end ?? 0) : 0
 
-  if (problems.length === 0) {
+  if (!isLoading && problems.length === 0) {
     return (
       <div className="flex h-full items-center justify-center text-muted-foreground">
         No problems to display
@@ -214,8 +249,14 @@ export const ProblemsDataTable = ({ problems }: ProblemsDataTableProps) => {
     <div className="flex h-full flex-col">
       <div className="flex items-center justify-between border-b px-4 py-3">
         <div className="text-sm text-muted-foreground">
-          <span className="font-medium text-foreground">{problems.length.toLocaleString()}</span>{' '}
-          {problems.length === 1 ? 'problem' : 'problems'}
+          {isLoading ? (
+            <div className="h-4 w-24 rounded bg-muted" />
+          ) : (
+            <>
+              <span className="font-medium text-foreground">{problems.length.toLocaleString()}</span>{' '}
+              {problems.length === 1 ? 'problem' : 'problems'}
+            </>
+          )}
         </div>
       </div>
 
@@ -242,35 +283,43 @@ export const ProblemsDataTable = ({ problems }: ProblemsDataTableProps) => {
             ))}
           </TableHeader>
           <TableBody>
-            {paddingTop > 0 && (
-              <tr>
-                <td style={{ height: `${paddingTop}px` }} />
-              </tr>
-            )}
-            {virtualRows.map((virtualRow) => {
-              const row = rows[virtualRow.index]
-              return (
-                <TableRow
-                  key={row.id}
-                  data-index={virtualRow.index}
-                  className={cn(
-                    'transition-colors',
-                    virtualRow.index % 2 === 0 ? 'bg-background' : 'bg-muted/30'
-                  )}
-                  style={{ height: `${ROW_HEIGHT}px` }}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} style={{ width: cell.column.getSize() }}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              )
-            })}
-            {paddingBottom > 0 && (
-              <tr>
-                <td style={{ height: `${paddingBottom}px` }} />
-              </tr>
+            {isLoading ? (
+              Array.from({ length: SKELETON_ROW_COUNT }).map((_, index) => (
+                <SkeletonRow key={index} index={index} />
+              ))
+            ) : (
+              <>
+                {paddingTop > 0 && (
+                  <tr>
+                    <td style={{ height: `${paddingTop}px` }} />
+                  </tr>
+                )}
+                {virtualRows.map((virtualRow) => {
+                  const row = rows[virtualRow.index]
+                  return (
+                    <TableRow
+                      key={row.id}
+                      data-index={virtualRow.index}
+                      className={cn(
+                        'transition-colors',
+                        virtualRow.index % 2 === 0 ? 'bg-background' : 'bg-muted/30'
+                      )}
+                      style={{ height: `${ROW_HEIGHT}px` }}
+                    >
+                      {row.getVisibleCells().map((cell) => (
+                        <TableCell key={cell.id} style={{ width: cell.column.getSize() }}>
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  )
+                })}
+                {paddingBottom > 0 && (
+                  <tr>
+                    <td style={{ height: `${paddingBottom}px` }} />
+                  </tr>
+                )}
+              </>
             )}
           </TableBody>
         </Table>
