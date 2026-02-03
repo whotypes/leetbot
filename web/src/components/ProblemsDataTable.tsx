@@ -7,6 +7,12 @@ import {
     TableHeader,
     TableRow,
 } from '@/components/ui/table'
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
 import {
     flexRender,
@@ -144,15 +150,37 @@ const columns: ColumnDef<Problem>[] = [
   {
     accessorKey: 'frequency',
     header: ({ column }) => (
-      <button
-        type="button"
-        className="flex items-center font-medium hover:text-foreground transition-colors"
-        onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-        aria-label={`Sort by frequency ${column.getIsSorted() === 'asc' ? 'descending' : 'ascending'}`}
-      >
-        Frequency
-        <SortIcon isSorted={column.getIsSorted()} />
-      </button>
+      <div className="flex items-center gap-1">
+        <button
+          type="button"
+          className="flex items-center font-medium hover:text-foreground transition-colors"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+          aria-label={`Sort by frequency ${column.getIsSorted() === 'asc' ? 'descending' : 'ascending'}`}
+        >
+          Frequency
+          <SortIcon isSorted={column.getIsSorted()} />
+        </button>
+        <TooltipProvider delayDuration={100}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <a
+                href="https://leetcode.com/discuss/post/1912580/answered-leetcodes-lists-and-frequency-c-u6vi/comments/1337781/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => e.stopPropagation()}
+                tabIndex={0}
+                aria-label="What is frequency?"
+              >
+                (?)
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>What is this?</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
     ),
     cell: ({ row }) => {
       const frequency = row.getValue('frequency') as number
