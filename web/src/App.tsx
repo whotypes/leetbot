@@ -216,7 +216,10 @@ function App() {
     if (selectedCompany && timeframesData) {
       const currentTimeframes = timeframesData.timeframes || []
       if (selectedTimeframe && !currentTimeframes.includes(selectedTimeframe)) {
-        setSelectedTimeframe('')
+        const fallback = currentTimeframes.includes('all')
+          ? 'all'
+          : currentTimeframes[0] || 'all'
+        setSelectedTimeframe(fallback)
       }
     }
   }, [selectedCompany, timeframesData, selectedTimeframe, setSelectedTimeframe])
