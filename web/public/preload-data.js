@@ -1,6 +1,4 @@
 
-// Preloaded data for faster initial loading
-// Generated at: 2025-10-25T20:03:00.587Z
 window.__PRELOADED_DATA__ = {
   companies: [],
   timeframes: {},
