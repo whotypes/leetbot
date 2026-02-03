@@ -230,8 +230,10 @@ function App() {
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8 flex items-start justify-between">
           <div>
-            <h1 className="text-4xl font-bold mb-2 text-foreground">Leetbot.org - a leetcode problem data explorer</h1>
-            <p className='max-w-xl text-muted-foreground'>See all of the problems that have been asked at your favorite companies. <br /><a href={discordInviteUrl} target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400 inline-flex items-center gap-1">Add leetbot to your discord servers <ExternalLink className="h-3 w-3" /></a> to expose the problems in your own communities.</p>
+            <h1 className="text-4xl font-bold mb-2 text-foreground">leetbot.org</h1>
+            <p className='max-w-xl text-muted-foreground'>See all of the problems that have been asked at your favorite companies. <span aria-disabled={true}><br /><a href={discordInviteUrl} target="_blank" rel="noopener noreferrer" className="hover:underline text-fuchsia-400 inline-flex items-center gap-1">Add leetbot to your discord servers <ExternalLink className="h-3 w-3" /></a> to expose the problems in your own communities.
+            </span>
+            </p>
           </div>
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </header>
