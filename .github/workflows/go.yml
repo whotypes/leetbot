@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main, develop ]
 
+permissions:
+  contents: read
+
 jobs:
   changes:
     runs-on: ubuntu-latest
@@ -21,6 +24,7 @@ jobs:
         files: |
           cmd/**
           internal/**
+          data/**
           go.mod
           go.sum
           Makefile
@@ -202,3 +206,42 @@ jobs:
     - name: Build server binary
       if: needs.changes.outputs.backend == 'true'
       run: go build -v -o bin/server ./cmd/server
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [changes, test, lint, frontend-test, frontend-build, build]
+    if: >
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      (needs.changes.outputs.backend == 'true' || needs.changes.outputs.frontend == 'true') &&
+      needs.build.result == 'success' &&
+      (needs.test.result == 'success' || needs.test.result == 'skipped') &&
+      (needs.lint.result == 'success' || needs.lint.result == 'skipped') &&
+      (needs.frontend-test.result == 'success' || needs.frontend-test.result == 'skipped') &&
+      (needs.frontend-build.result == 'success' || needs.frontend-build.result == 'skipped')
+    env:
+      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+      DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+      DEPLOY_SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+      DEPLOY_PATH: ${{ vars.DEPLOY_PATH || '/opt/leetbot' }}
+      DEPLOY_PORT: ${{ vars.DEPLOY_PORT || '22' }}
+    steps:
+    - name: Set up SSH key
+      run: |
+        install -m 700 -d ~/.ssh
+        printf '%s\n' "$DEPLOY_SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan -p "$DEPLOY_PORT" -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+
+    - name: Deploy latest main
+      run: |
+        ssh -p "$DEPLOY_PORT" "$DEPLOY_USER@$DEPLOY_HOST" <<EOF
+        set -euo pipefail
+        sudo -n bash -lc '
+          set -euo pipefail
+          cd "$DEPLOY_PATH"
+          git fetch origin main
+          git reset --hard origin/main
+          docker compose up -d --build --remove-orphans
+        '
+        EOF
