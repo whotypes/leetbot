@@ -1,0 +1,7 @@
+services:
+  leetbot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "{{ leetbot_port }}:8080"

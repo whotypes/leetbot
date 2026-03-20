@@ -163,17 +163,26 @@ make docker-build
 make docker-run
 ```
 
-## Deployment
+## Taking Leetbot to Production
 
-The bot is designed to be deployed as a compiled binary to platforms like:
-- Fly.io
-- Any VPS or cloud instance
+For a quick path, build the binary and run it anywhere that fits (Fly.io, a VPS, etc.) with the right env vars. Cheers to go:
 
-For deployment, simply build the binary and run it with the appropriate environment variables. Cheers to go!
 ```bash
 make build
 ./bin/leetbot
 ```
+
+There’s also an [`ansible/`](./ansible/) playbook for a single Ubuntu host: Docker + compose for the app, nginx reverse proxy, UFW, Let’s Encrypt (optional via `leetbot_ssl_email` in `group_vars`), fail2ban, etc.
+
+1. Point your domain(s) at the server (see `leetbot_public_domains` in [`ansible/group_vars/all.yml`](./ansible/group_vars/all.yml) — adjust as needed).
+2. Put your host in [`ansible/inventory.yml`](./ansible/inventory.yml) and set secrets in encrypted [`ansible/group_vars/vault.yml`](./ansible/group_vars/vault.yml) as needed. A Discord bot token is only required if you’re running the bot; if you’re only self-hosting the website / HTTP side, you can leave that out (or empty) and trim [`ansible/.env.j2`](./ansible/.env.j2) so the container isn’t expecting a token.
+3. From the `ansible/` directory:
+```bash
+ansible-galaxy collection install -r requirements.yml
+ansible-playbook playbook.yml --ask-vault-pass
+```
+
+The `leetbot` role clones this repo on the server under `/opt/leetbot` and runs `docker compose` there. 
 
 ## License
 

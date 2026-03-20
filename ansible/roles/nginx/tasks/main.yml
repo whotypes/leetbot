@@ -1,0 +1,92 @@
+- name: install nginx and certbot
+  apt:
+    name:
+      - nginx
+      - certbot
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: ensure acme webroot exists
+  file:
+    path: /var/www/certbot
+    state: directory
+    mode: "0755"
+
+- name: check letsencrypt cert
+  stat:
+    path: "/etc/letsencrypt/live/{{ leetbot_public_domains[0] }}/fullchain.pem"
+  register: leetbot_tls_before
+
+- name: deploy leetbot nginx site
+  template:
+    src: leetbot.conf.j2
+    dest: /etc/nginx/sites-available/leetbot
+    mode: "0644"
+  vars:
+    leetbot_nginx_ssl_enabled: "{{ leetbot_tls_before.stat.exists }}"
+  notify: reload nginx
+
+- name: remove default nginx site
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+  notify: reload nginx
+
+- name: enable leetbot nginx site
+  file:
+    src: /etc/nginx/sites-available/leetbot
+    dest: /etc/nginx/sites-enabled/leetbot
+    state: link
+  notify: reload nginx
+
+- name: ensure nginx is enabled
+  systemd:
+    name: nginx
+    enabled: yes
+    state: started
+
+- name: flush handlers before certbot
+  ansible.builtin.meta: flush_handlers
+
+- name: obtain letsencrypt certificate
+  ansible.builtin.shell:
+    cmd: >
+      certbot certonly --webroot -w /var/www/certbot
+      --non-interactive --agree-tos
+      --email {{ leetbot_ssl_email | quote }}
+      {% for d in leetbot_public_domains %} -d {{ d | quote }}{% endfor %}
+  args:
+    creates: "/etc/letsencrypt/live/{{ leetbot_public_domains[0] }}/fullchain.pem"
+  when:
+    - leetbot_ssl_email | default('') | length > 0
+    - not leetbot_tls_before.stat.exists
+
+- name: recheck letsencrypt cert
+  stat:
+    path: "/etc/letsencrypt/live/{{ leetbot_public_domains[0] }}/fullchain.pem"
+  register: leetbot_tls_after
+
+- name: deploy leetbot nginx site after tls issuance
+  template:
+    src: leetbot.conf.j2
+    dest: /etc/nginx/sites-available/leetbot
+    mode: "0644"
+  vars:
+    leetbot_nginx_ssl_enabled: "{{ leetbot_tls_after.stat.exists }}"
+  when: leetbot_tls_before.stat.exists != leetbot_tls_after.stat.exists
+  notify: reload nginx
+
+- name: ensure letsencrypt renewal-hooks deploy dir exists
+  file:
+    path: /etc/letsencrypt/renewal-hooks/deploy
+    state: directory
+    mode: "0755"
+
+- name: certbot renewal deploy hook for nginx reload
+  copy:
+    dest: /etc/letsencrypt/renewal-hooks/deploy/nginx-reload.sh
+    content: |
+      #!/bin/sh
+      systemctl reload nginx
+    mode: "0755"

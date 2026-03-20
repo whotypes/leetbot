@@ -1,0 +1,10 @@
+leetbot_repo_url: "https://github.com/whotypes/leetbot.git"
+leetbot_repo_version: "main"
+leetbot_install_dir: "/opt/leetbot"
+leetbot_port: 8080
+leetbot_public_domains:
+  - leetbot.org
+  - www.leetbot.org
+leetbot_ssl_email: "titandq@gmail.com"
+leetbot_container_name: "leetbot_leetbot_1"
+leetbot_bot_prefix: "!"

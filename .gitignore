@@ -26,3 +26,8 @@ bot
 cleanup_commands
 server
 key.json
+ansible/.ansible/
+*.retry
+.vault_pass
+vault_pass.txt
+.env.prod

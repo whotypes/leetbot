@@ -1,0 +1,22 @@
+- hosts: all
+  vars_files:
+    - group_vars/vault.yml
+  roles:
+    - base
+    - nginx
+    - leetbot
+
+- hosts: all
+  gather_facts: false
+  vars_files:
+    - group_vars/vault.yml
+  tasks:
+    - name: get info on leetbot container
+      community.docker.docker_container_info:
+        name: "{{ leetbot_container_name }}"
+      register: leetbot_container
+
+    - name: show container status
+      ansible.builtin.debug:
+        msg: "Container is {{ leetbot_container.container.State.Status }}"
+      when: leetbot_container.exists | default(false)
