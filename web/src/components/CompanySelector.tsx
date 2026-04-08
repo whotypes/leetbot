@@ -263,6 +263,13 @@ const VirtualizedList = ({
     }
   }, [isDragging, handleDrag, handleDragEnd])
 
+  const handleFocus = React.useCallback(() => {
+    if (focusedIndex === -1 && filteredItems.length > 0) {
+      const selectedIdx = filteredItems.findIndex((item) => item.value === selectedValue)
+      setFocusedIndex(selectedIdx !== -1 ? selectedIdx : 0)
+    }
+  }, [focusedIndex, filteredItems, selectedValue])
+
   const highlightMatch = (text: string, query: string) => {
     if (!query) return text
     const lowerText = text.toLowerCase()
@@ -287,13 +294,6 @@ const VirtualizedList = ({
       </div>
     )
   }
-
-  const handleFocus = React.useCallback(() => {
-    if (focusedIndex === -1 && filteredItems.length > 0) {
-      const selectedIdx = filteredItems.findIndex((item) => item.value === selectedValue)
-      setFocusedIndex(selectedIdx !== -1 ? selectedIdx : 0)
-    }
-  }, [focusedIndex, filteredItems, selectedValue])
 
   return (
     <div
