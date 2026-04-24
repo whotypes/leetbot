@@ -21,9 +21,9 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/t
 /** `?about` opens this dialog — e.g. https://leetbot.org/?about */
 const ABOUT_QUERY_PARAM = 'about'
 
-/** LeetCode Discuss — community context on company “frequency” ordering and caveats */
+/** LeetCode Discuss — official/community context on lists and frequency */
 const LEETCODE_FREQUENCY_FAQ_URL =
-  'https://leetcode.com/discuss/general-discussion/1677842/is-leetcode-ordering-company-questions-by-frequency-incorrectly/'
+  'https://leetcode.com/discuss/post/1912580/answered-leetcodes-lists-and-frequency-c-u6vi/comments/1337781/'
 
 function stripAboutFromUrl() {
   const url = new URL(window.location.href)
@@ -191,7 +191,7 @@ export const Navbar = ({
                                 rel="noopener noreferrer"
                                 className="font-medium text-primary underline underline-offset-4 hover:no-underline"
                               >
-                                LeetCode discussion thread on frequency ordering
+                                LeetCode discussion thread on how they do that.
                               </a>
                               .
                             </p>
