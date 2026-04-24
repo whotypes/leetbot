@@ -1,2 +1,3 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,48.1%,100.0%
+71,https://leetcode.com/problems/simplify-path,"Simplify Path",Medium,48.1%,100.0%
+243,https://leetcode.com/problems/shortest-word-distance,"Shortest Word Distance",Easy,66.3%,100.0%

@@ -1,2 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-939,https://leetcode.com/problems/minimum-area-rectangle,Minimum Area Rectangle,Medium,55.0%,100.0%
+359,https://leetcode.com/problems/logger-rate-limiter,"Logger Rate Limiter",Easy,76.8%,100.0%
+939,https://leetcode.com/problems/minimum-area-rectangle,"Minimum Area Rectangle",Medium,55.0%,100.0%
+146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,90.4%
+354,https://leetcode.com/problems/russian-doll-envelopes,"Russian Doll Envelopes",Hard,37.8%,90.4%

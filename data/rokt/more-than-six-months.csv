@@ -1,5 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,66.8%,100.0%
-408,https://leetcode.com/problems/valid-word-abbreviation,Valid Word Abbreviation,Easy,36.9%,100.0%
-227,https://leetcode.com/problems/basic-calculator-ii,Basic Calculator II,Medium,45.9%,100.0%
-224,https://leetcode.com/problems/basic-calculator,Basic Calculator,Hard,45.7%,100.0%
+224,https://leetcode.com/problems/basic-calculator,"Basic Calculator",Hard,46.8%,100.0%
+242,https://leetcode.com/problems/valid-anagram,"Valid Anagram",Easy,66.8%,100.0%
+227,https://leetcode.com/problems/basic-calculator-ii,"Basic Calculator II",Medium,46.8%,92.6%
+408,https://leetcode.com/problems/valid-word-abbreviation,"Valid Word Abbreviation",Easy,37.0%,85.7%
+10,https://leetcode.com/problems/regular-expression-matching,"Regular Expression Matching",Hard,30.8%,66.8%
+1472,https://leetcode.com/problems/design-browser-history,"Design Browser History",Medium,78.3%,66.8%

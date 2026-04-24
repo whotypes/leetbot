@@ -1,2 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,37.4%,100.0%
+43,https://leetcode.com/problems/multiply-strings,"Multiply Strings",Medium,44.0%,100.0%
+212,https://leetcode.com/problems/word-search-ii,"Word Search II",Hard,37.4%,100.0%
+20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,84.5%
+2050,https://leetcode.com/problems/parallel-courses-iii,"Parallel Courses III",Hard,66.8%,84.5%
+337,https://leetcode.com/problems/house-robber-iii,"House Robber III",Medium,55.8%,75.5%
+528,https://leetcode.com/problems/random-pick-with-weight,"Random Pick with Weight",Medium,49.0%,75.5%

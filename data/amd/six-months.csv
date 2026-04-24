@@ -1,2 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,54.2%,100.0%
+12,https://leetcode.com/problems/integer-to-roman,"Integer to Roman",Medium,70.8%,100.0%
+54,https://leetcode.com/problems/spiral-matrix,"Spiral Matrix",Medium,54.2%,100.0%
+70,https://leetcode.com/problems/climbing-stairs,"Climbing Stairs",Easy,54.0%,100.0%
+200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,100.0%
+234,https://leetcode.com/problems/palindrome-linked-list,"Palindrome Linked List",Easy,57.8%,100.0%
+283,https://leetcode.com/problems/move-zeroes,"Move Zeroes",Easy,63.8%,100.0%

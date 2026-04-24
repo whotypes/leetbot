@@ -1,10 +1,18 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2493,https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups,Divide Nodes Into the Maximum Number of Groups,Hard,67.3%,87.5%
-283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,62.9%,100.0%
-509,https://leetcode.com/problems/fibonacci-number,Fibonacci Number,Easy,73.1%,87.5%
-349,https://leetcode.com/problems/intersection-of-two-arrays,Intersection of Two Arrays,Easy,76.6%,87.5%
-875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,49.1%,87.5%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,55.4%,87.5%
-17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,64.0%,87.5%
-7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,30.4%,87.5%
-204,https://leetcode.com/problems/count-primes,Count Primes,Medium,34.9%,87.5%
+560,https://leetcode.com/problems/subarray-sum-equals-k,"Subarray Sum Equals K",Medium,47.2%,100.0%
+3432,https://leetcode.com/problems/count-partitions-with-even-sum-difference,"Count Partitions with Even Sum Difference",Easy,85.2%,100.0%
+1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,91.5%
+70,https://leetcode.com/problems/climbing-stairs,"Climbing Stairs",Easy,54.0%,91.5%
+7,https://leetcode.com/problems/reverse-integer,"Reverse Integer",Medium,30.4%,87.5%
+17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,"Letter Combinations of a Phone Number",Medium,64.0%,87.5%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,55.4%,87.5%
+204,https://leetcode.com/problems/count-primes,"Count Primes",Medium,34.9%,87.5%
+349,https://leetcode.com/problems/intersection-of-two-arrays,"Intersection of Two Arrays",Easy,76.6%,87.5%
+509,https://leetcode.com/problems/fibonacci-number,"Fibonacci Number",Easy,73.1%,87.5%
+2493,https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups,"Divide Nodes Into the Maximum Number of Groups",Hard,67.3%,87.5%
+15,https://leetcode.com/problems/3sum,"3Sum",Medium,38.9%,79.6%
+32,https://leetcode.com/problems/longest-valid-parentheses,"Longest Valid Parentheses",Hard,38.6%,79.6%
+56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,51.6%,79.6%
+283,https://leetcode.com/problems/move-zeroes,"Move Zeroes",Easy,63.8%,79.6%
+875,https://leetcode.com/problems/koko-eating-bananas,"Koko Eating Bananas",Medium,49.9%,79.6%
+3779,https://leetcode.com/problems/minimum-number-of-operations-to-have-distinct-elements,"Minimum Number of Operations to Have Distinct Elements",Medium,42.2%,79.6%

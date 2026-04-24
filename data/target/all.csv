@@ -1,5 +1,9 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2246,https://leetcode.com/problems/longest-path-with-different-adjacent-characters,Longest Path With Different Adjacent Characters,Hard,53.9%,100.0%
-1352,https://leetcode.com/problems/product-of-the-last-k-numbers,Product of the Last K Numbers,Medium,62.8%,100.0%
-53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,52.2%,100.0%
-75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,67.8%,100.0%
+75,https://leetcode.com/problems/sort-colors,"Sort Colors",Medium,69.5%,100.0%
+14,https://leetcode.com/problems/longest-common-prefix,"Longest Common Prefix",Easy,47.4%,88.2%
+20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,88.2%
+53,https://leetcode.com/problems/maximum-subarray,"Maximum Subarray",Medium,53.2%,88.2%
+184,https://leetcode.com/problems/department-highest-salary,"Department Highest Salary",Medium,57.9%,88.2%
+451,https://leetcode.com/problems/sort-characters-by-frequency,"Sort Characters By Frequency",Medium,75.3%,88.2%
+1352,https://leetcode.com/problems/product-of-the-last-k-numbers,"Product of the Last K Numbers",Medium,62.9%,88.2%
+2246,https://leetcode.com/problems/longest-path-with-different-adjacent-characters,"Longest Path With Different Adjacent Characters",Hard,54.0%,88.2%

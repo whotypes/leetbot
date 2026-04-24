@@ -1,2 +1,3 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-110,https://leetcode.com/problems/balanced-binary-tree,Balanced Binary Tree,Easy,55.6%,100.0%
+110,https://leetcode.com/problems/balanced-binary-tree,"Balanced Binary Tree",Easy,58.2%,100.0%
+146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,89.0%

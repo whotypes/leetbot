@@ -1,3 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,58.0%,100.0%
-403,https://leetcode.com/problems/frog-jump,Frog Jump,Hard,46.6%,87.5%
+42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,67.2%,100.0%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,100.0%
+300,https://leetcode.com/problems/longest-increasing-subsequence,"Longest Increasing Subsequence",Medium,58.0%,100.0%
+1326,https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden,"Minimum Number of Taps to Open to Water a Garden",Hard,51.0%,100.0%
+403,https://leetcode.com/problems/frog-jump,"Frog Jump",Hard,46.6%,87.5%

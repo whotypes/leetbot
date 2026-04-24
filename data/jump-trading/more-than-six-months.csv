@@ -1,4 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,100.0%
-202,https://leetcode.com/problems/happy-number,Happy Number,Easy,58.2%,100.0%
-1250,https://leetcode.com/problems/check-if-it-is-a-good-array,Check If It Is a Good Array,Hard,61.5%,100.0%
+60,https://leetcode.com/problems/permutation-sequence,"Permutation Sequence",Hard,52.8%,100.0%
+188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,"Best Time to Buy and Sell Stock IV",Hard,47.4%,100.0%
+202,https://leetcode.com/problems/happy-number,"Happy Number",Easy,59.5%,100.0%
+1250,https://leetcode.com/problems/check-if-it-is-a-good-array,"Check If It Is a Good Array",Hard,61.5%,100.0%
+572,https://leetcode.com/problems/subtree-of-another-tree,"Subtree of Another Tree",Easy,51.5%,89.3%
+2275,https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero,"Largest Combination With Bitwise AND Greater Than Zero",Medium,80.8%,89.3%

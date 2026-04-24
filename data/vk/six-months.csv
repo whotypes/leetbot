@@ -1,4 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-228,https://leetcode.com/problems/summary-ranges,Summary Ranges,Easy,53.1%,100.0%
-849,https://leetcode.com/problems/maximize-distance-to-closest-person,Maximize Distance to Closest Person,Medium,49.1%,87.5%
-1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,87.5%
+228,https://leetcode.com/problems/summary-ranges,"Summary Ranges",Easy,53.1%,100.0%
+567,https://leetcode.com/problems/permutation-in-string,"Permutation in String",Medium,48.7%,100.0%
+1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,55.9%,87.5%
+849,https://leetcode.com/problems/maximize-distance-to-closest-person,"Maximize Distance to Closest Person",Medium,49.1%,87.5%

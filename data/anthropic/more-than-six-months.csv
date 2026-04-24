@@ -1,2 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1242,https://leetcode.com/problems/web-crawler-multithreaded,Web Crawler Multithreaded,Medium,50.2%,100.0%
+1242,https://leetcode.com/problems/web-crawler-multithreaded,"Web Crawler Multithreaded",Medium,51.2%,100.0%
+609,https://leetcode.com/problems/find-duplicate-file-in-system,"Find Duplicate File in System",Medium,67.5%,80.7%
+1236,https://leetcode.com/problems/web-crawler,"Web Crawler",Medium,68.8%,74.5%
+636,https://leetcode.com/problems/exclusive-time-of-functions,"Exclusive Time of Functions",Medium,66.2%,70.4%

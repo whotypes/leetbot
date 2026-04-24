@@ -1,9 +1,12 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-289,https://leetcode.com/problems/game-of-life,Game of Life,Medium,71.5%,87.5%
-268,https://leetcode.com/problems/missing-number,Missing Number,Easy,70.3%,87.5%
-238,https://leetcode.com/problems/product-of-array-except-self,Product of Array Except Self,Medium,67.9%,87.5%
-273,https://leetcode.com/problems/integer-to-english-words,Integer to English Words,Hard,34.4%,100.0%
-23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,57.0%,87.5%
-28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,45.1%,87.5%
-2020,https://leetcode.com/problems/number-of-accounts-that-did-not-stream,Number of Accounts That Did Not Stream,Medium,72.0%,62.5%
-15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,62.5%
+273,https://leetcode.com/problems/integer-to-english-words,"Integer to English Words",Hard,35.0%,100.0%
+23,https://leetcode.com/problems/merge-k-sorted-lists,"Merge k Sorted Lists",Hard,59.4%,94.5%
+28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,"Find the Index of the First Occurrence in a String",Easy,45.1%,87.5%
+268,https://leetcode.com/problems/missing-number,"Missing Number",Easy,70.3%,87.5%
+13,https://leetcode.com/problems/roman-to-integer,"Roman to Integer",Easy,66.5%,87.4%
+289,https://leetcode.com/problems/game-of-life,"Game of Life",Medium,72.5%,87.4%
+1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,77.3%
+15,https://leetcode.com/problems/3sum,"3Sum",Medium,38.9%,77.3%
+238,https://leetcode.com/problems/product-of-array-except-self,"Product of Array Except Self",Medium,68.8%,77.3%
+341,https://leetcode.com/problems/flatten-nested-list-iterator,"Flatten Nested List Iterator",Medium,65.7%,77.3%
+2020,https://leetcode.com/problems/number-of-accounts-that-did-not-stream,"Number of Accounts That Did Not Stream",Medium,72.0%,77.3%

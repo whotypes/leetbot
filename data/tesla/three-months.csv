@@ -1,5 +1,10 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1117,https://leetcode.com/problems/building-h2o,Building H2O,Medium,57.7%,100.0%
-200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,87.5%
-41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,41.2%,87.5%
-128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.0%,87.5%
+223,https://leetcode.com/problems/rectangle-area,"Rectangle Area",Medium,49.4%,100.0%
+767,https://leetcode.com/problems/reorganize-string,"Reorganize String",Medium,57.0%,100.0%
+1117,https://leetcode.com/problems/building-h2o,"Building H2O",Medium,57.7%,100.0%
+15,https://leetcode.com/problems/3sum,"3Sum",Medium,38.9%,89.0%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,89.0%
+2502,https://leetcode.com/problems/design-memory-allocator,"Design Memory Allocator",Medium,50.1%,89.0%
+41,https://leetcode.com/problems/first-missing-positive,"First Missing Positive",Hard,41.2%,87.5%
+128,https://leetcode.com/problems/longest-consecutive-sequence,"Longest Consecutive Sequence",Medium,47.0%,87.5%
+200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,62.5%,87.5%

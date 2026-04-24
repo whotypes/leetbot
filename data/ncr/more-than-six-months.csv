@@ -1,2 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2327,https://leetcode.com/problems/number-of-people-aware-of-a-secret,Number of People Aware of a Secret,Medium,46.4%,100.0%
+2327,https://leetcode.com/problems/number-of-people-aware-of-a-secret,"Number of People Aware of a Secret",Medium,60.8%,100.0%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,38.9%,89.8%
+924,https://leetcode.com/problems/minimize-malware-spread,"Minimize Malware Spread",Hard,43.1%,89.8%
+1797,https://leetcode.com/problems/design-authentication-manager,"Design Authentication Manager",Medium,58.5%,89.8%

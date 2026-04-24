@@ -1,3 +1,9 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2747,https://leetcode.com/problems/count-zero-request-servers,Count Zero Request Servers,Medium,34.4%,100.0%
-33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,43.0%,87.5%
+757,https://leetcode.com/problems/set-intersection-size-at-least-two,"Set Intersection Size At Least Two",Hard,58.0%,100.0%
+1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,"Capacity To Ship Packages Within D Days",Medium,73.8%,100.0%
+33,https://leetcode.com/problems/search-in-rotated-sorted-array,"Search in Rotated Sorted Array",Medium,44.4%,87.5%
+49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,87.5%
+221,https://leetcode.com/problems/maximal-square,"Maximal Square",Medium,50.2%,87.5%
+287,https://leetcode.com/problems/find-the-duplicate-number,"Find the Duplicate Number",Medium,64.2%,87.5%
+968,https://leetcode.com/problems/binary-tree-cameras,"Binary Tree Cameras",Hard,47.9%,87.5%
+2747,https://leetcode.com/problems/count-zero-request-servers,"Count Zero Request Servers",Medium,35.8%,87.5%

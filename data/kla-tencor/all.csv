@@ -1,5 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1192,https://leetcode.com/problems/critical-connections-in-a-network,Critical Connections in a Network,Hard,58.0%,87.5%
-460,https://leetcode.com/problems/lfu-cache,LFU Cache,Hard,46.8%,87.5%
-780,https://leetcode.com/problems/reaching-points,Reaching Points,Hard,33.7%,87.5%
-2079,https://leetcode.com/problems/watering-plants,Watering Plants,Medium,80.0%,100.0%
+780,https://leetcode.com/problems/reaching-points,"Reaching Points",Hard,34.3%,100.0%
+460,https://leetcode.com/problems/lfu-cache,"LFU Cache",Hard,49.0%,88.1%
+2079,https://leetcode.com/problems/watering-plants,"Watering Plants",Medium,79.9%,88.1%
+1192,https://leetcode.com/problems/critical-connections-in-a-network,"Critical Connections in a Network",Hard,59.5%,78.7%

@@ -1,5 +1,11 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,42.4%,100.0%
-49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,75.0%
-344,https://leetcode.com/problems/reverse-string,Reverse String,Easy,79.8%,75.0%
-1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,75.0%
+1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,100.0%
+20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,91.7%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,38.9%,86.1%
+88,https://leetcode.com/problems/merge-sorted-array,"Merge Sorted Array",Easy,54.7%,79.0%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,79.0%
+49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,71.1%,75.0%
+15,https://leetcode.com/problems/3sum,"3Sum",Medium,38.9%,69.0%
+176,https://leetcode.com/problems/second-highest-salary,"Second Highest Salary",Medium,46.8%,69.0%
+185,https://leetcode.com/problems/department-top-three-salaries,"Department Top Three Salaries",Hard,60.3%,69.0%
+344,https://leetcode.com/problems/reverse-string,"Reverse String",Easy,80.7%,69.0%

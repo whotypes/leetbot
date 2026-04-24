@@ -1,4 +1,9 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,100.0%
-680,https://leetcode.com/problems/valid-palindrome-ii,Valid Palindrome II,Easy,43.1%,87.5%
-49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,87.5%
+680,https://leetcode.com/problems/valid-palindrome-ii,"Valid Palindrome II",Easy,44.2%,100.0%
+200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,95.8%
+1047,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string,"Remove All Adjacent Duplicates In String",Easy,73.1%,83.9%
+1152,https://leetcode.com/problems/analyze-user-website-visit-pattern,"Analyze User Website Visit Pattern",Medium,44.3%,83.9%
+49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,74.5%
+79,https://leetcode.com/problems/word-search,"Word Search",Medium,47.2%,74.5%
+240,https://leetcode.com/problems/search-a-2d-matrix-ii,"Search a 2D Matrix II",Medium,57.2%,74.5%
+977,https://leetcode.com/problems/squares-of-a-sorted-array,"Squares of a Sorted Array",Easy,73.7%,74.5%

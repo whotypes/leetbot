@@ -1,22 +1,43 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-475,https://leetcode.com/problems/heaters,Heaters,Medium,40.1%,87.5%
-224,https://leetcode.com/problems/basic-calculator,Basic Calculator,Hard,45.7%,62.5%
-739,https://leetcode.com/problems/daily-temperatures,Daily Temperatures,Medium,67.5%,100.0%
-1610,https://leetcode.com/problems/maximum-number-of-visible-points,Maximum Number of Visible Points,Hard,37.7%,100.0%
-227,https://leetcode.com/problems/basic-calculator-ii,Basic Calculator II,Medium,45.9%,62.5%
-243,https://leetcode.com/problems/shortest-word-distance,Shortest Word Distance,Easy,66.0%,87.5%
-289,https://leetcode.com/problems/game-of-life,Game of Life,Medium,71.5%,62.5%
-49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,100.0%
-951,https://leetcode.com/problems/flip-equivalent-binary-trees,Flip Equivalent Binary Trees,Medium,69.7%,75.0%
-1268,https://leetcode.com/problems/search-suggestions-system,Search Suggestions System,Medium,65.1%,75.0%
-114,https://leetcode.com/problems/flatten-binary-tree-to-linked-list,Flatten Binary Tree to Linked List,Medium,68.7%,62.5%
-200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,100.0%
-207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,49.4%,87.5%
-244,https://leetcode.com/problems/shortest-word-distance-ii,Shortest Word Distance II,Medium,62.2%,62.5%
-295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,53.4%,87.5%
-56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,49.5%,62.5%
-33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,43.0%,62.5%
-283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,62.9%,62.5%
-210,https://leetcode.com/problems/course-schedule-ii,Course Schedule II,Medium,53.6%,62.5%
-909,https://leetcode.com/problems/snakes-and-ladders,Snakes and Ladders,Medium,47.9%,62.5%
-287,https://leetcode.com/problems/find-the-duplicate-number,Find the Duplicate Number,Medium,63.0%,62.5%
+200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,100.0%
+243,https://leetcode.com/problems/shortest-word-distance,"Shortest Word Distance",Easy,66.3%,84.4%
+1024,https://leetcode.com/problems/video-stitching,"Video Stitching",Medium,52.7%,84.4%
+207,https://leetcode.com/problems/course-schedule,"Course Schedule",Medium,51.3%,82.6%
+49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,80.6%
+1610,https://leetcode.com/problems/maximum-number-of-visible-points,"Maximum Number of Visible Points",Hard,38.1%,80.6%
+295,https://leetcode.com/problems/find-median-from-data-stream,"Find Median from Data Stream",Hard,54.4%,78.3%
+827,https://leetcode.com/problems/making-a-large-island,"Making A Large Island",Hard,56.5%,75.8%
+1268,https://leetcode.com/problems/search-suggestions-system,"Search Suggestions System",Medium,65.2%,75.8%
+475,https://leetcode.com/problems/heaters,"Heaters",Medium,41.8%,73.0%
+56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,51.6%,69.7%
+210,https://leetcode.com/problems/course-schedule-ii,"Course Schedule II",Medium,55.4%,69.7%
+244,https://leetcode.com/problems/shortest-word-distance-ii,"Shortest Word Distance II",Medium,62.9%,69.7%
+739,https://leetcode.com/problems/daily-temperatures,"Daily Temperatures",Medium,68.6%,69.7%
+289,https://leetcode.com/problems/game-of-life,"Game of Life",Medium,72.5%,65.9%
+818,https://leetcode.com/problems/race-car,"Race Car",Hard,44.7%,65.9%
+224,https://leetcode.com/problems/basic-calculator,"Basic Calculator",Hard,45.7%,62.5%
+227,https://leetcode.com/problems/basic-calculator-ii,"Basic Calculator II",Medium,45.9%,62.5%
+23,https://leetcode.com/problems/merge-k-sorted-lists,"Merge k Sorted Lists",Hard,59.4%,61.2%
+54,https://leetcode.com/problems/spiral-matrix,"Spiral Matrix",Medium,56.6%,61.2%
+20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,55.1%
+150,https://leetcode.com/problems/evaluate-reverse-polish-notation,"Evaluate Reverse Polish Notation",Medium,57.6%,55.1%
+253,https://leetcode.com/problems/meeting-rooms-ii,"Meeting Rooms II",Medium,52.6%,55.1%
+647,https://leetcode.com/problems/palindromic-substrings,"Palindromic Substrings",Medium,72.7%,55.1%
+708,https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list,"Insert into a Sorted Circular Linked List",Medium,38.5%,55.1%
+951,https://leetcode.com/problems/flip-equivalent-binary-trees,"Flip Equivalent Binary Trees",Medium,69.5%,55.1%
+981,https://leetcode.com/problems/time-based-key-value-store,"Time Based Key-Value Store",Medium,49.9%,55.1%
+2244,https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks,"Minimum Rounds to Complete All Tasks",Medium,63.3%,55.1%
+1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,46.6%
+33,https://leetcode.com/problems/search-in-rotated-sorted-array,"Search in Rotated Sorted Array",Medium,44.4%,46.6%
+114,https://leetcode.com/problems/flatten-binary-tree-to-linked-list,"Flatten Binary Tree to Linked List",Medium,70.6%,46.6%
+130,https://leetcode.com/problems/surrounded-regions,"Surrounded Regions",Medium,45.1%,46.6%
+283,https://leetcode.com/problems/move-zeroes,"Move Zeroes",Easy,63.8%,46.6%
+287,https://leetcode.com/problems/find-the-duplicate-number,"Find the Duplicate Number",Medium,64.2%,46.6%
+443,https://leetcode.com/problems/string-compression,"String Compression",Medium,59.9%,46.6%
+529,https://leetcode.com/problems/minesweeper,"Minesweeper",Medium,68.7%,46.6%
+694,https://leetcode.com/problems/number-of-distinct-islands,"Number of Distinct Islands",Medium,62.8%,46.6%
+721,https://leetcode.com/problems/accounts-merge,"Accounts Merge",Medium,61.2%,46.6%
+909,https://leetcode.com/problems/snakes-and-ladders,"Snakes and Ladders",Medium,48.1%,46.6%
+953,https://leetcode.com/problems/verifying-an-alien-dictionary,"Verifying an Alien Dictionary",Easy,55.9%,46.6%
+994,https://leetcode.com/problems/rotting-oranges,"Rotting Oranges",Medium,58.5%,46.6%
+1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,"Shortest Path in Binary Matrix",Medium,51.4%,46.6%

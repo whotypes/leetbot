@@ -1,11 +1,23 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,54.2%,75.0%
-1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,100.0%
-242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,66.8%,100.0%
-560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,45.6%,87.5%
-122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,69.6%,75.0%
-53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,52.2%,75.0%
-75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,67.8%,75.0%
-152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,35.1%,75.0%
-9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,59.3%,75.0%
-35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,49.2%,75.0%
+1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,100.0%
+152,https://leetcode.com/problems/maximum-product-subarray,"Maximum Product Subarray",Medium,36.3%,100.0%
+283,https://leetcode.com/problems/move-zeroes,"Move Zeroes",Easy,63.8%,93.6%
+560,https://leetcode.com/problems/subarray-sum-equals-k,"Subarray Sum Equals K",Medium,45.6%,87.5%
+5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,37.7%,85.4%
+28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,"Find the Index of the First Occurrence in a String",Easy,46.5%,85.4%
+766,https://leetcode.com/problems/toeplitz-matrix,"Toeplitz Matrix",Easy,69.7%,85.4%
+35,https://leetcode.com/problems/search-insert-position,"Search Insert Position",Easy,49.2%,75.0%
+54,https://leetcode.com/problems/spiral-matrix,"Spiral Matrix",Medium,54.2%,75.0%
+75,https://leetcode.com/problems/sort-colors,"Sort Colors",Medium,67.8%,75.0%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,"Best Time to Buy and Sell Stock II",Medium,69.6%,75.0%
+9,https://leetcode.com/problems/palindrome-number,"Palindrome Number",Easy,60.5%,73.9%
+14,https://leetcode.com/problems/longest-common-prefix,"Longest Common Prefix",Easy,47.4%,73.9%
+27,https://leetcode.com/problems/remove-element,"Remove Element",Easy,61.7%,73.9%
+53,https://leetcode.com/problems/maximum-subarray,"Maximum Subarray",Medium,53.2%,73.9%
+90,https://leetcode.com/problems/subsets-ii,"Subsets II",Medium,61.2%,73.9%
+118,https://leetcode.com/problems/pascals-triangle,"Pascal's Triangle",Easy,78.9%,73.9%
+136,https://leetcode.com/problems/single-number,"Single Number",Easy,77.6%,73.9%
+242,https://leetcode.com/problems/valid-anagram,"Valid Anagram",Easy,68.0%,73.9%
+540,https://leetcode.com/problems/single-element-in-a-sorted-array,"Single Element in a Sorted Array",Medium,59.2%,73.9%
+621,https://leetcode.com/problems/task-scheduler,"Task Scheduler",Medium,63.0%,73.9%
+1823,https://leetcode.com/problems/find-the-winner-of-the-circular-game,"Find the Winner of the Circular Game",Medium,82.2%,73.9%

@@ -1,16 +1,38 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.4%,100.0%
-621,https://leetcode.com/problems/task-scheduler,Task Scheduler,Medium,61.7%,100.0%
-381,https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed,Insert Delete GetRandom O(1) - Duplicates allowed,Hard,35.8%,87.5%
-399,https://leetcode.com/problems/evaluate-division,Evaluate Division,Medium,63.2%,100.0%
-1901,https://leetcode.com/problems/find-a-peak-element-ii,Find a Peak Element II,Medium,53.4%,87.5%
-97,https://leetcode.com/problems/interleaving-string,Interleaving String,Medium,42.3%,87.5%
-502,https://leetcode.com/problems/ipo,IPO,Hard,53.1%,100.0%
-3071,https://leetcode.com/problems/minimum-operations-to-write-the-letter-y-on-a-grid,Minimum Operations to Write the Letter Y on a Grid,Medium,62.2%,87.5%
-503,https://leetcode.com/problems/next-greater-element-ii,Next Greater Element II,Medium,66.6%,100.0%
-2896,https://leetcode.com/problems/apply-operations-to-make-two-strings-equal,Apply Operations to Make Two Strings Equal,Medium,27.2%,87.5%
-200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,87.5%
-25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,63.3%,87.5%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,37.1%,87.5%
-30,https://leetcode.com/problems/substring-with-concatenation-of-all-words,Substring with Concatenation of All Words,Hard,33.1%,87.5%
-1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,Capacity To Ship Packages Within D Days,Medium,72.3%,87.5%
+399,https://leetcode.com/problems/evaluate-division,"Evaluate Division",Medium,63.2%,100.0%
+410,https://leetcode.com/problems/split-array-largest-sum,"Split Array Largest Sum",Hard,60.3%,100.0%
+1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,"Maximum Profit in Job Scheduling",Hard,54.4%,100.0%
+76,https://leetcode.com/problems/minimum-window-substring,"Minimum Window Substring",Hard,47.4%,93.3%
+30,https://leetcode.com/problems/substring-with-concatenation-of-all-words,"Substring with Concatenation of All Words",Hard,33.1%,87.5%
+97,https://leetcode.com/problems/interleaving-string,"Interleaving String",Medium,42.3%,87.5%
+200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,62.5%,87.5%
+381,https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed,"Insert Delete GetRandom O(1) - Duplicates allowed",Hard,35.8%,87.5%
+1901,https://leetcode.com/problems/find-a-peak-element-ii,"Find a Peak Element II",Medium,53.4%,87.5%
+42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,67.2%,84.7%
+502,https://leetcode.com/problems/ipo,"IPO",Hard,53.5%,84.7%
+546,https://leetcode.com/problems/remove-boxes,"Remove Boxes",Hard,49.4%,84.7%
+621,https://leetcode.com/problems/task-scheduler,"Task Scheduler",Medium,63.0%,84.7%
+1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,"Capacity To Ship Packages Within D Days",Medium,73.8%,84.7%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,38.9%,72.6%
+4,https://leetcode.com/problems/median-of-two-sorted-arrays,"Median of Two Sorted Arrays",Hard,46.4%,72.6%
+25,https://leetcode.com/problems/reverse-nodes-in-k-group,"Reverse Nodes in k-Group",Hard,65.9%,72.6%
+32,https://leetcode.com/problems/longest-valid-parentheses,"Longest Valid Parentheses",Hard,38.6%,72.6%
+53,https://leetcode.com/problems/maximum-subarray,"Maximum Subarray",Medium,53.2%,72.6%
+56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,51.6%,72.6%
+85,https://leetcode.com/problems/maximal-rectangle,"Maximal Rectangle",Hard,58.6%,72.6%
+132,https://leetcode.com/problems/palindrome-partitioning-ii,"Palindrome Partitioning II",Hard,36.9%,72.6%
+239,https://leetcode.com/problems/sliding-window-maximum,"Sliding Window Maximum",Hard,48.7%,72.6%
+250,https://leetcode.com/problems/count-univalue-subtrees,"Count Univalue Subtrees",Medium,57.5%,72.6%
+375,https://leetcode.com/problems/guess-number-higher-or-lower-ii,"Guess Number Higher or Lower II",Medium,52.7%,72.6%
+380,https://leetcode.com/problems/insert-delete-getrandom-o1,"Insert Delete GetRandom O(1)",Medium,55.3%,72.6%
+402,https://leetcode.com/problems/remove-k-digits,"Remove K Digits",Medium,36.7%,72.6%
+475,https://leetcode.com/problems/heaters,"Heaters",Medium,41.8%,72.6%
+503,https://leetcode.com/problems/next-greater-element-ii,"Next Greater Element II",Medium,68.2%,72.6%
+698,https://leetcode.com/problems/partition-to-k-equal-sum-subsets,"Partition to K Equal Sum Subsets",Medium,38.6%,72.6%
+968,https://leetcode.com/problems/binary-tree-cameras,"Binary Tree Cameras",Hard,47.9%,72.6%
+979,https://leetcode.com/problems/distribute-coins-in-binary-tree,"Distribute Coins in Binary Tree",Medium,77.3%,72.6%
+2115,https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies,"Find All Possible Recipes from Given Supplies",Medium,56.9%,72.6%
+2381,https://leetcode.com/problems/shifting-letters-ii,"Shifting Letters II",Medium,53.6%,72.6%
+2616,https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs,"Minimize the Maximum Difference of Pairs",Medium,50.9%,72.6%
+2896,https://leetcode.com/problems/apply-operations-to-make-two-strings-equal,"Apply Operations to Make Two Strings Equal",Medium,27.7%,72.6%
+3071,https://leetcode.com/problems/minimum-operations-to-write-the-letter-y-on-a-grid,"Minimum Operations to Write the Letter Y on a Grid",Medium,64.5%,72.6%

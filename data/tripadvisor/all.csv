@@ -1,5 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1002,https://leetcode.com/problems/find-common-characters,Find Common Characters,Easy,74.6%,100.0%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,55.4%,62.5%
-146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,45.4%,75.0%
-20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,42.4%,87.5%
+20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,100.0%
+1002,https://leetcode.com/problems/find-common-characters,"Find Common Characters",Easy,74.7%,96.3%
+146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,71.5%
+383,https://leetcode.com/problems/ransom-note,"Ransom Note",Easy,65.9%,71.5%
+155,https://leetcode.com/problems/min-stack,"Min Stack",Medium,58.0%,63.2%
+240,https://leetcode.com/problems/search-a-2d-matrix-ii,"Search a 2D Matrix II",Medium,57.2%,63.2%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,55.4%,62.5%
