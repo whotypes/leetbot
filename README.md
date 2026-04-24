@@ -137,6 +137,24 @@ mkdir data/new-company
 > [!TIP]
 > Run `make generate-embedded` to generate the embedded data automatically.
 
+### Refreshing company data from LeetCode
+
+To refetch and merge the latest company-tagged problem lists (GraphQL) into `data/` and regenerate `internal/data/parser_generated.go`, export your browser cookies as a Netscape file and save it at the repository root as `leetcode_cookies_netscape.txt` (must include `LEETCODE_SESSION` and `csrftoken`). From the repository root run:
+
+```bash
+go run ./scripts/refresh_leetcode_data
+```
+
+The command walks every company in the problem-set company dropdown, appends or updates rows by problem ID (it does not remove existing IDs), and then runs the embedded generator. Timeframes with no questions on LeetCode skip writing a CSV and remove a previously created empty file for that timeframe; the `data/<company>/` directory is still created when needed.
+
+To delete **header-only** CSVs left over under `data/` (no data rows), run from the repo root:
+
+```bash
+go run ./scripts/cleanup_empty_data_csv
+```
+
+This does not remove empty directories; you can prune those separately if you want (e.g. `find data -type d -empty`). Afterward, regenerate embedded data: `go run scripts/generate_embedded/main.go ./data`. A full run issues many API calls and can take a long time; if the session or Cloudflare challenge expires, refresh the cookie file and run again. Do not commit live cookie files.
+
 ## CSV Format
 
 CSV files should have the following columns:
