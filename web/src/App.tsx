@@ -8,15 +8,65 @@ import { Alert, AlertDescription } from './components/ui/alert'
 import { Button } from './components/ui/button'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useTheme } from './hooks/useTheme'
-import type { AllProblemsData, APIResponse, Problem } from './types'
+import type { AllProblemsData, APIResponse, CompanyInfo, Problem } from './types'
 
-const fetchCompanies = async (): Promise<{ companies: string[] }> => {
+const formatSlugAsDisplayName = (slug: string) =>
+  slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ')
+
+/** Accepts both catalog objects and legacy string[] from older API builds. */
+function normalizeCompaniesPayload(payload: unknown): {
+  dataLastUpdated: string
+  companies: CompanyInfo[]
+} {
+  if (!payload || typeof payload !== 'object') {
+    return { dataLastUpdated: '', companies: [] }
+  }
+  const p = payload as { dataLastUpdated?: unknown; companies?: unknown }
+  const updated =
+    typeof p.dataLastUpdated === 'string' ? p.dataLastUpdated : ''
+  const raw = p.companies
+  if (!Array.isArray(raw)) {
+    return { dataLastUpdated: updated, companies: [] }
+  }
+  const companies: CompanyInfo[] = []
+  for (const item of raw) {
+    if (typeof item === 'string') {
+      const slug = item.toLowerCase().trim()
+      if (!slug) continue
+      companies.push({
+        slug,
+        name: formatSlugAsDisplayName(slug),
+        hasData: true,
+      })
+      continue
+    }
+    if (item && typeof item === 'object') {
+      const o = item as Partial<CompanyInfo>
+      const slug = String(o.slug ?? '')
+        .toLowerCase()
+        .trim()
+      if (!slug) continue
+      const rawName = o.name != null ? String(o.name).trim() : ''
+      companies.push({
+        slug,
+        name: rawName || formatSlugAsDisplayName(slug),
+        hasData: typeof o.hasData === 'boolean' ? o.hasData : true,
+      })
+    }
+  }
+  return { dataLastUpdated: updated, companies }
+}
+
+const fetchCompanies = async (): Promise<{
+  dataLastUpdated: string
+  companies: CompanyInfo[]
+}> => {
   const response = await fetch('/api/companies')
   const data = await response.json()
   if (!data.success) {
     throw new Error('Failed to load companies')
   }
-  return data.data
+  return normalizeCompaniesPayload(data.data)
 }
 
 const fetchTimeframes = async (company: string): Promise<{ timeframes: string[] }> => {
@@ -92,9 +142,16 @@ const fetchProblems = async ({
   timeframe: string
   problems: Problem[]
   count: number
+  companyHasLocalData?: boolean
+  emptyTimeframe?: boolean
 }> => {
   const normalizedCompany = company.toLowerCase().trim()
   const normalizedTimeframe = normalizeTimeframe(timeframe)
+  const catalog = queryClient.getQueryData<{
+    dataLastUpdated: string
+    companies: CompanyInfo[]
+  }>(['companies'])
+  const companyMeta = catalog?.companies.find((c) => c.slug === normalizedCompany)
 
   const allProblemsData = queryClient.getQueryData<AllProblemsData>(['all-problems'])
 
@@ -108,17 +165,29 @@ const fetchProblems = async ({
           timeframe: normalizedTimeframe,
           problems,
           count: problems.length,
+          companyHasLocalData: companyMeta?.hasData,
+          emptyTimeframe:
+            companyMeta?.hasData && problems.length === 0 ? true : undefined,
         }
       }
     }
   }
 
-  const response = await fetch(`/api/companies/${company}/timeframes/${timeframe}/problems`)
+  const response = await fetch(
+    `/api/companies/${encodeURIComponent(company)}/timeframes/${encodeURIComponent(timeframe)}/problems`
+  )
   const data: APIResponse = await response.json()
   if (!data.success) {
     throw new Error(data.error || 'Failed to load problems')
   }
-  return data.data!
+  return {
+    company: data.data!.company,
+    timeframe: data.data!.timeframe,
+    problems: data.data!.problems,
+    count: data.data!.count,
+    companyHasLocalData: data.data!.companyHasLocalData,
+    emptyTimeframe: data.data!.emptyTimeframe,
+  }
 }
 
 function App() {
@@ -170,9 +239,22 @@ function App() {
   })
 
   const companies = companiesData?.companies || []
+  const dataLastUpdated = companiesData?.dataLastUpdated
   const timeframes = timeframesData?.timeframes || []
   const problems = problemsData?.problems || []
   const error = companiesError?.message || timeframesError?.message || problemsError?.message || ''
+
+  const activeCompanyInfo = useMemo(
+    () => companies.find((c) => c.slug === activeCompany),
+    [companies, activeCompany]
+  )
+  const noLocalData =
+    (activeCompanyInfo && activeCompanyInfo.hasData === false) ||
+    (problemsData && problemsData.companyHasLocalData === false)
+  const showLastUpdatedLine =
+    typeof dataLastUpdated === 'string' &&
+    dataLastUpdated.length > 0 &&
+    new Date(dataLastUpdated).getUTCFullYear() >= 2015
 
   const filteredProblems = useMemo(() => {
     let result = problems
@@ -254,6 +336,8 @@ function App() {
         theme={theme}
         onThemeToggle={toggleTheme}
         discordInviteUrl={discordInviteUrl}
+        dataLastUpdated={dataLastUpdated}
+        showDataLastUpdated={!!showLastUpdatedLine}
       />
 
       <main className="flex-1 overflow-hidden">
@@ -284,17 +368,23 @@ function App() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <AlertDescription>
-                    {problems.length === 0
-                      ? 'No problems found for the selected company and timeframe.'
-                      : 'No problems match your current filters.'}
+                    {noLocalData
+                      ? "There's no leetbot data for this company yet."
+                      : problems.length === 0
+                        ? problemsData?.emptyTimeframe
+                          ? 'No problems for this company in the selected timeframe in my dataset.'
+                          : 'No problems found for the selected company and timeframe.'
+                        : 'No problems match your current filters.'}
                   </AlertDescription>
                   <p className="text-sm mt-2 text-muted-foreground">
-                    {problems.length === 0
-                      ? 'This could mean no problems were asked in this timeframe, or the data is still being updated.'
-                      : 'Try adjusting your difficulty or search filters.'}
+                    {noLocalData
+                      ? 'Companies still appear in the list when LeetCode has a company page, even if there are no problems for that company yet.'
+                      : problems.length === 0
+                        ? 'This can mean the timeframe is empty, or the data is still being updated.'
+                        : 'Try adjusting your difficulty or search filters.'}
                   </p>
                 </div>
-                {problems.length === 0 && (
+                {problems.length === 0 && !noLocalData && (
                   <Button
                     variant="outline"
                     size="sm"

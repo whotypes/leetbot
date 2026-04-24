@@ -1,14 +1,41 @@
-import type { ThemePreference } from '@/hooks/useTheme'
-import { Search, X } from 'lucide-react'
-import { CompanySelector } from './CompanySelector'
-import { DifficultyFilter, type Difficulty } from './DifficultyFilter'
-import { ThemeToggle } from './ThemeToggle'
-import { TimeframeSelector } from './TimeframeSelector'
-import { Input } from './ui/input'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip'
+import type { ThemePreference } from '@/hooks/useTheme';
+import type { CompanyInfo } from '@/types';
+import { Info, Search, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { CompanySelector } from './CompanySelector';
+import { DifficultyFilter, type Difficulty } from './DifficultyFilter';
+import { ThemeToggle } from './ThemeToggle';
+import { TimeframeSelector } from './TimeframeSelector';
+import { Button } from './ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from './ui/dialog';
+import { Input } from './ui/input';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
+
+/** `?about` opens this dialog — e.g. https://leetbot.org/?about */
+const ABOUT_QUERY_PARAM = 'about'
+
+/** LeetCode Discuss — community context on company “frequency” ordering and caveats */
+const LEETCODE_FREQUENCY_FAQ_URL =
+  'https://leetcode.com/discuss/general-discussion/1677842/is-leetcode-ordering-company-questions-by-frequency-incorrectly/'
+
+function stripAboutFromUrl() {
+  const url = new URL(window.location.href)
+  if (!url.searchParams.has(ABOUT_QUERY_PARAM)) return
+  url.searchParams.delete(ABOUT_QUERY_PARAM)
+  const qs = url.searchParams.toString()
+  const next = `${url.pathname}${qs ? `?${qs}` : ''}${url.hash}`
+  window.history.replaceState(null, '', next)
+}
 
 interface NavbarProps {
-  companies: string[]
+  companies: CompanyInfo[]
   selectedCompany: string
   onCompanyChange: (company: string) => void
   onCompanyPreview: (company: string) => void
@@ -22,6 +49,8 @@ interface NavbarProps {
   theme: ThemePreference
   onThemeToggle: () => void
   discordInviteUrl: string
+  dataLastUpdated?: string
+  showDataLastUpdated?: boolean
 }
 
 const DiscordIcon = ({ className }: { className?: string }) => (
@@ -50,16 +79,44 @@ export const Navbar = ({
   theme,
   onThemeToggle,
   discordInviteUrl,
+  dataLastUpdated,
+  showDataLastUpdated,
 }: NavbarProps) => {
+  const [aboutOpen, setAboutOpen] = useState(false)
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    if (params.has(ABOUT_QUERY_PARAM)) {
+      setAboutOpen(true)
+    }
+  }, [])
+
+  const handleAboutOpenChange = (open: boolean) => {
+    setAboutOpen(open)
+    if (!open) {
+      stripAboutFromUrl()
+    }
+  }
+
+  const lastUpdatedLabel =
+    showDataLastUpdated && dataLastUpdated
+      ? (() => {
+        try {
+          return new Intl.DateTimeFormat(undefined, {
+            dateStyle: 'medium',
+            timeZone: 'UTC',
+          }).format(new Date(dataLastUpdated))
+        } catch {
+          return dataLastUpdated
+        }
+      })()
+      : null
+
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center gap-4">
-          <div className="flex items-center gap-3">
-            <h1 className="text-xl font-bold text-foreground whitespace-nowrap">
-              leetbot.org
-            </h1>
-
+          <div className="flex items-center gap-3 min-w-0">
             <TooltipProvider delayDuration={100}>
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -67,7 +124,7 @@ export const Navbar = ({
                     href={discordInviteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-fuchsia-400 transition-colors"
+                    className="text-muted-foreground hover:text-fuchsia-400 transition-colors shrink-0"
                     aria-label="Add leetbot to your Discord server"
                     tabIndex={0}
                   >
@@ -78,6 +135,78 @@ export const Navbar = ({
                   <p>Add leetbot to your Discord servers</p>
                 </TooltipContent>
               </Tooltip>
+
+              <div className="flex flex-col gap-0.5 min-w-0">
+                <div className="flex items-center gap-1 min-w-0">
+                  <h1 className="text-xl font-bold text-foreground whitespace-nowrap">
+                    leetbot.org
+                  </h1>
+                  <Dialog open={aboutOpen} onOpenChange={handleAboutOpenChange}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <DialogTrigger asChild>
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="icon"
+                            className="h-7 w-7 shrink-0 text-muted-foreground hover:text-foreground"
+                            aria-label="About leetbot"
+                          >
+                            <Info className="h-4 w-4" />
+                          </Button>
+                        </DialogTrigger>
+                      </TooltipTrigger>
+                      <TooltipContent side="bottom">
+                        <p>About this site</p>
+                      </TooltipContent>
+                    </Tooltip>
+                    <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
+                      <DialogHeader>
+                        <DialogTitle>About <span className="text-accent">leetbot.org</span></DialogTitle>
+                        <DialogDescription asChild>
+                          <div className="space-y-3 pt-1 text-left text-sm text-muted-foreground">
+                            <p>
+                              Welcome to leetbot! <br /> <br />
+
+                              Thousands of engineers around the world use this <span className="text-accent">always free</span> tool to stay on top of the latest company questions as they are updated on LeetCode.
+
+                              <br /> <br />
+                              The main interface of leetbot (hence the name) is a Discord bot that emits problems to a channel, most notably in <a href="https://discord.com/invite/cscareers" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline underline-offset-4 hover:no-underline">the CSCD community</a>.
+                              <br /> <br />
+
+                             I run the scraper every couple of weeks to ensure the data is up to date.
+                            </p>
+                            <p>
+                              All you have to do is pick a company, timeframe, and optional difficulty filters. The problems are
+                              ordered like on LeetCode, including the frequency % column used for
+                              ranking.
+                            </p>
+                            <p>
+                              <span className="text-accent">About “frequency”</span>{' '}
+                              - I get a lot of questions about this. The frequency column reflects LeetCode’s own signals and community tagging, and is not a
+                              guarantee of what you will see in an interview. <br/> <br/> For background on how leetcode themselves determine frequency, see this{' '}
+                              <a
+                                href={LEETCODE_FREQUENCY_FAQ_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-medium text-primary underline underline-offset-4 hover:no-underline"
+                              >
+                                LeetCode discussion thread on frequency ordering
+                              </a>
+                              .
+                            </p>
+                          </div>
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+                {lastUpdatedLabel && (
+                  <p className="text-xs text-accent truncate" title={dataLastUpdated}>
+                    Last updated: {lastUpdatedLabel}
+                  </p>
+                )}
+              </div>
             </TooltipProvider>
           </div>
 

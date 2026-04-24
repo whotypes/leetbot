@@ -25,14 +25,14 @@ import {
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { ArrowDown, ArrowUp, ArrowUpDown, ExternalLink } from 'lucide-react'
 import * as React from 'react'
-import type { Problem } from '../types'
+import type { CompanyInfo, Problem } from '../types'
 import { MobileCompanySelector } from './CompanySelector'
 import { MobileTimeframeSelector } from './TimeframeSelector'
 
 interface ProblemsDataTableProps {
   problems: Problem[]
   isLoading?: boolean
-  companies?: string[]
+  companies?: CompanyInfo[]
   selectedCompany?: string
   onCompanyChange?: (company: string) => void
   timeframes?: string[]

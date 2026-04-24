@@ -7,6 +7,12 @@ export interface Problem {
   frequency: number
 }
 
+export interface CompanyInfo {
+  slug: string
+  name: string
+  hasData: boolean
+}
+
 export interface APIResponse {
   success: boolean
   data?: {
@@ -14,6 +20,8 @@ export interface APIResponse {
     timeframe: string
     problems: Problem[]
     count: number
+    companyHasLocalData?: boolean
+    emptyTimeframe?: boolean
   }
   error?: string
 }

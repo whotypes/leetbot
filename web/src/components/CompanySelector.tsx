@@ -1,10 +1,11 @@
 import { Label } from '@/components/ui/label'
 import { cn } from '@/lib/utils'
+import type { CompanyInfo } from '@/types'
 import { Check, ChevronDown, ChevronUp, Search, X } from 'lucide-react'
 import * as React from 'react'
 
 interface CompanySelectorProps {
-  companies: string[]
+  companies: CompanyInfo[]
   selectedCompany: string
   onCompanyChange: (company: string) => void
   onCompanyPreview?: (company: string) => void
@@ -18,7 +19,12 @@ const formatLabel = (company: string) =>
   company.charAt(0).toUpperCase() + company.slice(1).replace(/-/g, ' ')
 
 interface VirtualizedListProps {
-  items: Array<{ value: string; label: string; searchLabel: string }>
+  items: Array<{
+    value: string
+    label: string
+    searchLabel: string
+    hasData?: boolean
+  }>
   selectedValue: string
   onSelect: (value: string) => void
   search: string
@@ -330,7 +336,14 @@ const VirtualizedList = ({
               <span className="absolute right-2 flex h-3.5 w-3.5 items-center justify-center">
                 {isSelected && <Check className="h-4 w-4" />}
               </span>
-              <span className="truncate">{highlightMatch(item.label, search)}</span>
+              <span className="min-w-0 flex-1 truncate pr-1">
+                {highlightMatch(item.label, search)}
+              </span>
+              {item.hasData === false && (
+                <span className="shrink-0 text-[10px] uppercase tracking-wide text-muted-foreground pr-1">
+                  No data
+                </span>
+              )}
             </div>
           )
         })}
@@ -380,7 +393,7 @@ const VirtualizedList = ({
 }
 
 interface MobileCompanySelectorProps {
-  companies: string[]
+  companies: CompanyInfo[]
   selectedCompany: string
   onCompanyChange: (company: string) => void
 }
@@ -397,11 +410,15 @@ export const MobileCompanySelector = ({
   const inputRef = React.useRef<HTMLInputElement>(null)
 
   const items = React.useMemo(() => {
-    return companies.map((company) => ({
-      value: company,
-      label: formatLabel(company),
-      searchLabel: `${company} ${formatLabel(company)}`,
-    }))
+    return companies.map((company) => {
+      const label = company.name?.trim() || formatLabel(company.slug)
+      return {
+        value: company.slug,
+        label,
+        searchLabel: `${company.slug} ${label}`,
+        hasData: company.hasData,
+      }
+    })
   }, [companies])
 
   const handleSelect = React.useCallback(
@@ -453,8 +470,10 @@ export const MobileCompanySelector = ({
 
   const selectedLabel = React.useMemo(() => {
     if (!selectedCompany) return null
-    return formatLabel(selectedCompany)
-  }, [selectedCompany])
+    const row = companies.find((c) => c.slug === selectedCompany)
+    const n = row?.name?.trim()
+    return n || formatLabel(selectedCompany)
+  }, [companies, selectedCompany])
 
   return (
     <div className="relative">
@@ -549,11 +568,15 @@ export const CompanySelector = ({
   const inputRef = React.useRef<HTMLInputElement>(null)
 
   const items = React.useMemo(() => {
-    return companies.map((company) => ({
-      value: company,
-      label: formatLabel(company),
-      searchLabel: `${company} ${formatLabel(company)}`,
-    }))
+    return companies.map((company) => {
+      const label = company.name?.trim() || formatLabel(company.slug)
+      return {
+        value: company.slug,
+        label,
+        searchLabel: `${company.slug} ${label}`,
+        hasData: company.hasData,
+      }
+    })
   }, [companies])
 
   const handleSelect = React.useCallback(
@@ -605,8 +628,10 @@ export const CompanySelector = ({
 
   const selectedLabel = React.useMemo(() => {
     if (!selectedCompany) return null
-    return formatLabel(selectedCompany)
-  }, [selectedCompany])
+    const row = companies.find((c) => c.slug === selectedCompany)
+    const n = row?.name?.trim()
+    return n || formatLabel(selectedCompany)
+  }, [companies, selectedCompany])
 
   return (
     <div className="relative">
