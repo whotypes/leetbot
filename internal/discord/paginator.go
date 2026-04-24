@@ -1,6 +1,7 @@
 package discord
 
 import (
+	"errors"
 	"fmt"
 	"log"
 	"sync"
@@ -45,6 +46,27 @@ func init() {
 
 func shouldUsePagination(problemCount int) bool {
 	return problemCount > paginationThreshold
+}
+
+func interactionAlreadyAcknowledged(err error) bool {
+	var re *discordgo.RESTError
+	if !errors.As(err, &re) || re.Message == nil {
+		return false
+	}
+	return re.Message.Code == discordgo.ErrCodeInteractionHasAlreadyBeenAcknowledged
+}
+
+func replaceInteractionResponseWithText(s *discordgo.Session, i *discordgo.Interaction, msg string) {
+	emptyEmbeds := []*discordgo.MessageEmbed{}
+	emptyComponents := []discordgo.MessageComponent{}
+	_, err := s.InteractionResponseEdit(i, &discordgo.WebhookEdit{
+		Content:    &msg,
+		Embeds:     &emptyEmbeds,
+		Components: &emptyComponents,
+	})
+	if err != nil {
+		log.Printf("[PAGINATOR] could not replace interaction response: %v", err)
+	}
 }
 
 func createProblemsPaginator(company, timeframe string, problems []data.Problem) *Paginator {
@@ -206,7 +228,10 @@ func (m *Manager) CreateInteraction(s *discordgo.Session, i *discordgo.Interacti
 	msg, err := s.InteractionResponse(i)
 	if err != nil {
 		log.Printf("[PAGINATOR] ERROR getting interaction response: %v", err)
-		return fmt.Errorf("failed to get interaction response: %w", err)
+		replaceInteractionResponseWithText(s, i,
+			"Could not finish loading help. Please run `/help` again.")
+		// interaction was already acknowledged; do not return a hard error so callers avoid a second respond
+		return nil
 	}
 	log.Printf("[PAGINATOR] Created message %s in channel %s", msg.ID, msg.ChannelID)
 
@@ -218,7 +243,9 @@ func (m *Manager) CreateInteraction(s *discordgo.Session, i *discordgo.Interacti
 	})
 	if err != nil {
 		log.Printf("[PAGINATOR] ERROR updating components for message %s: %v", msg.ID, err)
-		return fmt.Errorf("failed to update message components: %w", err)
+		replaceInteractionResponseWithText(s, i,
+			"Could not attach pagination controls. Please run `/help` again.")
+		return nil
 	}
 
 	m.mu.Lock()
@@ -382,6 +409,10 @@ func (m *Manager) OnInteractionCreate(s *discordgo.Session, i *discordgo.Interac
 		Type: discordgo.InteractionResponseDeferredMessageUpdate,
 	})
 	if err != nil {
+		if interactionAlreadyAcknowledged(err) {
+			log.Printf("[PAGINATOR] deferred update skipped (interaction already acknowledged); often a duplicate bot process is still running")
+			return
+		}
 		log.Printf("[PAGINATOR] ERROR responding to interaction (DeferredMessageUpdate): %v (messageID: %s, customID: %s)",
 			err, messageID, customID)
 		log.Printf("[PAGINATOR]   This error will cause 'This interaction failed' message")

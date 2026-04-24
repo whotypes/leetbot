@@ -1,282 +1,226 @@
+// Command server is the leetbot.org HTTP API and static file server.
 package main
 
 import (
-	"context"
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
-	"os/signal"
-	"syscall"
+	"path/filepath"
+	"strings"
 	"time"
 
-	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/whotypes/leetbot/internal/data"
 )
 
-type APIResponse struct {
-	Success bool        `json:"success"`
-	Data    interface{} `json:"data,omitempty"`
-	Error   string      `json:"error,omitempty"`
+type envelope struct {
+	Success bool   `json:"success"`
+	Data    any    `json:"data,omitempty"`
+	Error   string `json:"error,omitempty"`
 }
 
-type CompanyData struct {
-	Company    string               `json:"company"`
-	Timeframes map[string][]Problem `json:"timeframes"`
+type api struct {
+	pbc *data.ProblemsByCompany
 }
-
-type Problem struct {
-	ID         int     `json:"id"`
-	URL        string  `json:"url"`
-	Title      string  `json:"title"`
-	Difficulty string  `json:"difficulty"`
-	Acceptance float64 `json:"acceptance"`
-	Frequency  float64 `json:"frequency"`
-}
-
-type CompaniesList struct {
-	Companies []string `json:"companies"`
-}
-
-type TimeframesList struct {
-	Timeframes []string `json:"timeframes"`
-}
-
-var problemsData *data.ProblemsByCompany
 
 func main() {
-	var err error
-	problemsData, err = data.LoadAllProblems()
+	pbc, err := data.LoadAllProblems()
 	if err != nil {
-		log.Fatalf("Failed to load problems data: %v", err)
+		log.Fatalf("load embedded data: %v", err)
 	}
 
+	s := &api{pbc: pbc}
 	r := mux.NewRouter()
+	r.PathPrefix("/api/").Handler(http.StripPrefix("/api", s.apiRouter()))
+	r.PathPrefix("/").Handler(s.spaFileServer("web/dist"))
 
-	api := r.PathPrefix("/api").Subrouter()
-	api.HandleFunc("/companies", getCompanies).Methods("GET")
-	api.HandleFunc("/companies/{company}/timeframes", getTimeframes).Methods("GET")
-	api.HandleFunc("/companies/{company}/problems", getProblems).Methods("GET")
-	api.HandleFunc("/companies/{company}/timeframes/{timeframe}/problems", getProblemsByTimeframe).Methods("GET")
-	api.HandleFunc("/all-problems", getAllProblems).Methods("GET")
-
-	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./web/dist/")))
-
-	corsHandler := handlers.CORS(
-		handlers.AllowedOrigins([]string{"*"}),
-		handlers.AllowedMethods([]string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}),
-		handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"}),
-	)(r)
-
-	// cloud run listens on 8080, lets expose $PORT
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
 	}
-
-	// Create HTTP server with timeouts
 	srv := &http.Server{
-		Addr:         ":" + port,
-		Handler:      corsHandler,
-		ReadTimeout:  30 * time.Second,
-		WriteTimeout: 30 * time.Second,
-		IdleTimeout:  120 * time.Second,
+		Addr:              ":" + port,
+		Handler:           loggingMiddleware(r),
+		ReadHeaderTimeout: 10 * time.Second,
 	}
-
-	// Channel to listen for interrupt signal
-	done := make(chan os.Signal, 1)
-	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
-
-	// Start server in a goroutine
-	go func() {
-		fmt.Printf("Server starting on port %s\n", port)
-		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			log.Fatalf("Server failed to start: %v", err)
-		}
-	}()
-
-	// Wait for interrupt signal
-	fmt.Println("Server is running. Press CTRL-C to exit.")
-	<-done
-	fmt.Println("Shutting down server...")
-
-	// Create a context with timeout for graceful shutdown
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
-	defer cancel()
-
-	// Attempt graceful shutdown
-	if err := srv.Shutdown(ctx); err != nil {
-		log.Fatalf("Server forced to shutdown: %v", err)
+	log.Printf("listening on :%s", port)
+	if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		log.Fatalf("server: %v", err)
 	}
-
-	fmt.Println("Server exited")
 }
 
-func getCompanies(w http.ResponseWriter, r *http.Request) {
-	companies := problemsData.GetAvailableCompanies()
+func loggingMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		t0 := time.Now()
+		next.ServeHTTP(w, r)
+		log.Printf("%s %s %s", r.Method, r.URL.Path, time.Since(t0))
+	})
+}
 
-	response := APIResponse{
+func (s *api) apiRouter() http.Handler {
+	r := mux.NewRouter()
+	r.HandleFunc("/companies", s.handleCompanies).Methods(http.MethodGet)
+	r.HandleFunc("/all-problems", s.handleAllProblems).Methods(http.MethodGet)
+	r.Methods(http.MethodGet).Path("/companies/{company}/timeframes").HandlerFunc(s.handleTimeframes)
+	r.Methods(http.MethodGet).Path("/companies/{company}/timeframes/{timeframe}/problems").HandlerFunc(s.handleProblems)
+	r.Methods(http.MethodGet).Path("/companies/{company}/problems").HandlerFunc(s.handleProblemsPriority)
+	return r
+}
+
+func (s *api) handleCompanies(w http.ResponseWriter, _ *http.Request) {
+	updated := data.DataLastUpdatedRFC3339()
+	writeJSON(w, http.StatusOK, envelope{
 		Success: true,
-		Data:    CompaniesList{Companies: companies},
-	}
+		Data: map[string]any{
+			"dataLastUpdated": updated,
+			"companies":       s.pbc.CompanyCatalog(),
+		},
+	})
+}
 
-	w.Header().Set("Content-Type", "application/json")
-	if err := json.NewEncoder(w).Encode(response); err != nil {
-		http.Error(w, "Failed to encode response", http.StatusInternalServerError)
+func (s *api) handleAllProblems(w http.ResponseWriter, _ *http.Request) {
+	writeJSON(w, http.StatusOK, envelope{Success: true, Data: s.pbc.GetAllProblems()})
+}
+
+func (s *api) handleTimeframes(w http.ResponseWriter, r *http.Request) {
+	company, err := pathVar(mux.Vars(r), "company")
+	if err != nil {
+		writeErr(w, http.StatusBadRequest, err.Error())
 		return
 	}
-}
-
-func getTimeframes(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	company := vars["company"]
-
-	timeframes := problemsData.GetAvailableTimeframes(company)
-
-	response := APIResponse{
-		Success: true,
-		Data:    TimeframesList{Timeframes: timeframes},
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	if err := json.NewEncoder(w).Encode(response); err != nil {
-		http.Error(w, "Failed to encode response", http.StatusInternalServerError)
+	if !data.InWebCatalog(s.pbc, company) {
+		writeErr(w, http.StatusNotFound, "unknown company")
 		return
 	}
+	tf := data.TimeframesForWeb(s.pbc, company)
+	writeJSON(w, http.StatusOK, envelope{
+		Success: true,
+		Data:    map[string]any{"timeframes": tf},
+	})
 }
 
-func getProblems(w http.ResponseWriter, r *http.Request) {
+func (s *api) handleProblems(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	company := vars["company"]
+	company, err := pathVar(vars, "company")
+	if err != nil {
+		writeErr(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	timeframe, err := pathVar(vars, "timeframe")
+	if err != nil {
+		writeErr(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if !data.InWebCatalog(s.pbc, company) {
+		writeErr(w, http.StatusNotFound, "unknown company")
+		return
+	}
+	normTF := data.NormalizeTimeframe(timeframe)
+	probs := s.pbc.GetProblems(company, normTF)
+	if probs == nil {
+		probs = []data.Problem{}
+	}
+	local := s.pbc.CompanyHasLocalData(company)
+	emptyTF := local && len(probs) == 0
+	writeJSON(w, http.StatusOK, envelope{
+		Success: true,
+		Data: map[string]any{
+			"company":             strings.ToLower(strings.TrimSpace(company)),
+			"timeframe":           normTF,
+			"problems":            probs,
+			"count":               len(probs),
+			"companyHasLocalData": local,
+			"emptyTimeframe":      emptyTF,
+		},
+	})
+}
 
-	// Get problems with priority (most recent timeframe with data)
-	problems, timeframe := problemsData.GetProblemsWithPriority(company)
+func (s *api) handleProblemsPriority(w http.ResponseWriter, r *http.Request) {
+	company, err := pathVar(mux.Vars(r), "company")
+	if err != nil {
+		writeErr(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if !data.InWebCatalog(s.pbc, company) {
+		writeErr(w, http.StatusNotFound, "unknown company")
+		return
+	}
+	probs, tf := s.pbc.GetProblemsWithPriority(company)
+	if probs == nil {
+		probs = []data.Problem{}
+	}
+	local := s.pbc.CompanyHasLocalData(company)
+	writeJSON(w, http.StatusOK, envelope{
+		Success: true,
+		Data: map[string]any{
+			"company":             strings.ToLower(strings.TrimSpace(company)),
+			"timeframe":           tf,
+			"problems":            probs,
+			"count":               len(probs),
+			"companyHasLocalData": local,
+		},
+	})
+}
 
-	if problems == nil {
-		response := APIResponse{
-			Success: false,
-			Error:   "No problems found for company: " + company,
-		}
-		w.Header().Set("Content-Type", "application/json")
-		if err := json.NewEncoder(w).Encode(response); err != nil {
-			http.Error(w, "Failed to encode response", http.StatusInternalServerError)
+func pathVar(vars map[string]string, key string) (string, error) {
+	v := strings.TrimSpace(vars[key])
+	if v == "" {
+		return "", errInvalid("missing " + key)
+	}
+	return v, nil
+}
+
+type pathErr string
+
+func (e pathErr) Error() string { return string(e) }
+func errInvalid(s string) error { return pathErr(s) }
+
+func writeErr(w http.ResponseWriter, code int, msg string) {
+	writeJSON(w, code, envelope{Success: false, Error: msg})
+}
+
+func writeJSON(w http.ResponseWriter, code int, v any) {
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.WriteHeader(code)
+	_ = json.NewEncoder(w).Encode(v)
+}
+
+func (s *api) spaFileServer(root string) http.Handler {
+	fs := http.FileServer(http.Dir(root))
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet && r.Method != http.MethodHead {
+			writeErr(w, http.StatusMethodNotAllowed, "method not allowed")
 			return
 		}
-		return
-	}
-
-	// Convert to our API format
-	apiProblems := make([]Problem, len(problems))
-	for i, p := range problems {
-		apiProblems[i] = Problem{
-			ID:         p.ID,
-			URL:        p.URL,
-			Title:      p.Title,
-			Difficulty: p.Difficulty,
-			Acceptance: p.Acceptance,
-			Frequency:  p.Frequency,
-		}
-	}
-
-	response := APIResponse{
-		Success: true,
-		Data: map[string]interface{}{
-			"company":   company,
-			"timeframe": timeframe,
-			"problems":  apiProblems,
-			"count":     len(apiProblems),
-		},
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	if err := json.NewEncoder(w).Encode(response); err != nil {
-		http.Error(w, "Failed to encode response", http.StatusInternalServerError)
-		return
-	}
-}
-
-func getProblemsByTimeframe(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	company := vars["company"]
-	timeframe := vars["timeframe"]
-
-	problems := problemsData.GetProblems(company, timeframe)
-
-	if problems == nil {
-		response := APIResponse{
-			Success: false,
-			Error:   fmt.Sprintf("No problems found for company: %s, timeframe: %s", company, timeframe),
-		}
-		w.Header().Set("Content-Type", "application/json")
-		if err := json.NewEncoder(w).Encode(response); err != nil {
-			http.Error(w, "Failed to encode response", http.StatusInternalServerError)
+		// real build assets: let the file server 404 for missing files
+		if strings.HasPrefix(r.URL.Path, "/assets/") {
+			fs.ServeHTTP(w, r)
 			return
 		}
-		return
-	}
-
-	// Convert to our API format
-	apiProblems := make([]Problem, len(problems))
-	for i, p := range problems {
-		apiProblems[i] = Problem{
-			ID:         p.ID,
-			URL:        p.URL,
-			Title:      p.Title,
-			Difficulty: p.Difficulty,
-			Acceptance: p.Acceptance,
-			Frequency:  p.Frequency,
+		p := r.URL.Path
+		if p == "" || p == "/" {
+			serveIndexHTML(w, root)
+			return
 		}
-	}
-
-	response := APIResponse{
-		Success: true,
-		Data: map[string]interface{}{
-			"company":   company,
-			"timeframe": timeframe,
-			"problems":  apiProblems,
-			"count":     len(apiProblems),
-		},
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	if err := json.NewEncoder(w).Encode(response); err != nil {
-		http.Error(w, "Failed to encode response", http.StatusInternalServerError)
-		return
-	}
+		rel := strings.TrimPrefix(p, "/")
+		local := filepath.Join(root, rel)
+		if st, err := os.Stat(local); err == nil && !st.IsDir() {
+			fs.ServeHTTP(w, r)
+			return
+		}
+		serveIndexHTML(w, root)
+	})
 }
 
-func getAllProblems(w http.ResponseWriter, r *http.Request) {
-	allProblems := problemsData.GetAllProblems()
-
-	allProblemsMap := make(map[string]map[string][]Problem)
-	for company, timeframes := range allProblems {
-		allProblemsMap[company] = make(map[string][]Problem)
-		for timeframe, problems := range timeframes {
-			apiProblems := make([]Problem, len(problems))
-			for i, p := range problems {
-				apiProblems[i] = Problem{
-					ID:         p.ID,
-					URL:        p.URL,
-					Title:      p.Title,
-					Difficulty: p.Difficulty,
-					Acceptance: p.Acceptance,
-					Frequency:  p.Frequency,
-				}
-			}
-			allProblemsMap[company][timeframe] = apiProblems
-		}
-	}
-
-	response := APIResponse{
-		Success: true,
-		Data:    allProblemsMap,
-	}
-
-	w.Header().Set("Content-Type", "application/json")
-	if err := json.NewEncoder(w).Encode(response); err != nil {
-		http.Error(w, "Failed to encode response", http.StatusInternalServerError)
+func serveIndexHTML(w http.ResponseWriter, root string) {
+	p := filepath.Join(root, "index.html")
+	b, err := os.ReadFile(p)
+	if err != nil {
+		http.Error(w, "not found", http.StatusNotFound)
 		return
 	}
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	w.WriteHeader(http.StatusOK)
+	_, _ = w.Write(b)
 }

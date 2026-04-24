@@ -1,6 +1,9 @@
 package main
 
 import (
+	"bytes"
+	"encoding/csv"
+	"encoding/json"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -8,6 +11,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"time"
 	"unicode"
 )
 
@@ -78,7 +82,11 @@ func main() {
 			companyName := normalizeVarName(company)
 			timeframeName := normalizeVarName(timeframe)
 			varName := fmt.Sprintf("%s%sCSV", companyName, timeframeName)
-			csvContent := generateCSVContent(problems)
+			csvContent, err := generateCSVContent(problems)
+			if err != nil {
+				fmt.Printf("Error generating embedded CSV for %s/%s: %v\n", company, timeframe, err)
+				continue
+			}
 
 			output += fmt.Sprintf("var %s = `%s`\n\n", varName, csvContent)
 		}
@@ -114,8 +122,105 @@ var embeddedCSVs = map[string]map[string][]byte{
 		os.Exit(1)
 	}
 
+	if err := writeCompaniesManifest(dataDir); err != nil {
+		fmt.Printf("Error writing companies manifest: %v\n", err)
+		os.Exit(1)
+	}
+
 	fmt.Printf("Successfully generated embedded data for %d companies\n", len(companies))
 	fmt.Printf("Generated file: internal/data/parser_generated.go\n")
+	fmt.Printf("Generated file: internal/data/companies_manifest.json\n")
+}
+
+type manifestCompany struct {
+	Slug string `json:"slug"`
+	Name string `json:"name"`
+}
+
+type manifestFile struct {
+	GeneratedAt string            `json:"generatedAt"`
+	Source      string            `json:"source,omitempty"`
+	Companies   []manifestCompany `json:"companies"`
+}
+
+func writeCompaniesManifest(dataDir string) error {
+	root := filepath.Dir(dataDir)
+	if root == "." || root == "" {
+		root = "."
+	}
+	outPath := filepath.Join(root, "internal", "data", "companies_manifest.json")
+	leetPath := filepath.Join(dataDir, "companies_manifest.json")
+
+	var base manifestFile
+	if raw, err := os.ReadFile(leetPath); err == nil {
+		_ = json.Unmarshal(raw, &base)
+	}
+
+	seen := make(map[string]bool)
+	var merged []manifestCompany
+	for _, c := range base.Companies {
+		slug := strings.ToLower(strings.TrimSpace(c.Slug))
+		if slug == "" {
+			continue
+		}
+		name := strings.TrimSpace(c.Name)
+		if name == "" {
+			name = humanizeCompanySlug(slug)
+		}
+		seen[slug] = true
+		merged = append(merged, manifestCompany{Slug: slug, Name: name})
+	}
+
+	dirs, err := findCompanies(dataDir)
+	if err != nil {
+		return err
+	}
+	for _, d := range dirs {
+		if seen[d] {
+			continue
+		}
+		seen[d] = true
+		merged = append(merged, manifestCompany{Slug: d, Name: humanizeCompanySlug(d)})
+	}
+
+	sort.Slice(merged, func(i, j int) bool {
+		ai := strings.ToLower(merged[i].Name)
+		aj := strings.ToLower(merged[j].Name)
+		if ai != aj {
+			return ai < aj
+		}
+		return merged[i].Slug < merged[j].Slug
+	})
+
+	genAt := time.Now().UTC().Format(time.RFC3339)
+	if strings.TrimSpace(base.GeneratedAt) != "" {
+		genAt = strings.TrimSpace(base.GeneratedAt)
+	}
+	src := base.Source
+	if src == "" {
+		src = "data-directories"
+	}
+
+	enc, err := json.MarshalIndent(manifestFile{
+		GeneratedAt: genAt,
+		Source:      src,
+		Companies:   merged,
+	}, "", "  ")
+	if err != nil {
+		return err
+	}
+	return os.WriteFile(outPath, enc, 0o644)
+}
+
+func humanizeCompanySlug(slug string) string {
+	parts := strings.Split(slug, "-")
+	for i, p := range parts {
+		if p == "" {
+			continue
+		}
+		parts[i] = strings.ToUpper(p[:1]) + strings.ToLower(p[1:])
+	}
+	return strings.Join(parts, " ")
 }
 
 func findCompanies(dataDir string) ([]string, error) {
@@ -169,112 +274,87 @@ func loadCSV(filename string) ([]Problem, error) {
 	if err != nil {
 		return nil, err
 	}
-
-	lines := strings.Split(string(content), "\n")
-	if len(lines) < 2 {
+	r := csv.NewReader(strings.NewReader(string(content)))
+	records, err := r.ReadAll()
+	if err != nil {
+		return nil, err
+	}
+	if len(records) < 2 {
 		return nil, fmt.Errorf("CSV file must have at least header and one data row")
 	}
-
 	expectedHeader := []string{"ID", "URL", "Title", "Difficulty", "Acceptance %", "Frequency %"}
-	headerFields := strings.Split(lines[0], ",")
-	for i, field := range headerFields {
-		if i < len(expectedHeader) {
-			field = strings.TrimSpace(field)
-			if field != expectedHeader[i] {
-				return nil, fmt.Errorf("invalid header[%d]: expected %q, got %q", i, expectedHeader[i], field)
-			}
+	for i := range expectedHeader {
+		if i >= len(records[0]) {
+			return nil, fmt.Errorf("invalid header: missing columns")
+		}
+		field := strings.TrimSpace(records[0][i])
+		if field != expectedHeader[i] {
+			return nil, fmt.Errorf("invalid header[%d]: expected %q, got %q", i, expectedHeader[i], field)
 		}
 	}
-
 	var problems []Problem
-
-	for i := 1; i < len(lines); i++ {
-		line := strings.TrimSpace(lines[i])
-		if line == "" {
+	for rowIdx, rec := range records[1:] {
+		if len(rec) < 6 {
 			continue
 		}
-
-		problem, err := parseCSVLine(line)
+		id, err := strconv.Atoi(strings.TrimSpace(rec[0]))
 		if err != nil {
-			return nil, fmt.Errorf("error parsing line %d: %v", i+1, err)
+			return nil, fmt.Errorf("row %d: invalid ID: %w", rowIdx+2, err)
 		}
-
-		problems = append(problems, problem)
+		acceptance, err := parsePercentage(rec[4])
+		if err != nil {
+			return nil, fmt.Errorf("row %d: acceptance: %w", rowIdx+2, err)
+		}
+		frequency, err := parsePercentage(rec[5])
+		if err != nil {
+			return nil, fmt.Errorf("row %d: frequency: %w", rowIdx+2, err)
+		}
+		problems = append(problems, Problem{
+			ID:         id,
+			URL:        strings.TrimSpace(rec[1]),
+			Title:      strings.TrimSpace(rec[2]),
+			Difficulty: strings.TrimSpace(rec[3]),
+			Acceptance: acceptance,
+			Frequency:  frequency,
+		})
 	}
-
 	return problems, nil
 }
 
-func parseCSVLine(line string) (Problem, error) {
-	parts := strings.Split(line, ",")
-	if len(parts) < 6 {
-		return Problem{}, fmt.Errorf("line has fewer than 6 fields")
-	}
-
-	difficulty := strings.TrimSpace(parts[len(parts)-3])
-	acceptanceStr := strings.TrimSpace(parts[len(parts)-2])
-	frequencyStr := strings.TrimSpace(parts[len(parts)-1])
-	id, err := strconv.Atoi(strings.TrimSpace(parts[0]))
-	if err != nil {
-		return Problem{}, fmt.Errorf("invalid ID: %v", err)
-	}
-	url := strings.TrimSpace(parts[1])
-
-	titleStart := 2
-	titleEnd := len(parts) - 4
-	if titleEnd < titleStart {
-		return Problem{}, fmt.Errorf("cannot determine title boundaries")
-	}
-	var titleParts []string
-	for i := titleStart; i <= titleEnd; i++ {
-		titleParts = append(titleParts, strings.TrimSpace(parts[i]))
-	}
-	title := strings.Join(titleParts, ", ")
-
-	acceptance, err := parsePercentage(acceptanceStr)
-	if err != nil {
-		return Problem{}, fmt.Errorf("invalid acceptance percentage: %v", err)
-	}
-
-	frequency, err := parsePercentage(frequencyStr)
-	if err != nil {
-		return Problem{}, fmt.Errorf("invalid frequency percentage: %v", err)
-	}
-
-	return Problem{
-		ID:         id,
-		URL:        url,
-		Title:      title,
-		Difficulty: difficulty,
-		Acceptance: acceptance,
-		Frequency:  frequency,
-	}, nil
-}
-
 func parsePercentage(s string) (float64, error) {
+	s = strings.TrimSpace(s)
 	s = strings.TrimSuffix(s, "%")
-	return strconv.ParseFloat(s, 64)
+	return strconv.ParseFloat(strings.TrimSpace(s), 64)
 }
 
-func generateCSVContent(problems []Problem) string {
-	var lines []string
-	lines = append(lines, "ID,URL,Title,Difficulty,Acceptance %,Frequency %")
-
-	for _, problem := range problems {
-		// escape backticks by replacing them with a unicode lookalike or removing them
-		// backticks would break Go's raw string literals
-		escapedTitle := strings.ReplaceAll(problem.Title, "`", "'")
-		escapedTitle = strings.ReplaceAll(escapedTitle, "\n", " ")
-		escapedTitle = strings.ReplaceAll(escapedTitle, "\r", " ")
-		escapedTitle = strings.ReplaceAll(escapedTitle, "\t", " ")
-		// escape quotes for CSV format
-		escapedTitle = strings.ReplaceAll(escapedTitle, "\"", "\"\"")
-
-		line := fmt.Sprintf("%d,%s,\"%s\",%s,%.1f%%,%.1f%%",
-			problem.ID, problem.URL, escapedTitle, problem.Difficulty,
-			problem.Acceptance, problem.Frequency)
-		lines = append(lines, line)
+func generateCSVContent(problems []Problem) (string, error) {
+	var buf bytes.Buffer
+	w := csv.NewWriter(&buf)
+	header := []string{"ID", "URL", "Title", "Difficulty", "Acceptance %", "Frequency %"}
+	if err := w.Write(header); err != nil {
+		return "", err
 	}
-
-	return strings.Join(lines, "\n")
+	for _, problem := range problems {
+		// backticks would break the generated Go raw string literals
+		title := strings.ReplaceAll(problem.Title, "`", "'")
+		title = strings.ReplaceAll(title, "\n", " ")
+		title = strings.ReplaceAll(title, "\r", " ")
+		title = strings.ReplaceAll(title, "\t", " ")
+		rec := []string{
+			strconv.Itoa(problem.ID),
+			problem.URL,
+			title,
+			problem.Difficulty,
+			fmt.Sprintf("%.1f%%", problem.Acceptance),
+			fmt.Sprintf("%.1f%%", problem.Frequency),
+		}
+		if err := w.Write(rec); err != nil {
+			return "", err
+		}
+	}
+	w.Flush()
+	if err := w.Error(); err != nil {
+		return "", err
+	}
+	return strings.TrimSuffix(buf.String(), "\n"), nil
 }

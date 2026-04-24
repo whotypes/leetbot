@@ -111,8 +111,6 @@ func TestNormalizeTimeframe(t *testing.T) {
 }
 
 func TestFormatTimeframeDisplay(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
-
 	tests := []struct {
 		input    string
 		expected string
@@ -126,7 +124,7 @@ func TestFormatTimeframeDisplay(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		result := handler.formatTimeframeDisplay(tt.input)
+		result := formatTimeframeDisplay(tt.input)
 		if result != tt.expected {
 			t.Errorf("formatTimeframeDisplay(%q) = %q, want %q", tt.input, result, tt.expected)
 		}

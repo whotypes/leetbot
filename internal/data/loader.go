@@ -9,12 +9,12 @@ import (
 )
 
 type Problem struct {
-	ID         int
-	URL        string
-	Title      string
-	Difficulty string
-	Acceptance float64
-	Frequency  float64
+	ID         int     `json:"id"`
+	URL        string  `json:"url"`
+	Title      string  `json:"title"`
+	Difficulty string  `json:"difficulty"`
+	Acceptance float64 `json:"acceptance"`
+	Frequency  float64 `json:"frequency"`
 }
 
 type ProblemsByCompany struct {
@@ -83,6 +83,21 @@ func (pbc *ProblemsByCompany) CompanyExists(company string) bool {
 	return exists
 }
 
+// CompanyHasLocalData reports whether any embedded timeframe has at least one problem.
+func (pbc *ProblemsByCompany) CompanyHasLocalData(company string) bool {
+	company = strings.ToLower(strings.TrimSpace(company))
+	cData, ok := pbc.data[company]
+	if !ok {
+		return false
+	}
+	for _, probs := range cData {
+		if len(probs) > 0 {
+			return true
+		}
+	}
+	return false
+}
+
 // thirty-days > three-months > six-months > more-than-six-months > all
 func (pbc *ProblemsByCompany) GetProblemsWithPriority(company string) ([]Problem, string) {
 	company = strings.ToLower(strings.TrimSpace(company))
@@ -109,6 +124,11 @@ func (pbc *ProblemsByCompany) GetAllProblems() map[string]map[string][]Problem {
 		}
 	}
 	return result
+}
+
+// NormalizeTimeframe maps user-facing timeframe strings to canonical slugs.
+func NormalizeTimeframe(timeframe string) string {
+	return normalizeTimeframe(timeframe)
 }
 
 func normalizeTimeframe(timeframe string) string {
