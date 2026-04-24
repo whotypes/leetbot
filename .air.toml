@@ -16,13 +16,14 @@ tmp_dir = "tmp"
   include_dir = []
   include_ext = ["go", "tpl", "tmpl", "html", "tsx", "ts", "js", "jsx", "css", "json"]
   include_file = []
-  kill_delay = "0s"
+  # Let dev.sh receive SIGINT first so it can SIGTERM children (Discord bot, server, web watch).
+  kill_delay = "5s"
   log = "build-errors.log"
   poll = false
   poll_interval = 0
   rerun = false
   rerun_delay = 500
-  send_interrupt = false
+  send_interrupt = true
   stop_on_root = false
 
 [color]

@@ -104,7 +104,7 @@ demo: ## Run the bot demo
 
 cleanup-commands: ## List or delete Discord slash commands
 	@echo "Discord Command Cleanup Tool"
-	@echo "Usage: make cleanup-commands-list or make cleanup-commands-delete command=shutdown"
+	@echo "Usage: make cleanup-commands-list or make cleanup-commands-delete command=problems"
 	@if [ "$(command)" = "" ]; then \
 		go run scripts/cleanup_commands/main.go -list; \
 	else \
@@ -117,8 +117,8 @@ cleanup-commands-list: ## List all registered Discord slash commands
 
 cleanup-commands-delete: ## Delete a specific Discord slash command (requires command= parameter)
 	@if [ "$(command)" = "" ]; then \
-		echo "Error: Please specify command=shutdown (or other command name)"; \
-		echo "Usage: make cleanup-commands-delete command=shutdown"; \
+		echo "Error: Please specify command=problems (or other command name)"; \
+		echo "Usage: make cleanup-commands-delete command=problems"; \
 		exit 1; \
 	fi
 	@echo "Deleting Discord command: $(command)"

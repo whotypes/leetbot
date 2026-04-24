@@ -31,3 +31,7 @@ ansible/.ansible/
 .vault_pass
 vault_pass.txt
 .env.prod
+leetcode_cookies_netscape.txt
+leetcode_cookies_header_string.txt
+har_leetcode_logs.har
+logs_including_all_companies_dropdown
