@@ -2,11 +2,12 @@ import { QueryClient, useQuery, useQueryClient } from '@tanstack/react-query'
 import { RefreshCw } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Difficulty } from './components/DifficultyFilter'
+import { MobileCompanySelector } from './components/CompanySelector'
 import { Navbar } from './components/Navbar'
 import { ProblemsDataTable } from './components/ProblemsDataTable'
+import { MobileTimeframeSelector } from './components/TimeframeSelector'
 import { Alert, AlertDescription } from './components/ui/alert'
 import { Button } from './components/ui/button'
-import { useLocalStorage } from './hooks/useLocalStorage'
 import { useTheme } from './hooks/useTheme'
 import type { AllProblemsData, APIResponse, CompanyInfo, Problem } from './types'
 
@@ -195,8 +196,8 @@ function App() {
   const queryClient = useQueryClient()
   const hasClearedCache = useRef(false)
 
-  const [selectedCompany, setSelectedCompany] = useLocalStorage<string>('selectedCompany', 'google')
-  const [selectedTimeframe, setSelectedTimeframe] = useLocalStorage<string>('selectedTimeframe', 'all')
+  const [selectedCompany, setSelectedCompany] = useState<string>('google')
+  const [selectedTimeframe, setSelectedTimeframe] = useState<string>('all')
   const [previewCompany, setPreviewCompany] = useState<string>('')
   const [selectedDifficulties, setSelectedDifficulties] = useState<Difficulty[]>([])
   const [searchQuery, setSearchQuery] = useState<string>('')
@@ -363,45 +364,60 @@ function App() {
         )}
 
         {!problemsLoading && selectedCompany && selectedTimeframe && filteredProblems.length === 0 && !error && (
-          <div className="flex h-full items-center justify-center px-4">
-            <Alert className="max-w-md">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <AlertDescription>
-                    {noLocalData
-                      ? "There's no leetbot data for this company yet."
-                      : problems.length === 0
-                        ? problemsData?.emptyTimeframe
-                          ? 'No problems for this company in the selected timeframe in my dataset.'
-                          : 'No problems found for the selected company and timeframe.'
-                        : 'No problems match your current filters.'}
-                  </AlertDescription>
-                  <p className="text-sm mt-2 text-muted-foreground">
-                    {noLocalData
-                      ? 'Companies still appear in the list when LeetCode has a company page, even if there are no problems for that company yet.'
-                      : problems.length === 0
-                        ? 'This can mean the timeframe is empty, or the data is still being updated.'
-                        : 'Try adjusting your difficulty or search filters.'}
-                  </p>
+          <div className="flex h-full flex-col">
+            <div className="flex items-center gap-2 border-b px-4 py-3 sm:hidden">
+              <MobileCompanySelector
+                companies={companies}
+                selectedCompany={selectedCompany}
+                onCompanyChange={handleCompanyChange}
+              />
+              <MobileTimeframeSelector
+                timeframes={timeframes}
+                selectedTimeframe={selectedTimeframe}
+                onTimeframeChange={handleTimeframeChange}
+                disabled={!selectedCompany}
+              />
+            </div>
+            <div className="flex flex-1 items-center justify-center px-4">
+              <Alert className="max-w-md">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <AlertDescription>
+                      {noLocalData
+                        ? "There's no data for this company yet."
+                        : problems.length === 0
+                          ? problemsData?.emptyTimeframe
+                            ? 'No problems for this company in the selected timeframe in my dataset.'
+                            : 'No problems found for the selected company and timeframe.'
+                          : 'No problems match your current filters.'}
+                    </AlertDescription>
+                    <p className="text-sm mt-2 text-muted-foreground">
+                      {noLocalData
+                        ? 'Companies still appear in the list when LeetCode has a company page, even if there are no problems for that company yet.'
+                        : problems.length === 0
+                          ? 'This can mean the timeframe is empty, or the data is still being updated.'
+                          : 'Try adjusting your difficulty or search filters.'}
+                    </p>
+                  </div>
+                  {problems.length === 0 && !noLocalData && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => {
+                        queryClient.invalidateQueries({ queryKey: ['problems'] })
+                        queryClient.invalidateQueries({ queryKey: ['timeframes'] })
+                        queryClient.invalidateQueries({ queryKey: ['companies'] })
+                        queryClient.invalidateQueries({ queryKey: ['all-problems'] })
+                      }}
+                      aria-label="Refresh data"
+                    >
+                      <RefreshCw className="h-4 w-4 mr-2" />
+                      Refresh
+                    </Button>
+                  )}
                 </div>
-                {problems.length === 0 && !noLocalData && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => {
-                      queryClient.invalidateQueries({ queryKey: ['problems'] })
-                      queryClient.invalidateQueries({ queryKey: ['timeframes'] })
-                      queryClient.invalidateQueries({ queryKey: ['companies'] })
-                      queryClient.invalidateQueries({ queryKey: ['all-problems'] })
-                    }}
-                    aria-label="Refresh data"
-                  >
-                    <RefreshCw className="h-4 w-4 mr-2" />
-                    Refresh
-                  </Button>
-                )}
-              </div>
-            </Alert>
+              </Alert>
+            </div>
           </div>
         )}
 

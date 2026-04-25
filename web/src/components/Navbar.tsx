@@ -182,7 +182,7 @@ export const Navbar = ({
                               ranking.
                             </p>
                             <p>
-                              <span className="text-accent">About “frequency”</span>{' '}
+                              <span className="text-accent">On “frequency”</span>{' '}
                               - I get a lot of questions about this. The frequency column reflects LeetCode’s own signals and community tagging, and is not a
                               guarantee of what you will see in an interview. <br/> <br/> For background on how leetcode themselves determine frequency, see this{' '}
                               <a
@@ -191,7 +191,7 @@ export const Navbar = ({
                                 rel="noopener noreferrer"
                                 className="font-medium text-primary underline underline-offset-4 hover:no-underline"
                               >
-                                LeetCode discussion thread on how they do that.
+                                LeetCode discussion thread on how they do that
                               </a>
                               .
                             </p>
