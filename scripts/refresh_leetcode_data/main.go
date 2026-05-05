@@ -439,7 +439,7 @@ func postGraphQL(client *http.Client, cookieHeader, csrf, opName, referer, query
 			continue
 		}
 		body, _ := io.ReadAll(resp.Body)
-		resp.Body.Close()
+		_ = resp.Body.Close()
 		if resp.StatusCode == 429 || resp.StatusCode >= 500 {
 			lastErr = fmt.Errorf("HTTP %d", resp.StatusCode)
 			continue

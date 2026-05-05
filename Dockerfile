@@ -5,7 +5,7 @@ RUN npm install -g bun && bun install
 COPY web .
 RUN bun run build
 
-FROM golang:1.24-alpine AS go-builder
+FROM golang:1.25-alpine AS go-builder
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download

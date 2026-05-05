@@ -655,7 +655,7 @@ func TestFindCompanyWithSuggestion(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			company, found, suggestions := findCompanyWithSuggestion(tt.input, problemsData)
+			company, found, suggestions := findCompanyWithSuggestion(tt.input, problemsData, false)
 
 			if found != tt.expectedFound {
 				t.Errorf("findCompanyWithSuggestion(%q) found = %v, want %v", tt.input, found, tt.expectedFound)
@@ -858,7 +858,7 @@ func TestAmbiguousCompanyMatching(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			company, found, suggestions := findCompanyWithSuggestion(tt.input, problemsData)
+			company, found, suggestions := findCompanyWithSuggestion(tt.input, problemsData, false)
 
 			if found != tt.expectedFound {
 				t.Errorf("findCompanyWithSuggestion(%q) found = %v, want %v", tt.input, found, tt.expectedFound)

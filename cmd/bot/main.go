@@ -125,7 +125,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to open Discord connection: %v", err)
 	}
-	defer dg.Close()
+	defer func() { _ = dg.Close() }()
 
 	// start a goroutine to handle reconnection signals
 	go func() {

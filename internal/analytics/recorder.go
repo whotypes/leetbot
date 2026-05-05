@@ -90,6 +90,8 @@ func migrate(ctx context.Context, db *sql.DB) error {
 			timeframe TEXT,
 			meta JSONB
 		)`,
+		`ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS dedupe TEXT`,
+		`CREATE UNIQUE INDEX IF NOT EXISTS analytics_events_dedupe_uidx ON analytics_events (dedupe)`,
 		`CREATE INDEX IF NOT EXISTS analytics_events_occurred_at_idx ON analytics_events (occurred_at DESC)`,
 		`CREATE INDEX IF NOT EXISTS analytics_events_company_slug_idx ON analytics_events (company_slug)`,
 	}
@@ -100,6 +102,11 @@ func migrate(ctx context.Context, db *sql.DB) error {
 	}
 
 	return tx.Commit()
+}
+
+// Migrate ensures analytics_events exists and applies additive schema updates (dedupe for backfill).
+func Migrate(ctx context.Context, db *sql.DB) error {
+	return migrate(ctx, db)
 }
 
 func (r *Recorder) RecordProblemsFetch(_ context.Context, source Source, companySlug, timeframe string) {

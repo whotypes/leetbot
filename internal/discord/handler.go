@@ -72,7 +72,7 @@ func searchCompanyEnrichAPI(query string) ([]CompanyEnrichItem, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to send request: %w", err)
 	}
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }()
 
 	// check response status
 	if res.StatusCode != http.StatusOK {
@@ -384,7 +384,7 @@ func findBestCompanyMatch(input string, companies []string) (string, float64) {
 // - confidence > 0.8 or distance <= 2: auto-correct
 // - confidence 0.6-0.8: suggest with "Did you mean?"
 // - confidence < 0.6: show error with top suggestions
-func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompany) (company string, found bool, suggestions []string) {
+func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompany, skipExternalAPI bool) (company string, found bool, suggestions []string) {
 	// first try the standard fuzzy search (handles exact matches, aliases, etc.)
 	company, found = findCompanyByFuzzySearch(input, problemsData)
 	if found {
@@ -520,78 +520,80 @@ func findCompanyWithSuggestion(input string, problemsData *data.ProblemsByCompan
 			return "", false, suggestions
 		}
 
-		// low confidence: try the company enrich API as a fallback
-		apiResults, err := searchCompanyEnrichAPI(input)
-		if err == nil && len(apiResults) > 0 {
-			// we got API results, now combine them with our internal companies
-			// and re-run matching on the combined list
-			var combinedCandidates []string
+		// low confidence: try the company enrich API as a fallback (disabled for deterministic offline backfill)
+		if !skipExternalAPI {
+			apiResults, err := searchCompanyEnrichAPI(input)
+			if err == nil && len(apiResults) > 0 {
+				// we got API results, now combine them with our internal companies
+				// and re-run matching on the combined list
+				var combinedCandidates []string
 
-			// add API results (company names) to candidates
-			for _, item := range apiResults {
-				if item.Name != nil && *item.Name != "" {
-					// normalize the API company name for matching
-					apiCompanyName := strings.ToLower(*item.Name)
-					apiCompanyName = strings.ReplaceAll(apiCompanyName, " ", "-")
-					apiCompanyName = strings.TrimSpace(apiCompanyName)
-					combinedCandidates = append(combinedCandidates, apiCompanyName)
-				}
-			}
-
-			// now match the combined candidates against our internal company list
-			var enrichedMatches []scoredMatch
-			for _, candidate := range combinedCandidates {
-				for _, c := range companies {
-					// check if the API result matches any of our internal companies
-					slugConfidence := calculateMatchConfidence(candidate, c)
-					slugDistance := levenshteinDistance(candidate, c)
-
-					displayName := formatCompanyName(c)
-					displayNameNormalized := strings.ToLower(strings.ReplaceAll(displayName, " ", "-"))
-					displayConfidence := calculateMatchConfidence(candidate, displayNameNormalized)
-					displayDistance := levenshteinDistance(candidate, displayNameNormalized)
-
-					// use the better of the two
-					confidence := slugConfidence
-					distance := slugDistance
-					if displayConfidence > confidence {
-						confidence = displayConfidence
-						distance = displayDistance
-					}
-
-					// only consider if this is a reasonably good match
-					if confidence > 0.5 {
-						enrichedMatches = append(enrichedMatches, scoredMatch{
-							company:    c,
-							confidence: confidence,
-							distance:   distance,
-						})
+				// add API results (company names) to candidates
+				for _, item := range apiResults {
+					if item.Name != nil && *item.Name != "" {
+						// normalize the API company name for matching
+						apiCompanyName := strings.ToLower(*item.Name)
+						apiCompanyName = strings.ReplaceAll(apiCompanyName, " ", "-")
+						apiCompanyName = strings.TrimSpace(apiCompanyName)
+						combinedCandidates = append(combinedCandidates, apiCompanyName)
 					}
 				}
-			}
 
-			// sort enriched matches
-			for i := 0; i < len(enrichedMatches)-1; i++ {
-				for j := i + 1; j < len(enrichedMatches); j++ {
-					if enrichedMatches[j].confidence > enrichedMatches[i].confidence ||
-						(enrichedMatches[j].confidence == enrichedMatches[i].confidence && enrichedMatches[j].distance < enrichedMatches[i].distance) {
-						enrichedMatches[i], enrichedMatches[j] = enrichedMatches[j], enrichedMatches[i]
+				// now match the combined candidates against our internal company list
+				var enrichedMatches []scoredMatch
+				for _, candidate := range combinedCandidates {
+					for _, c := range companies {
+						// check if the API result matches any of our internal companies
+						slugConfidence := calculateMatchConfidence(candidate, c)
+						slugDistance := levenshteinDistance(candidate, c)
+
+						displayName := formatCompanyName(c)
+						displayNameNormalized := strings.ToLower(strings.ReplaceAll(displayName, " ", "-"))
+						displayConfidence := calculateMatchConfidence(candidate, displayNameNormalized)
+						displayDistance := levenshteinDistance(candidate, displayNameNormalized)
+
+						// use the better of the two
+						confidence := slugConfidence
+						distance := slugDistance
+						if displayConfidence > confidence {
+							confidence = displayConfidence
+							distance = displayDistance
+						}
+
+						// only consider if this is a reasonably good match
+						if confidence > 0.5 {
+							enrichedMatches = append(enrichedMatches, scoredMatch{
+								company:    c,
+								confidence: confidence,
+								distance:   distance,
+							})
+						}
 					}
 				}
-			}
 
-			// if we found good matches from the API, use them
-			if len(enrichedMatches) > 0 && enrichedMatches[0].confidence > 0.7 {
-				// high confidence match from API, return it
-				return enrichedMatches[0].company, true, nil
-			} else if len(enrichedMatches) > 0 {
-				// medium confidence from API, provide as suggestions
-				maxSuggestions := 3
-				var apiSuggestions []string
-				for i := 0; i < len(enrichedMatches) && i < maxSuggestions; i++ {
-					apiSuggestions = append(apiSuggestions, enrichedMatches[i].company)
+				// sort enriched matches
+				for i := 0; i < len(enrichedMatches)-1; i++ {
+					for j := i + 1; j < len(enrichedMatches); j++ {
+						if enrichedMatches[j].confidence > enrichedMatches[i].confidence ||
+							(enrichedMatches[j].confidence == enrichedMatches[i].confidence && enrichedMatches[j].distance < enrichedMatches[i].distance) {
+							enrichedMatches[i], enrichedMatches[j] = enrichedMatches[j], enrichedMatches[i]
+						}
+					}
 				}
-				return "", false, apiSuggestions
+
+				// if we found good matches from the API, use them
+				if len(enrichedMatches) > 0 && enrichedMatches[0].confidence > 0.7 {
+					// high confidence match from API, return it
+					return enrichedMatches[0].company, true, nil
+				} else if len(enrichedMatches) > 0 {
+					// medium confidence from API, provide as suggestions
+					maxSuggestions := 3
+					var apiSuggestions []string
+					for i := 0; i < len(enrichedMatches) && i < maxSuggestions; i++ {
+						apiSuggestions = append(apiSuggestions, enrichedMatches[i].company)
+					}
+					return "", false, apiSuggestions
+				}
 			}
 		}
 
@@ -1055,14 +1057,14 @@ func (h *Handler) handleProblemsCommand(s *discordgo.Session, m *discordgo.Messa
 	cleanedCompanyInput := cleanCompanyInput(companyInput)
 
 	// use enhanced fuzzy matching with suggestions
-	company, companyFound, companySuggestions := findCompanyWithSuggestion(cleanedCompanyInput, h.problemsData)
+	company, companyFound, companySuggestions := findCompanyWithSuggestion(cleanedCompanyInput, h.problemsData, false)
 	if !companyFound {
 		var errorMsg strings.Builder
-		errorMsg.WriteString(fmt.Sprintf("Could not find company matching '%s'.", cleanedCompanyInput))
+		fmt.Fprintf(&errorMsg, "Could not find company matching '%s'.", cleanedCompanyInput)
 		if len(companySuggestions) > 0 {
 			errorMsg.WriteString("\n\nDid you mean:")
 			for _, suggestion := range companySuggestions {
-				errorMsg.WriteString(fmt.Sprintf("\n• %s", formatCompanyName(suggestion)))
+				fmt.Fprintf(&errorMsg, "\n• %s", formatCompanyName(suggestion))
 			}
 		}
 		h.sendErrorMessage(s, m.ChannelID, errorMsg.String())
@@ -1112,47 +1114,12 @@ func (h *Handler) handleProblemsCommand(s *discordgo.Session, m *discordgo.Messa
 	h.sendMessage(s, m.ChannelID, response)
 }
 
-func (h *Handler) isTimeframeKeyword(s string) bool {
-	s = strings.ToLower(s)
-	timeframeKeywords := []string{
-		"all", "alltime", "everything",
-		"30", "30d", "30days", "thirty", "thirtydays",
-		"90", "3mo", "90days", "3months", "three", "threemonths",
-		"180", "6mo", "180days", "6months", "six", "sixmonths",
-		">6mo", "more-than-six-months",
-		"thirty-days", "three-months", "six-months", "more-than-six-months",
-	}
-
-	for _, keyword := range timeframeKeywords {
-		if s == keyword || strings.Contains(s, keyword) {
-			return true
-		}
-	}
-	return false
+func (h *Handler) NormalizeTimeframe(timeframe string) string {
+	return NormalizeProblemsTimeframe(timeframe)
 }
 
-func (h *Handler) NormalizeTimeframe(timeframe string) string {
-	timeframe = strings.ToLower(strings.TrimSpace(timeframe))
-	timeframe = strings.ReplaceAll(timeframe, " ", "-")
-	switch timeframe {
-	case "30", "30d", "90d", "30days", "30-days", "thirty", "thirtydays", "thirty-days":
-		return "thirty-days"
-	case "90", "3mo", "90days", "90-days", "three", "threemonths", "three-months", "3months", "3-months":
-		return "three-months"
-	case "180", "6mo", "180days", "180-days", "six", "sixmonths", "six-months", "6months", "6-months":
-		return "six-months"
-	case ">6mo", ">6months", "more-than-six-months", "more-than-6-months", "morethan6months":
-		return "more-than-six-months"
-	case "all", "alltime", "all-time", "everything", "":
-		return "all"
-	default:
-		for _, tf := range []string{"all", "thirty-days", "three-months", "six-months", "more-than-six-months"} {
-			if timeframe == tf {
-				return tf
-			}
-		}
-		return "all"
-	}
+func (h *Handler) isTimeframeKeyword(s string) bool {
+	return IsProblemsTimeframeKeyword(s)
 }
 
 func (h *Handler) formatProblemsResponse(company, timeframe string, problems []data.Problem) string {
@@ -1201,11 +1168,11 @@ func formatTimeframeDisplay(timeframe string) string {
 
 func (h *Handler) formatAvailableTimeframesSuggestion(company, requestedTimeframe string, availableTimeframes []string) string {
 	var message strings.Builder
-	message.WriteString(fmt.Sprintf("No data found for %s (%s).\n\n",
+	fmt.Fprintf(&message, "No data found for %s (%s).\n\n",
 		formatCompanyName(company),
-		formatTimeframeDisplay(requestedTimeframe)))
+		formatTimeframeDisplay(requestedTimeframe))
 
-	message.WriteString(fmt.Sprintf("Available timeframes for %s:\n", formatCompanyName(company)))
+	fmt.Fprintf(&message, "Available timeframes for %s:\n", formatCompanyName(company))
 
 	priorityOrder := map[string]int{
 		"thirty-days":          1,
@@ -1240,10 +1207,10 @@ func (h *Handler) formatAvailableTimeframesSuggestion(company, requestedTimefram
 	for _, tf := range sortedTimeframes {
 
 		shortAlias := h.getTimeframeShortAlias(tf.name)
-		message.WriteString(fmt.Sprintf("• **%s** (%s)\n", shortAlias, formatTimeframeDisplay(tf.name)))
+		fmt.Fprintf(&message, "• **%s** (%s)\n", shortAlias, formatTimeframeDisplay(tf.name))
 	}
 
-	message.WriteString(fmt.Sprintf("\nTry: `%sproblems %s <timeframe>`", h.prefix, company))
+	fmt.Fprintf(&message, "\nTry: `%sproblems %s <timeframe>`", h.prefix, company)
 
 	return message.String()
 }
@@ -1541,11 +1508,11 @@ func (h *Handler) handleInitCommand(s *discordgo.Session, m *discordgo.MessageCr
 
 func (h *Handler) formatAvailableTimeframesSuggestionSlash(company, requestedTimeframe string, availableTimeframes []string) string {
 	var message strings.Builder
-	message.WriteString(fmt.Sprintf("No data found for %s (%s).\n\n",
+	fmt.Fprintf(&message, "No data found for %s (%s).\n\n",
 		formatCompanyName(company),
-		formatTimeframeDisplay(requestedTimeframe)))
+		formatTimeframeDisplay(requestedTimeframe))
 
-	message.WriteString(fmt.Sprintf("Available timeframes for %s:\n", formatCompanyName(company)))
+	fmt.Fprintf(&message, "Available timeframes for %s:\n", formatCompanyName(company))
 
 	priorityOrder := map[string]int{
 		"thirty-days":          1,
@@ -1578,10 +1545,10 @@ func (h *Handler) formatAvailableTimeframesSuggestionSlash(company, requestedTim
 	}
 
 	for _, tf := range sortedTimeframes {
-		message.WriteString(fmt.Sprintf("• **%s** (%s)\n", tf.name, formatTimeframeDisplay(tf.name)))
+		fmt.Fprintf(&message, "• **%s** (%s)\n", tf.name, formatTimeframeDisplay(tf.name))
 	}
 
-	message.WriteString(fmt.Sprintf("\nTry: `/problems company:%s timeframe:<option>`", company))
+	fmt.Fprintf(&message, "\nTry: `/problems company:%s timeframe:<option>`", company)
 
 	return message.String()
 }

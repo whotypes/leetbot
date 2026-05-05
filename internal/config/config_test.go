@@ -7,12 +7,8 @@ import (
 
 func TestLoad(t *testing.T) {
 
-	os.Setenv("DISCORD_TOKEN", "test-token")
-	os.Setenv("BOT_PREFIX", "!")
-	defer func() {
-		os.Unsetenv("DISCORD_TOKEN")
-		os.Unsetenv("BOT_PREFIX")
-	}()
+	t.Setenv("DISCORD_TOKEN", "test-token")
+	t.Setenv("BOT_PREFIX", "!")
 
 	config, err := Load()
 	if err != nil {
@@ -30,8 +26,8 @@ func TestLoad(t *testing.T) {
 
 func TestLoad_MissingToken(t *testing.T) {
 	// clear environment to simulate missing token
-	os.Unsetenv("DISCORD_TOKEN")
-	os.Unsetenv("BOT_PREFIX")
+	_ = os.Unsetenv("DISCORD_TOKEN")
+	_ = os.Unsetenv("BOT_PREFIX")
 
 	_, err := Load()
 	if err != ErrMissingDiscordToken {

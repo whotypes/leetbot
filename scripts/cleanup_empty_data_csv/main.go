@@ -32,8 +32,8 @@ func main() {
 		if err != nil {
 			return err
 		}
+		defer func() { _ = f.Close() }()
 		rows, err := readAllRows(f)
-		f.Close()
 		if err != nil {
 			return err
 		}

@@ -83,7 +83,7 @@ func validateCSV(path string) error {
 	if err != nil {
 		return fmt.Errorf("cannot open file: %v", err)
 	}
-	defer file.Close()
+	defer func() { _ = file.Close() }()
 
 	reader := csv.NewReader(file)
 
@@ -139,30 +139,30 @@ func validateRecord(record []string) error {
 	}
 
 	if record[2] == "" {
-		return fmt.Errorf("Title is empty")
+		return fmt.Errorf("title is empty")
 	}
 
 	difficulty := strings.ToLower(record[3])
 	if difficulty != "easy" && difficulty != "medium" && difficulty != "hard" {
-		return fmt.Errorf("Difficulty %q is not valid (must be Easy, Medium, or Hard)", record[3])
+		return fmt.Errorf("difficulty %q is not valid (must be Easy, Medium, or Hard)", record[3])
 	}
 
 	if record[4] == "" {
-		return fmt.Errorf("Acceptance %% is empty")
+		return fmt.Errorf("acceptance %% is empty")
 	}
 	if _, err := parsePercentage(record[4]); err != nil {
-		return fmt.Errorf("Acceptance %% %q is not a valid number: %v", record[4], err)
+		return fmt.Errorf("acceptance %% %q is not a valid number: %v", record[4], err)
 	}
 
 	if record[5] == "" {
-		return fmt.Errorf("Frequency %% is empty")
+		return fmt.Errorf("frequency %% is empty")
 	}
 	frequency, err := parsePercentage(record[5])
 	if err != nil {
-		return fmt.Errorf("Frequency %% %q is not a valid number", record[5])
+		return fmt.Errorf("frequency %% %q is not a valid number", record[5])
 	}
 	if frequency < 0 || frequency > 100 {
-		return fmt.Errorf("Frequency %% %.1f is out of range [0, 100]", frequency)
+		return fmt.Errorf("frequency %% %.1f is out of range [0, 100]", frequency)
 	}
 
 	return nil

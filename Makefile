@@ -21,7 +21,7 @@ dev-all: ## Run both bot and web server simultaneously
 
 lint: ## Run linter
 	@echo "Running linter..."
-	@which golangci-lint > /dev/null || (echo "Installing golangci-lint..." && go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest)
+	@which golangci-lint > /dev/null || (echo "Installing golangci-lint..." && go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest)
 	@golangci-lint run
 
 test: ## Run tests
@@ -86,7 +86,7 @@ setup: ## Setup development environment
 	@go mod download
 	@echo "Installing development tools..."
 	@go install github.com/air-verse/air@latest
-	@go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+	@go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
 	@echo "Setup complete!"
 
 generate-embedded: ## Generate embedded CSV data from actual files
