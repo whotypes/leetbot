@@ -41,11 +41,13 @@ func main() {
 		log.Fatal("DATABASE_URL is required when -apply is set")
 	}
 
+	fmt.Fprintf(os.Stderr, "backfill: loading embedded problem data...\n")
 	problemsData, err := data.LoadAllProblems()
 	if err != nil {
 		log.Fatalf("load problems data: %v", err)
 	}
 
+	fmt.Fprintf(os.Stderr, "backfill: opening %s...\n", *csvPath)
 	f, err := os.Open(*csvPath)
 	if err != nil {
 		log.Fatalf("open csv: %v", err)
@@ -65,6 +67,12 @@ func main() {
 		if err := analytics.Migrate(ctx, db); err != nil {
 			log.Fatalf("migrate: %v", err)
 		}
+	}
+
+	if !*apply {
+		fmt.Fprintf(os.Stderr, "backfill: dry run (no DB writes). Scanning CSV (progress every 25k logical rows)...\n")
+	} else {
+		fmt.Fprintf(os.Stderr, "backfill: writing to database. Scanning CSV...\n")
 	}
 
 	r := csv.NewReader(f)
@@ -91,8 +99,8 @@ func main() {
 			log.Fatalf("csv read: %v", err)
 		}
 		scanLines++
-		if scanLines%100000 == 0 {
-			fmt.Fprintf(os.Stderr, "backfill: scanned %d csv records...\n", scanLines)
+		if scanLines%25000 == 0 && scanLines > 0 {
+			fmt.Fprintf(os.Stderr, "backfill: scanned %d csv logical rows...\n", scanLines)
 		}
 		if len(rec) < 4 {
 			continue
