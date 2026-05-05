@@ -37,7 +37,7 @@ func main() {
 
 	analyticsRec, err := analytics.NewFromEnv(context.Background())
 	if err != nil {
-		log.Fatalf("analytics: %v", err)
+		log.Printf("analytics unavailable (discord metrics disabled): %v", err)
 	}
 
 	handler := discord.NewHandler(problemsData, cfg.BotPrefix, analyticsRec)

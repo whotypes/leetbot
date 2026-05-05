@@ -225,6 +225,13 @@ function App() {
     enabled: !!activeCompany,
   })
 
+  const { data: selectedCompanyTimeframesData } = useQuery({
+    queryKey: ['timeframes', selectedCompany],
+    queryFn: () => fetchTimeframes(selectedCompany),
+    enabled: !!selectedCompany,
+    staleTime: 1000 * 60 * 10,
+  })
+
   const activeTimeframe = selectedTimeframe
   const { data: problemsData, isLoading: problemsLoading, error: problemsError } = useQuery({
     queryKey: ['problems', activeCompany, activeTimeframe],
@@ -314,6 +321,26 @@ function App() {
       queryClient.invalidateQueries({ queryKey: ['timeframes'] })
     }
   }, [queryClient, selectedCompany, selectedTimeframe])
+
+  useEffect(() => {
+    if (!selectedCompany || !selectedTimeframe) {
+      return
+    }
+    const tfs = selectedCompanyTimeframesData?.timeframes
+    if (!tfs || tfs.length === 0 || !tfs.includes(selectedTimeframe)) {
+      return
+    }
+    const company = selectedCompany.toLowerCase().trim()
+    const timeframe = normalizeTimeframe(selectedTimeframe)
+    const ac = new AbortController()
+    void fetch('/api/analytics/problems-fetch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ company, timeframe }),
+      signal: ac.signal,
+    }).catch(() => {})
+    return () => ac.abort()
+  }, [selectedCompany, selectedTimeframe, selectedCompanyTimeframesData?.timeframes])
 
   const isProd = import.meta.env.PROD
   const discordInviteUrl = isProd

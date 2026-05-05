@@ -4,6 +4,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -22,6 +23,11 @@ type envelope struct {
 	Error   string `json:"error,omitempty"`
 }
 
+type analyticsProblemsFetchBody struct {
+	Company   string `json:"company"`
+	Timeframe string `json:"timeframe"`
+}
+
 type api struct {
 	pbc *data.ProblemsByCompany
 	ar  *analytics.Recorder
@@ -36,7 +42,7 @@ func main() {
 
 	ar, err := analytics.NewFromEnv(ctx)
 	if err != nil {
-		log.Fatalf("analytics: %v", err)
+		log.Printf("analytics unavailable (metrics disabled): %v", err)
 	}
 
 	s := &api{pbc: pbc, ar: ar}
@@ -69,6 +75,7 @@ func loggingMiddleware(next http.Handler) http.Handler {
 
 func (s *api) apiRouter() http.Handler {
 	r := mux.NewRouter()
+	r.Methods(http.MethodPost).Path("/analytics/problems-fetch").HandlerFunc(s.handleAnalyticsProblemsFetch)
 	r.HandleFunc("/companies", s.handleCompanies).Methods(http.MethodGet)
 	r.HandleFunc("/all-problems", s.handleAllProblems).Methods(http.MethodGet)
 	r.Methods(http.MethodGet).Path("/companies/{company}/timeframes").HandlerFunc(s.handleTimeframes)
@@ -90,6 +97,37 @@ func (s *api) handleCompanies(w http.ResponseWriter, _ *http.Request) {
 
 func (s *api) handleAllProblems(w http.ResponseWriter, _ *http.Request) {
 	writeJSON(w, http.StatusOK, envelope{Success: true, Data: s.pbc.GetAllProblems()})
+}
+
+func (s *api) handleAnalyticsProblemsFetch(w http.ResponseWriter, r *http.Request) {
+	if s.ar == nil {
+		writeJSON(w, http.StatusOK, envelope{Success: true})
+		return
+	}
+	r.Body = http.MaxBytesReader(w, r.Body, 4096)
+	var body analyticsProblemsFetchBody
+	dec := json.NewDecoder(r.Body)
+	dec.DisallowUnknownFields()
+	if err := dec.Decode(&body); err != nil {
+		writeErr(w, http.StatusBadRequest, "invalid json body")
+		return
+	}
+	if _, err := io.Copy(io.Discard, r.Body); err != nil {
+		writeErr(w, http.StatusBadRequest, "invalid request")
+		return
+	}
+	company := strings.ToLower(strings.TrimSpace(body.Company))
+	if company == "" || len(company) > 200 {
+		writeErr(w, http.StatusBadRequest, "invalid company")
+		return
+	}
+	if !data.InWebCatalog(s.pbc, company) {
+		writeErr(w, http.StatusNotFound, "unknown company")
+		return
+	}
+	normTF := data.NormalizeTimeframe(body.Timeframe)
+	s.ar.RecordProblemsFetch(r.Context(), analytics.SourceWeb, company, normTF)
+	writeJSON(w, http.StatusOK, envelope{Success: true})
 }
 
 func (s *api) handleTimeframes(w http.ResponseWriter, r *http.Request) {
@@ -132,9 +170,6 @@ func (s *api) handleProblems(w http.ResponseWriter, r *http.Request) {
 	}
 	local := s.pbc.CompanyHasLocalData(company)
 	emptyTF := local && len(probs) == 0
-	if s.ar != nil {
-		s.ar.RecordProblemsFetch(r.Context(), analytics.SourceWeb, strings.ToLower(strings.TrimSpace(company)), normTF)
-	}
 	writeJSON(w, http.StatusOK, envelope{
 		Success: true,
 		Data: map[string]any{
@@ -163,9 +198,6 @@ func (s *api) handleProblemsPriority(w http.ResponseWriter, r *http.Request) {
 		probs = []data.Problem{}
 	}
 	local := s.pbc.CompanyHasLocalData(company)
-	if s.ar != nil {
-		s.ar.RecordProblemsFetch(r.Context(), analytics.SourceWeb, strings.ToLower(strings.TrimSpace(company)), tf)
-	}
 	writeJSON(w, http.StatusOK, envelope{
 		Success: true,
 		Data: map[string]any{

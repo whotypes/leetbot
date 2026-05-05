@@ -50,12 +50,10 @@ SERVER_PID=$!
 echo "Leetbot started (PID: $BOT_PID)"
 echo "Leetbot web server started (PID: $SERVER_PID)"
 
-# wait for any process to exit
-wait -n
+while kill -0 "$BOT_PID" 2>/dev/null && kill -0 "$SERVER_PID" 2>/dev/null; do
+	sleep 2
+done
 
-# If we reach here, one of the processes exited unexpectedly
-EXIT_CODE=$?
-echo "One of the processes exited with code $EXIT_CODE"
+echo "One of the processes exited unexpectedly"
 
-# Cleanup and exit with the same code
 cleanup
