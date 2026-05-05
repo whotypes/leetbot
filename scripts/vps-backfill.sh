@@ -37,6 +37,5 @@ if ! test -r "$CSV_ABS"; then
 fi
 
 exec docker compose run --rm \
-	--env-file .env \
 	-v "$CSV_ABS:/data/cscd.csv:ro" \
 	leetbot ./backfill -csv /data/cscd.csv -prefix '!' "$@"
