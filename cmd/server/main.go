@@ -2,6 +2,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -11,6 +12,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	"github.com/whotypes/leetbot/internal/analytics"
 	"github.com/whotypes/leetbot/internal/data"
 )
 
@@ -22,15 +24,22 @@ type envelope struct {
 
 type api struct {
 	pbc *data.ProblemsByCompany
+	ar  *analytics.Recorder
 }
 
 func main() {
+	ctx := context.Background()
 	pbc, err := data.LoadAllProblems()
 	if err != nil {
 		log.Fatalf("load embedded data: %v", err)
 	}
 
-	s := &api{pbc: pbc}
+	ar, err := analytics.NewFromEnv(ctx)
+	if err != nil {
+		log.Fatalf("analytics: %v", err)
+	}
+
+	s := &api{pbc: pbc, ar: ar}
 	r := mux.NewRouter()
 	r.PathPrefix("/api/").Handler(http.StripPrefix("/api", s.apiRouter()))
 	r.PathPrefix("/").Handler(s.spaFileServer("web/dist"))
@@ -123,6 +132,9 @@ func (s *api) handleProblems(w http.ResponseWriter, r *http.Request) {
 	}
 	local := s.pbc.CompanyHasLocalData(company)
 	emptyTF := local && len(probs) == 0
+	if s.ar != nil {
+		s.ar.RecordProblemsFetch(r.Context(), analytics.SourceWeb, strings.ToLower(strings.TrimSpace(company)), normTF)
+	}
 	writeJSON(w, http.StatusOK, envelope{
 		Success: true,
 		Data: map[string]any{
@@ -151,6 +163,9 @@ func (s *api) handleProblemsPriority(w http.ResponseWriter, r *http.Request) {
 		probs = []data.Problem{}
 	}
 	local := s.pbc.CompanyHasLocalData(company)
+	if s.ar != nil {
+		s.ar.RecordProblemsFetch(r.Context(), analytics.SourceWeb, strings.ToLower(strings.TrimSpace(company)), tf)
+	}
 	writeJSON(w, http.StatusOK, envelope{
 		Success: true,
 		Data: map[string]any{

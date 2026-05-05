@@ -10,6 +10,12 @@
     version: "{{ leetbot_repo_version }}"
   register: repo
 
+- name: postgres init scripts (second database for metabase_app)
+  copy:
+    src: postgres-init/
+    dest: "{{ leetbot_install_dir }}/postgres-init/"
+    mode: "0644"
+
 - name: env file
   template:
     src: .env.j2
@@ -19,6 +25,26 @@
   template:
     src: docker-compose.yml.j2
     dest: "{{ leetbot_install_dir }}/docker-compose.yml"
+
+- name: postgres backup directory
+  file:
+    path: "{{ leetbot_pg_backup_dir }}"
+    state: directory
+    mode: "0755"
+
+- name: postgres backup script
+  template:
+    src: pg_backup.sh.j2
+    dest: /usr/local/bin/leetbot-pg-backup.sh
+    mode: "0755"
+
+- name: cron nightly postgres dumps
+  ansible.builtin.cron:
+    name: leetbot postgres backups
+    minute: "15"
+    hour: "4"
+    job: /usr/local/bin/leetbot-pg-backup.sh
+    user: root
 
 - name: run compose
   community.docker.docker_compose_v2:

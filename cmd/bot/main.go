@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -9,6 +10,7 @@ import (
 	"time"
 
 	"github.com/bwmarrin/discordgo"
+	"github.com/whotypes/leetbot/internal/analytics"
 	"github.com/whotypes/leetbot/internal/config"
 	"github.com/whotypes/leetbot/internal/data"
 	"github.com/whotypes/leetbot/internal/discord"
@@ -33,7 +35,12 @@ func main() {
 
 	fmt.Printf("Loaded data for %d companies\n", len(problemsData.GetAvailableCompanies()))
 
-	handler := discord.NewHandler(problemsData, cfg.BotPrefix)
+	analyticsRec, err := analytics.NewFromEnv(context.Background())
+	if err != nil {
+		log.Fatalf("analytics: %v", err)
+	}
+
+	handler := discord.NewHandler(problemsData, cfg.BotPrefix, analyticsRec)
 
 	dg, err := discordgo.New("Bot " + cfg.DiscordToken)
 	if err != nil {

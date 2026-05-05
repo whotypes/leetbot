@@ -192,13 +192,17 @@ make build
 
 There’s also an [`ansible/`](./ansible/) playbook for a single Ubuntu host: Docker + compose for the app, nginx reverse proxy, UFW, Let’s Encrypt (optional via `leetbot_ssl_email` in `group_vars`), fail2ban, etc.
 
-1. Point your domain(s) at the server (see `leetbot_public_domains` in [`ansible/group_vars/all.yml`](./ansible/group_vars/all.yml) — adjust as needed).
-2. Put your host in [`ansible/inventory.yml`](./ansible/inventory.yml) and set secrets in encrypted [`ansible/group_vars/vault.yml`](./ansible/group_vars/vault.yml) as needed. A Discord bot token is only required if you’re running the bot; if you’re only self-hosting the website / HTTP side, you can leave that out (or empty) and trim [`ansible/.env.j2`](./ansible/.env.j2) so the container isn’t expecting a token.
+1. Point your domains at the server: main site uses `leetbot_app_domains`, analytics UI uses `leetbot_analytics_domains` (see [`ansible/group_vars/all.yml`](./ansible/group_vars/all.yml)); together they populate TLS SANs via `leetbot_public_domains`.
+2. Put your host in [`ansible/inventory.yml`](./ansible/inventory.yml) and set secrets in encrypted [`ansible/group_vars/vault.yml`](./ansible/group_vars/vault.yml) as needed. Use `vault_discord_token` for the bot, `vault_postgres_password` for the bundled Postgres/Metabase stack, and a strong value (avoid raw `@` or `:` in the password, or URL-encode them in `DATABASE_URL` if you customize templates). A Discord bot token is only required if you’re running the bot; if you’re only self-hosting the website / HTTP side, you can leave that out (or empty) and trim [`ansible/.env.j2`](./ansible/.env.j2) so the container isn’t expecting a token.
 3. From the `ansible/` directory:
 ```bash
 ansible-galaxy collection install -r requirements.yml
 ansible-playbook playbook.yml --ask-vault-pass
 ```
+
+**HTTPS:** Nginx uses **`leetbot_letsencrypt_live_app`** and **`leetbot_letsencrypt_live_analytics`** (defaults in [`ansible/group_vars/all.yml`](./ansible/group_vars/all.yml)) under `/etc/letsencrypt/live/…`. They must match your Certbot **certificate names**. Separate certs for the main site vs analytics are supported; for **one** certificate that covers every hostname, set both vars to the same directory name (usually `leetbot_app_domains[0]`).
+
+**Before running the playbook again:** On the VPS you usually **do not need to change anything**—pull latest git on your **admin machine**, then run `ansible-playbook` so the nginx template is redeployed. Optionally SSH in and run `sudo nginx -t` and `sudo certbot certificates` to confirm paths match [`leetbot.conf.j2`](ansible/roles/nginx/templates/leetbot.conf.j2). After the playbook, reload is handled by Ansible handlers.
 
 The `leetbot` role clones this repo on the server under `/opt/leetbot` and runs `docker compose` there. 
 

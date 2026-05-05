@@ -2,6 +2,7 @@ package discord
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -13,6 +14,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/lithammer/fuzzysearch/fuzzy"
+	"github.com/whotypes/leetbot/internal/analytics"
 	"github.com/whotypes/leetbot/internal/data"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
@@ -828,6 +830,7 @@ type Handler struct {
 	sessionMutex     sync.RWMutex
 	enabledChannels  map[string]bool // tracks which channels leetbot is enabled in
 	channelsMutex    sync.RWMutex    // protects enabledChannels map
+	analytics        *analytics.Recorder
 }
 
 const (
@@ -845,7 +848,7 @@ var preInitializedChannels = []string{
 	"1431649138084155403",          // test channel
 }
 
-func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
+func NewHandler(problemsData *data.ProblemsByCompany, prefix string, analytics *analytics.Recorder) *Handler {
 	// initialize the enabled channels map with pre-initialized channels
 	enabledChannels := make(map[string]bool)
 	for _, channelID := range preInitializedChannels {
@@ -856,6 +859,7 @@ func NewHandler(problemsData *data.ProblemsByCompany, prefix string) *Handler {
 		problemsData:    problemsData,
 		prefix:          prefix,
 		enabledChannels: enabledChannels,
+		analytics:       analytics,
 	}
 }
 
@@ -873,6 +877,13 @@ func (h *Handler) GetSession() *discordgo.Session {
 	h.sessionMutex.RLock()
 	defer h.sessionMutex.RUnlock()
 	return h.session
+}
+
+func (h *Handler) recordProblemsFetch(company, timeframe string) {
+	if h.analytics == nil {
+		return
+	}
+	h.analytics.RecordProblemsFetch(context.Background(), analytics.SourceDiscord, company, timeframe)
 }
 
 // isChannelEnabled checks if leetbot is enabled in the given channel
@@ -1083,6 +1094,8 @@ func (h *Handler) handleProblemsCommand(s *discordgo.Session, m *discordgo.Messa
 		}
 		return
 	}
+
+	h.recordProblemsFetch(company, timeframe)
 
 	if shouldUsePagination(len(problems)) {
 		err := sendPaginatedProblemsMessage(s, m.ChannelID, company, timeframe, problems)
@@ -1408,6 +1421,8 @@ func (h *Handler) handleProblemsSlash(s *discordgo.Session, i *discordgo.Interac
 		}
 		return
 	}
+
+	h.recordProblemsFetch(company, timeframe)
 
 	if shouldUsePagination(len(problems)) {
 		err := sendPaginatedProblems(s, i, company, timeframe, problems)

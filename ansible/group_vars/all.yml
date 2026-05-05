@@ -2,9 +2,23 @@ leetbot_repo_url: "https://github.com/whotypes/leetbot.git"
 leetbot_repo_version: "main"
 leetbot_install_dir: "/opt/leetbot"
 leetbot_port: 8080
-leetbot_public_domains:
+leetbot_app_domains:
   - leetbot.org
   - www.leetbot.org
+leetbot_analytics_domains:
+  - analytics.leetbot.org
+leetbot_public_domains: "{{ leetbot_app_domains + leetbot_analytics_domains }}"
+# /etc/letsencrypt/live/<name>/ — use app domain for both if a single SAN cert covers every hostname.
+leetbot_letsencrypt_live_app: "{{ leetbot_app_domains[0] }}"
+leetbot_letsencrypt_live_analytics: "{{ leetbot_analytics_domains[0] }}"
 leetbot_ssl_email: "titandq@gmail.com"
 leetbot_container_name: "leetbot_leetbot_1"
 leetbot_bot_prefix: "!"
+
+leetbot_postgres_user: leetbot
+leetbot_postgres_db_analytics: leetbot_analytics
+leetbot_postgres_db_metabase: metabase_app
+leetbot_metabase_port: 3000
+leetbot_metabase_image: "metabase/metabase:v0.54.7"
+leetbot_metabase_java_opts: "-Xmx512m"
+leetbot_pg_backup_dir: "/var/backups/leetbot-pg"

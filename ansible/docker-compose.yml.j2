@@ -1,7 +1,52 @@
 services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: "{{ leetbot_postgres_user }}"
+      POSTGRES_PASSWORD: "{{ vault_postgres_password }}"
+      POSTGRES_DB: "{{ leetbot_postgres_db_analytics }}"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - "{{ leetbot_install_dir }}/postgres-init:/docker-entrypoint-initdb.d:ro"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U {{ leetbot_postgres_user }} -d {{ leetbot_postgres_db_analytics }}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  metabase:
+    image: "{{ leetbot_metabase_image }}"
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: "{{ leetbot_postgres_db_metabase }}"
+      MB_DB_PORT: "5432"
+      MB_DB_USER: "{{ leetbot_postgres_user }}"
+      MB_DB_PASS: "{{ vault_postgres_password }}"
+      MB_DB_HOST: postgres
+      JAVA_TOOL_OPTIONS: '{{ leetbot_metabase_java_opts }}'
+    ports:
+      - "{{ leetbot_metabase_port }}:3000"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://127.0.0.1:3000/api/health >/dev/null"]
+      interval: 15s
+      timeout: 10s
+      retries: 12
+      start_period: 180s
+
   leetbot:
     build: .
     restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
     env_file: .env
     ports:
       - "{{ leetbot_port }}:8080"
+
+volumes:
+  postgres_data:

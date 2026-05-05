@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+cd "{{ leetbot_install_dir }}"
+DATE=$(date +%Y%m%d)
+install -d -m 0755 "{{ leetbot_pg_backup_dir }}"
+/usr/bin/docker compose exec -T postgres pg_dump -U "{{ leetbot_postgres_user }}" "{{ leetbot_postgres_db_analytics }}" | gzip -c >"{{ leetbot_pg_backup_dir }}/leetbot_analytics-${DATE}.sql.gz"
+/usr/bin/docker compose exec -T postgres pg_dump -U "{{ leetbot_postgres_user }}" "{{ leetbot_postgres_db_metabase }}" | gzip -c >"{{ leetbot_pg_backup_dir }}/metabase_app-${DATE}.sql.gz"
+find "{{ leetbot_pg_backup_dir }}" -name '*.sql.gz' -mtime +14 -delete

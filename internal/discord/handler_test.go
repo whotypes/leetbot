@@ -60,10 +60,14 @@ func createTestProblemsData() *data.ProblemsByCompany {
 
 func TestNewHandler(t *testing.T) {
 	problemsData := createTestProblemsData()
-	handler := NewHandler(problemsData, "!")
+	handler := NewHandler(problemsData, "!", nil)
 
 	if handler.problemsData == nil {
 		t.Error("NewHandler() should set problemsData")
+	}
+
+	if handler.analytics != nil {
+		t.Error("NewHandler() analytics should be nil by default in tests")
 	}
 
 	if handler.prefix != "!" {
@@ -72,7 +76,7 @@ func TestNewHandler(t *testing.T) {
 }
 
 func TestNormalizeTimeframe(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	tests := []struct {
 		input    string
@@ -132,7 +136,7 @@ func TestFormatTimeframeDisplay(t *testing.T) {
 }
 
 func TestFormatProblemsResponse(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	problems := []data.Problem{
 		{
@@ -173,7 +177,7 @@ func TestFormatProblemsResponse(t *testing.T) {
 }
 
 func TestFormatProblemsResponse_Empty(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	result := handler.formatProblemsResponse("airbnb", "all", []data.Problem{})
 
@@ -183,7 +187,7 @@ func TestFormatProblemsResponse_Empty(t *testing.T) {
 }
 
 func TestHandleMessage(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	session := &discordgo.Session{Token: ""}
 	message := &discordgo.MessageCreate{
@@ -201,7 +205,7 @@ func TestHandleMessage(t *testing.T) {
 }
 
 func TestHandleMessage_BotMessage(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	session := &discordgo.Session{Token: ""}
 	message := &discordgo.MessageCreate{
@@ -218,7 +222,7 @@ func TestHandleMessage_BotMessage(t *testing.T) {
 }
 
 func TestHandleMessage_WrongPrefix(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	session := &discordgo.Session{Token: ""}
 	message := &discordgo.MessageCreate{
@@ -235,7 +239,7 @@ func TestHandleMessage_WrongPrefix(t *testing.T) {
 }
 
 func TestHandleMessage_UnknownCommand(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	session := &discordgo.Session{Token: ""}
 	message := &discordgo.MessageCreate{
@@ -252,7 +256,7 @@ func TestHandleMessage_UnknownCommand(t *testing.T) {
 }
 
 func TestHandleMessage_ProblemsNoArgs(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	session := &discordgo.Session{Token: ""}
 	message := &discordgo.MessageCreate{
@@ -374,7 +378,7 @@ func TestGetCompanyAutocompleteChoices(t *testing.T) {
 }
 
 func TestIsTimeframeKeyword(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	tests := []struct {
 		input    string
@@ -404,7 +408,7 @@ func TestIsTimeframeKeyword(t *testing.T) {
 }
 
 func TestFormatAvailableTimeframesSuggestion(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	availableTimeframes := []string{"all", "six-months"}
 	result := handler.formatAvailableTimeframesSuggestion("starbucks", "thirty-days", availableTimeframes)
@@ -427,7 +431,7 @@ func TestFormatAvailableTimeframesSuggestion(t *testing.T) {
 }
 
 func TestGetTimeframeShortAlias(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	tests := []struct {
 		input    string
@@ -450,7 +454,7 @@ func TestGetTimeframeShortAlias(t *testing.T) {
 }
 
 func TestFormatProblemsResponse_LongList(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	var longList []data.Problem
 	for i := 1; i <= 100; i++ {
@@ -472,7 +476,7 @@ func TestFormatProblemsResponse_LongList(t *testing.T) {
 }
 
 func TestHandleMessage_ProblemsWithTimeframe(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	session := &discordgo.Session{Token: ""}
 	message := &discordgo.MessageCreate{
@@ -490,7 +494,7 @@ func TestHandleMessage_ProblemsWithTimeframe(t *testing.T) {
 }
 
 func TestHandleMessage_UnknownCompany(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	session := &discordgo.Session{Token: ""}
 	message := &discordgo.MessageCreate{
@@ -508,7 +512,7 @@ func TestHandleMessage_UnknownCompany(t *testing.T) {
 }
 
 func TestNormalizeTimeframe_EdgeCases(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	tests := []struct {
 		input    string
@@ -534,7 +538,7 @@ func TestNormalizeTimeframe_EdgeCases(t *testing.T) {
 }
 
 func TestFormatProblemsResponse_DifferentDifficulties(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 
 	problems := []data.Problem{
 		{ID: 1, Title: "Easy Problem", Difficulty: "Easy", Frequency: 100.0},
@@ -877,7 +881,7 @@ func TestAmbiguousCompanyMatching(t *testing.T) {
 
 // Test parseProblemsCommandArgs contract: extracts company and timeframe from args
 func TestParseProblemsCommandArgs(t *testing.T) {
-	handler := NewHandler(createTestProblemsData(), "!")
+	handler := NewHandler(createTestProblemsData(), "!", nil)
 	isTimeframeKeyword := handler.isTimeframeKeyword
 
 	tests := []struct {
