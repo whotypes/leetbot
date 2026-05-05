@@ -161,14 +161,32 @@ export const Navbar = ({
                       </TooltipContent>
                     </Tooltip>
                     <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
-                      <DialogHeader>
-                        <DialogTitle>About <span className="text-accent">leetbot.org</span></DialogTitle>
+                      <DialogHeader className="mb-2">
+                        <DialogTitle>
+                          <div className="flex flex-col space-y-1">
+                            <span>
+                              About{' '}
+                              <span className="text-accent font-extrabold tracking-tight">leetbot.org</span>
+                            </span>
+                            <div className="flex flex-col pb-1">
+                              <span className="text-xs text-muted-foreground font-medium">
+                                Made by{' '}
+                                <a
+                                  href="https://github.com/Nyumat"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-fuchsia-400 hover:text-fuchsia-500 text-xs font-medium"
+                                >
+                                  @Nyumat
+                                </a>
+                              </span>
+                            </div>
+                          </div>
+                        </DialogTitle>
                         <DialogDescription asChild>
                           <div className="space-y-3 pt-1 text-left text-sm text-muted-foreground">
                             <p>
-                              Welcome to leetbot! <br /> <br />
-
-                              Thousands of engineers around the world use this <span className="text-accent">always free</span> tool to stay on top of the latest company questions as they are updated on LeetCode.
+                              Engineers around the world use this <span className="text-accent">always free</span> tool to stay on top of the latest company questions as they are updated on LeetCode.
 
                               <br /> <br />
                               The main interface of leetbot (hence the name) is a Discord bot that emits problems to a channel, most notably in <a href="https://discord.com/invite/cscareers" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline underline-offset-4 hover:no-underline">the CSCD community</a>.
@@ -177,13 +195,8 @@ export const Navbar = ({
                              I run the scraper every couple of weeks to ensure the data is up to date.
                             </p>
                             <p>
-                              All you have to do is pick a company, timeframe, and optional difficulty filters. The problems are
-                              ordered like on LeetCode, including the frequency % column used for
-                              ranking.
-                            </p>
-                            <p>
-                              <span className="text-accent">On “frequency”</span>{' '}
-                              - I get a lot of questions about this. The frequency column reflects LeetCode’s own signals and community tagging, and is not a
+                              <span className="text-accent">Regarding “frequency”</span>{' '}
+                              - The frequency column reflects LeetCode's own signals and community tagging, and is not a
                               guarantee of what you will see in an interview. <br/> <br/> For background on how leetcode themselves determine frequency, see this{' '}
                               <a
                                 href={LEETCODE_FREQUENCY_FAQ_URL}
@@ -191,7 +204,7 @@ export const Navbar = ({
                                 rel="noopener noreferrer"
                                 className="font-medium text-primary underline underline-offset-4 hover:no-underline"
                               >
-                                LeetCode discussion thread on how they do that
+                                discussion thread on how they do that
                               </a>
                               .
                             </p>

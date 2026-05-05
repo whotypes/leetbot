@@ -11,6 +11,10 @@ import { Button } from './components/ui/button'
 import { useTheme } from './hooks/useTheme'
 import type { AllProblemsData, APIResponse, CompanyInfo, Problem } from './types'
 
+const EMPTY_COMPANIES: CompanyInfo[] = []
+const EMPTY_PROBLEMS: Problem[] = []
+const EMPTY_TIMEFRAMES: string[] = []
+
 const formatSlugAsDisplayName = (slug: string) =>
   slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ')
 
@@ -246,10 +250,10 @@ function App() {
     staleTime: 1000 * 60 * 2,
   })
 
-  const companies = companiesData?.companies || []
+  const companies = companiesData?.companies ?? EMPTY_COMPANIES
   const dataLastUpdated = companiesData?.dataLastUpdated
-  const timeframes = timeframesData?.timeframes || []
-  const problems = problemsData?.problems || []
+  const timeframes = timeframesData?.timeframes ?? EMPTY_TIMEFRAMES
+  const problems = problemsData?.problems ?? EMPTY_PROBLEMS
   const error = companiesError?.message || timeframesError?.message || problemsError?.message || ''
 
   const activeCompanyInfo = useMemo(
