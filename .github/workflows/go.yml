@@ -5,6 +5,7 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,8 +14,8 @@ jobs:
   changes:
     runs-on: ubuntu-latest
     outputs:
-      backend: ${{ steps.changes.outputs.backend }}
-      frontend: ${{ steps.changes.outputs.frontend }}
+      backend: ${{ steps.backend-flag.outputs.backend }}
+      frontend: ${{ steps.frontend-flag.outputs.frontend }}
     steps:
     - uses: actions/checkout@v4
     - name: Get changed files
@@ -29,6 +30,8 @@ jobs:
           go.sum
           Makefile
           Dockerfile
+          start-all.sh
+          .github/workflows/**
           *.go
         files_ignore: |
           web/**
@@ -39,15 +42,21 @@ jobs:
         files: |
           web/**
     - name: Set backend output
+      id: backend-flag
       run: |
-        if [ "${{ steps.changes.outputs.any_changed }}" == "true" ]; then
+        if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          echo "backend=true" >> $GITHUB_OUTPUT
+        elif [ "${{ steps.changes.outputs.any_changed }}" == "true" ]; then
           echo "backend=true" >> $GITHUB_OUTPUT
         else
           echo "backend=false" >> $GITHUB_OUTPUT
         fi
     - name: Set frontend output
+      id: frontend-flag
       run: |
-        if [ "${{ steps.frontend-changes.outputs.any_changed }}" == "true" ]; then
+        if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          echo "frontend=true" >> $GITHUB_OUTPUT
+        elif [ "${{ steps.frontend-changes.outputs.any_changed }}" == "true" ]; then
           echo "frontend=true" >> $GITHUB_OUTPUT
         else
           echo "frontend=false" >> $GITHUB_OUTPUT
@@ -211,7 +220,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [changes, test, lint, frontend-test, frontend-build, build]
     if: >
-      github.event_name == 'push' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
       github.ref == 'refs/heads/main' &&
       (needs.changes.outputs.backend == 'true' || needs.changes.outputs.frontend == 'true') &&
       needs.build.result == 'success' &&
@@ -242,6 +251,9 @@ jobs:
           cd "$DEPLOY_PATH"
           git fetch origin main
           git reset --hard origin/main
-          docker compose up -d --build --remove-orphans
+          DEPLOY_SHA="\$(git rev-parse HEAD)"
+          echo "deploy commit=\${DEPLOY_SHA}"
+          docker compose build --pull --build-arg "DEPLOY_GIT_SHA=\${DEPLOY_SHA}" leetbot
+          docker compose up -d --force-recreate --remove-orphans leetbot
         '
         EOF

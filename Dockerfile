@@ -10,6 +10,8 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
+ARG DEPLOY_GIT_SHA=unknown
+RUN echo "$DEPLOY_GIT_SHA" >/tmp/.leetbot-deploy-sha
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o bot ./cmd/bot
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o server ./cmd/server
 
