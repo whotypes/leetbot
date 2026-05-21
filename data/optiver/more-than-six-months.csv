@@ -1,6 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-622,https://leetcode.com/problems/design-circular-queue,"Design Circular Queue",Medium,54.4%,100.0%
-188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,"Best Time to Buy and Sell Stock IV",Hard,47.4%,87.5%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,87.1%
-1360,https://leetcode.com/problems/number-of-days-between-two-dates,"Number of Days Between Two Dates",Easy,52.6%,87.1%
-146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,76.8%
+622,https://leetcode.com/problems/design-circular-queue,Design Circular Queue,Medium,54.4%,100.0%
+188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,87.5%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,87.1%
+1360,https://leetcode.com/problems/number-of-days-between-two-dates,Number of Days Between Two Dates,Easy,52.6%,87.1%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,76.8%

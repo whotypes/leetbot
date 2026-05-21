@@ -1,32 +1,32 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,51.6%,100.0%
-1047,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string,"Remove All Adjacent Duplicates In String",Easy,73.1%,92.4%
-33,https://leetcode.com/problems/search-in-rotated-sorted-array,"Search in Rotated Sorted Array",Medium,44.4%,87.8%
-966,https://leetcode.com/problems/vowel-spellchecker,"Vowel Spellchecker",Medium,61.4%,87.8%
-380,https://leetcode.com/problems/insert-delete-getrandom-o1,"Insert Delete GetRandom O(1)",Medium,55.3%,86.5%
-1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,"Remove All Adjacent Duplicates in String II",Medium,61.2%,86.5%
-70,https://leetcode.com/problems/climbing-stairs,"Climbing Stairs",Easy,54.0%,81.9%
-187,https://leetcode.com/problems/repeated-dna-sequences,"Repeated DNA Sequences",Medium,53.2%,80.1%
-69,https://leetcode.com/problems/sqrtx,"Sqrt(x)",Easy,41.7%,76.0%
-22,https://leetcode.com/problems/generate-parentheses,"Generate Parentheses",Medium,78.6%,73.6%
-507,https://leetcode.com/problems/perfect-number,"Perfect Number",Easy,48.6%,73.6%
-359,https://leetcode.com/problems/logger-rate-limiter,"Logger Rate Limiter",Easy,76.8%,70.9%
-404,https://leetcode.com/problems/sum-of-left-leaves,"Sum of Left Leaves",Easy,62.6%,70.9%
-140,https://leetcode.com/problems/word-break-ii,"Word Break II",Hard,55.4%,64.0%
-844,https://leetcode.com/problems/backspace-string-compare,"Backspace String Compare",Easy,49.5%,62.5%
-35,https://leetcode.com/problems/search-insert-position,"Search Insert Position",Easy,51.1%,59.4%
-79,https://leetcode.com/problems/word-search,"Word Search",Medium,47.2%,59.4%
-150,https://leetcode.com/problems/evaluate-reverse-polish-notation,"Evaluate Reverse Polish Notation",Medium,57.6%,59.4%
-139,https://leetcode.com/problems/word-break,"Word Break",Medium,49.4%,53.5%
-200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,53.5%
-208,https://leetcode.com/problems/implement-trie-prefix-tree,"Implement Trie (Prefix Tree)",Medium,69.4%,53.5%
-1461,https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k,"Check If a String Contains All Binary Codes of Size K",Medium,61.6%,53.5%
-133,https://leetcode.com/problems/clone-graph,"Clone Graph",Medium,62.7%,50.0%
-645,https://leetcode.com/problems/set-mismatch,"Set Mismatch",Easy,45.1%,50.0%
-42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,67.2%,45.3%
-62,https://leetcode.com/problems/unique-paths,"Unique Paths",Medium,66.8%,45.3%
-435,https://leetcode.com/problems/non-overlapping-intervals,"Non-overlapping Intervals",Medium,57.0%,45.3%
-761,https://leetcode.com/problems/special-binary-string,"Special Binary String",Hard,79.3%,45.3%
-2054,https://leetcode.com/problems/two-best-non-overlapping-events,"Two Best Non-Overlapping Events",Medium,64.0%,45.3%
-2075,https://leetcode.com/problems/decode-the-slanted-ciphertext,"Decode the Slanted Ciphertext",Medium,67.6%,45.3%
-3035,https://leetcode.com/problems/maximum-palindromes-after-operations,"Maximum Palindromes After Operations",Medium,46.2%,45.3%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,100.0%
+1047,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string,Remove All Adjacent Duplicates In String,Easy,73.1%,92.4%
+33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,87.8%
+966,https://leetcode.com/problems/vowel-spellchecker,Vowel Spellchecker,Medium,61.4%,87.8%
+380,https://leetcode.com/problems/insert-delete-getrandom-o1,Insert Delete GetRandom O(1),Medium,55.3%,86.5%
+1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,61.2%,86.5%
+70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.0%,81.9%
+187,https://leetcode.com/problems/repeated-dna-sequences,Repeated DNA Sequences,Medium,53.2%,80.1%
+69,https://leetcode.com/problems/sqrtx,Sqrt(x),Easy,41.7%,76.0%
+22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,73.6%
+507,https://leetcode.com/problems/perfect-number,Perfect Number,Easy,48.6%,73.6%
+359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.8%,70.9%
+404,https://leetcode.com/problems/sum-of-left-leaves,Sum of Left Leaves,Easy,62.6%,70.9%
+140,https://leetcode.com/problems/word-break-ii,Word Break II,Hard,55.4%,64.0%
+844,https://leetcode.com/problems/backspace-string-compare,Backspace String Compare,Easy,49.5%,62.5%
+35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,51.1%,59.4%
+79,https://leetcode.com/problems/word-search,Word Search,Medium,47.2%,59.4%
+150,https://leetcode.com/problems/evaluate-reverse-polish-notation,Evaluate Reverse Polish Notation,Medium,57.6%,59.4%
+139,https://leetcode.com/problems/word-break,Word Break,Medium,49.4%,53.5%
+200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,53.5%
+208,https://leetcode.com/problems/implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,69.4%,53.5%
+1461,https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k,Check If a String Contains All Binary Codes of Size K,Medium,61.6%,53.5%
+133,https://leetcode.com/problems/clone-graph,Clone Graph,Medium,62.7%,50.0%
+645,https://leetcode.com/problems/set-mismatch,Set Mismatch,Easy,45.1%,50.0%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,45.3%
+62,https://leetcode.com/problems/unique-paths,Unique Paths,Medium,66.8%,45.3%
+435,https://leetcode.com/problems/non-overlapping-intervals,Non-overlapping Intervals,Medium,57.0%,45.3%
+761,https://leetcode.com/problems/special-binary-string,Special Binary String,Hard,79.3%,45.3%
+2054,https://leetcode.com/problems/two-best-non-overlapping-events,Two Best Non-Overlapping Events,Medium,64.0%,45.3%
+2075,https://leetcode.com/problems/decode-the-slanted-ciphertext,Decode the Slanted Ciphertext,Medium,67.6%,45.3%
+3035,https://leetcode.com/problems/maximum-palindromes-after-operations,Maximum Palindromes After Operations,Medium,46.2%,45.3%

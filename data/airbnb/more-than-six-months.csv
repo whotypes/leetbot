@@ -1,62 +1,62 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-68,https://leetcode.com/problems/text-justification,"Text Justification",Hard,50.9%,100.0%
-1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,"Maximum Profit in Job Scheduling",Hard,54.7%,91.5%
-251,https://leetcode.com/problems/flatten-2d-vector,"Flatten 2D Vector",Medium,50.5%,84.1%
-336,https://leetcode.com/problems/palindrome-pairs,"Palindrome Pairs",Hard,37.1%,82.8%
-39,https://leetcode.com/problems/combination-sum,"Combination Sum",Medium,76.4%,78.3%
-2043,https://leetcode.com/problems/simple-bank-system,"Simple Bank System",Medium,69.7%,76.6%
-1257,https://leetcode.com/problems/smallest-common-region,"Smallest Common Region",Medium,68.3%,74.6%
-76,https://leetcode.com/problems/minimum-window-substring,"Minimum Window Substring",Hard,47.4%,72.5%
-755,https://leetcode.com/problems/pour-water,"Pour Water",Medium,49.0%,70.1%
-1298,https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes,"Maximum Candies You Can Get from Boxes",Hard,67.7%,67.4%
-42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,67.2%,64.3%
-348,https://leetcode.com/problems/design-tic-tac-toe,"Design Tic-Tac-Toe",Medium,58.8%,64.3%
-631,https://leetcode.com/problems/design-excel-sum-formula,"Design Excel Sum Formula",Hard,39.9%,64.3%
-773,https://leetcode.com/problems/sliding-puzzle,"Sliding Puzzle",Hard,74.4%,64.3%
-713,https://leetcode.com/problems/subarray-product-less-than-k,"Subarray Product Less Than K",Medium,54.2%,60.6%
-864,https://leetcode.com/problems/shortest-path-to-get-all-keys,"Shortest Path to Get All Keys",Hard,54.5%,60.6%
-160,https://leetcode.com/problems/intersection-of-two-linked-lists,"Intersection of Two Linked Lists",Easy,63.6%,56.1%
-219,https://leetcode.com/problems/contains-duplicate-ii,"Contains Duplicate II",Easy,51.1%,56.1%
-269,https://leetcode.com/problems/alien-dictionary,"Alien Dictionary",Hard,37.2%,56.1%
-3076,https://leetcode.com/problems/shortest-uncommon-substring-in-an-array,"Shortest Uncommon Substring in an Array",Medium,50.4%,56.1%
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,50.3%
-2,https://leetcode.com/problems/add-two-numbers,"Add Two Numbers",Medium,48.3%,50.3%
-212,https://leetcode.com/problems/word-search-ii,"Word Search II",Hard,38.4%,50.3%
-432,https://leetcode.com/problems/all-oone-data-structure,"All O'one Data Structure",Hard,44.2%,50.3%
-638,https://leetcode.com/problems/shopping-offers,"Shopping Offers",Medium,52.4%,50.3%
-787,https://leetcode.com/problems/cheapest-flights-within-k-stops,"Cheapest Flights Within K Stops",Medium,41.7%,50.3%
-56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,49.5%,50.0%
-166,https://leetcode.com/problems/fraction-to-recurring-decimal,"Fraction to Recurring Decimal",Medium,26.3%,50.0%
-322,https://leetcode.com/problems/coin-change,"Coin Change",Medium,46.7%,50.0%
-341,https://leetcode.com/problems/flatten-nested-list-iterator,"Flatten Nested List Iterator",Medium,65.3%,50.0%
-10,https://leetcode.com/problems/regular-expression-matching,"Regular Expression Matching",Hard,30.8%,42.2%
-20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,42.2%
-23,https://leetcode.com/problems/merge-k-sorted-lists,"Merge k Sorted Lists",Hard,59.4%,42.2%
-53,https://leetcode.com/problems/maximum-subarray,"Maximum Subarray",Medium,53.2%,42.2%
-108,https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree,"Convert Sorted Array to Binary Search Tree",Easy,75.5%,42.2%
-136,https://leetcode.com/problems/single-number,"Single Number",Easy,77.6%,42.2%
-190,https://leetcode.com/problems/reverse-bits,"Reverse Bits",Easy,68.2%,42.2%
-198,https://leetcode.com/problems/house-robber,"House Robber",Medium,53.1%,42.2%
-202,https://leetcode.com/problems/happy-number,"Happy Number",Easy,59.5%,42.2%
-217,https://leetcode.com/problems/contains-duplicate,"Contains Duplicate",Easy,64.3%,42.2%
-220,https://leetcode.com/problems/contains-duplicate-iii,"Contains Duplicate III",Hard,24.7%,42.2%
-221,https://leetcode.com/problems/maximal-square,"Maximal Square",Medium,50.2%,42.2%
-227,https://leetcode.com/problems/basic-calculator-ii,"Basic Calculator II",Medium,46.8%,42.2%
-385,https://leetcode.com/problems/mini-parser,"Mini Parser",Medium,42.4%,42.2%
-400,https://leetcode.com/problems/nth-digit,"Nth Digit",Medium,38.0%,42.2%
-415,https://leetcode.com/problems/add-strings,"Add Strings",Easy,52.1%,42.2%
-605,https://leetcode.com/problems/can-place-flowers,"Can Place Flowers",Easy,29.1%,42.2%
-751,https://leetcode.com/problems/ip-to-cidr,"IP to CIDR",Medium,53.5%,42.2%
-756,https://leetcode.com/problems/pyramid-transition-matrix,"Pyramid Transition Matrix",Medium,60.6%,42.2%
-759,https://leetcode.com/problems/employee-free-time,"Employee Free Time",Hard,72.8%,42.2%
-827,https://leetcode.com/problems/making-a-large-island,"Making A Large Island",Hard,56.5%,42.2%
-981,https://leetcode.com/problems/time-based-key-value-store,"Time Based Key-Value Store",Medium,49.9%,42.2%
-1017,https://leetcode.com/problems/convert-to-base-2,"Convert to Base -2",Medium,61.8%,42.2%
-1041,https://leetcode.com/problems/robot-bounded-in-circle,"Robot Bounded In Circle",Medium,56.5%,42.2%
-1058,https://leetcode.com/problems/minimize-rounding-error-to-meet-target,"Minimize Rounding Error to Meet Target",Medium,45.8%,42.2%
-1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,"Shortest Path in Binary Matrix",Medium,51.4%,42.2%
-1166,https://leetcode.com/problems/design-file-system,"Design File System",Medium,65.1%,42.2%
-1284,https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix,"Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",Hard,72.5%,42.2%
-1554,https://leetcode.com/problems/strings-differ-by-one-character,"Strings Differ by One Character",Medium,39.9%,42.2%
-1557,https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes,"Minimum Number of Vertices to Reach All Nodes",Medium,81.6%,42.2%
-2189,https://leetcode.com/problems/number-of-ways-to-build-house-of-cards,"Number of Ways to Build House of Cards",Medium,62.6%,42.2%
+68,https://leetcode.com/problems/text-justification,Text Justification,Hard,50.9%,100.0%
+1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.7%,91.5%
+251,https://leetcode.com/problems/flatten-2d-vector,Flatten 2D Vector,Medium,50.5%,84.1%
+336,https://leetcode.com/problems/palindrome-pairs,Palindrome Pairs,Hard,37.1%,82.8%
+39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,76.4%,78.3%
+2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,76.6%
+1257,https://leetcode.com/problems/smallest-common-region,Smallest Common Region,Medium,68.3%,74.6%
+76,https://leetcode.com/problems/minimum-window-substring,Minimum Window Substring,Hard,47.4%,72.5%
+755,https://leetcode.com/problems/pour-water,Pour Water,Medium,49.0%,70.1%
+1298,https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes,Maximum Candies You Can Get from Boxes,Hard,67.7%,67.4%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,64.3%
+348,https://leetcode.com/problems/design-tic-tac-toe,Design Tic-Tac-Toe,Medium,58.8%,64.3%
+631,https://leetcode.com/problems/design-excel-sum-formula,Design Excel Sum Formula,Hard,39.9%,64.3%
+773,https://leetcode.com/problems/sliding-puzzle,Sliding Puzzle,Hard,74.4%,64.3%
+713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.2%,60.6%
+864,https://leetcode.com/problems/shortest-path-to-get-all-keys,Shortest Path to Get All Keys,Hard,54.5%,60.6%
+160,https://leetcode.com/problems/intersection-of-two-linked-lists,Intersection of Two Linked Lists,Easy,63.6%,56.1%
+219,https://leetcode.com/problems/contains-duplicate-ii,Contains Duplicate II,Easy,51.1%,56.1%
+269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,37.2%,56.1%
+3076,https://leetcode.com/problems/shortest-uncommon-substring-in-an-array,Shortest Uncommon Substring in an Array,Medium,50.4%,56.1%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,50.3%
+2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,50.3%
+212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,38.4%,50.3%
+432,https://leetcode.com/problems/all-oone-data-structure,All O'one Data Structure,Hard,44.2%,50.3%
+638,https://leetcode.com/problems/shopping-offers,Shopping Offers,Medium,52.4%,50.3%
+787,https://leetcode.com/problems/cheapest-flights-within-k-stops,Cheapest Flights Within K Stops,Medium,41.7%,50.3%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,49.5%,50.0%
+166,https://leetcode.com/problems/fraction-to-recurring-decimal,Fraction to Recurring Decimal,Medium,26.3%,50.0%
+322,https://leetcode.com/problems/coin-change,Coin Change,Medium,46.7%,50.0%
+341,https://leetcode.com/problems/flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,65.3%,50.0%
+10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,42.2%
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,42.2%
+23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,42.2%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,42.2%
+108,https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree,Convert Sorted Array to Binary Search Tree,Easy,75.5%,42.2%
+136,https://leetcode.com/problems/single-number,Single Number,Easy,77.6%,42.2%
+190,https://leetcode.com/problems/reverse-bits,Reverse Bits,Easy,68.2%,42.2%
+198,https://leetcode.com/problems/house-robber,House Robber,Medium,53.1%,42.2%
+202,https://leetcode.com/problems/happy-number,Happy Number,Easy,59.5%,42.2%
+217,https://leetcode.com/problems/contains-duplicate,Contains Duplicate,Easy,64.3%,42.2%
+220,https://leetcode.com/problems/contains-duplicate-iii,Contains Duplicate III,Hard,24.7%,42.2%
+221,https://leetcode.com/problems/maximal-square,Maximal Square,Medium,50.2%,42.2%
+227,https://leetcode.com/problems/basic-calculator-ii,Basic Calculator II,Medium,46.8%,42.2%
+385,https://leetcode.com/problems/mini-parser,Mini Parser,Medium,42.4%,42.2%
+400,https://leetcode.com/problems/nth-digit,Nth Digit,Medium,38.0%,42.2%
+415,https://leetcode.com/problems/add-strings,Add Strings,Easy,52.1%,42.2%
+605,https://leetcode.com/problems/can-place-flowers,Can Place Flowers,Easy,29.1%,42.2%
+751,https://leetcode.com/problems/ip-to-cidr,IP to CIDR,Medium,53.5%,42.2%
+756,https://leetcode.com/problems/pyramid-transition-matrix,Pyramid Transition Matrix,Medium,60.6%,42.2%
+759,https://leetcode.com/problems/employee-free-time,Employee Free Time,Hard,72.8%,42.2%
+827,https://leetcode.com/problems/making-a-large-island,Making A Large Island,Hard,56.5%,42.2%
+981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,42.2%
+1017,https://leetcode.com/problems/convert-to-base-2,Convert to Base -2,Medium,61.8%,42.2%
+1041,https://leetcode.com/problems/robot-bounded-in-circle,Robot Bounded In Circle,Medium,56.5%,42.2%
+1058,https://leetcode.com/problems/minimize-rounding-error-to-meet-target,Minimize Rounding Error to Meet Target,Medium,45.8%,42.2%
+1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,51.4%,42.2%
+1166,https://leetcode.com/problems/design-file-system,Design File System,Medium,65.1%,42.2%
+1284,https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix,Minimum Number of Flips to Convert Binary Matrix to Zero Matrix,Hard,72.5%,42.2%
+1554,https://leetcode.com/problems/strings-differ-by-one-character,Strings Differ by One Character,Medium,39.9%,42.2%
+1557,https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes,Minimum Number of Vertices to Reach All Nodes,Medium,81.6%,42.2%
+2189,https://leetcode.com/problems/number-of-ways-to-build-house-of-cards,Number of Ways to Build House of Cards,Medium,62.6%,42.2%

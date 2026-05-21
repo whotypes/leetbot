@@ -1,52 +1,52 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1797,https://leetcode.com/problems/design-authentication-manager,"Design Authentication Manager",Medium,58.5%,100.0%
-3883,https://leetcode.com/problems/count-non-decreasing-arrays-with-given-digit-sums,"Count Non Decreasing Arrays With Given Digit Sums",Hard,41.8%,100.0%
-138,https://leetcode.com/problems/copy-list-with-random-pointer,"Copy List with Random Pointer",Medium,62.7%,87.5%
-208,https://leetcode.com/problems/implement-trie-prefix-tree,"Implement Trie (Prefix Tree)",Medium,69.4%,87.5%
-994,https://leetcode.com/problems/rotting-oranges,"Rotting Oranges",Medium,56.8%,87.5%
-3588,https://leetcode.com/problems/find-maximum-area-of-a-triangle,"Find Maximum Area of a Triangle",Medium,29.4%,87.5%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,38.9%,81.5%
-56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,51.6%,81.5%
-146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,81.5%
-380,https://leetcode.com/problems/insert-delete-getrandom-o1,"Insert Delete GetRandom O(1)",Medium,55.3%,81.5%
-1268,https://leetcode.com/problems/search-suggestions-system,"Search Suggestions System",Medium,65.2%,81.5%
-75,https://leetcode.com/problems/sort-colors,"Sort Colors",Medium,67.8%,75.0%
-780,https://leetcode.com/problems/reaching-points,"Reaching Points",Hard,33.7%,75.0%
-12,https://leetcode.com/problems/integer-to-roman,"Integer to Roman",Medium,70.8%,73.9%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,73.9%
-200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,73.9%
-285,https://leetcode.com/problems/inorder-successor-in-bst,"Inorder Successor in BST",Medium,51.2%,73.9%
-295,https://leetcode.com/problems/find-median-from-data-stream,"Find Median from Data Stream",Hard,54.4%,73.9%
-347,https://leetcode.com/problems/top-k-frequent-elements,"Top K Frequent Elements",Medium,66.3%,73.9%
-359,https://leetcode.com/problems/logger-rate-limiter,"Logger Rate Limiter",Easy,76.8%,73.9%
-21,https://leetcode.com/problems/merge-two-sorted-lists,"Merge Two Sorted Lists",Easy,68.2%,63.1%
-23,https://leetcode.com/problems/merge-k-sorted-lists,"Merge k Sorted Lists",Hard,59.4%,63.1%
-42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,67.2%,63.1%
-102,https://leetcode.com/problems/binary-tree-level-order-traversal,"Binary Tree Level Order Traversal",Medium,72.5%,63.1%
-127,https://leetcode.com/problems/word-ladder,"Word Ladder",Hard,45.4%,63.1%
-162,https://leetcode.com/problems/find-peak-element,"Find Peak Element",Medium,46.9%,63.1%
-171,https://leetcode.com/problems/excel-sheet-column-number,"Excel Sheet Column Number",Easy,67.6%,63.1%
-211,https://leetcode.com/problems/design-add-and-search-words-data-structure,"Design Add and Search Words Data Structure",Medium,48.4%,63.1%
-213,https://leetcode.com/problems/house-robber-ii,"House Robber II",Medium,44.8%,63.1%
-253,https://leetcode.com/problems/meeting-rooms-ii,"Meeting Rooms II",Medium,52.6%,63.1%
-266,https://leetcode.com/problems/palindrome-permutation,"Palindrome Permutation",Easy,68.7%,63.1%
-337,https://leetcode.com/problems/house-robber-iii,"House Robber III",Medium,55.8%,63.1%
-424,https://leetcode.com/problems/longest-repeating-character-replacement,"Longest Repeating Character Replacement",Medium,59.5%,63.1%
-621,https://leetcode.com/problems/task-scheduler,"Task Scheduler",Medium,63.0%,63.1%
-721,https://leetcode.com/problems/accounts-merge,"Accounts Merge",Medium,61.2%,63.1%
-726,https://leetcode.com/problems/number-of-atoms,"Number of Atoms",Hard,65.1%,63.1%
-934,https://leetcode.com/problems/shortest-bridge,"Shortest Bridge",Medium,59.4%,63.1%
-1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,"Maximum Profit in Job Scheduling",Hard,54.7%,63.1%
-1368,https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid,"Minimum Cost to Make at Least One Valid Path in a Grid",Hard,70.9%,63.1%
-1448,https://leetcode.com/problems/count-good-nodes-in-binary-tree,"Count Good Nodes in Binary Tree",Medium,73.8%,63.1%
-2115,https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies,"Find All Possible Recipes from Given Supplies",Medium,56.9%,63.1%
-2326,https://leetcode.com/problems/spiral-matrix-iv,"Spiral Matrix IV",Medium,82.3%,63.1%
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,55.9%,62.5%
-15,https://leetcode.com/problems/3sum,"3Sum",Medium,37.2%,62.5%
-133,https://leetcode.com/problems/clone-graph,"Clone Graph",Medium,62.7%,62.5%
-238,https://leetcode.com/problems/product-of-array-except-self,"Product of Array Except Self",Medium,67.9%,62.5%
-502,https://leetcode.com/problems/ipo,"IPO",Hard,53.0%,62.5%
-881,https://leetcode.com/problems/boats-to-save-people,"Boats to Save People",Medium,60.5%,62.5%
-1010,https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60,"Pairs of Songs With Total Durations Divisible by 60",Medium,53.3%,62.5%
-1466,https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero,"Reorder Routes to Make All Paths Lead to the City Zero",Medium,65.1%,62.5%
-2405,https://leetcode.com/problems/optimal-partition-of-string,"Optimal Partition of String",Medium,78.3%,62.5%
+1797,https://leetcode.com/problems/design-authentication-manager,Design Authentication Manager,Medium,58.5%,100.0%
+3883,https://leetcode.com/problems/count-non-decreasing-arrays-with-given-digit-sums,Count Non Decreasing Arrays With Given Digit Sums,Hard,41.8%,100.0%
+138,https://leetcode.com/problems/copy-list-with-random-pointer,Copy List with Random Pointer,Medium,62.7%,87.5%
+208,https://leetcode.com/problems/implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,69.4%,87.5%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,56.8%,87.5%
+3588,https://leetcode.com/problems/find-maximum-area-of-a-triangle,Find Maximum Area of a Triangle,Medium,29.4%,87.5%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,81.5%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,81.5%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,81.5%
+380,https://leetcode.com/problems/insert-delete-getrandom-o1,Insert Delete GetRandom O(1),Medium,55.3%,81.5%
+1268,https://leetcode.com/problems/search-suggestions-system,Search Suggestions System,Medium,65.2%,81.5%
+75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,67.8%,75.0%
+780,https://leetcode.com/problems/reaching-points,Reaching Points,Hard,33.7%,75.0%
+12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,73.9%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,73.9%
+200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,73.9%
+285,https://leetcode.com/problems/inorder-successor-in-bst,Inorder Successor in BST,Medium,51.2%,73.9%
+295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,54.4%,73.9%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.3%,73.9%
+359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.8%,73.9%
+21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,63.1%
+23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,63.1%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,63.1%
+102,https://leetcode.com/problems/binary-tree-level-order-traversal,Binary Tree Level Order Traversal,Medium,72.5%,63.1%
+127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,45.4%,63.1%
+162,https://leetcode.com/problems/find-peak-element,Find Peak Element,Medium,46.9%,63.1%
+171,https://leetcode.com/problems/excel-sheet-column-number,Excel Sheet Column Number,Easy,67.6%,63.1%
+211,https://leetcode.com/problems/design-add-and-search-words-data-structure,Design Add and Search Words Data Structure,Medium,48.4%,63.1%
+213,https://leetcode.com/problems/house-robber-ii,House Robber II,Medium,44.8%,63.1%
+253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.6%,63.1%
+266,https://leetcode.com/problems/palindrome-permutation,Palindrome Permutation,Easy,68.7%,63.1%
+337,https://leetcode.com/problems/house-robber-iii,House Robber III,Medium,55.8%,63.1%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,59.5%,63.1%
+621,https://leetcode.com/problems/task-scheduler,Task Scheduler,Medium,63.0%,63.1%
+721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.2%,63.1%
+726,https://leetcode.com/problems/number-of-atoms,Number of Atoms,Hard,65.1%,63.1%
+934,https://leetcode.com/problems/shortest-bridge,Shortest Bridge,Medium,59.4%,63.1%
+1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.7%,63.1%
+1368,https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid,Minimum Cost to Make at Least One Valid Path in a Grid,Hard,70.9%,63.1%
+1448,https://leetcode.com/problems/count-good-nodes-in-binary-tree,Count Good Nodes in Binary Tree,Medium,73.8%,63.1%
+2115,https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies,Find All Possible Recipes from Given Supplies,Medium,56.9%,63.1%
+2326,https://leetcode.com/problems/spiral-matrix-iv,Spiral Matrix IV,Medium,82.3%,63.1%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,62.5%
+15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,62.5%
+133,https://leetcode.com/problems/clone-graph,Clone Graph,Medium,62.7%,62.5%
+238,https://leetcode.com/problems/product-of-array-except-self,Product of Array Except Self,Medium,67.9%,62.5%
+502,https://leetcode.com/problems/ipo,IPO,Hard,53.0%,62.5%
+881,https://leetcode.com/problems/boats-to-save-people,Boats to Save People,Medium,60.5%,62.5%
+1010,https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60,Pairs of Songs With Total Durations Divisible by 60,Medium,53.3%,62.5%
+1466,https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero,Reorder Routes to Make All Paths Lead to the City Zero,Medium,65.1%,62.5%
+2405,https://leetcode.com/problems/optimal-partition-of-string,Optimal Partition of String,Medium,78.3%,62.5%

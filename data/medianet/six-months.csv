@@ -1,6 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-70,https://leetcode.com/problems/climbing-stairs,"Climbing Stairs",Easy,54.0%,100.0%
-407,https://leetcode.com/problems/trapping-rain-water-ii,"Trapping Rain Water II",Hard,58.9%,100.0%
-99,https://leetcode.com/problems/recover-binary-search-tree,"Recover Binary Search Tree",Medium,59.4%,89.4%
-354,https://leetcode.com/problems/russian-doll-envelopes,"Russian Doll Envelopes",Hard,37.8%,89.4%
-2382,https://leetcode.com/problems/maximum-segment-sum-after-removals,"Maximum Segment Sum After Removals",Hard,48.5%,75.0%
+70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.0%,100.0%
+407,https://leetcode.com/problems/trapping-rain-water-ii,Trapping Rain Water II,Hard,58.9%,100.0%
+99,https://leetcode.com/problems/recover-binary-search-tree,Recover Binary Search Tree,Medium,59.4%,89.4%
+354,https://leetcode.com/problems/russian-doll-envelopes,Russian Doll Envelopes,Hard,37.8%,89.4%
+2382,https://leetcode.com/problems/maximum-segment-sum-after-removals,Maximum Segment Sum After Removals,Hard,48.5%,75.0%

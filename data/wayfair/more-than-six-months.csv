@@ -1,26 +1,26 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2950,https://leetcode.com/problems/number-of-divisible-substrings,"Number of Divisible Substrings",Medium,74.7%,100.0%
-152,https://leetcode.com/problems/maximum-product-subarray,"Maximum Product Subarray",Medium,36.3%,85.9%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,78.7%
-780,https://leetcode.com/problems/reaching-points,"Reaching Points",Hard,34.3%,78.7%
-1895,https://leetcode.com/problems/largest-magic-square,"Largest Magic Square",Medium,75.2%,78.7%
-2139,https://leetcode.com/problems/minimum-moves-to-reach-target-score,"Minimum Moves to Reach Target Score",Medium,52.4%,78.7%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,36.0%,75.0%
-125,https://leetcode.com/problems/valid-palindrome,"Valid Palindrome",Easy,53.2%,68.6%
-239,https://leetcode.com/problems/sliding-window-maximum,"Sliding Window Maximum",Hard,48.7%,68.6%
-415,https://leetcode.com/problems/add-strings,"Add Strings",Easy,52.1%,68.6%
-844,https://leetcode.com/problems/backspace-string-compare,"Backspace String Compare",Easy,49.9%,68.6%
-1014,https://leetcode.com/problems/best-sightseeing-pair,"Best Sightseeing Pair",Medium,62.7%,68.6%
-1189,https://leetcode.com/problems/maximum-number-of-balloons,"Maximum Number of Balloons",Easy,60.2%,68.6%
-1194,https://leetcode.com/problems/tournament-winners,"Tournament Winners",Hard,50.1%,68.6%
-1204,https://leetcode.com/problems/last-person-to-fit-in-the-bus,"Last Person to Fit in the Bus",Medium,69.2%,68.6%
-1212,https://leetcode.com/problems/team-scores-in-football-tournament,"Team Scores in Football Tournament",Medium,55.8%,68.6%
-1244,https://leetcode.com/problems/design-a-leaderboard,"Design A Leaderboard",Medium,68.1%,68.6%
-1405,https://leetcode.com/problems/longest-happy-string,"Longest Happy String",Medium,65.5%,68.6%
-1604,https://leetcode.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period,"Alert Using Same Key-Card Three or More Times in a One Hour Period",Medium,46.2%,68.6%
-1957,https://leetcode.com/problems/delete-characters-to-make-fancy-string,"Delete Characters to Make Fancy String",Easy,74.1%,68.6%
-2380,https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string,"Time Needed to Rearrange a Binary String",Medium,52.9%,68.6%
-151,https://leetcode.com/problems/reverse-words-in-a-string,"Reverse Words in a String",Medium,52.3%,62.5%
-300,https://leetcode.com/problems/longest-increasing-subsequence,"Longest Increasing Subsequence",Medium,58.0%,62.5%
-647,https://leetcode.com/problems/palindromic-substrings,"Palindromic Substrings",Medium,71.8%,62.5%
-1456,https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length,"Maximum Number of Vowels in a Substring of Given Length",Medium,60.6%,62.5%
+2950,https://leetcode.com/problems/number-of-divisible-substrings,Number of Divisible Substrings,Medium,74.7%,100.0%
+152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,36.3%,85.9%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,78.7%
+780,https://leetcode.com/problems/reaching-points,Reaching Points,Hard,34.3%,78.7%
+1895,https://leetcode.com/problems/largest-magic-square,Largest Magic Square,Medium,75.2%,78.7%
+2139,https://leetcode.com/problems/minimum-moves-to-reach-target-score,Minimum Moves to Reach Target Score,Medium,52.4%,78.7%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,36.0%,75.0%
+125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.2%,68.6%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.7%,68.6%
+415,https://leetcode.com/problems/add-strings,Add Strings,Easy,52.1%,68.6%
+844,https://leetcode.com/problems/backspace-string-compare,Backspace String Compare,Easy,49.9%,68.6%
+1014,https://leetcode.com/problems/best-sightseeing-pair,Best Sightseeing Pair,Medium,62.7%,68.6%
+1189,https://leetcode.com/problems/maximum-number-of-balloons,Maximum Number of Balloons,Easy,60.2%,68.6%
+1194,https://leetcode.com/problems/tournament-winners,Tournament Winners,Hard,50.1%,68.6%
+1204,https://leetcode.com/problems/last-person-to-fit-in-the-bus,Last Person to Fit in the Bus,Medium,69.2%,68.6%
+1212,https://leetcode.com/problems/team-scores-in-football-tournament,Team Scores in Football Tournament,Medium,55.8%,68.6%
+1244,https://leetcode.com/problems/design-a-leaderboard,Design A Leaderboard,Medium,68.1%,68.6%
+1405,https://leetcode.com/problems/longest-happy-string,Longest Happy String,Medium,65.5%,68.6%
+1604,https://leetcode.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period,Alert Using Same Key-Card Three or More Times in a One Hour Period,Medium,46.2%,68.6%
+1957,https://leetcode.com/problems/delete-characters-to-make-fancy-string,Delete Characters to Make Fancy String,Easy,74.1%,68.6%
+2380,https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string,Time Needed to Rearrange a Binary String,Medium,52.9%,68.6%
+151,https://leetcode.com/problems/reverse-words-in-a-string,Reverse Words in a String,Medium,52.3%,62.5%
+300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,58.0%,62.5%
+647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,71.8%,62.5%
+1456,https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length,Maximum Number of Vowels in a Substring of Given Length,Medium,60.6%,62.5%

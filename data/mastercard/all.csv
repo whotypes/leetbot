@@ -1,15 +1,15 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,100.0%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,100.0%
-20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,86.2%
-322,https://leetcode.com/problems/coin-change,"Coin Change",Medium,48.3%,86.2%
-412,https://leetcode.com/problems/fizz-buzz,"Fizz Buzz",Easy,75.4%,86.2%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,37.7%,75.3%
-11,https://leetcode.com/problems/container-with-most-water,"Container With Most Water",Medium,59.9%,75.3%
-79,https://leetcode.com/problems/word-search,"Word Search",Medium,47.2%,75.3%
-134,https://leetcode.com/problems/gas-station,"Gas Station",Medium,47.9%,75.3%
-242,https://leetcode.com/problems/valid-anagram,"Valid Anagram",Easy,68.0%,75.3%
-518,https://leetcode.com/problems/coin-change-ii,"Coin Change II",Medium,60.1%,75.3%
-48,https://leetcode.com/problems/rotate-image,"Rotate Image",Medium,78.1%,75.0%
-78,https://leetcode.com/problems/subsets,"Subsets",Medium,81.0%,75.0%
-135,https://leetcode.com/problems/candy,"Candy",Hard,46.9%,75.0%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,100.0%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,100.0%
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,86.2%
+322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.3%,86.2%
+412,https://leetcode.com/problems/fizz-buzz,Fizz Buzz,Easy,75.4%,86.2%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,75.3%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,75.3%
+79,https://leetcode.com/problems/word-search,Word Search,Medium,47.2%,75.3%
+134,https://leetcode.com/problems/gas-station,Gas Station,Medium,47.9%,75.3%
+242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.0%,75.3%
+518,https://leetcode.com/problems/coin-change-ii,Coin Change II,Medium,60.1%,75.3%
+48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,78.1%,75.0%
+78,https://leetcode.com/problems/subsets,Subsets,Medium,81.0%,75.0%
+135,https://leetcode.com/problems/candy,Candy,Hard,46.9%,75.0%

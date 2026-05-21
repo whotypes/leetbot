@@ -1,18 +1,20 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-282,https://leetcode.com/problems/expression-add-operators,"Expression Add Operators",Hard,41.8%,100.0%
-332,https://leetcode.com/problems/reconstruct-itinerary,"Reconstruct Itinerary",Hard,44.5%,100.0%
-1244,https://leetcode.com/problems/design-a-leaderboard,"Design A Leaderboard",Medium,68.1%,100.0%
-410,https://leetcode.com/problems/split-array-largest-sum,"Split Array Largest Sum",Hard,60.3%,94.4%
-815,https://leetcode.com/problems/bus-routes,"Bus Routes",Hard,47.3%,94.4%
-1110,https://leetcode.com/problems/delete-nodes-and-return-forest,"Delete Nodes And Return Forest",Medium,72.5%,94.4%
-322,https://leetcode.com/problems/coin-change,"Coin Change",Medium,48.3%,87.2%
-465,https://leetcode.com/problems/optimal-account-balancing,"Optimal Account Balancing",Hard,50.4%,87.2%
-1055,https://leetcode.com/problems/shortest-way-to-form-string,"Shortest Way to Form String",Medium,61.6%,87.2%
-642,https://leetcode.com/problems/design-search-autocomplete-system,"Design Search Autocomplete System",Hard,49.9%,77.0%
-494,https://leetcode.com/problems/target-sum,"Target Sum",Medium,50.9%,62.5%
-1293,https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination,"Shortest Path in a Grid with Obstacles Elimination",Hard,45.7%,62.5%
-2302,https://leetcode.com/problems/count-subarrays-with-score-less-than-k,"Count Subarrays With Score Less Than K",Hard,62.4%,62.5%
-39,https://leetcode.com/problems/combination-sum,"Combination Sum",Medium,74.9%,50.0%
-721,https://leetcode.com/problems/accounts-merge,"Accounts Merge",Medium,59.8%,50.0%
-767,https://leetcode.com/problems/reorganize-string,"Reorganize String",Medium,56.3%,50.0%
-1723,https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs,"Find Minimum Time to Finish All Jobs",Hard,43.8%,50.0%
+282,https://leetcode.com/problems/expression-add-operators,Expression Add Operators,Hard,41.8%,100.0%
+332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,44.5%,100.0%
+1244,https://leetcode.com/problems/design-a-leaderboard,Design A Leaderboard,Medium,68.1%,100.0%
+410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,60.3%,94.4%
+815,https://leetcode.com/problems/bus-routes,Bus Routes,Hard,47.3%,94.4%
+1110,https://leetcode.com/problems/delete-nodes-and-return-forest,Delete Nodes And Return Forest,Medium,72.5%,94.4%
+322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.3%,87.2%
+465,https://leetcode.com/problems/optimal-account-balancing,Optimal Account Balancing,Hard,50.4%,87.2%
+1055,https://leetcode.com/problems/shortest-way-to-form-string,Shortest Way to Form String,Medium,61.6%,87.2%
+43,https://leetcode.com/problems/multiply-strings,Multiply Strings,Medium,44.2%,82.0%
+1564,https://leetcode.com/problems/put-boxes-into-the-warehouse-i,Put Boxes Into the Warehouse I,Medium,67.5%,82.0%
+642,https://leetcode.com/problems/design-search-autocomplete-system,Design Search Autocomplete System,Hard,49.9%,77.0%
+494,https://leetcode.com/problems/target-sum,Target Sum,Medium,50.9%,62.5%
+1293,https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination,Shortest Path in a Grid with Obstacles Elimination,Hard,45.7%,62.5%
+2302,https://leetcode.com/problems/count-subarrays-with-score-less-than-k,Count Subarrays With Score Less Than K,Hard,62.4%,62.5%
+39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,74.9%,50.0%
+721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,59.8%,50.0%
+767,https://leetcode.com/problems/reorganize-string,Reorganize String,Medium,56.3%,50.0%
+1723,https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs,Find Minimum Time to Finish All Jobs,Hard,43.8%,50.0%

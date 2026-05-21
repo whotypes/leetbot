@@ -1,9 +1,9 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-981,https://leetcode.com/problems/time-based-key-value-store,"Time Based Key-Value Store",Medium,49.9%,100.0%
-394,https://leetcode.com/problems/decode-string,"Decode String",Medium,62.5%,92.7%
-2739,https://leetcode.com/problems/total-distance-traveled,"Total Distance Traveled",Easy,41.4%,92.7%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,82.3%
-253,https://leetcode.com/problems/meeting-rooms-ii,"Meeting Rooms II",Medium,52.6%,82.3%
-332,https://leetcode.com/problems/reconstruct-itinerary,"Reconstruct Itinerary",Hard,44.5%,82.3%
-572,https://leetcode.com/problems/subtree-of-another-tree,"Subtree of Another Tree",Easy,51.5%,82.3%
-1023,https://leetcode.com/problems/camelcase-matching,"Camelcase Matching",Medium,65.2%,82.3%
+981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,100.0%
+394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.5%,92.7%
+2739,https://leetcode.com/problems/total-distance-traveled,Total Distance Traveled,Easy,41.4%,92.7%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,82.3%
+253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.6%,82.3%
+332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,44.5%,82.3%
+572,https://leetcode.com/problems/subtree-of-another-tree,Subtree of Another Tree,Easy,51.5%,82.3%
+1023,https://leetcode.com/problems/camelcase-matching,Camelcase Matching,Medium,65.2%,82.3%

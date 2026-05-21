@@ -1,5 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,51.6%,100.0%
-785,https://leetcode.com/problems/is-graph-bipartite,"Is Graph Bipartite?",Medium,57.9%,100.0%
-253,https://leetcode.com/problems/meeting-rooms-ii,"Meeting Rooms II",Medium,52.2%,87.5%
-2545,https://leetcode.com/problems/sort-the-students-by-their-kth-score,"Sort the Students by Their Kth Score",Medium,85.7%,87.5%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,100.0%
+785,https://leetcode.com/problems/is-graph-bipartite,Is Graph Bipartite?,Medium,57.9%,100.0%
+253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.2%,87.5%
+2545,https://leetcode.com/problems/sort-the-students-by-their-kth-score,Sort the Students by Their Kth Score,Medium,85.7%,87.5%

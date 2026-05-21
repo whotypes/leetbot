@@ -1,7 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1143,https://leetcode.com/problems/longest-common-subsequence,"Longest Common Subsequence",Medium,59.1%,100.0%
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,88.6%
-53,https://leetcode.com/problems/maximum-subarray,"Maximum Subarray",Medium,53.2%,88.6%
-1555,https://leetcode.com/problems/bank-account-summary,"Bank Account Summary",Medium,52.3%,88.6%
-2000,https://leetcode.com/problems/reverse-prefix-of-word,"Reverse Prefix of Word",Easy,86.4%,88.6%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,37.1%,87.5%
+1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,59.1%,100.0%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,88.6%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,88.6%
+1555,https://leetcode.com/problems/bank-account-summary,Bank Account Summary,Medium,52.3%,88.6%
+2000,https://leetcode.com/problems/reverse-prefix-of-word,Reverse Prefix of Word,Easy,86.4%,88.6%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,37.1%,87.5%

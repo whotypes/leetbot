@@ -1,13 +1,13 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-347,https://leetcode.com/problems/top-k-frequent-elements,"Top K Frequent Elements",Medium,66.3%,100.0%
-215,https://leetcode.com/problems/kth-largest-element-in-an-array,"Kth Largest Element in an Array",Medium,68.9%,86.7%
-2,https://leetcode.com/problems/add-two-numbers,"Add Two Numbers",Medium,48.3%,81.7%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,81.7%
-22,https://leetcode.com/problems/generate-parentheses,"Generate Parentheses",Medium,78.6%,75.2%
-88,https://leetcode.com/problems/merge-sorted-array,"Merge Sorted Array",Easy,54.7%,75.2%
-907,https://leetcode.com/problems/sum-of-subarray-minimums,"Sum of Subarray Minimums",Medium,38.5%,75.2%
-104,https://leetcode.com/problems/maximum-depth-of-binary-tree,"Maximum Depth of Binary Tree",Easy,78.1%,66.1%
-238,https://leetcode.com/problems/product-of-array-except-self,"Product of Array Except Self",Medium,68.8%,66.1%
-415,https://leetcode.com/problems/add-strings,"Add Strings",Easy,52.1%,66.1%
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,55.9%,50.0%
-989,https://leetcode.com/problems/add-to-array-form-of-integer,"Add to Array-Form of Integer",Easy,45.1%,50.0%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.3%,100.0%
+215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,86.7%
+2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,81.7%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,81.7%
+22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,75.2%
+88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,54.7%,75.2%
+907,https://leetcode.com/problems/sum-of-subarray-minimums,Sum of Subarray Minimums,Medium,38.5%,75.2%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.1%,66.1%
+238,https://leetcode.com/problems/product-of-array-except-self,Product of Array Except Self,Medium,68.8%,66.1%
+415,https://leetcode.com/problems/add-strings,Add Strings,Easy,52.1%,66.1%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,50.0%
+989,https://leetcode.com/problems/add-to-array-form-of-integer,Add to Array-Form of Integer,Easy,45.1%,50.0%

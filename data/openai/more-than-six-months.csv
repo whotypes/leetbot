@@ -1,14 +1,15 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2408,https://leetcode.com/problems/design-sql,"Design SQL",Medium,64.4%,100.0%
-271,https://leetcode.com/problems/encode-and-decode-strings,"Encode and Decode Strings",Medium,51.5%,85.4%
-341,https://leetcode.com/problems/flatten-nested-list-iterator,"Flatten Nested List Iterator",Medium,65.7%,85.4%
-2502,https://leetcode.com/problems/design-memory-allocator,"Design Memory Allocator",Medium,50.1%,76.4%
-981,https://leetcode.com/problems/time-based-key-value-store,"Time Based Key-Value Store",Medium,49.9%,73.3%
-631,https://leetcode.com/problems/design-excel-sum-formula,"Design Excel Sum Formula",Hard,39.9%,69.7%
-71,https://leetcode.com/problems/simplify-path,"Simplify Path",Medium,50.4%,65.3%
-751,https://leetcode.com/problems/ip-to-cidr,"IP to CIDR",Medium,53.5%,65.3%
-733,https://leetcode.com/problems/flood-fill,"Flood Fill",Easy,68.1%,51.5%
-735,https://leetcode.com/problems/asteroid-collision,"Asteroid Collision",Medium,47.7%,51.5%
-1242,https://leetcode.com/problems/web-crawler-multithreaded,"Web Crawler Multithreaded",Medium,51.2%,51.5%
-2373,https://leetcode.com/problems/largest-local-values-in-a-matrix,"Largest Local Values in a Matrix",Easy,87.7%,51.5%
-3484,https://leetcode.com/problems/design-spreadsheet,"Design Spreadsheet",Medium,74.2%,51.5%
+2408,https://leetcode.com/problems/design-sql,Design SQL,Medium,64.4%,100.0%
+271,https://leetcode.com/problems/encode-and-decode-strings,Encode and Decode Strings,Medium,51.5%,85.4%
+341,https://leetcode.com/problems/flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,65.7%,85.4%
+2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,76.4%
+981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,73.3%
+631,https://leetcode.com/problems/design-excel-sum-formula,Design Excel Sum Formula,Hard,39.9%,69.7%
+71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,50.4%,65.3%
+751,https://leetcode.com/problems/ip-to-cidr,IP to CIDR,Medium,53.5%,65.3%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.4%,51.8%
+733,https://leetcode.com/problems/flood-fill,Flood Fill,Easy,68.1%,51.5%
+735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,47.7%,51.5%
+1242,https://leetcode.com/problems/web-crawler-multithreaded,Web Crawler Multithreaded,Medium,51.2%,51.5%
+2373,https://leetcode.com/problems/largest-local-values-in-a-matrix,Largest Local Values in a Matrix,Easy,87.7%,51.5%
+3484,https://leetcode.com/problems/design-spreadsheet,Design Spreadsheet,Medium,74.2%,51.5%

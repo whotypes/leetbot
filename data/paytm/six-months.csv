@@ -1,5 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,37.1%,100.0%
-128,https://leetcode.com/problems/longest-consecutive-sequence,"Longest Consecutive Sequence",Medium,47.1%,100.0%
-155,https://leetcode.com/problems/min-stack,"Min Stack",Medium,58.0%,100.0%
-264,https://leetcode.com/problems/ugly-number-ii,"Ugly Number II",Medium,49.6%,100.0%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,37.1%,100.0%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.1%,100.0%
+155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.0%,100.0%
+264,https://leetcode.com/problems/ugly-number-ii,Ugly Number II,Medium,49.6%,100.0%

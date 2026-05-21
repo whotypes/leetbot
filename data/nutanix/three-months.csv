@@ -1,10 +1,11 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-334,https://leetcode.com/problems/increasing-triplet-subsequence,"Increasing Triplet Subsequence",Medium,39.1%,100.0%
-968,https://leetcode.com/problems/binary-tree-cameras,"Binary Tree Cameras",Hard,47.9%,100.0%
-1823,https://leetcode.com/problems/find-the-winner-of-the-circular-game,"Find the Winner of the Circular Game",Medium,82.2%,100.0%
-42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,65.3%,87.5%
-45,https://leetcode.com/problems/jump-game-ii,"Jump Game II",Medium,41.6%,87.5%
-73,https://leetcode.com/problems/set-matrix-zeroes,"Set Matrix Zeroes",Medium,60.9%,87.5%
-92,https://leetcode.com/problems/reverse-linked-list-ii,"Reverse Linked List II",Medium,49.7%,87.5%
-297,https://leetcode.com/problems/serialize-and-deserialize-binary-tree,"Serialize and Deserialize Binary Tree",Hard,59.1%,87.5%
-716,https://leetcode.com/problems/max-stack,"Max Stack",Hard,45.5%,87.5%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.3%,100.0%
+334,https://leetcode.com/problems/increasing-triplet-subsequence,Increasing Triplet Subsequence,Medium,39.1%,100.0%
+968,https://leetcode.com/problems/binary-tree-cameras,Binary Tree Cameras,Hard,47.9%,100.0%
+1823,https://leetcode.com/problems/find-the-winner-of-the-circular-game,Find the Winner of the Circular Game,Medium,82.2%,100.0%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,65.3%,87.5%
+45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,41.6%,87.5%
+73,https://leetcode.com/problems/set-matrix-zeroes,Set Matrix Zeroes,Medium,60.9%,87.5%
+92,https://leetcode.com/problems/reverse-linked-list-ii,Reverse Linked List II,Medium,49.7%,87.5%
+297,https://leetcode.com/problems/serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,59.1%,87.5%
+716,https://leetcode.com/problems/max-stack,Max Stack,Hard,45.5%,87.5%

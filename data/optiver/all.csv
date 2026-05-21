@@ -1,9 +1,9 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-622,https://leetcode.com/problems/design-circular-queue,"Design Circular Queue",Medium,54.4%,100.0%
-1206,https://leetcode.com/problems/design-skiplist,"Design Skiplist",Hard,59.7%,91.1%
-3822,https://leetcode.com/problems/design-order-management-system,"Design Order Management System",Medium,79.3%,91.1%
-1360,https://leetcode.com/problems/number-of-days-between-two-dates,"Number of Days Between Two Dates",Easy,52.6%,80.8%
-146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,75.9%
-188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,"Best Time to Buy and Sell Stock IV",Hard,47.4%,75.0%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,69.6%
-122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,"Best Time to Buy and Sell Stock II",Medium,71.0%,60.7%
+622,https://leetcode.com/problems/design-circular-queue,Design Circular Queue,Medium,54.4%,100.0%
+1206,https://leetcode.com/problems/design-skiplist,Design Skiplist,Hard,59.7%,91.1%
+3822,https://leetcode.com/problems/design-order-management-system,Design Order Management System,Medium,79.3%,91.1%
+1360,https://leetcode.com/problems/number-of-days-between-two-dates,Number of Days Between Two Dates,Easy,52.6%,80.8%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,75.9%
+188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,75.0%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,69.6%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.0%,60.7%

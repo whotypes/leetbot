@@ -1,18 +1,19 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,100.0%
-20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,85.8%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,38.9%,80.4%
-88,https://leetcode.com/problems/merge-sorted-array,"Merge Sorted Array",Easy,54.7%,80.4%
-125,https://leetcode.com/problems/valid-palindrome,"Valid Palindrome",Easy,53.2%,80.4%
-9,https://leetcode.com/problems/palindrome-number,"Palindrome Number",Easy,59.3%,75.0%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,71.1%,75.0%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,73.4%
-344,https://leetcode.com/problems/reverse-string,"Reverse String",Easy,80.7%,73.4%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,37.7%,63.6%
-15,https://leetcode.com/problems/3sum,"3Sum",Medium,38.9%,63.6%
-53,https://leetcode.com/problems/maximum-subarray,"Maximum Subarray",Medium,53.2%,63.6%
-151,https://leetcode.com/problems/reverse-words-in-a-string,"Reverse Words in a String",Medium,56.2%,63.6%
-176,https://leetcode.com/problems/second-highest-salary,"Second Highest Salary",Medium,46.8%,63.6%
-185,https://leetcode.com/problems/department-top-three-salaries,"Department Top Three Salaries",Hard,60.3%,63.6%
-268,https://leetcode.com/problems/missing-number,"Missing Number",Easy,71.9%,63.6%
-647,https://leetcode.com/problems/palindromic-substrings,"Palindromic Substrings",Medium,72.7%,63.6%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,100.0%
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,85.8%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,80.4%
+88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,54.7%,80.4%
+125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.2%,80.4%
+9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,59.3%,75.0%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,75.0%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,73.4%
+344,https://leetcode.com/problems/reverse-string,Reverse String,Easy,80.7%,73.4%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,63.6%
+15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,63.6%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,63.6%
+151,https://leetcode.com/problems/reverse-words-in-a-string,Reverse Words in a String,Medium,56.2%,63.6%
+176,https://leetcode.com/problems/second-highest-salary,Second Highest Salary,Medium,46.8%,63.6%
+185,https://leetcode.com/problems/department-top-three-salaries,Department Top Three Salaries,Hard,60.3%,63.6%
+268,https://leetcode.com/problems/missing-number,Missing Number,Easy,71.9%,63.6%
+647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,72.7%,63.6%
+209,https://leetcode.com/problems/minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,51.7%,61.9%

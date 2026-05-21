@@ -1,15 +1,17 @@
 // Command refresh_leetcode_data refetches LeetCode company problem lists via GraphQL and
-// merges into data/<slug>/<timeframe>.csv, then runs scripts/generate_embedded.
+// appends new rows into data/<slug>/<timeframe>.csv (by problem ID), then runs scripts/generate_embedded.
 //
 // Run from repository root with a valid leetcode_cookies_netscape.txt:
 //
 //	go run ./scripts/refresh_leetcode_data
+//	go run ./scripts/refresh_leetcode_data -company google
 package main
 
 import (
 	"bytes"
 	"encoding/csv"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io"
 	"log"
@@ -129,6 +131,10 @@ type problemRow struct {
 
 func main() {
 	log.SetFlags(0)
+	onlyCompany := flag.String("company", "", "refresh only this company slug (e.g. google); skips manifest and embed")
+	runEmbed := flag.Bool("embed", false, "run generate_embedded after refresh (default on full run; use with -company to embed after a test)")
+	flag.Parse()
+
 	root, err := os.Getwd()
 	if err != nil {
 		log.Fatal(err)
@@ -150,11 +156,26 @@ func main() {
 	}
 	log.Printf("problemsetCompanyTags: %d companies\n", len(tags))
 
-	manifestPath := filepath.Join(root, dataDir, "companies_manifest.json")
-	if err := writeCompaniesManifestFile(manifestPath, tags); err != nil {
-		log.Fatalf("write companies manifest: %v", err)
+	filter := strings.ToLower(strings.TrimSpace(*onlyCompany))
+	if filter != "" {
+		var matched []companyTag
+		for _, t := range tags {
+			if strings.EqualFold(t.Slug, filter) {
+				matched = append(matched, t)
+			}
+		}
+		if len(matched) == 0 {
+			log.Fatalf("company %q not found in problemsetCompanyTags", filter)
+		}
+		tags = matched
+		log.Printf("filter: only %q (%d)\n", tags[0].Slug, len(tags))
+	} else {
+		manifestPath := filepath.Join(root, dataDir, "companies_manifest.json")
+		if err := writeCompaniesManifestFile(manifestPath, tags); err != nil {
+			log.Fatalf("write companies manifest: %v", err)
+		}
+		log.Printf("wrote %s\n", manifestPath)
 	}
-	log.Printf("wrote %s\n", manifestPath)
 
 	success := 0
 	skipped := 0
@@ -168,6 +189,12 @@ func main() {
 		log.Printf("[%d/%d] %s: ok\n", i+1, len(tags), tag.Slug)
 	}
 	log.Printf("done: %d ok, %d skipped, %d total\n", success, skipped, len(tags))
+
+	shouldEmbed := filter == "" || *runEmbed
+	if !shouldEmbed {
+		log.Println("skipped generate_embedded (full run embeds by default; use -embed with -company)")
+		return
+	}
 
 	gen := filepath.Join(root, generateScript)
 	dataPath := filepath.Join(root, dataDir)
@@ -296,13 +323,12 @@ func refreshCompany(root string, client *http.Client, cookieHeader, csrf, compan
 		}
 		csvPath := filepath.Join(dir, tf+".csv")
 		if len(questions) == 0 {
-			// No questions for this list on LeetCode: do not create or keep an empty/hdr-only CSV.
-			if err := os.Remove(csvPath); err == nil {
-				log.Printf("  %s: 0 questions, removed %s\n", tf, filepath.Base(csvPath))
-			} else if !os.IsNotExist(err) {
-				return fmt.Errorf("%s: remove empty csv: %w", tf, err)
+			if _, err := os.Stat(csvPath); err == nil {
+				log.Printf("  %s: 0 questions from API, keeping existing %s\n", tf, filepath.Base(csvPath))
+			} else if os.IsNotExist(err) {
+				log.Printf("  %s: 0 questions, no file to create\n", tf)
 			} else {
-				log.Printf("  %s: 0 questions, no file to write\n", tf)
+				return fmt.Errorf("%s: stat csv: %w", tf, err)
 			}
 			continue
 		}
@@ -492,7 +518,6 @@ func loadNetscapeCookies(path string) (header string, csrf string, err error) {
 func mergeAndWriteCSV(path string, fetched []problemRow) error {
 	byID := make(map[int]problemRow)
 
-	// Existing rows (never remove)
 	if raw, err := os.ReadFile(path); err == nil && len(raw) > 0 {
 		r := csv.NewReader(strings.NewReader(string(raw)))
 		records, err := r.ReadAll()
@@ -519,9 +544,16 @@ func mergeAndWriteCSV(path string, fetched []problemRow) error {
 		}
 	}
 
-	// Merge / overwrite from API
+	before := len(byID)
 	for _, p := range fetched {
+		if _, exists := byID[p.ID]; exists {
+			continue
+		}
 		byID[p.ID] = p
+	}
+	added := len(byID) - before
+	if added > 0 {
+		log.Printf("  %s: appended %d new problem(s)\n", filepath.Base(path), added)
 	}
 
 	var list []problemRow

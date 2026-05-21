@@ -1,21 +1,21 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-202,https://leetcode.com/problems/happy-number,"Happy Number",Easy,59.5%,100.0%
-399,https://leetcode.com/problems/evaluate-division,"Evaluate Division",Medium,63.2%,75.0%
-1010,https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60,"Pairs of Songs With Total Durations Divisible by 60",Medium,53.3%,75.0%
-3068,https://leetcode.com/problems/find-the-maximum-sum-of-node-values,"Find the Maximum Sum of Node Values",Hard,69.4%,69.5%
-3004,https://leetcode.com/problems/maximum-subtree-of-the-same-color,"Maximum Subtree of the Same Color",Medium,58.8%,67.9%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,59.2%
-20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,52.3%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,52.3%
-22,https://leetcode.com/problems/generate-parentheses,"Generate Parentheses",Medium,77.3%,50.0%
-242,https://leetcode.com/problems/valid-anagram,"Valid Anagram",Easy,66.8%,50.0%
-322,https://leetcode.com/problems/coin-change,"Coin Change",Medium,46.7%,50.0%
-545,https://leetcode.com/problems/boundary-of-binary-tree,"Boundary of Binary Tree",Medium,47.2%,50.0%
-1514,https://leetcode.com/problems/path-with-maximum-probability,"Path with Maximum Probability",Medium,65.3%,50.0%
-2592,https://leetcode.com/problems/maximize-greatness-of-an-array,"Maximize Greatness of an Array",Medium,58.9%,50.0%
-2291,https://leetcode.com/problems/maximum-profit-from-trading-stocks,"Maximum Profit From Trading Stocks",Medium,48.2%,47.4%
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,40.6%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,37.7%,40.6%
-70,https://leetcode.com/problems/climbing-stairs,"Climbing Stairs",Easy,54.0%,40.6%
-200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,40.6%
-268,https://leetcode.com/problems/missing-number,"Missing Number",Easy,71.9%,40.6%
+202,https://leetcode.com/problems/happy-number,Happy Number,Easy,59.5%,100.0%
+399,https://leetcode.com/problems/evaluate-division,Evaluate Division,Medium,63.2%,75.0%
+1010,https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60,Pairs of Songs With Total Durations Divisible by 60,Medium,53.3%,75.0%
+3068,https://leetcode.com/problems/find-the-maximum-sum-of-node-values,Find the Maximum Sum of Node Values,Hard,69.4%,69.5%
+3004,https://leetcode.com/problems/maximum-subtree-of-the-same-color,Maximum Subtree of the Same Color,Medium,58.8%,67.9%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,59.2%
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,52.3%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,52.3%
+22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,77.3%,50.0%
+242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,66.8%,50.0%
+322,https://leetcode.com/problems/coin-change,Coin Change,Medium,46.7%,50.0%
+545,https://leetcode.com/problems/boundary-of-binary-tree,Boundary of Binary Tree,Medium,47.2%,50.0%
+1514,https://leetcode.com/problems/path-with-maximum-probability,Path with Maximum Probability,Medium,65.3%,50.0%
+2592,https://leetcode.com/problems/maximize-greatness-of-an-array,Maximize Greatness of an Array,Medium,58.9%,50.0%
+2291,https://leetcode.com/problems/maximum-profit-from-trading-stocks,Maximum Profit From Trading Stocks,Medium,48.2%,47.4%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,40.6%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,40.6%
+70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.0%,40.6%
+200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,40.6%
+268,https://leetcode.com/problems/missing-number,Missing Number,Easy,71.9%,40.6%

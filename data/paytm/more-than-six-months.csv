@@ -1,30 +1,30 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-142,https://leetcode.com/problems/linked-list-cycle-ii,"Linked List Cycle II",Medium,57.7%,100.0%
-155,https://leetcode.com/problems/min-stack,"Min Stack",Medium,58.0%,100.0%
-2950,https://leetcode.com/problems/number-of-divisible-substrings,"Number of Divisible Substrings",Medium,74.7%,100.0%
-11,https://leetcode.com/problems/container-with-most-water,"Container With Most Water",Medium,59.9%,85.3%
-20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,44.1%,85.3%
-33,https://leetcode.com/problems/search-in-rotated-sorted-array,"Search in Rotated Sorted Array",Medium,44.4%,85.3%
-42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,67.2%,85.3%
-15,https://leetcode.com/problems/3sum,"3Sum",Medium,37.2%,75.0%
-31,https://leetcode.com/problems/next-permutation,"Next Permutation",Medium,43.3%,75.0%
-151,https://leetcode.com/problems/reverse-words-in-a-string,"Reverse Words in a String",Medium,52.3%,75.0%
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,73.6%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,38.9%,73.6%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,37.7%,73.6%
-122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,"Best Time to Buy and Sell Stock II",Medium,71.0%,73.6%
-206,https://leetcode.com/problems/reverse-linked-list,"Reverse Linked List",Easy,80.5%,73.6%
-312,https://leetcode.com/problems/burst-balloons,"Burst Balloons",Hard,63.3%,73.6%
-316,https://leetcode.com/problems/remove-duplicate-letters,"Remove Duplicate Letters",Medium,53.1%,73.6%
-443,https://leetcode.com/problems/string-compression,"String Compression",Medium,59.9%,73.6%
-1047,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string,"Remove All Adjacent Duplicates In String",Easy,73.1%,73.6%
-1094,https://leetcode.com/problems/car-pooling,"Car Pooling",Medium,56.3%,73.6%
-2401,https://leetcode.com/problems/longest-nice-subarray,"Longest Nice Subarray",Medium,64.8%,73.6%
-2439,https://leetcode.com/problems/minimize-maximum-of-array,"Minimize Maximum of Array",Medium,46.5%,73.6%
-2475,https://leetcode.com/problems/number-of-unequal-triplets-in-array,"Number of Unequal Triplets in Array",Easy,73.3%,73.6%
-2903,https://leetcode.com/problems/find-indices-with-index-and-value-difference-i,"Find Indices With Index and Value Difference I",Easy,60.3%,73.6%
-2905,https://leetcode.com/problems/find-indices-with-index-and-value-difference-ii,"Find Indices With Index and Value Difference II",Medium,32.7%,73.6%
-79,https://leetcode.com/problems/word-search,"Word Search",Medium,45.4%,62.5%
-128,https://leetcode.com/problems/longest-consecutive-sequence,"Longest Consecutive Sequence",Medium,47.0%,62.5%
-153,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array,"Find Minimum in Rotated Sorted Array",Medium,52.8%,62.5%
-176,https://leetcode.com/problems/second-highest-salary,"Second Highest Salary",Medium,44.1%,62.5%
+142,https://leetcode.com/problems/linked-list-cycle-ii,Linked List Cycle II,Medium,57.7%,100.0%
+155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.0%,100.0%
+2950,https://leetcode.com/problems/number-of-divisible-substrings,Number of Divisible Substrings,Medium,74.7%,100.0%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,85.3%
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,85.3%
+33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,85.3%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,85.3%
+15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,75.0%
+31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,43.3%,75.0%
+151,https://leetcode.com/problems/reverse-words-in-a-string,Reverse Words in a String,Medium,52.3%,75.0%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,73.6%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,73.6%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,73.6%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.0%,73.6%
+206,https://leetcode.com/problems/reverse-linked-list,Reverse Linked List,Easy,80.5%,73.6%
+312,https://leetcode.com/problems/burst-balloons,Burst Balloons,Hard,63.3%,73.6%
+316,https://leetcode.com/problems/remove-duplicate-letters,Remove Duplicate Letters,Medium,53.1%,73.6%
+443,https://leetcode.com/problems/string-compression,String Compression,Medium,59.9%,73.6%
+1047,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string,Remove All Adjacent Duplicates In String,Easy,73.1%,73.6%
+1094,https://leetcode.com/problems/car-pooling,Car Pooling,Medium,56.3%,73.6%
+2401,https://leetcode.com/problems/longest-nice-subarray,Longest Nice Subarray,Medium,64.8%,73.6%
+2439,https://leetcode.com/problems/minimize-maximum-of-array,Minimize Maximum of Array,Medium,46.5%,73.6%
+2475,https://leetcode.com/problems/number-of-unequal-triplets-in-array,Number of Unequal Triplets in Array,Easy,73.3%,73.6%
+2903,https://leetcode.com/problems/find-indices-with-index-and-value-difference-i,Find Indices With Index and Value Difference I,Easy,60.3%,73.6%
+2905,https://leetcode.com/problems/find-indices-with-index-and-value-difference-ii,Find Indices With Index and Value Difference II,Medium,32.7%,73.6%
+79,https://leetcode.com/problems/word-search,Word Search,Medium,45.4%,62.5%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.0%,62.5%
+153,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array,Find Minimum in Rotated Sorted Array,Medium,52.8%,62.5%
+176,https://leetcode.com/problems/second-highest-salary,Second Highest Salary,Medium,44.1%,62.5%

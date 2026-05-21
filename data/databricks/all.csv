@@ -1,42 +1,42 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-362,https://leetcode.com/problems/design-hit-counter,"Design Hit Counter",Medium,69.7%,100.0%
-751,https://leetcode.com/problems/ip-to-cidr,"IP to CIDR",Medium,53.5%,98.4%
-348,https://leetcode.com/problems/design-tic-tac-toe,"Design Tic-Tac-Toe",Medium,58.8%,94.4%
-198,https://leetcode.com/problems/house-robber,"House Robber",Medium,53.1%,87.0%
-981,https://leetcode.com/problems/time-based-key-value-store,"Time Based Key-Value Store",Medium,49.9%,83.7%
-2096,https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another,"Step-By-Step Directions From a Binary Tree Node to Another",Medium,56.4%,83.7%
-438,https://leetcode.com/problems/find-all-anagrams-in-a-string,"Find All Anagrams in a String",Medium,53.6%,82.9%
-213,https://leetcode.com/problems/house-robber-ii,"House Robber II",Medium,44.8%,81.4%
-742,https://leetcode.com/problems/closest-leaf-in-a-binary-tree,"Closest Leaf in a Binary Tree",Medium,47.4%,65.7%
-1146,https://leetcode.com/problems/snapshot-array,"Snapshot Array",Medium,36.7%,65.7%
-2131,https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words,"Longest Palindrome by Concatenating Two Letter Words",Medium,53.5%,65.7%
-900,https://leetcode.com/problems/rle-iterator,"RLE Iterator",Medium,59.2%,63.8%
-632,https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists,"Smallest Range Covering Elements from K Lists",Hard,69.8%,62.5%
-2817,https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint,"Minimum Absolute Difference Between Elements With Constraint",Medium,34.3%,62.5%
-933,https://leetcode.com/problems/number-of-recent-calls,"Number of Recent Calls",Easy,78.4%,61.6%
-1293,https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination,"Shortest Path in a Grid with Obstacles Elimination",Hard,46.2%,61.6%
-68,https://leetcode.com/problems/text-justification,"Text Justification",Hard,50.9%,56.2%
-2468,https://leetcode.com/problems/split-message-based-on-limit,"Split Message Based on Limit",Hard,42.1%,56.2%
-567,https://leetcode.com/problems/permutation-in-string,"Permutation in String",Medium,48.7%,52.7%
-980,https://leetcode.com/problems/unique-paths-iii,"Unique Paths III",Hard,82.8%,52.7%
-614,https://leetcode.com/problems/second-degree-follower,"Second Degree Follower",Medium,40.1%,50.0%
-1242,https://leetcode.com/problems/web-crawler-multithreaded,"Web Crawler Multithreaded",Medium,50.2%,50.0%
-54,https://leetcode.com/problems/spiral-matrix,"Spiral Matrix",Medium,56.6%,43.2%
-845,https://leetcode.com/problems/longest-mountain-in-array,"Longest Mountain in Array",Medium,42.1%,43.2%
-1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,"Shortest Path in Binary Matrix",Medium,51.4%,43.2%
-1197,https://leetcode.com/problems/minimum-knight-moves,"Minimum Knight Moves",Medium,41.9%,43.2%
-1928,https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time,"Minimum Cost to Reach Destination in Time",Hard,41.4%,43.2%
-2251,https://leetcode.com/problems/number-of-flowers-in-full-bloom,"Number of Flowers in Full Bloom",Hard,57.8%,43.2%
-41,https://leetcode.com/problems/first-missing-positive,"First Missing Positive",Hard,41.2%,37.5%
-162,https://leetcode.com/problems/find-peak-element,"Find Peak Element",Medium,46.5%,37.5%
-352,https://leetcode.com/problems/data-stream-as-disjoint-intervals,"Data Stream as Disjoint Intervals",Hard,59.5%,37.5%
-1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,"Maximum Profit in Job Scheduling",Hard,54.4%,37.5%
-1244,https://leetcode.com/problems/design-a-leaderboard,"Design A Leaderboard",Medium,67.9%,37.5%
-1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,"Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",Medium,56.8%,37.5%
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,35.7%
-8,https://leetcode.com/problems/string-to-integer-atoi,"String to Integer (atoi)",Medium,20.9%,35.7%
-56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,51.6%,35.7%
-994,https://leetcode.com/problems/rotting-oranges,"Rotting Oranges",Medium,58.5%,35.7%
-1865,https://leetcode.com/problems/finding-pairs-with-a-certain-sum,"Finding Pairs With a Certain Sum",Medium,61.6%,35.7%
-2276,https://leetcode.com/problems/count-integers-in-intervals,"Count Integers in Intervals",Hard,35.8%,35.7%
-3043,https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix,"Find the Length of the Longest Common Prefix",Medium,57.1%,35.7%
+362,https://leetcode.com/problems/design-hit-counter,Design Hit Counter,Medium,69.7%,100.0%
+751,https://leetcode.com/problems/ip-to-cidr,IP to CIDR,Medium,53.5%,98.4%
+348,https://leetcode.com/problems/design-tic-tac-toe,Design Tic-Tac-Toe,Medium,58.8%,94.4%
+198,https://leetcode.com/problems/house-robber,House Robber,Medium,53.1%,87.0%
+981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,83.7%
+2096,https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another,Step-By-Step Directions From a Binary Tree Node to Another,Medium,56.4%,83.7%
+438,https://leetcode.com/problems/find-all-anagrams-in-a-string,Find All Anagrams in a String,Medium,53.6%,82.9%
+213,https://leetcode.com/problems/house-robber-ii,House Robber II,Medium,44.8%,81.4%
+742,https://leetcode.com/problems/closest-leaf-in-a-binary-tree,Closest Leaf in a Binary Tree,Medium,47.4%,65.7%
+1146,https://leetcode.com/problems/snapshot-array,Snapshot Array,Medium,36.7%,65.7%
+2131,https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words,Longest Palindrome by Concatenating Two Letter Words,Medium,53.5%,65.7%
+900,https://leetcode.com/problems/rle-iterator,RLE Iterator,Medium,59.2%,63.8%
+632,https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists,Smallest Range Covering Elements from K Lists,Hard,69.8%,62.5%
+2817,https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint,Minimum Absolute Difference Between Elements With Constraint,Medium,34.3%,62.5%
+933,https://leetcode.com/problems/number-of-recent-calls,Number of Recent Calls,Easy,78.4%,61.6%
+1293,https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination,Shortest Path in a Grid with Obstacles Elimination,Hard,46.2%,61.6%
+68,https://leetcode.com/problems/text-justification,Text Justification,Hard,50.9%,56.2%
+2468,https://leetcode.com/problems/split-message-based-on-limit,Split Message Based on Limit,Hard,42.1%,56.2%
+567,https://leetcode.com/problems/permutation-in-string,Permutation in String,Medium,48.7%,52.7%
+980,https://leetcode.com/problems/unique-paths-iii,Unique Paths III,Hard,82.8%,52.7%
+614,https://leetcode.com/problems/second-degree-follower,Second Degree Follower,Medium,40.1%,50.0%
+1242,https://leetcode.com/problems/web-crawler-multithreaded,Web Crawler Multithreaded,Medium,50.2%,50.0%
+54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.6%,43.2%
+845,https://leetcode.com/problems/longest-mountain-in-array,Longest Mountain in Array,Medium,42.1%,43.2%
+1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,51.4%,43.2%
+1197,https://leetcode.com/problems/minimum-knight-moves,Minimum Knight Moves,Medium,41.9%,43.2%
+1928,https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time,Minimum Cost to Reach Destination in Time,Hard,41.4%,43.2%
+2251,https://leetcode.com/problems/number-of-flowers-in-full-bloom,Number of Flowers in Full Bloom,Hard,57.8%,43.2%
+41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,41.2%,37.5%
+162,https://leetcode.com/problems/find-peak-element,Find Peak Element,Medium,46.5%,37.5%
+352,https://leetcode.com/problems/data-stream-as-disjoint-intervals,Data Stream as Disjoint Intervals,Hard,59.5%,37.5%
+1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.4%,37.5%
+1244,https://leetcode.com/problems/design-a-leaderboard,Design A Leaderboard,Medium,67.9%,37.5%
+1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,56.8%,37.5%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,35.7%
+8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,20.9%,35.7%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,35.7%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,35.7%
+1865,https://leetcode.com/problems/finding-pairs-with-a-certain-sum,Finding Pairs With a Certain Sum,Medium,61.6%,35.7%
+2276,https://leetcode.com/problems/count-integers-in-intervals,Count Integers in Intervals,Hard,35.8%,35.7%
+3043,https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix,Find the Length of the Longest Common Prefix,Medium,57.1%,35.7%

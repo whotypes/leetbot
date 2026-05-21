@@ -1,24 +1,25 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1,https://leetcode.com/problems/two-sum,"Two Sum",Easy,57.4%,100.0%
-54,https://leetcode.com/problems/spiral-matrix,"Spiral Matrix",Medium,54.2%,100.0%
-73,https://leetcode.com/problems/set-matrix-zeroes,"Set Matrix Zeroes",Medium,60.9%,100.0%
-347,https://leetcode.com/problems/top-k-frequent-elements,"Top K Frequent Elements",Medium,66.3%,100.0%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,100.0%
+54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,54.2%,100.0%
+73,https://leetcode.com/problems/set-matrix-zeroes,Set Matrix Zeroes,Medium,60.9%,100.0%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.3%,100.0%
 50,https://leetcode.com/problems/powx-n,"Pow(x, n)",Medium,37.2%,87.5%
-981,https://leetcode.com/problems/time-based-key-value-store,"Time Based Key-Value Store",Medium,49.4%,87.5%
-994,https://leetcode.com/problems/rotting-oranges,"Rotting Oranges",Medium,56.8%,87.5%
-146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,86.0%
-493,https://leetcode.com/problems/reverse-pairs,"Reverse Pairs",Hard,34.1%,86.0%
-968,https://leetcode.com/problems/binary-tree-cameras,"Binary Tree Cameras",Hard,47.9%,86.0%
-1743,https://leetcode.com/problems/restore-the-array-from-adjacent-pairs,"Restore the Array From Adjacent Pairs",Medium,75.0%,86.0%
-22,https://leetcode.com/problems/generate-parentheses,"Generate Parentheses",Medium,77.3%,75.0%
-23,https://leetcode.com/problems/merge-k-sorted-lists,"Merge k Sorted Lists",Hard,57.0%,75.0%
-473,https://leetcode.com/problems/matchsticks-to-square,"Matchsticks to Square",Medium,41.0%,75.0%
-581,https://leetcode.com/problems/shortest-unsorted-continuous-subarray,"Shortest Unsorted Continuous Subarray",Medium,37.5%,75.0%
-752,https://leetcode.com/problems/open-the-lock,"Open the Lock",Medium,60.8%,75.0%
-1909,https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing,"Remove One Element to Make the Array Strictly Increasing",Easy,28.8%,75.0%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,38.9%,74.9%
-15,https://leetcode.com/problems/3sum,"3Sum",Medium,38.9%,74.9%
-37,https://leetcode.com/problems/sudoku-solver,"Sudoku Solver",Hard,65.4%,74.9%
-45,https://leetcode.com/problems/jump-game-ii,"Jump Game II",Medium,42.7%,74.9%
-394,https://leetcode.com/problems/decode-string,"Decode String",Medium,62.5%,74.9%
-905,https://leetcode.com/problems/sort-array-by-parity,"Sort Array By Parity",Easy,76.5%,74.9%
+981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.4%,87.5%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,56.8%,87.5%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,86.0%
+493,https://leetcode.com/problems/reverse-pairs,Reverse Pairs,Hard,34.1%,86.0%
+968,https://leetcode.com/problems/binary-tree-cameras,Binary Tree Cameras,Hard,47.9%,86.0%
+1743,https://leetcode.com/problems/restore-the-array-from-adjacent-pairs,Restore the Array From Adjacent Pairs,Medium,75.0%,86.0%
+22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,77.3%,75.0%
+23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,57.0%,75.0%
+473,https://leetcode.com/problems/matchsticks-to-square,Matchsticks to Square,Medium,41.0%,75.0%
+581,https://leetcode.com/problems/shortest-unsorted-continuous-subarray,Shortest Unsorted Continuous Subarray,Medium,37.5%,75.0%
+752,https://leetcode.com/problems/open-the-lock,Open the Lock,Medium,60.8%,75.0%
+1909,https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing,Remove One Element to Make the Array Strictly Increasing,Easy,28.8%,75.0%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,74.9%
+15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,74.9%
+37,https://leetcode.com/problems/sudoku-solver,Sudoku Solver,Hard,65.4%,74.9%
+45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,42.7%,74.9%
+394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.5%,74.9%
+905,https://leetcode.com/problems/sort-array-by-parity,Sort Array By Parity,Easy,76.5%,74.9%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.8%,74.8%

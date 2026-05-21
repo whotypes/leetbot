@@ -1,9 +1,10 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2941,https://leetcode.com/problems/maximum-gcd-sum-of-a-subarray,"Maximum GCD-Sum of a Subarray",Hard,38.6%,100.0%
-3003,https://leetcode.com/problems/maximize-the-number-of-partitions-after-operations,"Maximize the Number of Partitions After Operations",Hard,53.4%,100.0%
-3036,https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-ii,"Number of Subarrays That Match a Pattern II",Hard,33.6%,100.0%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,37.7%,65.2%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,65.2%
-3226,https://leetcode.com/problems/number-of-bit-changes-to-make-two-integers-equal,"Number of Bit Changes to Make Two Integers Equal",Easy,63.5%,65.2%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,37.1%,62.5%
-20,https://leetcode.com/problems/valid-parentheses,"Valid Parentheses",Easy,42.4%,62.5%
+2941,https://leetcode.com/problems/maximum-gcd-sum-of-a-subarray,Maximum GCD-Sum of a Subarray,Hard,38.6%,100.0%
+3003,https://leetcode.com/problems/maximize-the-number-of-partitions-after-operations,Maximize the Number of Partitions After Operations,Hard,53.4%,100.0%
+3036,https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-ii,Number of Subarrays That Match a Pattern II,Hard,33.6%,100.0%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.5%,65.4%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,65.2%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,65.2%
+3226,https://leetcode.com/problems/number-of-bit-changes-to-make-two-integers-equal,Number of Bit Changes to Make Two Integers Equal,Easy,63.5%,65.2%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,37.1%,62.5%
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,42.4%,62.5%

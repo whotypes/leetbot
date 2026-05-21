@@ -1,6 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2560,https://leetcode.com/problems/house-robber-iv,"House Robber IV",Medium,64.7%,100.0%
-1695,https://leetcode.com/problems/maximum-erasure-value,"Maximum Erasure Value",Medium,64.2%,98.0%
-665,https://leetcode.com/problems/non-decreasing-array,"Non-decreasing Array",Medium,25.4%,72.8%
-658,https://leetcode.com/problems/find-k-closest-elements,"Find K Closest Elements",Medium,49.6%,64.3%
-2858,https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable,"Minimum Edge Reversals So Every Node Is Reachable",Hard,59.1%,64.3%
+2560,https://leetcode.com/problems/house-robber-iv,House Robber IV,Medium,64.7%,100.0%
+1695,https://leetcode.com/problems/maximum-erasure-value,Maximum Erasure Value,Medium,64.2%,98.0%
+665,https://leetcode.com/problems/non-decreasing-array,Non-decreasing Array,Medium,25.4%,72.8%
+658,https://leetcode.com/problems/find-k-closest-elements,Find K Closest Elements,Medium,49.6%,64.3%
+2858,https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable,Minimum Edge Reversals So Every Node Is Reachable,Hard,59.1%,64.3%

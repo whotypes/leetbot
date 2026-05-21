@@ -1,5 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-740,https://leetcode.com/problems/delete-and-earn,"Delete and Earn",Medium,57.2%,100.0%
-1658,https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero,"Minimum Operations to Reduce X to Zero",Medium,40.1%,100.0%
-2607,https://leetcode.com/problems/make-k-subarray-sums-equal,"Make K-Subarray Sums Equal",Medium,36.8%,100.0%
-19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,"Remove Nth Node From End of List",Medium,51.4%,75.2%
+740,https://leetcode.com/problems/delete-and-earn,Delete and Earn,Medium,57.2%,100.0%
+1658,https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero,Minimum Operations to Reduce X to Zero,Medium,40.1%,100.0%
+2607,https://leetcode.com/problems/make-k-subarray-sums-equal,Make K-Subarray Sums Equal,Medium,36.8%,100.0%
+19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,51.4%,75.2%
+1470,https://leetcode.com/problems/shuffle-the-array,Shuffle the Array,Easy,88.8%,75.0%

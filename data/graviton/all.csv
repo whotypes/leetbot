@@ -1,8 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-542,https://leetcode.com/problems/01-matrix,"01 Matrix",Medium,53.7%,100.0%
-91,https://leetcode.com/problems/decode-ways,"Decode Ways",Medium,37.9%,89.4%
-179,https://leetcode.com/problems/largest-number,"Largest Number",Medium,42.9%,89.4%
-207,https://leetcode.com/problems/course-schedule,"Course Schedule",Medium,51.3%,89.4%
-841,https://leetcode.com/problems/keys-and-rooms,"Keys and Rooms",Medium,75.7%,89.4%
-968,https://leetcode.com/problems/binary-tree-cameras,"Binary Tree Cameras",Hard,47.9%,89.4%
-2603,https://leetcode.com/problems/collect-coins-in-a-tree,"Collect Coins in a Tree",Hard,40.0%,89.4%
+542,https://leetcode.com/problems/01-matrix,01 Matrix,Medium,53.7%,100.0%
+91,https://leetcode.com/problems/decode-ways,Decode Ways,Medium,37.9%,89.4%
+179,https://leetcode.com/problems/largest-number,Largest Number,Medium,42.9%,89.4%
+207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,51.3%,89.4%
+841,https://leetcode.com/problems/keys-and-rooms,Keys and Rooms,Medium,75.7%,89.4%
+968,https://leetcode.com/problems/binary-tree-cameras,Binary Tree Cameras,Hard,47.9%,89.4%
+2603,https://leetcode.com/problems/collect-coins-in-a-tree,Collect Coins in a Tree,Hard,40.0%,89.4%

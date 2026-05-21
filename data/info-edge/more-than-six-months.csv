@@ -1,9 +1,9 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-3334,https://leetcode.com/problems/find-the-maximum-factor-score-of-array,"Find the Maximum Factor Score of Array",Medium,41.0%,100.0%
-3265,https://leetcode.com/problems/count-almost-equal-pairs-i,"Count Almost Equal Pairs I",Medium,38.3%,95.0%
-2032,https://leetcode.com/problems/two-out-of-three,"Two Out of Three",Easy,77.5%,84.5%
-815,https://leetcode.com/problems/bus-routes,"Bus Routes",Hard,47.3%,73.0%
-1476,https://leetcode.com/problems/subrectangle-queries,"Subrectangle Queries",Medium,86.3%,73.0%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,37.7%,63.9%
-75,https://leetcode.com/problems/sort-colors,"Sort Colors",Medium,69.5%,63.9%
-2058,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points,"Find the Minimum and Maximum Number of Nodes Between Critical Points",Medium,69.5%,63.9%
+3334,https://leetcode.com/problems/find-the-maximum-factor-score-of-array,Find the Maximum Factor Score of Array,Medium,41.0%,100.0%
+3265,https://leetcode.com/problems/count-almost-equal-pairs-i,Count Almost Equal Pairs I,Medium,38.3%,95.0%
+2032,https://leetcode.com/problems/two-out-of-three,Two Out of Three,Easy,77.5%,84.5%
+815,https://leetcode.com/problems/bus-routes,Bus Routes,Hard,47.3%,73.0%
+1476,https://leetcode.com/problems/subrectangle-queries,Subrectangle Queries,Medium,86.3%,73.0%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,63.9%
+75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,69.5%,63.9%
+2058,https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points,Find the Minimum and Maximum Number of Nodes Between Critical Points,Medium,69.5%,63.9%

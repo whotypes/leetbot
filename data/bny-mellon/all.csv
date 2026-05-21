@@ -1,26 +1,26 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2876,https://leetcode.com/problems/count-visited-nodes-in-a-directed-graph,"Count Visited Nodes in a Directed Graph",Hard,30.6%,100.0%
-1465,https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts,"Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",Medium,41.4%,97.7%
-2615,https://leetcode.com/problems/sum-of-distances,"Sum of Distances",Medium,50.1%,97.7%
-3012,https://leetcode.com/problems/minimize-length-of-array-using-operations,"Minimize Length of Array Using Operations",Medium,35.8%,97.7%
-924,https://leetcode.com/problems/minimize-malware-spread,"Minimize Malware Spread",Hard,43.1%,76.0%
-1326,https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden,"Minimum Number of Taps to Open to Water a Garden",Hard,50.7%,75.0%
-215,https://leetcode.com/problems/kth-largest-element-in-an-array,"Kth Largest Element in an Array",Medium,68.9%,69.2%
-853,https://leetcode.com/problems/car-fleet,"Car Fleet",Medium,55.0%,69.2%
-898,https://leetcode.com/problems/bitwise-ors-of-subarrays,"Bitwise ORs of Subarrays",Medium,56.8%,69.2%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,37.1%,62.5%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,36.0%,62.5%
-13,https://leetcode.com/problems/roman-to-integer,"Roman to Integer",Easy,65.0%,62.5%
-134,https://leetcode.com/problems/gas-station,"Gas Station",Medium,46.5%,62.5%
-283,https://leetcode.com/problems/move-zeroes,"Move Zeroes",Easy,62.9%,62.5%
-557,https://leetcode.com/problems/reverse-words-in-a-string-iii,"Reverse Words in a String III",Easy,83.7%,62.5%
-2062,https://leetcode.com/problems/count-vowel-substrings-of-a-string,"Count Vowel Substrings of a String",Easy,71.6%,62.5%
-2462,https://leetcode.com/problems/total-cost-to-hire-k-workers,"Total Cost to Hire K Workers",Medium,43.2%,62.5%
-2910,https://leetcode.com/problems/minimum-number-of-groups-to-create-a-valid-assignment,"Minimum Number of Groups to Create a Valid Assignment",Medium,24.0%,62.5%
-15,https://leetcode.com/problems/3sum,"3Sum",Medium,38.9%,59.6%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,59.6%
-88,https://leetcode.com/problems/merge-sorted-array,"Merge Sorted Array",Easy,54.7%,59.6%
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,59.6%
-647,https://leetcode.com/problems/palindromic-substrings,"Palindromic Substrings",Medium,72.7%,59.6%
-2044,https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets,"Count Number of Maximum Bitwise-OR Subsets",Medium,89.5%,59.6%
-3251,https://leetcode.com/problems/find-the-count-of-monotonic-pairs-ii,"Find the Count of Monotonic Pairs II",Hard,24.6%,59.6%
+2876,https://leetcode.com/problems/count-visited-nodes-in-a-directed-graph,Count Visited Nodes in a Directed Graph,Hard,30.6%,100.0%
+1465,https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,Medium,41.4%,97.7%
+2615,https://leetcode.com/problems/sum-of-distances,Sum of Distances,Medium,50.1%,97.7%
+3012,https://leetcode.com/problems/minimize-length-of-array-using-operations,Minimize Length of Array Using Operations,Medium,35.8%,97.7%
+924,https://leetcode.com/problems/minimize-malware-spread,Minimize Malware Spread,Hard,43.1%,76.0%
+1326,https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden,Minimum Number of Taps to Open to Water a Garden,Hard,50.7%,75.0%
+215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,69.2%
+853,https://leetcode.com/problems/car-fleet,Car Fleet,Medium,55.0%,69.2%
+898,https://leetcode.com/problems/bitwise-ors-of-subarrays,Bitwise ORs of Subarrays,Medium,56.8%,69.2%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,37.1%,62.5%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,36.0%,62.5%
+13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,62.5%
+134,https://leetcode.com/problems/gas-station,Gas Station,Medium,46.5%,62.5%
+283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,62.9%,62.5%
+557,https://leetcode.com/problems/reverse-words-in-a-string-iii,Reverse Words in a String III,Easy,83.7%,62.5%
+2062,https://leetcode.com/problems/count-vowel-substrings-of-a-string,Count Vowel Substrings of a String,Easy,71.6%,62.5%
+2462,https://leetcode.com/problems/total-cost-to-hire-k-workers,Total Cost to Hire K Workers,Medium,43.2%,62.5%
+2910,https://leetcode.com/problems/minimum-number-of-groups-to-create-a-valid-assignment,Minimum Number of Groups to Create a Valid Assignment,Medium,24.0%,62.5%
+15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,59.6%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,59.6%
+88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,54.7%,59.6%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,59.6%
+647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,72.7%,59.6%
+2044,https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets,Count Number of Maximum Bitwise-OR Subsets,Medium,89.5%,59.6%
+3251,https://leetcode.com/problems/find-the-count-of-monotonic-pairs-ii,Find the Count of Monotonic Pairs II,Hard,24.6%,59.6%

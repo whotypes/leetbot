@@ -1,7 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-79,https://leetcode.com/problems/word-search,"Word Search",Medium,47.2%,100.0%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,71.1%,87.5%
-273,https://leetcode.com/problems/integer-to-english-words,"Integer to English Words",Hard,35.0%,83.9%
-2468,https://leetcode.com/problems/split-message-based-on-limit,"Split Message Based on Limit",Hard,42.1%,79.3%
-591,https://leetcode.com/problems/tag-validator,"Tag Validator",Hard,40.5%,73.5%
-845,https://leetcode.com/problems/longest-mountain-in-array,"Longest Mountain in Array",Medium,42.1%,65.2%
+79,https://leetcode.com/problems/word-search,Word Search,Medium,47.2%,100.0%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,87.5%
+273,https://leetcode.com/problems/integer-to-english-words,Integer to English Words,Hard,35.0%,83.9%
+2468,https://leetcode.com/problems/split-message-based-on-limit,Split Message Based on Limit,Hard,42.1%,79.3%
+591,https://leetcode.com/problems/tag-validator,Tag Validator,Hard,40.5%,73.5%
+845,https://leetcode.com/problems/longest-mountain-in-array,Longest Mountain in Array,Medium,42.1%,65.2%

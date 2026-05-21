@@ -1,13 +1,13 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-2483,https://leetcode.com/problems/minimum-penalty-for-a-shop,"Minimum Penalty for a Shop",Medium,71.2%,100.0%
-399,https://leetcode.com/problems/evaluate-division,"Evaluate Division",Medium,64.1%,85.4%
-2303,https://leetcode.com/problems/calculate-amount-paid-in-taxes,"Calculate Amount Paid in Taxes",Easy,69.2%,85.4%
-1087,https://leetcode.com/problems/brace-expansion,"Brace Expansion",Medium,66.9%,79.4%
-1169,https://leetcode.com/problems/invalid-transactions,"Invalid Transactions",Medium,32.2%,79.4%
-787,https://leetcode.com/problems/cheapest-flights-within-k-stops,"Cheapest Flights Within K Stops",Medium,41.7%,75.5%
-161,https://leetcode.com/problems/one-edit-distance,"One Edit Distance",Medium,34.6%,56.3%
-1604,https://leetcode.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period,"Alert Using Same Key-Card Three or More Times in a One Hour Period",Medium,46.2%,56.3%
-2043,https://leetcode.com/problems/simple-bank-system,"Simple Bank System",Medium,69.7%,56.3%
-2050,https://leetcode.com/problems/parallel-courses-iii,"Parallel Courses III",Hard,66.8%,56.3%
-2768,https://leetcode.com/problems/number-of-black-blocks,"Number of Black Blocks",Medium,41.7%,56.3%
-465,https://leetcode.com/problems/optimal-account-balancing,"Optimal Account Balancing",Hard,50.0%,50.0%
+2483,https://leetcode.com/problems/minimum-penalty-for-a-shop,Minimum Penalty for a Shop,Medium,71.2%,100.0%
+399,https://leetcode.com/problems/evaluate-division,Evaluate Division,Medium,64.1%,85.4%
+2303,https://leetcode.com/problems/calculate-amount-paid-in-taxes,Calculate Amount Paid in Taxes,Easy,69.2%,85.4%
+1087,https://leetcode.com/problems/brace-expansion,Brace Expansion,Medium,66.9%,79.4%
+1169,https://leetcode.com/problems/invalid-transactions,Invalid Transactions,Medium,32.2%,79.4%
+787,https://leetcode.com/problems/cheapest-flights-within-k-stops,Cheapest Flights Within K Stops,Medium,41.7%,75.5%
+161,https://leetcode.com/problems/one-edit-distance,One Edit Distance,Medium,34.6%,56.3%
+1604,https://leetcode.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period,Alert Using Same Key-Card Three or More Times in a One Hour Period,Medium,46.2%,56.3%
+2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,56.3%
+2050,https://leetcode.com/problems/parallel-courses-iii,Parallel Courses III,Hard,66.8%,56.3%
+2768,https://leetcode.com/problems/number-of-black-blocks,Number of Black Blocks,Medium,41.7%,56.3%
+465,https://leetcode.com/problems/optimal-account-balancing,Optimal Account Balancing,Hard,50.0%,50.0%

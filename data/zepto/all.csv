@@ -1,34 +1,34 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,51.6%,100.0%
-687,https://leetcode.com/problems/longest-univalue-path,"Longest Univalue Path",Medium,43.8%,100.0%
-128,https://leetcode.com/problems/longest-consecutive-sequence,"Longest Consecutive Sequence",Medium,47.1%,93.5%
-437,https://leetcode.com/problems/path-sum-iii,"Path Sum III",Medium,46.4%,93.5%
-1094,https://leetcode.com/problems/car-pooling,"Car Pooling",Medium,56.3%,93.5%
-84,https://leetcode.com/problems/largest-rectangle-in-histogram,"Largest Rectangle in Histogram",Hard,47.6%,87.5%
-31,https://leetcode.com/problems/next-permutation,"Next Permutation",Medium,45.1%,85.2%
-162,https://leetcode.com/problems/find-peak-element,"Find Peak Element",Medium,46.9%,85.2%
-239,https://leetcode.com/problems/sliding-window-maximum,"Sliding Window Maximum",Hard,48.7%,85.2%
-875,https://leetcode.com/problems/koko-eating-bananas,"Koko Eating Bananas",Medium,49.9%,85.2%
-962,https://leetcode.com/problems/maximum-width-ramp,"Maximum Width Ramp",Medium,55.9%,85.2%
-983,https://leetcode.com/problems/minimum-cost-for-tickets,"Minimum Cost For Tickets",Medium,67.4%,85.2%
-5,https://leetcode.com/problems/longest-palindromic-substring,"Longest Palindromic Substring",Medium,36.0%,75.0%
-42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,65.3%,75.0%
-45,https://leetcode.com/problems/jump-game-ii,"Jump Game II",Medium,41.6%,75.0%
-79,https://leetcode.com/problems/word-search,"Word Search",Medium,45.5%,75.0%
-134,https://leetcode.com/problems/gas-station,"Gas Station",Medium,46.5%,75.0%
-146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,45.4%,75.0%
-752,https://leetcode.com/problems/open-the-lock,"Open the Lock",Medium,60.8%,75.0%
-1373,https://leetcode.com/problems/maximum-sum-bst-in-binary-tree,"Maximum Sum BST in Binary Tree",Hard,44.6%,75.0%
-3,https://leetcode.com/problems/longest-substring-without-repeating-characters,"Longest Substring Without Repeating Characters",Medium,38.9%,73.4%
-29,https://leetcode.com/problems/divide-two-integers,"Divide Two Integers",Medium,19.7%,73.4%
-33,https://leetcode.com/problems/search-in-rotated-sorted-array,"Search in Rotated Sorted Array",Medium,44.4%,73.4%
-63,https://leetcode.com/problems/unique-paths-ii,"Unique Paths II",Medium,44.4%,73.4%
-200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,73.4%
-215,https://leetcode.com/problems/kth-largest-element-in-an-array,"Kth Largest Element in an Array",Medium,68.9%,73.4%
-424,https://leetcode.com/problems/longest-repeating-character-replacement,"Longest Repeating Character Replacement",Medium,59.5%,73.4%
-781,https://leetcode.com/problems/rabbits-in-forest,"Rabbits in Forest",Medium,58.1%,73.4%
-994,https://leetcode.com/problems/rotting-oranges,"Rotting Oranges",Medium,58.5%,73.4%
-1385,https://leetcode.com/problems/find-the-distance-value-between-two-arrays,"Find the Distance Value Between Two Arrays",Easy,71.6%,73.4%
-1905,https://leetcode.com/problems/count-sub-islands,"Count Sub Islands",Medium,73.0%,73.4%
-2659,https://leetcode.com/problems/make-array-empty,"Make Array Empty",Hard,26.9%,73.4%
-3026,https://leetcode.com/problems/maximum-good-subarray-sum,"Maximum Good Subarray Sum",Medium,21.7%,73.4%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,100.0%
+687,https://leetcode.com/problems/longest-univalue-path,Longest Univalue Path,Medium,43.8%,100.0%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.1%,93.5%
+437,https://leetcode.com/problems/path-sum-iii,Path Sum III,Medium,46.4%,93.5%
+1094,https://leetcode.com/problems/car-pooling,Car Pooling,Medium,56.3%,93.5%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,47.6%,87.5%
+31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.1%,85.2%
+162,https://leetcode.com/problems/find-peak-element,Find Peak Element,Medium,46.9%,85.2%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.7%,85.2%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,49.9%,85.2%
+962,https://leetcode.com/problems/maximum-width-ramp,Maximum Width Ramp,Medium,55.9%,85.2%
+983,https://leetcode.com/problems/minimum-cost-for-tickets,Minimum Cost For Tickets,Medium,67.4%,85.2%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,36.0%,75.0%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,65.3%,75.0%
+45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,41.6%,75.0%
+79,https://leetcode.com/problems/word-search,Word Search,Medium,45.5%,75.0%
+134,https://leetcode.com/problems/gas-station,Gas Station,Medium,46.5%,75.0%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,45.4%,75.0%
+752,https://leetcode.com/problems/open-the-lock,Open the Lock,Medium,60.8%,75.0%
+1373,https://leetcode.com/problems/maximum-sum-bst-in-binary-tree,Maximum Sum BST in Binary Tree,Hard,44.6%,75.0%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,73.4%
+29,https://leetcode.com/problems/divide-two-integers,Divide Two Integers,Medium,19.7%,73.4%
+33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,73.4%
+63,https://leetcode.com/problems/unique-paths-ii,Unique Paths II,Medium,44.4%,73.4%
+200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,73.4%
+215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,73.4%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,59.5%,73.4%
+781,https://leetcode.com/problems/rabbits-in-forest,Rabbits in Forest,Medium,58.1%,73.4%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,73.4%
+1385,https://leetcode.com/problems/find-the-distance-value-between-two-arrays,Find the Distance Value Between Two Arrays,Easy,71.6%,73.4%
+1905,https://leetcode.com/problems/count-sub-islands,Count Sub Islands,Medium,73.0%,73.4%
+2659,https://leetcode.com/problems/make-array-empty,Make Array Empty,Hard,26.9%,73.4%
+3026,https://leetcode.com/problems/maximum-good-subarray-sum,Maximum Good Subarray Sum,Medium,21.7%,73.4%

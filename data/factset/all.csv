@@ -1,8 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-316,https://leetcode.com/problems/remove-duplicate-letters,"Remove Duplicate Letters",Medium,53.1%,100.0%
-1081,https://leetcode.com/problems/smallest-subsequence-of-distinct-characters,"Smallest Subsequence of Distinct Characters",Medium,63.3%,97.8%
-1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,"Remove All Adjacent Duplicates in String II",Medium,61.2%,97.8%
-202,https://leetcode.com/problems/happy-number,"Happy Number",Easy,58.2%,62.5%
-217,https://leetcode.com/problems/contains-duplicate,"Contains Duplicate",Easy,63.3%,62.5%
-334,https://leetcode.com/problems/increasing-triplet-subsequence,"Increasing Triplet Subsequence",Medium,39.1%,62.5%
-49,https://leetcode.com/problems/group-anagrams,"Group Anagrams",Medium,72.5%,61.5%
+316,https://leetcode.com/problems/remove-duplicate-letters,Remove Duplicate Letters,Medium,53.1%,100.0%
+1081,https://leetcode.com/problems/smallest-subsequence-of-distinct-characters,Smallest Subsequence of Distinct Characters,Medium,63.3%,97.8%
+1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,61.2%,97.8%
+202,https://leetcode.com/problems/happy-number,Happy Number,Easy,58.2%,62.5%
+217,https://leetcode.com/problems/contains-duplicate,Contains Duplicate,Easy,63.3%,62.5%
+334,https://leetcode.com/problems/increasing-triplet-subsequence,Increasing Triplet Subsequence,Medium,39.1%,62.5%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,61.5%

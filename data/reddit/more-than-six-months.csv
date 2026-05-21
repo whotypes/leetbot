@@ -1,7 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-127,https://leetcode.com/problems/word-ladder,"Word Ladder",Hard,45.4%,100.0%
-146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,88.9%
-359,https://leetcode.com/problems/logger-rate-limiter,"Logger Rate Limiter",Easy,76.8%,77.4%
-362,https://leetcode.com/problems/design-hit-counter,"Design Hit Counter",Medium,69.7%,77.4%
-2240,https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils,"Number of Ways to Buy Pens and Pencils",Medium,56.8%,63.1%
-200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,62.5%,62.5%
+127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,45.4%,100.0%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,88.9%
+359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.8%,77.4%
+362,https://leetcode.com/problems/design-hit-counter,Design Hit Counter,Medium,69.7%,77.4%
+2240,https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils,Number of Ways to Buy Pens and Pencils,Medium,56.8%,63.1%
+200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,62.5%

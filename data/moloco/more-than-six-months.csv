@@ -1,10 +1,10 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1048,https://leetcode.com/problems/longest-string-chain,"Longest String Chain",Medium,63.0%,100.0%
-200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,92.5%
-1381,https://leetcode.com/problems/design-a-stack-with-increment-operation,"Design a Stack With Increment Operation",Medium,79.9%,92.5%
-253,https://leetcode.com/problems/meeting-rooms-ii,"Meeting Rooms II",Medium,52.2%,87.5%
-42,https://leetcode.com/problems/trapping-rain-water,"Trapping Rain Water",Hard,67.2%,82.0%
-146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,82.0%
-540,https://leetcode.com/problems/single-element-in-a-sorted-array,"Single Element in a Sorted Array",Medium,59.2%,82.0%
-827,https://leetcode.com/problems/making-a-large-island,"Making A Large Island",Hard,56.5%,82.0%
-1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,"Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",Medium,57.6%,82.0%
+1048,https://leetcode.com/problems/longest-string-chain,Longest String Chain,Medium,63.0%,100.0%
+200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,92.5%
+1381,https://leetcode.com/problems/design-a-stack-with-increment-operation,Design a Stack With Increment Operation,Medium,79.9%,92.5%
+253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.2%,87.5%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,82.0%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,82.0%
+540,https://leetcode.com/problems/single-element-in-a-sorted-array,Single Element in a Sorted Array,Medium,59.2%,82.0%
+827,https://leetcode.com/problems/making-a-large-island,Making A Large Island,Hard,56.5%,82.0%
+1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,57.6%,82.0%

@@ -1,21 +1,21 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-127,https://leetcode.com/problems/word-ladder,"Word Ladder",Hard,45.4%,100.0%
-146,https://leetcode.com/problems/lru-cache,"LRU Cache",Medium,47.2%,100.0%
-198,https://leetcode.com/problems/house-robber,"House Robber",Medium,53.1%,100.0%
-200,https://leetcode.com/problems/number-of-islands,"Number of Islands",Medium,64.2%,100.0%
-221,https://leetcode.com/problems/maximal-square,"Maximal Square",Medium,50.2%,100.0%
-394,https://leetcode.com/problems/decode-string,"Decode String",Medium,62.5%,100.0%
-450,https://leetcode.com/problems/delete-node-in-a-bst,"Delete Node in a BST",Medium,54.5%,100.0%
-540,https://leetcode.com/problems/single-element-in-a-sorted-array,"Single Element in a Sorted Array",Medium,59.2%,100.0%
-721,https://leetcode.com/problems/accounts-merge,"Accounts Merge",Medium,61.2%,100.0%
-934,https://leetcode.com/problems/shortest-bridge,"Shortest Bridge",Medium,59.4%,100.0%
-56,https://leetcode.com/problems/merge-intervals,"Merge Intervals",Medium,49.5%,87.5%
-2,https://leetcode.com/problems/add-two-numbers,"Add Two Numbers",Medium,46.4%,75.0%
-10,https://leetcode.com/problems/regular-expression-matching,"Regular Expression Matching",Hard,29.4%,75.0%
-39,https://leetcode.com/problems/combination-sum,"Combination Sum",Medium,74.9%,75.0%
-224,https://leetcode.com/problems/basic-calculator,"Basic Calculator",Hard,45.7%,75.0%
-317,https://leetcode.com/problems/shortest-distance-from-all-buildings,"Shortest Distance from All Buildings",Hard,44.5%,75.0%
-347,https://leetcode.com/problems/top-k-frequent-elements,"Top K Frequent Elements",Medium,64.7%,75.0%
-424,https://leetcode.com/problems/longest-repeating-character-replacement,"Longest Repeating Character Replacement",Medium,57.4%,75.0%
-560,https://leetcode.com/problems/subarray-sum-equals-k,"Subarray Sum Equals K",Medium,45.6%,75.0%
-1171,https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list,"Remove Zero Sum Consecutive Nodes from Linked List",Medium,52.9%,75.0%
+127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,45.4%,100.0%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,100.0%
+198,https://leetcode.com/problems/house-robber,House Robber,Medium,53.1%,100.0%
+200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,100.0%
+221,https://leetcode.com/problems/maximal-square,Maximal Square,Medium,50.2%,100.0%
+394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.5%,100.0%
+450,https://leetcode.com/problems/delete-node-in-a-bst,Delete Node in a BST,Medium,54.5%,100.0%
+540,https://leetcode.com/problems/single-element-in-a-sorted-array,Single Element in a Sorted Array,Medium,59.2%,100.0%
+721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.2%,100.0%
+934,https://leetcode.com/problems/shortest-bridge,Shortest Bridge,Medium,59.4%,100.0%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,49.5%,87.5%
+2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,46.4%,75.0%
+10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,29.4%,75.0%
+39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,74.9%,75.0%
+224,https://leetcode.com/problems/basic-calculator,Basic Calculator,Hard,45.7%,75.0%
+317,https://leetcode.com/problems/shortest-distance-from-all-buildings,Shortest Distance from All Buildings,Hard,44.5%,75.0%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,64.7%,75.0%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,57.4%,75.0%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,45.6%,75.0%
+1171,https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list,Remove Zero Sum Consecutive Nodes from Linked List,Medium,52.9%,75.0%

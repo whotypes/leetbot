@@ -1,11 +1,11 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,"Best Time to Buy and Sell Stock",Easy,56.7%,100.0%
-227,https://leetcode.com/problems/basic-calculator-ii,"Basic Calculator II",Medium,46.8%,77.5%
-18,https://leetcode.com/problems/4sum,"4Sum",Medium,38.4%,62.5%
-274,https://leetcode.com/problems/h-index,"H-Index",Medium,40.4%,62.5%
-509,https://leetcode.com/problems/fibonacci-number,"Fibonacci Number",Easy,73.1%,62.5%
-622,https://leetcode.com/problems/design-circular-queue,"Design Circular Queue",Medium,52.8%,62.5%
-149,https://leetcode.com/problems/max-points-on-a-line,"Max Points on a Line",Hard,30.6%,59.7%
-443,https://leetcode.com/problems/string-compression,"String Compression",Medium,59.9%,59.7%
-994,https://leetcode.com/problems/rotting-oranges,"Rotting Oranges",Medium,58.5%,59.7%
-1419,https://leetcode.com/problems/minimum-number-of-frogs-croaking,"Minimum Number of Frogs Croaking",Medium,51.1%,59.7%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,100.0%
+227,https://leetcode.com/problems/basic-calculator-ii,Basic Calculator II,Medium,46.8%,77.5%
+18,https://leetcode.com/problems/4sum,4Sum,Medium,38.4%,62.5%
+274,https://leetcode.com/problems/h-index,H-Index,Medium,40.4%,62.5%
+509,https://leetcode.com/problems/fibonacci-number,Fibonacci Number,Easy,73.1%,62.5%
+622,https://leetcode.com/problems/design-circular-queue,Design Circular Queue,Medium,52.8%,62.5%
+149,https://leetcode.com/problems/max-points-on-a-line,Max Points on a Line,Hard,30.6%,59.7%
+443,https://leetcode.com/problems/string-compression,String Compression,Medium,59.9%,59.7%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,59.7%
+1419,https://leetcode.com/problems/minimum-number-of-frogs-croaking,Minimum Number of Frogs Croaking,Medium,51.1%,59.7%

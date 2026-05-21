@@ -145,7 +145,11 @@ To refetch and merge the latest company-tagged problem lists (GraphQL) into `dat
 go run ./scripts/refresh_leetcode_data
 ```
 
-The command walks every company in the problem-set company dropdown, appends or updates rows by problem ID (it does not remove existing IDs), and then runs the embedded generator. Timeframes with no questions on LeetCode skip writing a CSV and remove a previously created empty file for that timeframe; the `data/<company>/` directory is still created when needed.
+The command walks every company in the problem-set company dropdown (or one company with `-company <slug>`), appends new rows by problem ID without removing or overwriting existing rows, and then runs the embedded generator. If LeetCode returns no questions for a timeframe, any existing CSV is left unchanged. A single-company test skips manifest and embed unless you pass `-embed`:
+
+```bash
+go run ./scripts/refresh_leetcode_data -company google
+```
 
 To delete **header-only** CSVs left over under `data/` (no data rows), run from the repo root:
 

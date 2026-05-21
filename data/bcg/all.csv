@@ -1,11 +1,12 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-9,https://leetcode.com/problems/palindrome-number,"Palindrome Number",Easy,60.5%,100.0%
-125,https://leetcode.com/problems/valid-palindrome,"Valid Palindrome",Easy,53.2%,96.3%
-621,https://leetcode.com/problems/task-scheduler,"Task Scheduler",Medium,63.0%,94.2%
-1457,https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree,"Pseudo-Palindromic Paths in a Binary Tree",Medium,68.4%,94.2%
-3433,https://leetcode.com/problems/count-mentions-per-user,"Count Mentions Per User",Medium,50.8%,94.2%
-3447,https://leetcode.com/problems/assign-elements-to-groups-with-constraints,"Assign Elements to Groups with Constraints",Medium,26.9%,94.2%
-3452,https://leetcode.com/problems/sum-of-good-numbers,"Sum of Good Numbers",Easy,69.7%,94.2%
-209,https://leetcode.com/problems/minimum-size-subarray-sum,"Minimum Size Subarray Sum",Medium,51.5%,89.2%
-68,https://leetcode.com/problems/text-justification,"Text Justification",Hard,50.9%,82.8%
-185,https://leetcode.com/problems/department-top-three-salaries,"Department Top Three Salaries",Hard,60.3%,67.5%
+9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.5%,100.0%
+125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.2%,96.3%
+621,https://leetcode.com/problems/task-scheduler,Task Scheduler,Medium,63.0%,94.2%
+1457,https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree,Pseudo-Palindromic Paths in a Binary Tree,Medium,68.4%,94.2%
+3433,https://leetcode.com/problems/count-mentions-per-user,Count Mentions Per User,Medium,50.8%,94.2%
+3447,https://leetcode.com/problems/assign-elements-to-groups-with-constraints,Assign Elements to Groups with Constraints,Medium,26.9%,94.2%
+3452,https://leetcode.com/problems/sum-of-good-numbers,Sum of Good Numbers,Easy,69.7%,94.2%
+209,https://leetcode.com/problems/minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,51.5%,89.2%
+68,https://leetcode.com/problems/text-justification,Text Justification,Hard,50.9%,82.8%
+185,https://leetcode.com/problems/department-top-three-salaries,Department Top Three Salaries,Hard,60.3%,67.5%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.6%,58.4%
