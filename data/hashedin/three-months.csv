@@ -1,3 +1,4 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-11,https://leetcode.com/problems/container-with-most-water,"Container With Most Water",Medium,57.9%,100.0%
-992,https://leetcode.com/problems/subarrays-with-k-different-integers,"Subarrays with K Different Integers",Hard,68.0%,100.0%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,57.9%,100.0%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.8%,100.0%
+992,https://leetcode.com/problems/subarrays-with-k-different-integers,Subarrays with K Different Integers,Hard,68.0%,100.0%

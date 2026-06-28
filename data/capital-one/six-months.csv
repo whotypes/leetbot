@@ -21,6 +21,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 415,https://leetcode.com/problems/add-strings,Add Strings,Easy,51.9%,62.5%
 1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,56.8%,62.5%
 3034,https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i,Number of Subarrays That Match a Pattern I,Medium,67.0%,62.5%
+2232,https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression,Minimize Result by Adding Parentheses to Expression,Medium,68.3%,59.8%
 3019,https://leetcode.com/problems/number-of-changing-keys,Number of Changing Keys,Easy,80.7%,58.3%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.6%,58.1%
 647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,72.7%,58.1%

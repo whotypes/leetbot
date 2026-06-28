@@ -1,4 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,100.0%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,39.3%,100.0%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.6%,100.0%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,66.8%,100.0%
+485,https://leetcode.com/problems/max-consecutive-ones,Max Consecutive Ones,Easy,65.5%,100.0%

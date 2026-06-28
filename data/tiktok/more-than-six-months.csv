@@ -299,6 +299,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2506,https://leetcode.com/problems/count-pairs-of-similar-strings,Count Pairs Of Similar Strings,Easy,73.7%,34.0%
 2523,https://leetcode.com/problems/closest-prime-numbers-in-range,Closest Prime Numbers in Range,Medium,51.7%,34.0%
 2673,https://leetcode.com/problems/make-costs-of-paths-equal-in-a-binary-tree,Make Costs of Paths Equal in a Binary Tree,Medium,58.4%,34.0%
+48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,80.3%,26.0%
+325,https://leetcode.com/problems/maximum-size-subarray-sum-equals-k,Maximum Size Subarray Sum Equals k,Medium,50.9%,26.0%
+696,https://leetcode.com/problems/count-binary-substrings,Count Binary Substrings,Easy,70.5%,26.0%
+759,https://leetcode.com/problems/employee-free-time,Employee Free Time,Hard,73.0%,26.0%
 470,https://leetcode.com/problems/implement-rand10-using-rand7,Implement Rand10() Using Rand7(),Medium,46.4%,25.6%
 2672,https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color,Number of Adjacent Elements With the Same Color,Medium,59.6%,25.6%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,25.5%

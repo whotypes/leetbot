@@ -32,6 +32,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1768,https://leetcode.com/problems/merge-strings-alternately,Merge Strings Alternately,Easy,82.2%,62.5%
 2231,https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity,Largest Number After Digit Swaps by Parity,Easy,63.9%,62.5%
 2948,https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements,Make Lexicographically Smallest Array by Swapping Elements,Medium,60.2%,62.5%
+2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.7%,55.0%
+627,https://leetcode.com/problems/swap-sex-of-employees,Swap Sex of Employees,Easy,84.7%,55.0%
+2414,https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring,Length of the Longest Alphabetical Continuous Substring,Medium,61.0%,55.0%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,53.1%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,53.1%
 72,https://leetcode.com/problems/edit-distance,Edit Distance,Medium,60.5%,53.1%

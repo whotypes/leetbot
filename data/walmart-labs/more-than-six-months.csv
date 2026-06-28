@@ -81,6 +81,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1052,https://leetcode.com/problems/grumpy-bookstore-owner,Grumpy Bookstore Owner,Medium,64.0%,50.0%
 2291,https://leetcode.com/problems/maximum-profit-from-trading-stocks,Maximum Profit From Trading Stocks,Medium,46.7%,50.0%
 2625,https://leetcode.com/problems/flatten-deeply-nested-array,Flatten Deeply Nested Array,Medium,64.6%,50.0%
+135,https://leetcode.com/problems/candy,Candy,Hard,48.7%,46.8%
+332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,44.7%,46.8%
+567,https://leetcode.com/problems/permutation-in-string,Permutation in String,Medium,49.1%,46.8%
+1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,Capacity To Ship Packages Within D Days,Medium,74.2%,46.8%
+2402,https://leetcode.com/problems/meeting-rooms-iii,Meeting Rooms III,Hard,51.4%,46.8%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,45.7%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,45.7%
 19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,51.4%,45.7%

@@ -1,5 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,100.0%
+43,https://leetcode.com/problems/multiply-strings,Multiply Strings,Medium,44.3%,92.5%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,92.4%
 72,https://leetcode.com/problems/edit-distance,Edit Distance,Medium,59.0%,87.5%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,81.7%

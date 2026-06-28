@@ -23,6 +23,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 838,https://leetcode.com/problems/push-dominoes,Push Dominoes,Medium,63.0%,57.8%
 981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,57.8%
 2244,https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks,Minimum Rounds to Complete All Tasks,Medium,63.3%,57.8%
+383,https://leetcode.com/problems/ransom-note,Ransom Note,Easy,66.1%,57.5%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,51.8%
 150,https://leetcode.com/problems/evaluate-reverse-polish-notation,Evaluate Reverse Polish Notation,Medium,57.6%,51.8%
 287,https://leetcode.com/problems/find-the-duplicate-number,Find the Duplicate Number,Medium,64.2%,51.8%
@@ -52,3 +53,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1762,https://leetcode.com/problems/buildings-with-an-ocean-view,Buildings With an Ocean View,Medium,80.9%,43.4%
 198,https://leetcode.com/problems/house-robber,House Robber,Medium,53.2%,43.2%
 1087,https://leetcode.com/problems/brace-expansion,Brace Expansion,Medium,66.9%,43.2%
+76,https://leetcode.com/problems/minimum-window-substring,Minimum Window Substring,Hard,47.8%,42.9%
+94,https://leetcode.com/problems/binary-tree-inorder-traversal,Binary Tree Inorder Traversal,Easy,80.2%,42.9%
+110,https://leetcode.com/problems/balanced-binary-tree,Balanced Binary Tree,Easy,58.6%,42.9%
+2360,https://leetcode.com/problems/longest-cycle-in-a-graph,Longest Cycle in a Graph,Hard,50.8%,42.9%

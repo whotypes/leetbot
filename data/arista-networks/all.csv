@@ -50,3 +50,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1351,https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix,Count Negative Numbers in a Sorted Matrix,Easy,79.6%,56.9%
 1669,https://leetcode.com/problems/merge-in-between-linked-lists,Merge In Between Linked Lists,Medium,83.0%,56.9%
 1910,https://leetcode.com/problems/remove-all-occurrences-of-a-substring,Remove All Occurrences of a Substring,Medium,78.5%,56.9%
+2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.7%,56.8%
+232,https://leetcode.com/problems/implement-queue-using-stacks,Implement Queue using Stacks,Easy,70.0%,56.8%

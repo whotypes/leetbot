@@ -72,6 +72,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3176,https://leetcode.com/problems/find-the-maximum-length-of-a-good-subsequence-i,Find the Maximum Length of a Good Subsequence I,Medium,32.7%,48.9%
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.6%,40.8%
 1494,https://leetcode.com/problems/parallel-courses-ii,Parallel Courses II,Hard,30.9%,40.8%
+2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.7%,40.6%
+45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,43.0%,40.6%
+490,https://leetcode.com/problems/the-maze,The Maze,Medium,60.5%,40.6%
+1057,https://leetcode.com/problems/campus-bikes,Campus Bikes,Medium,59.1%,40.6%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,40.1%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,40.1%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,64.4%,40.1%

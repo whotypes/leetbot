@@ -15,6 +15,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,66.6%
 460,https://leetcode.com/problems/lfu-cache,LFU Cache,Hard,49.0%,66.6%
 115,https://leetcode.com/problems/distinct-subsequences,Distinct Subsequences,Hard,50.3%,62.5%
+3893,https://leetcode.com/problems/maximum-team-size-with-overlapping-intervals,Maximum Team Size with Overlapping Intervals,Medium,45.0%,58.2%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,55.7%
 124,https://leetcode.com/problems/binary-tree-maximum-path-sum,Binary Tree Maximum Path Sum,Hard,42.2%,55.7%
 628,https://leetcode.com/problems/maximum-product-of-three-numbers,Maximum Product of Three Numbers,Easy,45.9%,55.7%
@@ -39,6 +40,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1481,https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals,Least Number of Unique Integers after K Removals,Medium,63.5%,50.0%
 2957,https://leetcode.com/problems/remove-adjacent-almost-equal-characters,Remove Adjacent Almost-Equal Characters,Medium,51.9%,50.0%
 3295,https://leetcode.com/problems/report-spam-message,Report Spam Message,Medium,47.7%,50.0%
+295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,54.6%,49.3%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,49.3%
+1335,https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule,Minimum Difficulty of a Job Schedule,Hard,59.8%,49.3%
+1962,https://leetcode.com/problems/remove-stones-to-minimize-the-total,Remove Stones to Minimize the Total,Medium,65.8%,49.3%
+2366,https://leetcode.com/problems/minimum-replacements-to-sort-the-array,Minimum Replacements to Sort the Array,Hard,53.1%,49.3%
+2858,https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable,Minimum Edge Reversals So Every Node Is Reachable,Hard,59.8%,49.3%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.6%,48.5%
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,54.0%,47.2%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,47.2%

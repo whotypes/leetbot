@@ -8,6 +8,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,72.4%
 71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,50.4%,68.7%
 631,https://leetcode.com/problems/design-excel-sum-formula,Design Excel Sum Formula,Hard,39.9%,68.7%
+1146,https://leetcode.com/problems/snapshot-array,Snapshot Array,Medium,36.7%,50.2%
+1797,https://leetcode.com/problems/design-authentication-manager,Design Authentication Manager,Medium,58.7%,50.2%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,50.0%
 362,https://leetcode.com/problems/design-hit-counter,Design Hit Counter,Medium,69.7%,50.0%
 733,https://leetcode.com/problems/flood-fill,Flood Fill,Easy,68.1%,50.0%

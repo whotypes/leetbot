@@ -19,6 +19,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1352,https://leetcode.com/problems/product-of-the-last-k-numbers,Product of the Last K Numbers,Medium,62.9%,78.8%
 1712,https://leetcode.com/problems/ways-to-split-array-into-three-subarrays,Ways to Split Array Into Three Subarrays,Medium,34.2%,78.8%
 2954,https://leetcode.com/problems/count-the-number-of-infection-sequences,Count the Number of Infection Sequences,Hard,37.3%,78.8%
+1366,https://leetcode.com/problems/rank-teams-by-votes,Rank Teams by Votes,Medium,60.0%,78.7%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,54.2%,75.0%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,55.4%,75.0%
 392,https://leetcode.com/problems/is-subsequence,Is Subsequence,Easy,48.4%,75.0%

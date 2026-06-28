@@ -13,6 +13,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1405,https://leetcode.com/problems/longest-happy-string,Longest Happy String,Medium,65.5%,68.4%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,62.5%
 315,https://leetcode.com/problems/count-of-smaller-numbers-after-self,Count of Smaller Numbers After Self,Hard,42.9%,62.5%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,52.1%,59.4%
+1102,https://leetcode.com/problems/path-with-maximum-minimum-value,Path With Maximum Minimum Value,Medium,54.7%,59.4%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,59.2%
 122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.0%,59.2%
 213,https://leetcode.com/problems/house-robber-ii,House Robber II,Medium,44.8%,59.2%

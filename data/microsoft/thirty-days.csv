@@ -1,6 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,100.0%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,79.9%
+9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.7%,75.9%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,57.0%,75.9%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,75.0%
 217,https://leetcode.com/problems/contains-duplicate,Contains Duplicate,Easy,63.3%,75.0%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,74.2%
@@ -13,6 +15,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1932,https://leetcode.com/problems/merge-bsts-to-create-single-bst,Merge BSTs to Create Single BST,Hard,38.8%,72.6%
 2553,https://leetcode.com/problems/separate-the-digits-in-an-array,Separate the Digits in an Array,Easy,85.8%,72.6%
 2784,https://leetcode.com/problems/check-if-array-is-good,Check if Array is Good,Easy,57.3%,72.6%
+74,https://leetcode.com/problems/search-a-2d-matrix,Search a 2D Matrix,Medium,54.2%,68.3%
+451,https://leetcode.com/problems/sort-characters-by-frequency,Sort Characters By Frequency,Medium,75.5%,68.3%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,66.8%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,66.8%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,66.8%
@@ -27,6 +31,25 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 169,https://leetcode.com/problems/majority-element,Majority Element,Easy,65.8%,62.5%
 875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,49.1%,62.5%
 2040,https://leetcode.com/problems/kth-smallest-product-of-two-sorted-arrays,Kth Smallest Product of Two Sorted Arrays,Hard,49.1%,62.5%
+31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.5%,57.7%
+39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,76.7%,57.7%
+48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,80.3%,57.7%
+62,https://leetcode.com/problems/unique-paths,Unique Paths,Medium,67.0%,57.7%
+78,https://leetcode.com/problems/subsets,Subsets,Medium,82.5%,57.7%
+85,https://leetcode.com/problems/maximal-rectangle,Maximal Rectangle,Hard,59.1%,57.7%
+92,https://leetcode.com/problems/reverse-linked-list-ii,Reverse Linked List II,Medium,51.8%,57.7%
+136,https://leetcode.com/problems/single-number,Single Number,Easy,77.9%,57.7%
+137,https://leetcode.com/problems/single-number-ii,Single Number II,Medium,67.3%,57.7%
+143,https://leetcode.com/problems/reorder-list,Reorder List,Medium,65.6%,57.7%
+206,https://leetcode.com/problems/reverse-linked-list,Reverse Linked List,Easy,80.7%,57.7%
+224,https://leetcode.com/problems/basic-calculator,Basic Calculator,Hard,47.0%,57.7%
+438,https://leetcode.com/problems/find-all-anagrams-in-a-string,Find All Anagrams in a String,Medium,54.0%,57.7%
+518,https://leetcode.com/problems/coin-change-ii,Coin Change II,Medium,59.7%,57.7%
+703,https://leetcode.com/problems/kth-largest-element-in-a-stream,Kth Largest Element in a Stream,Easy,61.2%,57.7%
+863,https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree,All Nodes Distance K in Binary Tree,Medium,67.8%,57.7%
+1768,https://leetcode.com/problems/merge-strings-alternately,Merge Strings Alternately,Easy,82.1%,57.7%
+2161,https://leetcode.com/problems/partition-array-according-to-given-pivot,Partition Array According to Given Pivot,Medium,90.8%,57.7%
+3737,https://leetcode.com/problems/count-subarrays-with-majority-element-i,Count Subarrays With Majority Element I,Medium,75.7%,57.7%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,56.6%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,56.6%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,56.6%

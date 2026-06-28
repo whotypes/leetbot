@@ -6,6 +6,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,85.4%
 28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,46.5%,85.4%
 766,https://leetcode.com/problems/toeplitz-matrix,Toeplitz Matrix,Easy,69.7%,85.4%
+387,https://leetcode.com/problems/first-unique-character-in-a-string,First Unique Character in a String,Easy,65.7%,84.7%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,60.3%,76.8%
+189,https://leetcode.com/problems/rotate-array,Rotate Array,Medium,45.1%,76.8%
+3689,https://leetcode.com/problems/maximum-total-subarray-value-i,Maximum Total Subarray Value I,Medium,71.9%,76.8%
 35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,49.2%,75.0%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,54.2%,75.0%
 75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,67.8%,75.0%
@@ -24,3 +28,17 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,62.8%,73.8%
 153,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array,Find Minimum in Rotated Sorted Array,Medium,54.7%,73.8%
 496,https://leetcode.com/problems/next-greater-element-i,Next Greater Element I,Easy,76.1%,73.8%
+4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.9%,65.8%
+15,https://leetcode.com/problems/3sum,3Sum,Medium,39.3%,65.8%
+34,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,49.1%,65.8%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.2%,65.8%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.3%,65.8%
+111,https://leetcode.com/problems/minimum-depth-of-binary-tree,Minimum Depth of Binary Tree,Easy,53.2%,65.8%
+176,https://leetcode.com/problems/second-highest-salary,Second Highest Salary,Medium,47.4%,65.8%
+198,https://leetcode.com/problems/house-robber,House Robber,Medium,53.3%,65.8%
+219,https://leetcode.com/problems/contains-duplicate-ii,Contains Duplicate II,Easy,51.5%,65.8%
+234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.2%,65.8%
+238,https://leetcode.com/problems/product-of-array-except-self,Product of Array Except Self,Medium,69.0%,65.8%
+344,https://leetcode.com/problems/reverse-string,Reverse String,Easy,80.9%,65.8%
+1295,https://leetcode.com/problems/find-numbers-with-even-number-of-digits,Find Numbers with Even Number of Digits,Easy,79.8%,65.8%
+1833,https://leetcode.com/problems/maximum-ice-cream-bars,Maximum Ice Cream Bars,Medium,77.2%,65.8%

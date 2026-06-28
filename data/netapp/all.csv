@@ -5,6 +5,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 227,https://leetcode.com/problems/basic-calculator-ii,Basic Calculator II,Medium,45.9%,87.5%
 269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,36.7%,87.5%
 283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,63.8%,78.7%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,39.3%,68.9%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,68.6%
 34,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,48.7%,68.6%
 39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,76.4%,68.6%

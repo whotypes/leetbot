@@ -104,6 +104,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2093,https://leetcode.com/problems/minimum-cost-to-reach-city-with-discounts,Minimum Cost to Reach City With Discounts,Medium,60.4%,53.9%
 2750,https://leetcode.com/problems/ways-to-split-array-into-good-subarrays,Ways to Split Array Into Good Subarrays,Medium,35.0%,53.9%
 2751,https://leetcode.com/problems/robot-collisions,Robot Collisions,Hard,61.6%,53.9%
+23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.8%,51.5%
+503,https://leetcode.com/problems/next-greater-element-ii,Next Greater Element II,Medium,68.6%,51.5%
+543,https://leetcode.com/problems/diameter-of-binary-tree,Diameter of Binary Tree,Easy,65.7%,51.5%
+677,https://leetcode.com/problems/map-sum-pairs,Map Sum Pairs,Medium,57.2%,51.5%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,50.0%
 26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,60.5%,50.0%
 45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,41.6%,50.0%

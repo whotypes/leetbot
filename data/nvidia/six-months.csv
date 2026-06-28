@@ -7,6 +7,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 761,https://leetcode.com/problems/special-binary-string,Special Binary String,Hard,79.3%,90.7%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,46.4%,87.5%
 61,https://leetcode.com/problems/rotate-list,Rotate List,Medium,40.1%,87.5%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.2%,85.0%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,84.5%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,84.5%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,84.5%
@@ -20,6 +21,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 63,https://leetcode.com/problems/unique-paths-ii,Unique Paths II,Medium,43.3%,75.0%
 1046,https://leetcode.com/problems/last-stone-weight,Last Stone Weight,Easy,66.0%,75.0%
 1353,https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended,Maximum Number of Events That Can Be Attended,Medium,38.6%,75.0%
+48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,80.3%,73.2%
+622,https://leetcode.com/problems/design-circular-queue,Design Circular Queue,Medium,54.9%,73.2%
+743,https://leetcode.com/problems/network-delay-time,Network Delay Time,Medium,60.8%,73.2%
+930,https://leetcode.com/problems/binary-subarrays-with-sum,Binary Subarrays With Sum,Medium,69.2%,73.2%
 347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.4%,66.1%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,65.4%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,65.4%

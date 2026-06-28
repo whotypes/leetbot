@@ -177,6 +177,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1944,https://leetcode.com/problems/number-of-visible-people-in-a-queue,Number of Visible People in a Queue,Hard,72.9%,36.8%
 2592,https://leetcode.com/problems/maximize-greatness-of-an-array,Maximize Greatness of an Array,Medium,61.5%,36.8%
 2603,https://leetcode.com/problems/collect-coins-in-a-tree,Collect Coins in a Tree,Hard,40.0%,36.8%
+3893,https://leetcode.com/problems/maximum-team-size-with-overlapping-intervals,Maximum Team Size with Overlapping Intervals,Medium,45.0%,36.1%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,28.8%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,28.8%
 17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,65.9%,28.8%
@@ -247,3 +248,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 727,https://leetcode.com/problems/minimum-window-subsequence,Minimum Window Subsequence,Hard,43.8%,28.4%
 981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,28.4%
 987,https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree,Vertical Order Traversal of a Binary Tree,Hard,53.7%,28.4%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.2%,28.2%
+304,https://leetcode.com/problems/range-sum-query-2d-immutable,Range Sum Query 2D - Immutable,Medium,58.5%,28.2%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,28.2%
+778,https://leetcode.com/problems/swim-in-rising-water,Swim in Rising Water,Hard,67.9%,28.2%
+1962,https://leetcode.com/problems/remove-stones-to-minimize-the-total,Remove Stones to Minimize the Total,Medium,65.8%,28.2%
+2366,https://leetcode.com/problems/minimum-replacements-to-sort-the-array,Minimum Replacements to Sort the Array,Hard,53.1%,28.2%
+2858,https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable,Minimum Edge Reversals So Every Node Is Reachable,Hard,59.8%,28.2%

@@ -9,3 +9,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 527,https://leetcode.com/problems/word-abbreviation,Word Abbreviation,Hard,62.7%,58.5%
 622,https://leetcode.com/problems/design-circular-queue,Design Circular Queue,Medium,54.4%,51.0%
 1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,51.4%,51.0%
+289,https://leetcode.com/problems/game-of-life,Game of Life,Medium,72.7%,48.7%

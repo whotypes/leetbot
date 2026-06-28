@@ -31,6 +31,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2607,https://leetcode.com/problems/make-k-subarray-sums-equal,Make K-Subarray Sums Equal,Medium,38.4%,59.6%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.4%,51.5%
 1470,https://leetcode.com/problems/shuffle-the-array,Shuffle the Array,Easy,88.8%,51.5%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,60.3%,51.4%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.5%,51.4%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.2%,51.4%
+327,https://leetcode.com/problems/count-of-range-sum,Count of Range Sum,Hard,39.2%,51.4%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.7%,51.4%
 17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,64.0%,50.0%
 61,https://leetcode.com/problems/rotate-list,Rotate List,Medium,40.1%,50.0%
 91,https://leetcode.com/problems/decode-ways,Decode Ways,Medium,36.6%,50.0%

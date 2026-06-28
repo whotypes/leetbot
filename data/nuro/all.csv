@@ -14,7 +14,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 311,https://leetcode.com/problems/sparse-matrix-multiplication,Sparse Matrix Multiplication,Medium,69.3%,61.0%
 356,https://leetcode.com/problems/line-reflection,Line Reflection,Medium,36.3%,61.0%
 494,https://leetcode.com/problems/target-sum,Target Sum,Medium,52.1%,61.0%
+529,https://leetcode.com/problems/minesweeper,Minesweeper,Medium,68.8%,61.0%
 735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,47.7%,61.0%
 1233,https://leetcode.com/problems/remove-sub-folders-from-the-filesystem,Remove Sub-Folders from the Filesystem,Medium,78.6%,61.0%
 1268,https://leetcode.com/problems/search-suggestions-system,Search Suggestions System,Medium,65.2%,61.0%
 1293,https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination,Shortest Path in a Grid with Obstacles Elimination,Hard,46.2%,61.0%
+1570,https://leetcode.com/problems/dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,89.9%,61.0%

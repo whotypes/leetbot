@@ -10,5 +10,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,54.7%,86.6%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,86.6%
 509,https://leetcode.com/problems/fibonacci-number,Fibonacci Number,Easy,74.1%,86.6%
+1741,https://leetcode.com/problems/find-total-time-spent-by-each-employee,Find Total Time Spent by Each Employee,Easy,86.4%,76.9%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,76.1%
 175,https://leetcode.com/problems/combine-two-tables,Combine Two Tables,Easy,79.5%,76.1%

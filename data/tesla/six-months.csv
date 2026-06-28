@@ -11,6 +11,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 909,https://leetcode.com/problems/snakes-and-ladders,Snakes and Ladders,Medium,48.1%,81.4%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,81.1%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,81.1%
+341,https://leetcode.com/problems/flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,65.7%,81.1%
 399,https://leetcode.com/problems/evaluate-division,Evaluate Division,Medium,64.1%,81.1%
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,81.1%
 41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,41.2%,75.0%

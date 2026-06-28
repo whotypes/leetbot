@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T06:56:44Z",
+  "generatedAt": "2026-06-28T21:01:46Z",
   "source": "leetcode-problemsetCompanyTags",
   "companies": [
     {
@@ -9,10 +9,6 @@
     {
       "slug": "1kosmos",
       "name": "1Kosmos"
-    },
-    {
-      "slug": "360",
-      "name": "360"
     },
     {
       "slug": "6sense",
@@ -395,20 +391,12 @@
       "name": "bigbasket"
     },
     {
-      "slug": "billcom",
-      "name": "BILL Holdings"
-    },
-    {
       "slug": "bill-com",
       "name": "Bill.com"
     },
     {
       "slug": "binance",
       "name": "Binance"
-    },
-    {
-      "slug": "birdeye",
-      "name": "BirdEye"
     },
     {
       "slug": "bitdefender",
@@ -1153,6 +1141,10 @@
     {
       "slug": "esri",
       "name": "Esri"
+    },
+    {
+      "slug": "ethos-life",
+      "name": "Ethos Life"
     },
     {
       "slug": "etsy",
@@ -2291,6 +2283,10 @@
       "name": "NielsenIQ"
     },
     {
+      "slug": "niger",
+      "name": "Niger"
+    },
+    {
       "slug": "nike",
       "name": "Nike"
     },
@@ -2691,10 +2687,6 @@
       "name": "Quora"
     },
     {
-      "slug": "quorum",
-      "name": "Quorum"
-    },
-    {
       "slug": "rackspace",
       "name": "Rackspace"
     },
@@ -2785,6 +2777,10 @@
     {
       "slug": "roche",
       "name": "Roche"
+    },
+    {
+      "slug": "rocket-money",
+      "name": "Rocket Money"
     },
     {
       "slug": "rokt",
@@ -2987,10 +2983,6 @@
       "name": "Sony"
     },
     {
-      "slug": "sophos",
-      "name": "Sophos"
-    },
-    {
       "slug": "soroco",
       "name": "Soroco"
     },
@@ -3121,10 +3113,6 @@
     {
       "slug": "1mg",
       "name": "Tata 1mg"
-    },
-    {
-      "slug": "tata",
-      "name": "Tata Group"
     },
     {
       "slug": "tcs",
@@ -3535,12 +3523,12 @@
       "name": "Whatnot"
     },
     {
-      "slug": "wheelseye",
-      "name": "WheelsEye"
+      "slug": "whatsapp",
+      "name": "Whatsapp"
     },
     {
-      "slug": "whole-foods",
-      "name": "Whole Foods"
+      "slug": "wheelseye",
+      "name": "WheelsEye"
     },
     {
       "slug": "wingify",

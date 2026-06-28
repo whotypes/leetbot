@@ -13,6 +13,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2258,https://leetcode.com/problems/escape-the-spreading-fire,Escape the Spreading Fire,Hard,38.1%,78.6%
 123,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii,Best Time to Buy and Sell Stock III,Hard,51.4%,75.0%
 127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,43.1%,75.0%
+23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.8%,72.5%
 210,https://leetcode.com/problems/course-schedule-ii,Course Schedule II,Medium,55.4%,68.4%
 362,https://leetcode.com/problems/design-hit-counter,Design Hit Counter,Medium,69.7%,68.4%
 752,https://leetcode.com/problems/open-the-lock,Open the Lock,Medium,61.3%,68.4%

@@ -5,6 +5,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1283,https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold,Find the Smallest Divisor Given a Threshold,Medium,63.9%,100.0%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.2%,97.1%
 1888,https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating,Minimum Number of Flips to Make the Binary String Alternating,Medium,53.5%,85.7%
+2414,https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring,Length of the Longest Alphabetical Continuous Substring,Medium,61.0%,76.3%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,73.2%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,73.2%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,73.2%

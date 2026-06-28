@@ -185,6 +185,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1636,https://leetcode.com/problems/sort-array-by-increasing-frequency,Sort Array by Increasing Frequency,Easy,80.3%,25.0%
 1662,https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent,Check If Two String Arrays are Equivalent,Easy,85.8%,25.0%
 2933,https://leetcode.com/problems/high-access-employees,High-Access Employees,Medium,46.3%,25.0%
+973,https://leetcode.com/problems/k-closest-points-to-origin,K Closest Points to Origin,Medium,69.1%,22.0%
+1277,https://leetcode.com/problems/count-square-submatrices-with-all-ones,Count Square Submatrices with All Ones,Medium,80.7%,22.0%
 678,https://leetcode.com/problems/valid-parenthesis-string,Valid Parenthesis String,Medium,40.1%,21.8%
 874,https://leetcode.com/problems/walking-robot-simulation,Walking Robot Simulation,Medium,64.6%,21.8%
 1522,https://leetcode.com/problems/diameter-of-n-ary-tree,Diameter of N-Ary Tree,Medium,75.4%,21.8%

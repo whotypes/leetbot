@@ -53,3 +53,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2999,https://leetcode.com/problems/count-the-number-of-powerful-integers,Count the Number of Powerful Integers,Hard,46.3%,59.8%
 3029,https://leetcode.com/problems/minimum-time-to-revert-word-to-initial-state-i,Minimum Time to Revert Word to Initial State I,Medium,42.4%,59.8%
 3031,https://leetcode.com/problems/minimum-time-to-revert-word-to-initial-state-ii,Minimum Time to Revert Word to Initial State II,Hard,35.2%,59.8%
+946,https://leetcode.com/problems/validate-stack-sequences,Validate Stack Sequences,Medium,70.5%,59.7%

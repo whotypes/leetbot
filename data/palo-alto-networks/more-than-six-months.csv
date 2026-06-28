@@ -35,3 +35,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 706,https://leetcode.com/problems/design-hashmap,Design HashMap,Easy,66.5%,55.8%
 870,https://leetcode.com/problems/advantage-shuffle,Advantage Shuffle,Medium,54.5%,55.8%
 1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,51.4%,55.8%
+92,https://leetcode.com/problems/reverse-linked-list-ii,Reverse Linked List II,Medium,51.8%,55.6%
+141,https://leetcode.com/problems/linked-list-cycle,Linked List Cycle,Easy,54.6%,55.6%
+332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,44.7%,55.6%
+359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.9%,55.6%

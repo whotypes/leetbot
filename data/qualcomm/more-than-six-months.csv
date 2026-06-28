@@ -54,3 +54,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1183,https://leetcode.com/problems/maximum-number-of-ones,Maximum Number of Ones,Hard,70.6%,67.7%
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,67.7%
 2563,https://leetcode.com/problems/count-the-number-of-fair-pairs,Count the Number of Fair Pairs,Medium,52.7%,67.7%
+22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.8%,67.5%
+225,https://leetcode.com/problems/implement-stack-using-queues,Implement Stack using Queues,Easy,70.3%,67.5%
+346,https://leetcode.com/problems/moving-average-from-data-stream,Moving Average from Data Stream,Easy,80.2%,67.5%

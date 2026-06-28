@@ -205,3 +205,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.4%,32.8%
 941,https://leetcode.com/problems/valid-mountain-array,Valid Mountain Array,Easy,35.3%,32.8%
 2116,https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid,Check if a Parentheses String Can Be Valid,Medium,45.1%,32.8%
+77,https://leetcode.com/problems/combinations,Combinations,Medium,74.7%,32.6%
+413,https://leetcode.com/problems/arithmetic-slices,Arithmetic Slices,Medium,64.8%,32.6%
+627,https://leetcode.com/problems/swap-sex-of-employees,Swap Sex of Employees,Easy,84.7%,32.6%
+2414,https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring,Length of the Longest Alphabetical Continuous Substring,Medium,61.0%,32.6%

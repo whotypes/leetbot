@@ -7,6 +7,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3607,https://leetcode.com/problems/power-grid-maintenance,Power Grid Maintenance,Medium,43.8%,87.5%
 443,https://leetcode.com/problems/string-compression,String Compression,Medium,59.9%,82.6%
 3634,https://leetcode.com/problems/minimum-removals-to-balance-array,Minimum Removals to Balance Array,Medium,47.8%,82.6%
+3893,https://leetcode.com/problems/maximum-team-size-with-overlapping-intervals,Maximum Team Size with Overlapping Intervals,Medium,45.0%,75.7%
 1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,58.3%,75.0%
 2488,https://leetcode.com/problems/count-subarrays-with-median-k,Count Subarrays With Median K,Hard,45.7%,75.0%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,67.0%
@@ -14,6 +15,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 628,https://leetcode.com/problems/maximum-product-of-three-numbers,Maximum Product of Three Numbers,Easy,45.9%,67.0%
 664,https://leetcode.com/problems/strange-printer,Strange Printer,Hard,60.9%,67.0%
 2603,https://leetcode.com/problems/collect-coins-in-a-tree,Collect Coins in a Tree,Hard,40.0%,67.0%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,65.7%
+2366,https://leetcode.com/problems/minimum-replacements-to-sort-the-array,Minimum Replacements to Sort the Array,Hard,53.1%,65.7%
+2858,https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable,Minimum Edge Reversals So Every Node Is Reachable,Hard,59.8%,65.7%
 465,https://leetcode.com/problems/optimal-account-balancing,Optimal Account Balancing,Hard,50.0%,62.5%
 3295,https://leetcode.com/problems/report-spam-message,Report Spam Message,Medium,47.7%,62.5%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,57.9%

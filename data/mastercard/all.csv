@@ -1,6 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,100.0%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,100.0%
+51,https://leetcode.com/problems/n-queens,N-Queens,Hard,75.9%,86.3%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,86.2%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.3%,86.2%
 412,https://leetcode.com/problems/fizz-buzz,Fizz Buzz,Easy,75.4%,86.2%

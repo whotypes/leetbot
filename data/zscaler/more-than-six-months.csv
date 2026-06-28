@@ -5,6 +5,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,75.0%
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,78.1%,75.0%
 55,https://leetcode.com/problems/jump-game,Jump Game,Medium,39.6%,75.0%
+73,https://leetcode.com/problems/set-matrix-zeroes,Set Matrix Zeroes,Medium,63.2%,69.0%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,66.7%
 127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,45.4%,66.7%
 945,https://leetcode.com/problems/minimum-increment-to-make-array-unique,Minimum Increment to Make Array Unique,Medium,60.6%,66.7%

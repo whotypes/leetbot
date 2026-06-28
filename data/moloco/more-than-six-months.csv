@@ -8,3 +8,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 540,https://leetcode.com/problems/single-element-in-a-sorted-array,Single Element in a Sorted Array,Medium,59.2%,82.0%
 827,https://leetcode.com/problems/making-a-large-island,Making A Large Island,Hard,56.5%,82.0%
 1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,57.6%,82.0%
+130,https://leetcode.com/problems/surrounded-regions,Surrounded Regions,Medium,45.6%,81.5%
+2116,https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid,Check if a Parentheses String Can Be Valid,Medium,45.2%,81.5%

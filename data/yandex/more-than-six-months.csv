@@ -134,6 +134,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,28.5%
 2215,https://leetcode.com/problems/find-the-difference-of-two-arrays,Find the Difference of Two Arrays,Easy,81.4%,28.5%
 2570,https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values,Merge Two 2D Arrays by Summing Values,Easy,81.7%,28.5%
+2629,https://leetcode.com/problems/function-composition,Function Composition,Easy,86.8%,28.5%
 2665,https://leetcode.com/problems/counter-ii,Counter II,Easy,81.2%,28.5%
 2666,https://leetcode.com/problems/allow-one-function-call,Allow One Function Call,Easy,86.6%,28.5%
 2667,https://leetcode.com/problems/create-hello-world-function,Create Hello World Function,Easy,81.9%,28.5%

@@ -94,6 +94,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1404,https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,63.7%,53.6%
 1929,https://leetcode.com/problems/concatenation-of-array,Concatenation of Array,Easy,90.4%,53.6%
 3761,https://leetcode.com/problems/minimum-absolute-distance-between-mirror-pairs,Minimum Absolute Distance Between Mirror Pairs,Medium,59.3%,53.6%
+451,https://leetcode.com/problems/sort-characters-by-frequency,Sort Characters By Frequency,Medium,75.5%,51.8%
+485,https://leetcode.com/problems/max-consecutive-ones,Max Consecutive Ones,Easy,65.5%,51.8%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,19.4%,50.0%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,52.2%,50.0%
 75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,67.8%,50.0%
@@ -137,6 +139,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2265,https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree,Count Nodes Equal to Average of Subtree,Medium,86.8%,46.4%
 3640,https://leetcode.com/problems/trionic-array-ii,Trionic Array II,Hard,47.3%,46.4%
 3713,https://leetcode.com/problems/longest-balanced-substring-i,Longest Balanced Substring I,Medium,69.7%,46.4%
+2574,https://leetcode.com/problems/left-and-right-sum-differences,Left and Right Sum Differences,Easy,89.6%,45.3%
+3020,https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset,Find the Maximum Number of Elements in Subset,Medium,42.3%,45.3%
 29,https://leetcode.com/problems/divide-two-integers,Divide Two Integers,Medium,19.8%,38.0%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,64.5%,38.0%
 82,https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii,Remove Duplicates from Sorted List II,Medium,51.8%,38.0%
@@ -275,6 +279,26 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,36.5%
 3129,https://leetcode.com/problems/find-all-possible-stable-binary-arrays-i,Find All Possible Stable Binary Arrays I,Medium,53.7%,36.5%
 3634,https://leetcode.com/problems/minimum-removals-to-balance-array,Minimum Removals to Balance Array,Medium,47.8%,36.5%
+24,https://leetcode.com/problems/swap-nodes-in-pairs,Swap Nodes in Pairs,Medium,69.7%,36.2%
+79,https://leetcode.com/problems/word-search,Word Search,Medium,47.6%,36.2%
+130,https://leetcode.com/problems/surrounded-regions,Surrounded Regions,Medium,45.6%,36.2%
+152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,36.6%,36.2%
+182,https://leetcode.com/problems/duplicate-emails,Duplicate Emails,Easy,73.9%,36.2%
+212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,38.6%,36.2%
+214,https://leetcode.com/problems/shortest-palindrome,Shortest Palindrome,Hard,42.6%,36.2%
+229,https://leetcode.com/problems/majority-element-ii,Majority Element II,Medium,56.4%,36.2%
+653,https://leetcode.com/problems/two-sum-iv-input-is-a-bst,Two Sum IV - Input is a BST,Easy,63.4%,36.2%
+1344,https://leetcode.com/problems/angle-between-hands-of-a-clock,Angle Between Hands of a Clock,Medium,69.6%,36.2%
+1351,https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix,Count Negative Numbers in a Sorted Matrix,Easy,79.7%,36.2%
+1365,https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number,How Many Numbers Are Smaller Than the Current Number,Easy,87.4%,36.2%
+1456,https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length,Maximum Number of Vowels in a Substring of Given Length,Medium,62.2%,36.2%
+1475,https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop,Final Prices With a Special Discount in a Shop,Easy,84.2%,36.2%
+1840,https://leetcode.com/problems/maximum-building-height,Maximum Building Height,Hard,67.1%,36.2%
+1871,https://leetcode.com/problems/jump-game-vii,Jump Game VII,Medium,35.6%,36.2%
+2104,https://leetcode.com/problems/sum-of-subarray-ranges,Sum of Subarray Ranges,Medium,61.4%,36.2%
+3300,https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum,Minimum Element After Replacement With Digit Sum,Easy,89.6%,36.2%
+3689,https://leetcode.com/problems/maximum-total-subarray-value-i,Maximum Total Subarray Value I,Medium,71.9%,36.2%
+3932,https://leetcode.com/problems/count-k-th-roots-in-a-range,Count K-th Roots in a Range,Medium,24.5%,36.2%
 25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,63.3%,25.0%
 40,https://leetcode.com/problems/combination-sum-ii,Combination Sum II,Medium,57.8%,25.0%
 43,https://leetcode.com/problems/multiply-strings,Multiply Strings,Medium,42.4%,25.0%

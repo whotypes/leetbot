@@ -46,3 +46,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 103,https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal,Binary Tree Zigzag Level Order Traversal,Medium,63.7%,54.0%
 355,https://leetcode.com/problems/design-twitter,Design Twitter,Medium,44.7%,54.0%
 1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.7%,54.0%
+543,https://leetcode.com/problems/diameter-of-binary-tree,Diameter of Binary Tree,Easy,65.7%,52.1%
+1171,https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list,Remove Zero Sum Consecutive Nodes from Linked List,Medium,53.2%,52.1%

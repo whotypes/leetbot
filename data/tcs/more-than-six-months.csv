@@ -111,6 +111,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2099,https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum,Find Subsequence of Length K With the Largest Sum,Easy,57.4%,34.3%
 2423,https://leetcode.com/problems/remove-letter-to-equalize-frequency,Remove Letter To Equalize Frequency,Easy,19.3%,34.3%
 2520,https://leetcode.com/problems/count-the-digits-that-divide-a-number,Count the Digits That Divide a Number,Easy,85.9%,34.3%
+443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.2%,34.2%
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,54.0%,27.0%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,27.0%
 16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,48.4%,27.0%
@@ -197,6 +198,23 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3190,https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three,Find Minimum Operations to Make All Elements Divisible by Three,Easy,90.8%,27.0%
 3330,https://leetcode.com/problems/find-the-original-typed-string-i,Find the Original Typed String I,Easy,72.0%,27.0%
 3714,https://leetcode.com/problems/longest-balanced-substring-ii,Longest Balanced Substring II,Medium,42.0%,27.0%
+8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,21.2%,26.9%
+12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,71.2%,26.9%
+57,https://leetcode.com/problems/insert-interval,Insert Interval,Medium,45.4%,26.9%
+59,https://leetcode.com/problems/spiral-matrix-ii,Spiral Matrix II,Medium,75.3%,26.9%
+167,https://leetcode.com/problems/two-sum-ii-input-array-is-sorted,Two Sum II - Input Array Is Sorted,Medium,65.3%,26.9%
+184,https://leetcode.com/problems/department-highest-salary,Department Highest Salary,Medium,58.5%,26.9%
+230,https://leetcode.com/problems/kth-smallest-element-in-a-bst,Kth Smallest Element in a BST,Medium,77.0%,26.9%
+319,https://leetcode.com/problems/bulb-switcher,Bulb Switcher,Medium,56.0%,26.9%
+435,https://leetcode.com/problems/non-overlapping-intervals,Non-overlapping Intervals,Medium,57.3%,26.9%
+448,https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array,Find All Numbers Disappeared in an Array,Easy,64.3%,26.9%
+523,https://leetcode.com/problems/continuous-subarray-sum,Continuous Subarray Sum,Medium,31.4%,26.9%
+566,https://leetcode.com/problems/reshape-the-matrix,Reshape the Matrix,Easy,65.1%,26.9%
+713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.5%,26.9%
+744,https://leetcode.com/problems/find-smallest-letter-greater-than-target,Find Smallest Letter Greater Than Target,Easy,59.3%,26.9%
+930,https://leetcode.com/problems/binary-subarrays-with-sum,Binary Subarrays With Sum,Medium,69.2%,26.9%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.9%,26.9%
+1015,https://leetcode.com/problems/smallest-integer-divisible-by-k,Smallest Integer Divisible by K,Medium,54.2%,26.9%
 39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,74.9%,25.0%
 79,https://leetcode.com/problems/word-search,Word Search,Medium,45.4%,25.0%
 82,https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii,Remove Duplicates from Sorted List II,Medium,50.0%,25.0%

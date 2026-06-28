@@ -604,6 +604,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3408,https://leetcode.com/problems/design-task-manager,Design Task Manager,Medium,49.0%,20.6%
 3494,https://leetcode.com/problems/find-the-minimum-amount-of-time-to-brew-potions,Find the Minimum Amount of Time to Brew Potions,Medium,62.7%,20.6%
 3719,https://leetcode.com/problems/longest-balanced-subarray-i,Longest Balanced Subarray I,Medium,65.6%,20.6%
+1390,https://leetcode.com/problems/four-divisors,Four Divisors,Medium,56.6%,20.3%
 89,https://leetcode.com/problems/gray-code,Gray Code,Medium,64.7%,15.9%
 93,https://leetcode.com/problems/restore-ip-addresses,Restore IP Addresses,Medium,55.8%,15.9%
 96,https://leetcode.com/problems/unique-binary-search-trees,Unique Binary Search Trees,Medium,63.6%,15.9%
@@ -787,6 +788,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 815,https://leetcode.com/problems/bus-routes,Bus Routes,Hard,47.3%,15.7%
 1502,https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence,Can Make Arithmetic Progression From Sequence,Easy,68.9%,15.7%
 3318,https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-i,Find X-Sum of All K-Long Subarrays I,Easy,76.1%,15.7%
+707,https://leetcode.com/problems/design-linked-list,Design Linked List,Medium,30.4%,15.6%
+840,https://leetcode.com/problems/magic-squares-in-grid,Magic Squares In Grid,Medium,55.2%,15.6%
+1411,https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid,Number of Ways to Paint N × 3 Grid,Hard,80.6%,15.6%
 188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,12.5%
 193,https://leetcode.com/problems/valid-phone-numbers,Valid Phone Numbers,Easy,27.6%,12.5%
 269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,36.7%,12.5%
@@ -1225,3 +1229,37 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3229,https://leetcode.com/problems/minimum-operations-to-make-array-equal-to-target,Minimum Operations to Make Array Equal to Target,Hard,41.6%,10.0%
 3321,https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-ii,Find X-Sum of All K-Long Subarrays II,Hard,41.1%,10.0%
 3433,https://leetcode.com/problems/count-mentions-per-user,Count Mentions Per User,Medium,50.8%,10.0%
+218,https://leetcode.com/problems/the-skyline-problem,The Skyline Problem,Hard,45.5%,9.9%
+270,https://leetcode.com/problems/closest-binary-search-tree-value,Closest Binary Search Tree Value,Easy,49.2%,9.9%
+396,https://leetcode.com/problems/rotate-function,Rotate Function,Medium,54.2%,9.9%
+446,https://leetcode.com/problems/arithmetic-slices-ii-subsequence,Arithmetic Slices II - Subsequence,Hard,55.1%,9.9%
+608,https://leetcode.com/problems/tree-node,Tree Node,Medium,75.9%,9.9%
+759,https://leetcode.com/problems/employee-free-time,Employee Free Time,Hard,73.0%,9.9%
+955,https://leetcode.com/problems/delete-columns-to-make-sorted-ii,Delete Columns to Make Sorted II,Medium,49.7%,9.9%
+1208,https://leetcode.com/problems/get-equal-substrings-within-budget,Get Equal Substrings Within Budget,Medium,59.8%,9.9%
+1386,https://leetcode.com/problems/cinema-seat-allocation,Cinema Seat Allocation,Medium,44.7%,9.9%
+1765,https://leetcode.com/problems/map-of-highest-peak,Map of Highest Peak,Medium,76.0%,9.9%
+1840,https://leetcode.com/problems/maximum-building-height,Maximum Building Height,Hard,67.1%,9.9%
+1925,https://leetcode.com/problems/count-square-sum-triples,Count Square Sum Triples,Easy,77.2%,9.9%
+1975,https://leetcode.com/problems/maximum-matrix-sum,Maximum Matrix Sum,Medium,67.5%,9.9%
+2027,https://leetcode.com/problems/minimum-moves-to-convert-string,Minimum Moves to Convert String,Easy,58.1%,9.9%
+2141,https://leetcode.com/problems/maximum-running-time-of-n-computers,Maximum Running Time of N Computers,Hard,56.4%,9.9%
+2147,https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor,Number of Ways to Divide a Long Corridor,Hard,54.6%,9.9%
+2236,https://leetcode.com/problems/root-equals-sum-of-children,Root Equals Sum of Children,Easy,85.1%,9.9%
+2402,https://leetcode.com/problems/meeting-rooms-iii,Meeting Rooms III,Hard,51.4%,9.9%
+2421,https://leetcode.com/problems/number-of-good-paths,Number of Good Paths,Hard,56.4%,9.9%
+2551,https://leetcode.com/problems/put-marbles-in-bags,Put Marbles in Bags,Hard,72.1%,9.9%
+2716,https://leetcode.com/problems/minimize-string-length,Minimize String Length,Easy,79.4%,9.9%
+3043,https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix,Find the Length of the Longest Common Prefix,Medium,62.3%,9.9%
+3074,https://leetcode.com/problems/apple-redistribution-into-boxes,Apple Redistribution into Boxes,Easy,78.6%,9.9%
+3193,https://leetcode.com/problems/count-the-number-of-inversions,Count the Number of Inversions,Hard,31.5%,9.9%
+3347,https://leetcode.com/problems/maximum-frequency-of-an-element-after-performing-operations-ii,Maximum Frequency of an Element After Performing Operations II,Hard,53.9%,9.9%
+3432,https://leetcode.com/problems/count-partitions-with-even-sum-difference,Count Partitions with Even Sum Difference,Easy,85.3%,9.9%
+3469,https://leetcode.com/problems/find-minimum-cost-to-remove-array-elements,Find Minimum Cost to Remove Array Elements,Medium,21.9%,9.9%
+3484,https://leetcode.com/problems/design-spreadsheet,Design Spreadsheet,Medium,74.0%,9.9%
+3497,https://leetcode.com/problems/analyze-subscription-conversion,Analyze Subscription Conversion ,Medium,74.5%,9.9%
+3546,https://leetcode.com/problems/equal-sum-grid-partition-i,Equal Sum Grid Partition I,Medium,52.9%,9.9%
+3623,https://leetcode.com/problems/count-number-of-trapezoids-i,Count Number of Trapezoids I,Medium,48.1%,9.9%
+3699,https://leetcode.com/problems/number-of-zigzag-arrays-i,Number of ZigZag Arrays I,Hard,50.8%,9.9%
+3776,https://leetcode.com/problems/minimum-moves-to-balance-circular-array,Minimum Moves to Balance Circular Array,Medium,40.5%,9.9%
+3783,https://leetcode.com/problems/mirror-distance-of-an-integer,Mirror Distance of an Integer,Easy,91.5%,9.9%

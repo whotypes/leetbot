@@ -13,6 +13,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,35.1%,62.5%
 188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,62.5%
 1312,https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome,Minimum Insertion Steps to Make a String Palindrome,Hard,72.7%,62.5%
+4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.9%,61.1%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.1%,61.0%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,61.0%
 72,https://leetcode.com/problems/edit-distance,Edit Distance,Medium,60.5%,61.0%

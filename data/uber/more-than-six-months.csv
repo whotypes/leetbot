@@ -444,6 +444,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 173,https://leetcode.com/problems/binary-search-tree-iterator,Binary Search Tree Iterator,Medium,76.4%,23.0%
 186,https://leetcode.com/problems/reverse-words-in-a-string-ii,Reverse Words in a String II,Medium,56.7%,23.0%
 202,https://leetcode.com/problems/happy-number,Happy Number,Easy,59.5%,23.0%
+204,https://leetcode.com/problems/count-primes,Count Primes,Medium,36.2%,23.0%
 206,https://leetcode.com/problems/reverse-linked-list,Reverse Linked List,Easy,80.5%,23.0%
 208,https://leetcode.com/problems/implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,69.4%,23.0%
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,23.0%
@@ -454,6 +455,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 254,https://leetcode.com/problems/factor-combinations,Factor Combinations,Medium,50.5%,23.0%
 256,https://leetcode.com/problems/paint-house,Paint House,Medium,64.4%,23.0%
 266,https://leetcode.com/problems/palindrome-permutation,Palindrome Permutation,Easy,68.7%,23.0%
+270,https://leetcode.com/problems/closest-binary-search-tree-value,Closest Binary Search Tree Value,Easy,49.2%,23.0%
 277,https://leetcode.com/problems/find-the-celebrity,Find the Celebrity,Medium,49.0%,23.0%
 290,https://leetcode.com/problems/word-pattern,Word Pattern,Easy,44.0%,23.0%
 291,https://leetcode.com/problems/word-pattern-ii,Word Pattern II,Medium,48.8%,23.0%
@@ -484,6 +486,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 690,https://leetcode.com/problems/employee-importance,Employee Importance,Medium,69.4%,23.0%
 699,https://leetcode.com/problems/falling-squares,Falling Squares,Hard,47.7%,23.0%
 710,https://leetcode.com/problems/random-pick-with-blacklist,Random Pick with Blacklist,Hard,34.9%,23.0%
+721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.5%,23.0%
 730,https://leetcode.com/problems/count-different-palindromic-subsequences,Count Different Palindromic Subsequences,Hard,47.7%,23.0%
 733,https://leetcode.com/problems/flood-fill,Flood Fill,Easy,68.1%,23.0%
 778,https://leetcode.com/problems/swim-in-rising-water,Swim in Rising Water,Hard,67.8%,23.0%
@@ -526,6 +529,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1968,https://leetcode.com/problems/array-with-elements-not-equal-to-average-of-neighbors,Array With Elements Not Equal to Average of Neighbors,Medium,50.7%,23.0%
 2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,23.0%
 2073,https://leetcode.com/problems/time-needed-to-buy-tickets,Time Needed to Buy Tickets,Easy,72.5%,23.0%
+2163,https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements,Minimum Difference in Sums After Removal of Elements,Hard,69.6%,23.0%
 2196,https://leetcode.com/problems/create-binary-tree-from-descriptions,Create Binary Tree From Descriptions,Medium,81.7%,23.0%
 2243,https://leetcode.com/problems/calculate-digit-sum-of-a-string,Calculate Digit Sum of a String,Easy,67.7%,23.0%
 2248,https://leetcode.com/problems/intersection-of-multiple-arrays,Intersection of Multiple Arrays,Easy,68.7%,23.0%
@@ -540,6 +544,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2622,https://leetcode.com/problems/cache-with-time-limit,Cache With Time Limit,Medium,76.1%,23.0%
 2636,https://leetcode.com/problems/promise-pool,Promise Pool,Medium,79.4%,23.0%
 2762,https://leetcode.com/problems/continuous-subarrays,Continuous Subarrays,Medium,57.9%,23.0%
+2812,https://leetcode.com/problems/find-the-safest-path-in-a-grid,Find the Safest Path in a Grid,Medium,48.8%,23.0%
 2912,https://leetcode.com/problems/number-of-ways-to-reach-destination-in-the-grid,Number of Ways to Reach Destination in the Grid,Hard,58.1%,23.0%
 2958,https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency,Length of Longest Subarray With at Most K Frequency,Medium,56.5%,23.0%
 3023,https://leetcode.com/problems/find-pattern-in-infinite-stream-i,Find Pattern in Infinite Stream I,Medium,57.2%,23.0%

@@ -220,6 +220,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2472,https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings,Maximum Number of Non-overlapping Palindrome Substrings,Hard,44.6%,36.1%
 2680,https://leetcode.com/problems/maximum-or,Maximum OR,Medium,43.0%,36.1%
 3047,https://leetcode.com/problems/find-the-largest-area-of-square-inside-two-rectangles,Find the Largest Area of Square Inside Two Rectangles,Medium,66.9%,36.1%
+193,https://leetcode.com/problems/valid-phone-numbers,Valid Phone Numbers,Easy,30.0%,31.7%
+1283,https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold,Find the Smallest Divisor Given a Threshold,Medium,66.2%,31.7%
+3737,https://leetcode.com/problems/count-subarrays-with-majority-element-i,Count Subarrays With Majority Element I,Medium,75.7%,31.7%
 728,https://leetcode.com/problems/self-dividing-numbers,Self Dividing Numbers,Easy,80.8%,31.4%
 1674,https://leetcode.com/problems/minimum-moves-to-make-array-complementary,Minimum Moves to Make Array Complementary,Medium,65.1%,31.4%
 3742,https://leetcode.com/problems/maximum-path-score-in-a-grid,Maximum Path Score in a Grid,Medium,53.9%,31.4%
@@ -463,6 +466,30 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3443,https://leetcode.com/problems/maximum-manhattan-distance-after-k-changes,Maximum Manhattan Distance After K Changes,Medium,54.0%,25.0%
 3477,https://leetcode.com/problems/fruits-into-baskets-ii,Fruits Into Baskets II,Easy,53.2%,25.0%
 3576,https://leetcode.com/problems/transform-array-to-all-equal-elements,Transform Array to All Equal Elements,Medium,32.0%,25.0%
+60,https://leetcode.com/problems/permutation-sequence,Permutation Sequence,Hard,53.5%,23.7%
+86,https://leetcode.com/problems/partition-list,Partition List,Medium,61.4%,23.7%
+108,https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree,Convert Sorted Array to Binary Search Tree,Easy,75.7%,23.7%
+130,https://leetcode.com/problems/surrounded-regions,Surrounded Regions,Medium,45.6%,23.7%
+216,https://leetcode.com/problems/combination-sum-iii,Combination Sum III,Medium,73.4%,23.7%
+237,https://leetcode.com/problems/delete-node-in-a-linked-list,Delete Node in a Linked List,Medium,84.1%,23.7%
+257,https://leetcode.com/problems/binary-tree-paths,Binary Tree Paths,Easy,68.9%,23.7%
+264,https://leetcode.com/problems/ugly-number-ii,Ugly Number II,Medium,49.7%,23.7%
+362,https://leetcode.com/problems/design-hit-counter,Design Hit Counter,Medium,69.7%,23.7%
+402,https://leetcode.com/problems/remove-k-digits,Remove K Digits,Medium,37.1%,23.7%
+526,https://leetcode.com/problems/beautiful-arrangement,Beautiful Arrangement,Medium,64.8%,23.7%
+763,https://leetcode.com/problems/partition-labels,Partition Labels,Medium,81.9%,23.7%
+847,https://leetcode.com/problems/shortest-path-visiting-all-nodes,Shortest Path Visiting All Nodes,Hard,66.1%,23.7%
+853,https://leetcode.com/problems/car-fleet,Car Fleet,Medium,55.3%,23.7%
+1000,https://leetcode.com/problems/minimum-cost-to-merge-stones,Minimum Cost to Merge Stones,Hard,46.4%,23.7%
+1344,https://leetcode.com/problems/angle-between-hands-of-a-clock,Angle Between Hands of a Clock,Medium,69.6%,23.7%
+1456,https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length,Maximum Number of Vowels in a Substring of Given Length,Medium,62.2%,23.7%
+1840,https://leetcode.com/problems/maximum-building-height,Maximum Building Height,Hard,67.1%,23.7%
+2080,https://leetcode.com/problems/range-frequency-queries,Range Frequency Queries,Medium,43.5%,23.7%
+2095,https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list,Delete the Middle Node of a Linked List,Medium,60.9%,23.7%
+2418,https://leetcode.com/problems/sort-the-people,Sort the People,Easy,84.8%,23.7%
+3699,https://leetcode.com/problems/number-of-zigzag-arrays-i,Number of ZigZag Arrays I,Hard,50.8%,23.7%
+3753,https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii,Total Waviness of Numbers in Range II,Hard,56.6%,23.7%
+3946,https://leetcode.com/problems/maximum-number-of-items-from-sale-i,Maximum Number of Items From Sale I,Medium,37.2%,23.7%
 110,https://leetcode.com/problems/balanced-binary-tree,Balanced Binary Tree,Easy,58.4%,23.4%
 268,https://leetcode.com/problems/missing-number,Missing Number,Easy,72.0%,23.4%
 396,https://leetcode.com/problems/rotate-function,Rotate Function,Medium,54.1%,23.4%

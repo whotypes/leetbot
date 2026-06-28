@@ -14,6 +14,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2672,https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color,Number of Adjacent Elements With the Same Color,Medium,59.4%,74.6%
 3649,https://leetcode.com/problems/number-of-perfect-pairs,Number of Perfect Pairs,Medium,33.9%,74.6%
 3651,https://leetcode.com/problems/minimum-cost-path-with-teleportations,Minimum Cost Path with Teleportations,Hard,45.6%,74.6%
+2466,https://leetcode.com/problems/count-ways-to-build-good-strings,Count Ways To Build Good Strings,Medium,58.9%,74.0%
 526,https://leetcode.com/problems/beautiful-arrangement,Beautiful Arrangement,Medium,64.8%,68.2%
 1529,https://leetcode.com/problems/minimum-suffix-flips,Minimum Suffix Flips,Medium,73.9%,68.2%
 1631,https://leetcode.com/problems/path-with-minimum-effort,Path With Minimum Effort,Medium,63.2%,68.2%
@@ -30,6 +31,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2491,https://leetcode.com/problems/divide-players-into-teams-of-equal-skill,Divide Players Into Teams of Equal Skill,Medium,68.9%,67.5%
 2817,https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint,Minimum Absolute Difference Between Elements With Constraint,Medium,37.5%,67.5%
 3019,https://leetcode.com/problems/number-of-changing-keys,Number of Changing Keys,Easy,80.6%,67.5%
+2439,https://leetcode.com/problems/minimize-maximum-of-array,Minimize Maximum of Array,Medium,46.6%,63.3%
+2771,https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays,Longest Non-decreasing Subarray From Two Arrays,Medium,31.3%,63.3%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,42.4%,62.5%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,62.5%
 71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,48.1%,62.5%

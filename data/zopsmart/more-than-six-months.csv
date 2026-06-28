@@ -8,6 +8,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 402,https://leetcode.com/problems/remove-k-digits,Remove K Digits,Medium,36.7%,63.6%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,58.0%
 991,https://leetcode.com/problems/broken-calculator,Broken Calculator,Medium,56.0%,58.0%
+394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.8%,53.3%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,50.2%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,50.2%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,50.2%

@@ -10,3 +10,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,57.0%,62.5%
 347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.3%,55.6%
 2386,https://leetcode.com/problems/find-the-k-sum-of-an-array,Find the K-Sum of an Array,Hard,41.3%,55.6%
+2623,https://leetcode.com/problems/memoize,Memoize,Medium,65.1%,52.5%

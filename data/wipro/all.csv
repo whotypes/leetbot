@@ -18,6 +18,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 231,https://leetcode.com/problems/power-of-two,Power of Two,Easy,48.4%,62.5%
 704,https://leetcode.com/problems/binary-search,Binary Search,Easy,59.7%,62.5%
 1148,https://leetcode.com/problems/article-views-i,Article Views I,Easy,77.1%,62.5%
+485,https://leetcode.com/problems/max-consecutive-ones,Max Consecutive Ones,Easy,65.5%,60.6%
+1431,https://leetcode.com/problems/kids-with-the-greatest-number-of-candies,Kids With the Greatest Number of Candies,Easy,88.0%,60.6%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.5%,60.5%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,60.5%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,60.5%

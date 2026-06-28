@@ -108,6 +108,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1052,https://leetcode.com/problems/grumpy-bookstore-owner,Grumpy Bookstore Owner,Medium,64.0%,50.0%
 2291,https://leetcode.com/problems/maximum-profit-from-trading-stocks,Maximum Profit From Trading Stocks,Medium,46.7%,50.0%
 2625,https://leetcode.com/problems/flatten-deeply-nested-array,Flatten Deeply Nested Array,Medium,64.6%,50.0%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.9%,43.1%
+787,https://leetcode.com/problems/cheapest-flights-within-k-stops,Cheapest Flights Within K Stops,Medium,42.1%,43.1%
+987,https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree,Vertical Order Traversal of a Binary Tree,Hard,54.1%,43.1%
+1200,https://leetcode.com/problems/minimum-absolute-difference,Minimum Absolute Difference,Easy,75.1%,43.1%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,41.7%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,41.7%
 26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,62.7%,41.7%

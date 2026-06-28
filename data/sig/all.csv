@@ -12,3 +12,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,70.3%
 3043,https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix,Find the Length of the Longest Common Prefix,Medium,57.1%,70.3%
 3161,https://leetcode.com/problems/block-placement-queries,Block Placement Queries,Hard,18.5%,70.3%
+295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,54.6%,70.1%

@@ -74,6 +74,13 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2385,https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected,Amount of Time for Binary Tree to Be Infected,Medium,65.3%,56.8%
 3106,https://leetcode.com/problems/lexicographically-smallest-string-after-operations-with-constraint,Lexicographically Smallest String After Operations With Constraint,Medium,62.8%,56.8%
 3203,https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees,Find Minimum Diameter After Merging Two Trees,Hard,57.0%,56.8%
+17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,66.3%,55.0%
+71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,50.8%,55.0%
+127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,45.9%,55.0%
+503,https://leetcode.com/problems/next-greater-element-ii,Next Greater Element II,Medium,68.6%,55.0%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,55.0%
+904,https://leetcode.com/problems/fruit-into-baskets,Fruit Into Baskets,Medium,51.5%,55.0%
+1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,59.3%,55.0%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,50.0%
 34,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,47.0%,50.0%
 46,https://leetcode.com/problems/permutations,Permutations,Medium,80.8%,50.0%

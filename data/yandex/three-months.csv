@@ -8,6 +8,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 680,https://leetcode.com/problems/valid-palindrome-ii,Valid Palindrome II,Easy,43.1%,87.5%
 2743,https://leetcode.com/problems/count-substrings-without-repeating-character,Count Substrings Without Repeating Character,Medium,76.2%,87.5%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,86.2%
+9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.7%,76.1%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,75.3%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,75.3%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,75.3%

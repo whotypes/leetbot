@@ -56,6 +56,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 166,https://leetcode.com/problems/fraction-to-recurring-decimal,Fraction to Recurring Decimal,Medium,26.3%,37.5%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,46.7%,37.5%
 341,https://leetcode.com/problems/flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,65.3%,37.5%
+2101,https://leetcode.com/problems/detonate-the-maximum-bombs,Detonate the Maximum Bombs,Medium,50.2%,35.8%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,35.6%
 400,https://leetcode.com/problems/nth-digit,Nth Digit,Medium,38.0%,35.6%
 605,https://leetcode.com/problems/can-place-flowers,Can Place Flowers,Easy,29.1%,35.6%

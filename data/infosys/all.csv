@@ -45,6 +45,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3653,https://leetcode.com/problems/xor-after-range-multiplication-queries-i,XOR After Range Multiplication Queries I,Medium,73.3%,67.8%
 3655,https://leetcode.com/problems/xor-after-range-multiplication-queries-ii,XOR After Range Multiplication Queries II,Hard,47.7%,67.8%
 3671,https://leetcode.com/problems/sum-of-beautiful-subsequences,Sum of Beautiful Subsequences,Hard,31.5%,67.8%
+3901,https://leetcode.com/problems/good-subsequence-queries,Good Subsequence Queries,Hard,20.0%,65.4%
+3939,https://leetcode.com/problems/count-non-adjacent-subsets-in-a-rooted-tree,Count Non Adjacent Subsets in a Rooted Tree,Hard,56.1%,65.4%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,64.6%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,64.6%
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,79.6%,64.6%
@@ -182,3 +184,14 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 532,https://leetcode.com/problems/k-diff-pairs-in-an-array,K-diff Pairs in an Array,Medium,45.9%,34.2%
 1004,https://leetcode.com/problems/max-consecutive-ones-iii,Max Consecutive Ones III,Medium,67.7%,34.2%
 1376,https://leetcode.com/problems/time-needed-to-inform-all-employees,Time Needed to Inform All Employees,Medium,60.5%,34.2%
+35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,51.5%,33.5%
+64,https://leetcode.com/problems/minimum-path-sum,Minimum Path Sum,Medium,68.4%,33.5%
+124,https://leetcode.com/problems/binary-tree-maximum-path-sum,Binary Tree Maximum Path Sum,Hard,42.4%,33.5%
+207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,51.7%,33.5%
+209,https://leetcode.com/problems/minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,52.0%,33.5%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,60.0%,33.5%
+763,https://leetcode.com/problems/partition-labels,Partition Labels,Medium,81.9%,33.5%
+918,https://leetcode.com/problems/maximum-sum-circular-subarray,Maximum Sum Circular Subarray,Medium,50.6%,33.5%
+1752,https://leetcode.com/problems/check-if-array-is-sorted-and-rotated,Check if Array Is Sorted and Rotated,Easy,57.5%,33.5%
+1768,https://leetcode.com/problems/merge-strings-alternately,Merge Strings Alternately,Easy,82.1%,33.5%
+2680,https://leetcode.com/problems/maximum-or,Maximum OR,Medium,43.3%,33.5%

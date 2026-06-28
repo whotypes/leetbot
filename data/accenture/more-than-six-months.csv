@@ -26,6 +26,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 319,https://leetcode.com/problems/bulb-switcher,Bulb Switcher,Medium,55.8%,64.7%
 485,https://leetcode.com/problems/max-consecutive-ones,Max Consecutive Ones,Easy,65.0%,64.7%
 875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,49.9%,64.7%
+3432,https://leetcode.com/problems/count-partitions-with-even-sum-difference,Count Partitions with Even Sum Difference,Easy,85.3%,60.7%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,59.2%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,59.2%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,59.2%
@@ -68,6 +69,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 27,https://leetcode.com/problems/remove-element,Remove Element,Easy,60.2%,50.0%
 28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,45.1%,50.0%
 229,https://leetcode.com/problems/majority-element-ii,Majority Element II,Medium,54.6%,50.0%
+32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,39.0%,43.5%
+178,https://leetcode.com/problems/rank-scores,Rank Scores,Medium,68.0%,43.5%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,43.5%
+670,https://leetcode.com/problems/maximum-swap,Maximum Swap,Medium,52.1%,43.5%
+907,https://leetcode.com/problems/sum-of-subarray-minimums,Sum of Subarray Minimums,Medium,38.7%,43.5%
+3779,https://leetcode.com/problems/minimum-number-of-operations-to-have-distinct-elements,Minimum Number of Operations to Have Distinct Elements,Medium,42.4%,43.5%
 525,https://leetcode.com/problems/contiguous-array,Contiguous Array,Medium,51.3%,43.0%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,20.9%,42.5%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,42.5%

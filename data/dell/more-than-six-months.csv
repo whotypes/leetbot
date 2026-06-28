@@ -10,3 +10,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1413,https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum,Minimum Value to Get Positive Step by Step Sum,Easy,64.7%,79.6%
 185,https://leetcode.com/problems/department-top-three-salaries,Department Top Three Salaries,Hard,60.3%,69.8%
 196,https://leetcode.com/problems/delete-duplicate-emails,Delete Duplicate Emails,Easy,65.9%,69.8%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.5%,60.8%
+242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.3%,60.8%

@@ -65,6 +65,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1507,https://leetcode.com/problems/reformat-date,Reformat Date,Easy,68.4%,51.5%
 1963,https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced,Minimum Number of Swaps to Make the String Balanced,Medium,78.1%,51.5%
 2006,https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k,Count Number of Pairs With Absolute Difference K,Easy,85.4%,51.5%
+33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,45.1%,51.4%
+336,https://leetcode.com/problems/palindrome-pairs,Palindrome Pairs,Hard,37.3%,51.4%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.2%,51.4%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,46.4%,50.0%
 70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,53.6%,50.0%
 88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,53.1%,50.0%

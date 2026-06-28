@@ -23,6 +23,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,45.4%,75.0%
 206,https://leetcode.com/problems/reverse-linked-list,Reverse Linked List,Easy,79.3%,75.0%
 3071,https://leetcode.com/problems/minimum-operations-to-write-the-letter-y-on-a-grid,Minimum Operations to Write the Letter Y on a Grid,Medium,62.2%,75.0%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,72.1%
+2439,https://leetcode.com/problems/minimize-maximum-of-array,Minimize Maximum of Array,Medium,46.6%,72.1%
+2466,https://leetcode.com/problems/count-ways-to-build-good-strings,Count Ways To Build Good Strings,Medium,58.9%,72.1%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,62.5%
 129,https://leetcode.com/problems/sum-root-to-leaf-numbers,Sum Root to Leaf Numbers,Medium,68.6%,62.5%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,62.5%

@@ -19,6 +19,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 74,https://leetcode.com/problems/search-a-2d-matrix,Search a 2D Matrix,Medium,52.4%,75.0%
 844,https://leetcode.com/problems/backspace-string-compare,Backspace String Compare,Easy,49.5%,75.0%
 1493,https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element,Longest Subarray of 1's After Deleting One Element,Medium,69.3%,75.0%
+228,https://leetcode.com/problems/summary-ranges,Summary Ranges,Easy,54.4%,74.2%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,67.2%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,67.2%
 125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.2%,67.2%

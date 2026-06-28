@@ -12,6 +12,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,72.6%
 394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.5%,72.6%
 739,https://leetcode.com/problems/daily-temperatures,Daily Temperatures,Medium,68.6%,72.6%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,39.3%,67.7%
+78,https://leetcode.com/problems/subsets,Subsets,Medium,82.5%,67.7%
+198,https://leetcode.com/problems/house-robber,House Robber,Medium,53.3%,67.7%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,67.7%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.2%,67.7%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.4%,67.6%
 55,https://leetcode.com/problems/jump-game,Jump Game,Medium,40.8%,63.4%
 1331,https://leetcode.com/problems/rank-transform-of-an-array,Rank Transform of an Array,Easy,70.8%,63.4%

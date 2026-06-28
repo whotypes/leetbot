@@ -647,6 +647,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3007,https://leetcode.com/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k,Maximum Number That Sum of the Prices Is Less Than or Equal to K,Medium,38.6%,22.3%
 3169,https://leetcode.com/problems/count-days-without-meetings,Count Days Without Meetings,Medium,48.1%,22.3%
 3507,https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i,Minimum Pair Removal to Sort Array I,Easy,65.2%,22.3%
+3737,https://leetcode.com/problems/count-subarrays-with-majority-element-i,Count Subarrays With Majority Element I,Medium,75.7%,19.4%
 60,https://leetcode.com/problems/permutation-sequence,Permutation Sequence,Hard,52.8%,19.3%
 119,https://leetcode.com/problems/pascals-triangle-ii,Pascal's Triangle II,Easy,67.4%,19.3%
 144,https://leetcode.com/problems/binary-tree-preorder-traversal,Binary Tree Preorder Traversal,Easy,75.6%,19.3%
@@ -963,6 +964,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3174,https://leetcode.com/problems/clear-digits,Clear Digits,Easy,82.5%,12.5%
 3185,https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii,Count Pairs That Form a Complete Day II,Medium,43.0%,12.5%
 3194,https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements,Minimum Average of Smallest and Largest Elements,Easy,84.9%,12.5%
+1840,https://leetcode.com/problems/maximum-building-height,Maximum Building Height,Hard,67.1%,11.9%
+3300,https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum,Minimum Element After Replacement With Digit Sum,Easy,89.6%,11.9%
+3509,https://leetcode.com/problems/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k,Maximum Product of Subsequences With an Alternating Sum Equal to K,Hard,13.5%,11.9%
+3699,https://leetcode.com/problems/number-of-zigzag-arrays-i,Number of ZigZag Arrays I,Hard,50.8%,11.9%
 3742,https://leetcode.com/problems/maximum-path-score-in-a-grid,Maximum Path Score in a Grid,Medium,53.9%,11.9%
 95,https://leetcode.com/problems/unique-binary-search-trees-ii,Unique Binary Search Trees II,Medium,62.3%,11.8%
 107,https://leetcode.com/problems/binary-tree-level-order-traversal-ii,Binary Tree Level Order Traversal II,Medium,68.1%,11.8%
@@ -1173,14 +1178,38 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3607,https://leetcode.com/problems/power-grid-maintenance,Power Grid Maintenance,Medium,56.2%,11.8%
 3666,https://leetcode.com/problems/minimum-operations-to-equalize-binary-string,Minimum Operations to Equalize Binary String,Hard,45.1%,11.8%
 193,https://leetcode.com/problems/valid-phone-numbers,Valid Phone Numbers,Easy,29.7%,7.2%
+255,https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree,Verify Preorder Sequence in Binary Search Tree,Medium,51.8%,7.2%
+377,https://leetcode.com/problems/combination-sum-iv,Combination Sum IV,Medium,55.2%,7.2%
 396,https://leetcode.com/problems/rotate-function,Rotate Function,Medium,54.1%,7.2%
+454,https://leetcode.com/problems/4sum-ii,4Sum II,Medium,58.0%,7.2%
+768,https://leetcode.com/problems/max-chunks-to-make-sorted-ii,Max Chunks To Make Sorted II,Hard,54.9%,7.2%
+792,https://leetcode.com/problems/number-of-matching-subsequences,Number of Matching Subsequences,Medium,50.6%,7.2%
 937,https://leetcode.com/problems/reorder-data-in-log-files,Reorder Data in Log Files,Medium,56.8%,7.2%
+976,https://leetcode.com/problems/largest-perimeter-triangle,Largest Perimeter Triangle,Easy,62.3%,7.2%
+1036,https://leetcode.com/problems/escape-a-large-maze,Escape a Large Maze,Hard,36.7%,7.2%
+1313,https://leetcode.com/problems/decompress-run-length-encoded-list,Decompress Run-Length Encoded List,Easy,86.2%,7.2%
 1559,https://leetcode.com/problems/detect-cycles-in-2d-grid,Detect Cycles in 2D Grid,Medium,63.3%,7.2%
+1796,https://leetcode.com/problems/second-largest-digit-in-a-string,Second Largest Digit in a String,Easy,54.7%,7.2%
+1833,https://leetcode.com/problems/maximum-ice-cream-bars,Maximum Ice Cream Bars,Medium,77.2%,7.2%
 1928,https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time,Minimum Cost to Reach Destination in Time,Hard,41.6%,7.2%
 1979,https://leetcode.com/problems/find-greatest-common-divisor-of-array,Find Greatest Common Divisor of Array,Easy,79.9%,7.2%
+2080,https://leetcode.com/problems/range-frequency-queries,Range Frequency Queries,Medium,43.5%,7.2%
+2087,https://leetcode.com/problems/minimum-cost-homecoming-of-a-robot-in-a-grid,Minimum Cost Homecoming of a Robot in a Grid,Medium,51.8%,7.2%
+2360,https://leetcode.com/problems/longest-cycle-in-a-graph,Longest Cycle in a Graph,Hard,50.8%,7.2%
+2418,https://leetcode.com/problems/sort-the-people,Sort the People,Easy,84.8%,7.2%
 2553,https://leetcode.com/problems/separate-the-digits-in-an-array,Separate the Digits in an Array,Easy,85.8%,7.2%
+2627,https://leetcode.com/problems/debounce,Debounce,Medium,91.7%,7.2%
 2784,https://leetcode.com/problems/check-if-array-is-good,Check if Array is Good,Easy,57.3%,7.2%
 2879,https://leetcode.com/problems/display-the-first-three-rows,Display the First Three Rows,Easy,93.0%,7.2%
+2940,https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet,Find Building Where Alice and Bob Can Meet,Hard,52.4%,7.2%
+3020,https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset,Find the Maximum Number of Elements in Subset,Medium,42.3%,7.2%
+3161,https://leetcode.com/problems/block-placement-queries,Block Placement Queries,Hard,41.5%,7.2%
+3612,https://leetcode.com/problems/process-string-with-special-operations-i,Process String with Special Operations I,Medium,71.4%,7.2%
+3668,https://leetcode.com/problems/restore-finishing-order,Restore Finishing Order,Easy,91.3%,7.2%
+3691,https://leetcode.com/problems/maximum-total-subarray-value-ii,Maximum Total Subarray Value II,Hard,41.7%,7.2%
+3739,https://leetcode.com/problems/count-subarrays-with-majority-element-ii,Count Subarrays With Majority Element II,Hard,65.2%,7.2%
+3753,https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii,Total Waviness of Numbers in Range II,Hard,56.6%,7.2%
+3946,https://leetcode.com/problems/maximum-number-of-items-from-sale-i,Maximum Number of Items From Sale I,Medium,37.2%,7.2%
 87,https://leetcode.com/problems/scramble-string,Scramble String,Hard,44.4%,7.1%
 89,https://leetcode.com/problems/gray-code,Gray Code,Medium,64.7%,7.1%
 96,https://leetcode.com/problems/unique-binary-search-trees,Unique Binary Search Trees,Medium,63.6%,7.1%

@@ -64,6 +64,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 273,https://leetcode.com/problems/integer-to-english-words,Integer to English Words,Hard,34.4%,50.0%
 300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,58.0%,50.0%
 1470,https://leetcode.com/problems/shuffle-the-array,Shuffle the Array,Easy,88.9%,50.0%
+1344,https://leetcode.com/problems/angle-between-hands-of-a-clock,Angle Between Hands of a Clock,Medium,69.6%,45.7%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,45.3%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,45.3%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,45.3%
@@ -114,6 +115,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2027,https://leetcode.com/problems/minimum-moves-to-convert-string,Minimum Moves to Convert String,Easy,56.7%,37.5%
 2332,https://leetcode.com/problems/the-latest-time-to-catch-a-bus,The Latest Time to Catch a Bus,Medium,28.8%,37.5%
 2428,https://leetcode.com/problems/maximum-sum-of-an-hourglass,Maximum Sum of an Hourglass,Medium,76.0%,37.5%
+40,https://leetcode.com/problems/combination-sum-ii,Combination Sum II,Medium,59.6%,36.6%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.9%,36.6%
+961,https://leetcode.com/problems/n-repeated-element-in-size-2n-array,N-Repeated Element in Size 2N Array,Easy,80.0%,36.6%
+1394,https://leetcode.com/problems/find-lucky-integer-in-an-array,Find Lucky Integer in an Array,Easy,75.6%,36.6%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,20.9%,36.3%
 18,https://leetcode.com/problems/4sum,4Sum,Medium,40.5%,36.3%
 34,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,48.9%,36.3%

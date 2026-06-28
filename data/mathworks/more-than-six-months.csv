@@ -34,3 +34,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3048,https://leetcode.com/problems/earliest-second-to-mark-indices-i,Earliest Second to Mark Indices I,Medium,36.8%,57.6%
 3049,https://leetcode.com/problems/earliest-second-to-mark-indices-ii,Earliest Second to Mark Indices II,Hard,22.6%,57.6%
 2697,https://leetcode.com/problems/lexicographically-smallest-palindrome,Lexicographically Smallest Palindrome,Easy,81.4%,57.5%
+2918,https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros,Minimum Equal Sum of Two Arrays After Replacing Zeros,Medium,50.2%,57.4%

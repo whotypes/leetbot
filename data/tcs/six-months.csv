@@ -10,6 +10,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 219,https://leetcode.com/problems/contains-duplicate-ii,Contains Duplicate II,Easy,49.2%,75.0%
 416,https://leetcode.com/problems/partition-equal-subset-sum,Partition Equal Subset Sum,Medium,48.5%,75.0%
 956,https://leetcode.com/problems/tallest-billboard,Tallest Billboard,Hard,51.9%,75.0%
+387,https://leetcode.com/problems/first-unique-character-in-a-string,First Unique Character in a String,Easy,65.7%,71.6%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,70.8%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,70.8%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,70.8%
@@ -18,6 +19,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.5%,65.7%
 28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,46.5%,65.7%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.0%,65.7%
+3689,https://leetcode.com/problems/maximum-total-subarray-value-i,Maximum Total Subarray Value I,Medium,71.9%,64.2%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,77.3%,62.5%
 35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,49.2%,62.5%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,65.3%,62.5%
@@ -48,6 +50,18 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.2%,59.2%
 766,https://leetcode.com/problems/toeplitz-matrix,Toeplitz Matrix,Easy,69.7%,59.2%
 977,https://leetcode.com/problems/squares-of-a-sorted-array,Squares of a Sorted Array,Easy,73.7%,59.2%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.8%,53.8%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.2%,53.8%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.3%,53.8%
+111,https://leetcode.com/problems/minimum-depth-of-binary-tree,Minimum Depth of Binary Tree,Easy,53.2%,53.8%
+234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.2%,53.8%
+287,https://leetcode.com/problems/find-the-duplicate-number,Find the Duplicate Number,Medium,64.5%,53.8%
+300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,59.6%,53.8%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.7%,53.8%
+525,https://leetcode.com/problems/contiguous-array,Contiguous Array,Medium,51.6%,53.8%
+643,https://leetcode.com/problems/maximum-average-subarray-i,Maximum Average Subarray I,Easy,48.2%,53.8%
+1295,https://leetcode.com/problems/find-numbers-with-even-number-of-digits,Find Numbers with Even Number of Digits,Easy,79.8%,53.8%
+1833,https://leetcode.com/problems/maximum-ice-cream-bars,Maximum Ice Cream Bars,Medium,77.2%,53.8%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,50.0%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,20.9%,50.0%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,50.0%

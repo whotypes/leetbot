@@ -59,6 +59,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 876,https://leetcode.com/problems/middle-of-the-linked-list,Middle of the Linked List,Easy,81.8%,56.3%
 962,https://leetcode.com/problems/maximum-width-ramp,Maximum Width Ramp,Medium,55.9%,56.3%
 3432,https://leetcode.com/problems/count-partitions-with-even-sum-difference,Count Partitions with Even Sum Difference,Easy,85.2%,56.3%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.2%,50.4%
+180,https://leetcode.com/problems/consecutive-numbers,Consecutive Numbers,Medium,48.6%,50.4%
+443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.2%,50.4%
 27,https://leetcode.com/problems/remove-element,Remove Element,Easy,60.2%,50.0%
 28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,45.1%,50.0%
 229,https://leetcode.com/problems/majority-element-ii,Majority Element II,Medium,54.6%,50.0%

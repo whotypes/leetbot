@@ -1,4 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1610,https://leetcode.com/problems/maximum-number-of-visible-points,"Maximum Number of Visible Points",Hard,37.7%,100.0%
-399,https://leetcode.com/problems/evaluate-division,"Evaluate Division",Medium,63.2%,87.5%
-735,https://leetcode.com/problems/asteroid-collision,"Asteroid Collision",Medium,45.7%,87.5%
+528,https://leetcode.com/problems/random-pick-with-weight,Random Pick with Weight,Medium,49.1%,100.0%
+529,https://leetcode.com/problems/minesweeper,Minesweeper,Medium,68.8%,100.0%
+1610,https://leetcode.com/problems/maximum-number-of-visible-points,Maximum Number of Visible Points,Hard,37.7%,100.0%
+399,https://leetcode.com/problems/evaluate-division,Evaluate Division,Medium,63.2%,87.5%
+735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,45.7%,87.5%

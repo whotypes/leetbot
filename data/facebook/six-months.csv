@@ -231,6 +231,14 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3507,https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i,Minimum Pair Removal to Sort Array I,Easy,65.2%,37.2%
 3714,https://leetcode.com/problems/longest-balanced-substring-ii,Longest Balanced Substring II,Medium,42.0%,37.2%
 3761,https://leetcode.com/problems/minimum-absolute-distance-between-mirror-pairs,Minimum Absolute Distance Between Mirror Pairs,Medium,59.3%,37.2%
+1344,https://leetcode.com/problems/angle-between-hands-of-a-clock,Angle Between Hands of a Clock,Medium,69.6%,33.8%
+1365,https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number,How Many Numbers Are Smaller Than the Current Number,Easy,87.4%,33.8%
+1475,https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop,Final Prices With a Special Discount in a Shop,Easy,84.2%,33.8%
+1840,https://leetcode.com/problems/maximum-building-height,Maximum Building Height,Hard,67.1%,33.8%
+1871,https://leetcode.com/problems/jump-game-vii,Jump Game VII,Medium,35.6%,33.8%
+2574,https://leetcode.com/problems/left-and-right-sum-differences,Left and Right Sum Differences,Easy,89.6%,33.8%
+3020,https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset,Find the Maximum Number of Elements in Subset,Medium,42.3%,33.8%
+3300,https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum,Minimum Element After Replacement With Digit Sum,Easy,89.6%,33.8%
 1174,https://leetcode.com/problems/immediate-food-delivery-ii,Immediate Food Delivery II,Medium,56.0%,33.4%
 1674,https://leetcode.com/problems/minimum-moves-to-make-array-complementary,Minimum Moves to Make Array Complementary,Medium,65.1%,33.4%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,31.0%
@@ -308,6 +316,16 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3640,https://leetcode.com/problems/trionic-array-ii,Trionic Array II,Hard,47.3%,31.0%
 3651,https://leetcode.com/problems/minimum-cost-path-with-teleportations,Minimum Cost Path with Teleportations,Hard,45.6%,31.0%
 3713,https://leetcode.com/problems/longest-balanced-substring-i,Longest Balanced Substring I,Medium,69.7%,31.0%
+130,https://leetcode.com/problems/surrounded-regions,Surrounded Regions,Medium,45.6%,25.3%
+214,https://leetcode.com/problems/shortest-palindrome,Shortest Palindrome,Hard,42.6%,25.3%
+413,https://leetcode.com/problems/arithmetic-slices,Arithmetic Slices,Medium,64.8%,25.3%
+607,https://leetcode.com/problems/sales-person,Sales Person,Easy,66.1%,25.3%
+841,https://leetcode.com/problems/keys-and-rooms,Keys and Rooms,Medium,75.9%,25.3%
+856,https://leetcode.com/problems/score-of-parentheses,Score of Parentheses,Medium,63.6%,25.3%
+2833,https://leetcode.com/problems/furthest-point-from-origin,Furthest Point From Origin,Easy,77.1%,25.3%
+3453,https://leetcode.com/problems/separate-squares-i,Separate Squares I,Medium,58.0%,25.3%
+3689,https://leetcode.com/problems/maximum-total-subarray-value-i,Maximum Total Subarray Value I,Medium,71.9%,25.3%
+3932,https://leetcode.com/problems/count-k-th-roots-in-a-range,Count K-th Roots in a Range,Medium,24.5%,25.3%
 29,https://leetcode.com/problems/divide-two-integers,Divide Two Integers,Medium,18.5%,25.0%
 38,https://leetcode.com/problems/count-and-say,Count and Say,Medium,60.7%,25.0%
 44,https://leetcode.com/problems/wildcard-matching,Wildcard Matching,Hard,30.1%,25.0%

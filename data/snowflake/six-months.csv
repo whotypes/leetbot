@@ -17,6 +17,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.7%,74.6%
 1236,https://leetcode.com/problems/web-crawler,Web Crawler,Medium,68.8%,74.6%
 1494,https://leetcode.com/problems/parallel-courses-ii,Parallel Courses II,Hard,30.9%,74.6%
+886,https://leetcode.com/problems/possible-bipartition,Possible Bipartition,Medium,52.7%,64.2%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,64.1%
 45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,42.7%,64.1%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,64.1%

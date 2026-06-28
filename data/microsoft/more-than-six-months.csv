@@ -624,6 +624,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1404,https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,63.7%,18.4%
 1415,https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n,The k-th Lexicographical String of All Happy Strings of Length n,Medium,87.1%,18.4%
 1456,https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length,Maximum Number of Vowels in a Substring of Given Length,Medium,61.8%,18.4%
+1502,https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence,Can Make Arithmetic Progression From Sequence,Easy,68.8%,18.4%
 1524,https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum,Number of Sub-arrays With Odd Sum,Medium,55.7%,18.4%
 1535,https://leetcode.com/problems/find-the-winner-of-an-array-game,Find the Winner of an Array Game,Medium,56.8%,18.4%
 1547,https://leetcode.com/problems/minimum-cost-to-cut-a-stick,Minimum Cost to Cut a Stick,Hard,63.0%,18.4%
@@ -772,6 +773,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1375,https://leetcode.com/problems/number-of-times-binary-string-is-prefix-aligned,Number of Times Binary String Is Prefix-Aligned,Medium,66.0%,14.1%
 1381,https://leetcode.com/problems/design-a-stack-with-increment-operation,Design a Stack With Increment Operation,Medium,79.9%,14.1%
 1382,https://leetcode.com/problems/balance-a-binary-search-tree,Balance a Binary Search Tree,Medium,86.3%,14.1%
+1390,https://leetcode.com/problems/four-divisors,Four Divisors,Medium,56.6%,14.1%
 1392,https://leetcode.com/problems/longest-happy-prefix,Longest Happy Prefix,Hard,52.9%,14.1%
 1400,https://leetcode.com/problems/construct-k-palindrome-strings,Construct K Palindrome Strings,Medium,68.5%,14.1%
 1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,57.6%,14.1%
@@ -815,6 +817,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1931,https://leetcode.com/problems/painting-a-grid-with-three-different-colors,Painting a Grid With Three Different Colors,Hard,77.1%,14.1%
 1935,https://leetcode.com/problems/maximum-number-of-words-you-can-type,Maximum Number of Words You Can Type,Easy,82.9%,14.1%
 1957,https://leetcode.com/problems/delete-characters-to-make-fancy-string,Delete Characters to Make Fancy String,Easy,74.1%,14.1%
+1966,https://leetcode.com/problems/binary-searchable-numbers-in-an-unsorted-array,Binary Searchable Numbers in an Unsorted Array,Medium,64.0%,14.1%
 2006,https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k,Count Number of Pairs With Absolute Difference K,Easy,85.4%,14.1%
 2009,https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous,Minimum Number of Operations to Make Array Continuous,Hard,52.0%,14.1%
 2033,https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid,Minimum Operations to Make a Uni-Value Grid,Medium,67.5%,14.1%
@@ -1371,3 +1374,36 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3652,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-using-strategy,Best Time to Buy and Sell Stock using Strategy,Medium,59.8%,8.9%
 3665,https://leetcode.com/problems/twisted-mirror-path-count,Twisted Mirror Path Count,Medium,48.2%,8.9%
 3666,https://leetcode.com/problems/minimum-operations-to-equalize-binary-string,Minimum Operations to Equalize Binary String,Hard,45.1%,8.9%
+255,https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree,Verify Preorder Sequence in Binary Search Tree,Medium,51.8%,8.8%
+336,https://leetcode.com/problems/palindrome-pairs,Palindrome Pairs,Hard,37.3%,8.8%
+377,https://leetcode.com/problems/combination-sum-iv,Combination Sum IV,Medium,55.2%,8.8%
+454,https://leetcode.com/problems/4sum-ii,4Sum II,Medium,58.0%,8.8%
+490,https://leetcode.com/problems/the-maze,The Maze,Medium,60.5%,8.8%
+529,https://leetcode.com/problems/minesweeper,Minesweeper,Medium,68.8%,8.8%
+728,https://leetcode.com/problems/self-dividing-numbers,Self Dividing Numbers,Easy,80.9%,8.8%
+768,https://leetcode.com/problems/max-chunks-to-make-sorted-ii,Max Chunks To Make Sorted II,Hard,54.9%,8.8%
+925,https://leetcode.com/problems/long-pressed-name,Long Pressed Name,Easy,33.0%,8.8%
+976,https://leetcode.com/problems/largest-perimeter-triangle,Largest Perimeter Triangle,Easy,62.3%,8.8%
+1036,https://leetcode.com/problems/escape-a-large-maze,Escape a Large Maze,Hard,36.7%,8.8%
+1188,https://leetcode.com/problems/design-bounded-blocking-queue,Design Bounded Blocking Queue,Medium,73.8%,8.8%
+1266,https://leetcode.com/problems/minimum-time-visiting-all-points,Minimum Time Visiting All Points,Easy,84.8%,8.8%
+1309,https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping,Decrypt String from Alphabet to Integer Mapping,Easy,80.6%,8.8%
+1727,https://leetcode.com/problems/largest-submatrix-with-rearrangements,Largest Submatrix With Rearrangements,Medium,80.2%,8.8%
+1776,https://leetcode.com/problems/car-fleet-ii,Car Fleet II,Hard,58.2%,8.8%
+1796,https://leetcode.com/problems/second-largest-digit-in-a-string,Second Largest Digit in a String,Easy,54.7%,8.8%
+2011,https://leetcode.com/problems/final-value-of-variable-after-performing-operations,Final Value of Variable After Performing Operations,Easy,90.6%,8.8%
+2110,https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock,Number of Smooth Descent Periods of a Stock,Medium,67.7%,8.8%
+2147,https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor,Number of Ways to Divide a Long Corridor,Hard,54.6%,8.8%
+2360,https://leetcode.com/problems/longest-cycle-in-a-graph,Longest Cycle in a Graph,Hard,50.8%,8.8%
+2439,https://leetcode.com/problems/minimize-maximum-of-array,Minimize Maximum of Array,Medium,46.6%,8.8%
+2466,https://leetcode.com/problems/count-ways-to-build-good-strings,Count Ways To Build Good Strings,Medium,58.9%,8.8%
+2622,https://leetcode.com/problems/cache-with-time-limit,Cache With Time Limit,Medium,76.2%,8.8%
+3006,https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-i,Find Beautiful Indices in the Given Array I,Medium,41.0%,8.8%
+3300,https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum,Minimum Element After Replacement With Digit Sum,Easy,89.6%,8.8%
+3306,https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii,Count of Substrings Containing Every Vowel and K Consonants II,Medium,40.7%,8.8%
+3507,https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i,Minimum Pair Removal to Sort Array I,Easy,65.2%,8.8%
+3509,https://leetcode.com/problems/maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k,Maximum Product of Subsequences With an Alternating Sum Equal to K,Hard,13.5%,8.8%
+3578,https://leetcode.com/problems/count-partitions-with-max-min-difference-at-most-k,Count Partitions With Max-Min Difference at Most K,Medium,58.5%,8.8%
+3658,https://leetcode.com/problems/gcd-of-odd-and-even-sums,GCD of Odd and Even Sums,Easy,85.1%,8.8%
+3668,https://leetcode.com/problems/restore-finishing-order,Restore Finishing Order,Easy,91.3%,8.8%
+3737,https://leetcode.com/problems/count-subarrays-with-majority-element-i,Count Subarrays With Majority Element I,Medium,75.7%,8.8%

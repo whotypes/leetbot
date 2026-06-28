@@ -31,6 +31,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1675,https://leetcode.com/problems/minimize-deviation-in-array,Minimize Deviation in Array,Hard,54.0%,59.2%
 2035,https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference,Partition Array Into Two Arrays to Minimize Sum Difference,Hard,23.3%,59.2%
 2662,https://leetcode.com/problems/minimum-cost-of-a-path-with-special-roads,Minimum Cost of a Path With Special Roads,Medium,43.0%,59.2%
+45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,43.0%,53.4%
+410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,60.8%,53.4%
+502,https://leetcode.com/problems/ipo,IPO,Hard,53.6%,53.4%
 88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,54.8%,50.3%
 283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,63.8%,50.3%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,36.0%,50.0%

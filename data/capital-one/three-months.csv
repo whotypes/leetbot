@@ -10,6 +10,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3045,https://leetcode.com/problems/count-prefix-and-suffix-pairs-ii,Count Prefix and Suffix Pairs II,Hard,27.3%,87.5%
 257,https://leetcode.com/problems/binary-tree-paths,Binary Tree Paths,Easy,68.7%,87.3%
 68,https://leetcode.com/problems/text-justification,Text Justification,Hard,50.9%,87.0%
+2232,https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression,Minimize Result by Adding Parentheses to Expression,Medium,68.3%,82.2%
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,82.1%
 2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,75.7%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,49.5%,75.0%

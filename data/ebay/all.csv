@@ -68,6 +68,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1381,https://leetcode.com/problems/design-a-stack-with-increment-operation,Design a Stack With Increment Operation,Medium,79.9%,51.8%
 1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,57.6%,51.8%
 1926,https://leetcode.com/problems/nearest-exit-from-entrance-in-maze,Nearest Exit from Entrance in Maze,Medium,48.5%,51.8%
+30,https://leetcode.com/problems/substring-with-concatenation-of-all-words,Substring with Concatenation of All Words,Hard,34.6%,51.6%
+59,https://leetcode.com/problems/spiral-matrix-ii,Spiral Matrix II,Medium,75.3%,51.6%
+269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,37.2%,51.6%
+3161,https://leetcode.com/problems/block-placement-queries,Block Placement Queries,Hard,41.5%,51.6%
+3208,https://leetcode.com/problems/alternating-groups-ii,Alternating Groups II,Medium,60.0%,51.6%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,44.0%,50.0%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,68.8%,50.0%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,50.0%

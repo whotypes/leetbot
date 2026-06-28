@@ -1,4 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+222,https://leetcode.com/problems/count-complete-tree-nodes,Count Complete Tree Nodes,Easy,72.9%,100.0%
 1397,https://leetcode.com/problems/find-all-good-strings,Find All Good Strings,Hard,45.2%,100.0%
 1420,https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons,Build Array Where You Can Find The Maximum Exactly K Comparisons,Hard,65.7%,100.0%
 1639,https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary,Number of Ways to Form a Target String Given a Dictionary,Hard,56.5%,100.0%

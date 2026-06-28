@@ -479,8 +479,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3613,https://leetcode.com/problems/minimize-maximum-component-cost,Minimize Maximum Component Cost,Medium,43.5%,21.8%
 346,https://leetcode.com/problems/moving-average-from-data-stream,Moving Average from Data Stream,Easy,80.2%,21.7%
 432,https://leetcode.com/problems/all-oone-data-structure,All O'one Data Structure,Hard,44.3%,21.7%
+736,https://leetcode.com/problems/parse-lisp-expression,Parse Lisp Expression,Hard,53.7%,21.7%
 889,https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal,Construct Binary Tree from Preorder and Postorder Traversal,Medium,78.0%,21.7%
+1392,https://leetcode.com/problems/longest-happy-prefix,Longest Happy Prefix,Hard,53.5%,21.7%
+1740,https://leetcode.com/problems/find-distance-in-a-binary-tree,Find Distance in a Binary Tree,Medium,74.4%,21.7%
 2633,https://leetcode.com/problems/convert-object-to-json-string,Convert Object to JSON String,Medium,78.1%,21.7%
+3408,https://leetcode.com/problems/design-task-manager,Design Task Manager,Medium,48.9%,21.7%
 63,https://leetcode.com/problems/unique-paths-ii,Unique Paths II,Medium,43.3%,12.5%
 80,https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii,Remove Duplicates from Sorted Array II,Medium,63.0%,12.5%
 81,https://leetcode.com/problems/search-in-rotated-sorted-array-ii,Search in Rotated Sorted Array II,Medium,39.0%,12.5%

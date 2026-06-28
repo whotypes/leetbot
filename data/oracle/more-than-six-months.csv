@@ -305,6 +305,20 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 920,https://leetcode.com/problems/number-of-music-playlists,Number of Music Playlists,Hard,60.1%,27.6%
 1254,https://leetcode.com/problems/number-of-closed-islands,Number of Closed Islands,Medium,67.1%,27.6%
 2603,https://leetcode.com/problems/collect-coins-in-a-tree,Collect Coins in a Tree,Hard,40.1%,27.6%
+44,https://leetcode.com/problems/wildcard-matching,Wildcard Matching,Hard,32.2%,26.9%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.2%,26.9%
+260,https://leetcode.com/problems/single-number-iii,Single Number III,Medium,70.2%,26.9%
+301,https://leetcode.com/problems/remove-invalid-parentheses,Remove Invalid Parentheses,Hard,50.0%,26.9%
+325,https://leetcode.com/problems/maximum-size-subarray-sum-equals-k,Maximum Size Subarray Sum Equals k,Medium,50.9%,26.9%
+338,https://leetcode.com/problems/counting-bits,Counting Bits,Easy,80.7%,26.9%
+445,https://leetcode.com/problems/add-two-numbers-ii,Add Two Numbers II,Medium,62.8%,26.9%
+605,https://leetcode.com/problems/can-place-flowers,Can Place Flowers,Easy,29.2%,26.9%
+1095,https://leetcode.com/problems/find-in-mountain-array,Find in Mountain Array,Hard,41.8%,26.9%
+1290,https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer,Convert Binary Number in a Linked List to Integer,Easy,82.4%,26.9%
+1312,https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome,Minimum Insertion Steps to Make a String Palindrome,Hard,74.1%,26.9%
+1481,https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals,Least Number of Unique Integers after K Removals,Medium,63.9%,26.9%
+1539,https://leetcode.com/problems/kth-missing-positive-number,Kth Missing Positive Number,Easy,63.6%,26.9%
+2858,https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable,Minimum Edge Reversals So Every Node Is Reachable,Hard,59.8%,26.9%
 60,https://leetcode.com/problems/permutation-sequence,Permutation Sequence,Hard,50.1%,25.0%
 85,https://leetcode.com/problems/maximal-rectangle,Maximal Rectangle,Hard,54.0%,25.0%
 118,https://leetcode.com/problems/pascals-triangle,Pascal's Triangle,Easy,77.1%,25.0%

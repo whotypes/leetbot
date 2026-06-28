@@ -19,6 +19,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,45.4%,75.0%
 752,https://leetcode.com/problems/open-the-lock,Open the Lock,Medium,60.8%,75.0%
 1373,https://leetcode.com/problems/maximum-sum-bst-in-binary-tree,Maximum Sum BST in Binary Tree,Hard,44.6%,75.0%
+394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.8%,73.9%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,73.4%
 29,https://leetcode.com/problems/divide-two-integers,Divide Two Integers,Medium,19.7%,73.4%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,73.4%

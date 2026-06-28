@@ -11,3 +11,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,58.4%
 185,https://leetcode.com/problems/department-top-three-salaries,Department Top Three Salaries,Hard,60.3%,58.4%
 196,https://leetcode.com/problems/delete-duplicate-emails,Delete Duplicate Emails,Easy,65.9%,58.4%
+242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.3%,57.3%

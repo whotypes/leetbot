@@ -30,6 +30,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1928,https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time,Minimum Cost to Reach Destination in Time,Hard,41.4%,39.4%
 2131,https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words,Longest Palindrome by Concatenating Two Letter Words,Medium,53.5%,39.4%
 3043,https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix,Find the Length of the Longest Common Prefix,Medium,57.1%,39.4%
+1197,https://leetcode.com/problems/minimum-knight-moves,Minimum Knight Moves,Medium,42.0%,37.8%
 41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,41.2%,37.5%
 162,https://leetcode.com/problems/find-peak-element,Find Peak Element,Medium,46.5%,37.5%
 352,https://leetcode.com/problems/data-stream-as-disjoint-intervals,Data Stream as Disjoint Intervals,Hard,59.5%,37.5%

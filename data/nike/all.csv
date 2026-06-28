@@ -12,3 +12,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 287,https://leetcode.com/problems/find-the-duplicate-number,Find the Duplicate Number,Medium,64.2%,76.6%
 605,https://leetcode.com/problems/can-place-flowers,Can Place Flowers,Easy,29.1%,76.6%
 2642,https://leetcode.com/problems/design-graph-with-shortest-path-calculator,Design Graph With Shortest Path Calculator,Hard,65.0%,76.6%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.8%,76.5%

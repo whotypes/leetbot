@@ -86,4 +86,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1647,https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique,Minimum Deletions to Make Character Frequencies Unique,Medium,61.5%,42.8%
 1760,https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag,Minimum Limit of Balls in a Bag,Medium,66.3%,42.8%
 2812,https://leetcode.com/problems/find-the-safest-path-in-a-grid,Find the Safest Path in a Grid,Medium,48.7%,42.8%
+546,https://leetcode.com/problems/remove-boxes,Remove Boxes,Hard,49.5%,42.6%
 729,https://leetcode.com/problems/my-calendar-i,My Calendar I,Medium,58.3%,42.5%

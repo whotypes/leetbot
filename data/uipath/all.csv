@@ -12,3 +12,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 990,https://leetcode.com/problems/satisfiability-of-equality-equations,Satisfiability of Equality Equations,Medium,51.8%,62.4%
 2603,https://leetcode.com/problems/collect-coins-in-a-tree,Collect Coins in a Tree,Hard,40.0%,62.4%
 155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.1%,62.3%
+90,https://leetcode.com/problems/subsets-ii,Subsets II,Medium,61.5%,60.7%
+143,https://leetcode.com/problems/reorder-list,Reorder List,Medium,65.6%,60.7%
+354,https://leetcode.com/problems/russian-doll-envelopes,Russian Doll Envelopes,Hard,38.0%,60.7%

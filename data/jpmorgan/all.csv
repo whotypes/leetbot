@@ -43,6 +43,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1710,https://leetcode.com/problems/maximum-units-on-a-truck,Maximum Units on a Truck,Easy,74.8%,56.9%
 1974,https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter,Minimum Time to Type Word Using Special Typewriter,Easy,78.6%,56.9%
 3147,https://leetcode.com/problems/taking-maximum-energy-from-the-mystic-dungeon,Taking Maximum Energy From the Mystic Dungeon,Medium,61.0%,56.9%
+2895,https://leetcode.com/problems/minimum-processing-time,Minimum Processing Time,Medium,70.5%,55.8%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,50.4%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,50.4%
 115,https://leetcode.com/problems/distinct-subsequences,Distinct Subsequences,Hard,51.8%,50.4%
@@ -87,6 +88,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2461,https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k,Maximum Sum of Distinct Subarrays With Length K,Medium,43.0%,41.4%
 3159,https://leetcode.com/problems/find-occurrences-of-an-element-in-an-array,Find Occurrences of an Element in an Array,Medium,73.3%,41.4%
 912,https://leetcode.com/problems/sort-an-array,Sort an Array,Medium,55.9%,41.0%
+88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,55.1%,40.5%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,59.3%,37.5%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,68.8%,37.5%
 17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,64.0%,37.5%

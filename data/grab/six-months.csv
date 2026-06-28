@@ -1,4 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+459,https://leetcode.com/problems/repeated-substring-pattern,Repeated Substring Pattern,Easy,48.4%,100.0%
 721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.2%,100.0%
 739,https://leetcode.com/problems/daily-temperatures,Daily Temperatures,Medium,67.5%,100.0%
 1404,https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,61.4%,87.5%

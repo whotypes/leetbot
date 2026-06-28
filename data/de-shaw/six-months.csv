@@ -1,6 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+767,https://leetcode.com/problems/reorganize-string,Reorganize String,Medium,57.3%,100.0%
 968,https://leetcode.com/problems/binary-tree-cameras,Binary Tree Cameras,Hard,47.9%,100.0%
 3469,https://leetcode.com/problems/find-minimum-cost-to-remove-array-elements,Find Minimum Cost to Remove Array Elements,Medium,18.9%,100.0%
+779,https://leetcode.com/problems/k-th-symbol-in-grammar,K-th Symbol in Grammar,Medium,48.4%,88.6%
 1642,https://leetcode.com/problems/furthest-building-you-can-reach,Furthest Building You Can Reach,Medium,50.9%,77.3%
 316,https://leetcode.com/problems/remove-duplicate-letters,Remove Duplicate Letters,Medium,53.1%,74.1%
 668,https://leetcode.com/problems/kth-smallest-number-in-multiplication-table,Kth Smallest Number in Multiplication Table,Hard,54.0%,74.1%

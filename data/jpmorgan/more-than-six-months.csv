@@ -74,6 +74,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,54.5%,45.5%
 974,https://leetcode.com/problems/subarray-sums-divisible-by-k,Subarray Sums Divisible by K,Medium,56.3%,45.5%
 1046,https://leetcode.com/problems/last-stone-weight,Last Stone Weight,Easy,66.5%,45.5%
+387,https://leetcode.com/problems/first-unique-character-in-a-string,First Unique Character in a String,Easy,65.7%,45.4%
+1629,https://leetcode.com/problems/slowest-key,Slowest Key,Easy,59.7%,45.4%
+2054,https://leetcode.com/problems/two-best-non-overlapping-events,Two Best Non-Overlapping Events,Medium,64.0%,45.4%
 17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,64.0%,37.5%
 39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,74.9%,37.5%
 118,https://leetcode.com/problems/pascals-triangle,Pascal's Triangle,Easy,77.1%,37.5%

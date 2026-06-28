@@ -50,6 +50,20 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1838,https://leetcode.com/problems/frequency-of-the-most-frequent-element,Frequency of the Most Frequent Element,Medium,44.8%,61.7%
 2872,https://leetcode.com/problems/maximum-number-of-k-divisible-components,Maximum Number of K-Divisible Components,Hard,74.0%,61.7%
 3666,https://leetcode.com/problems/minimum-operations-to-equalize-binary-string,Minimum Operations to Equalize Binary String,Hard,45.1%,61.7%
+26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,63.1%,60.6%
+35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,51.5%,60.6%
+64,https://leetcode.com/problems/minimum-path-sum,Minimum Path Sum,Medium,68.4%,60.6%
+72,https://leetcode.com/problems/edit-distance,Edit Distance,Medium,60.8%,60.6%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.3%,60.6%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.3%,60.6%
+125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.6%,60.6%
+131,https://leetcode.com/problems/palindrome-partitioning,Palindrome Partitioning,Medium,74.2%,60.6%
+155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.3%,60.6%
+207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,51.7%,60.6%
+209,https://leetcode.com/problems/minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,52.0%,60.6%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,60.0%,60.6%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.2%,60.6%
+2680,https://leetcode.com/problems/maximum-or,Maximum OR,Medium,43.3%,60.6%
 75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,69.6%,57.2%
 78,https://leetcode.com/problems/subsets,Subsets,Medium,82.3%,57.2%
 213,https://leetcode.com/problems/house-robber-ii,House Robber II,Medium,44.9%,57.2%

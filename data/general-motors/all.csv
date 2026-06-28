@@ -5,6 +5,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 64,https://leetcode.com/problems/minimum-path-sum,Minimum Path Sum,Medium,68.1%,58.4%
 689,https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,59.8%,58.4%
 1570,https://leetcode.com/problems/dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,89.9%,58.4%
+1647,https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique,Minimum Deletions to Make Character Frequencies Unique,Medium,61.5%,51.6%
 41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,42.8%,51.0%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,51.0%
 297,https://leetcode.com/problems/serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,60.6%,51.0%

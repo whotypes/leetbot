@@ -26,6 +26,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1081,https://leetcode.com/problems/smallest-subsequence-of-distinct-characters,Smallest Subsequence of Distinct Characters,Medium,63.3%,58.9%
 1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,59.1%,58.9%
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,58.9%
+16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,48.8%,50.8%
+55,https://leetcode.com/problems/jump-game,Jump Game,Medium,41.1%,50.8%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.9%,50.8%
+721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.5%,50.8%
+1352,https://leetcode.com/problems/product-of-the-last-k-numbers,Product of the Last K Numbers,Medium,62.9%,50.8%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.2%,50.2%
 93,https://leetcode.com/problems/restore-ip-addresses,Restore IP Addresses,Medium,56.0%,50.2%
 3043,https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix,Find the Length of the Longest Common Prefix,Medium,58.7%,50.2%

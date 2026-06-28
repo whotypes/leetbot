@@ -267,6 +267,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2296,https://leetcode.com/problems/design-a-text-editor,Design a Text Editor,Hard,47.3%,25.0%
 2484,https://leetcode.com/problems/count-palindromic-subsequences,Count Palindromic Subsequences,Hard,39.4%,25.0%
 2539,https://leetcode.com/problems/count-the-number-of-good-subsequences,Count the Number of Good Subsequences,Medium,50.4%,25.0%
+1193,https://leetcode.com/problems/monthly-transactions-i,Monthly Transactions I,Medium,59.3%,24.9%
+3203,https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees,Find Minimum Diameter After Merging Two Trees,Hard,57.0%,24.9%
 2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,24.5%
 19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,51.4%,24.3%
 24,https://leetcode.com/problems/swap-nodes-in-pairs,Swap Nodes in Pairs,Medium,69.4%,24.3%

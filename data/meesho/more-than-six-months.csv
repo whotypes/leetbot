@@ -18,6 +18,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.1%,69.2%
 55,https://leetcode.com/problems/jump-game,Jump Game,Medium,40.8%,69.2%
 886,https://leetcode.com/problems/possible-bipartition,Possible Bipartition,Medium,52.5%,69.2%
+115,https://leetcode.com/problems/distinct-subsequences,Distinct Subsequences,Hard,52.1%,67.5%
 1094,https://leetcode.com/problems/car-pooling,Car Pooling,Medium,56.1%,62.5%
 1761,https://leetcode.com/problems/minimum-degree-of-a-connected-trio-in-a-graph,Minimum Degree of a Connected Trio in a Graph,Hard,43.5%,62.5%
 2831,https://leetcode.com/problems/find-the-longest-equal-subarray,Find the Longest Equal Subarray,Medium,36.4%,62.5%

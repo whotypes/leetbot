@@ -99,6 +99,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2608,https://leetcode.com/problems/shortest-cycle-in-a-graph,Shortest Cycle in a Graph,Hard,39.5%,52.8%
 2968,https://leetcode.com/problems/apply-operations-to-maximize-frequency-score,Apply Operations to Maximize Frequency Score,Hard,38.8%,52.8%
 3608,https://leetcode.com/problems/minimum-time-for-k-connected-components,Minimum Time for K Connected Components,Medium,45.4%,52.8%
+803,https://leetcode.com/problems/bricks-falling-when-hit,Bricks Falling When Hit,Hard,37.4%,51.8%
 84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,47.6%,50.0%
 91,https://leetcode.com/problems/decode-ways,Decode Ways,Medium,36.6%,50.0%
 122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,69.6%,50.0%

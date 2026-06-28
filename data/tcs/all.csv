@@ -141,6 +141,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1757,https://leetcode.com/problems/recyclable-and-low-fat-products,Recyclable and Low Fat Products,Easy,88.7%,32.9%
 2095,https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list,Delete the Middle Node of a Linked List,Medium,59.5%,32.9%
 2099,https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum,Find Subsequence of Length K With the Largest Sum,Easy,57.4%,32.9%
+234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.2%,32.6%
+443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.2%,32.6%
+3689,https://leetcode.com/problems/maximum-total-subarray-value-i,Maximum Total Subarray Value I,Medium,71.9%,32.6%
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,54.0%,25.5%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,25.5%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,25.5%
@@ -229,6 +232,23 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3190,https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three,Find Minimum Operations to Make All Elements Divisible by Three,Easy,90.8%,25.5%
 3330,https://leetcode.com/problems/find-the-original-typed-string-i,Find the Original Typed String I,Easy,72.0%,25.5%
 3714,https://leetcode.com/problems/longest-balanced-substring-ii,Longest Balanced Substring II,Medium,42.0%,25.5%
+43,https://leetcode.com/problems/multiply-strings,Multiply Strings,Medium,44.3%,25.2%
+59,https://leetcode.com/problems/spiral-matrix-ii,Spiral Matrix II,Medium,75.3%,25.2%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.3%,25.2%
+111,https://leetcode.com/problems/minimum-depth-of-binary-tree,Minimum Depth of Binary Tree,Easy,53.2%,25.2%
+175,https://leetcode.com/problems/combine-two-tables,Combine Two Tables,Easy,79.7%,25.2%
+180,https://leetcode.com/problems/consecutive-numbers,Consecutive Numbers,Medium,48.6%,25.2%
+230,https://leetcode.com/problems/kth-smallest-element-in-a-bst,Kth Smallest Element in a BST,Medium,77.0%,25.2%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.7%,25.2%
+448,https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array,Find All Numbers Disappeared in an Array,Easy,64.3%,25.2%
+525,https://leetcode.com/problems/contiguous-array,Contiguous Array,Medium,51.6%,25.2%
+724,https://leetcode.com/problems/find-pivot-index,Find Pivot Index,Easy,63.0%,25.2%
+744,https://leetcode.com/problems/find-smallest-letter-greater-than-target,Find Smallest Letter Greater Than Target,Easy,59.3%,25.2%
+905,https://leetcode.com/problems/sort-array-by-parity,Sort Array By Parity,Easy,76.6%,25.2%
+930,https://leetcode.com/problems/binary-subarrays-with-sum,Binary Subarrays With Sum,Medium,69.2%,25.2%
+1281,https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer,Subtract the Product and Sum of Digits of an Integer,Easy,86.6%,25.2%
+1295,https://leetcode.com/problems/find-numbers-with-even-number-of-digits,Find Numbers with Even Number of Digits,Easy,79.8%,25.2%
+1833,https://leetcode.com/problems/maximum-ice-cream-bars,Maximum Ice Cream Bars,Medium,77.2%,25.2%
 57,https://leetcode.com/problems/insert-interval,Insert Interval,Medium,43.6%,25.0%
 79,https://leetcode.com/problems/word-search,Word Search,Medium,45.4%,25.0%
 82,https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii,Remove Duplicates from Sorted List II,Medium,50.0%,25.0%

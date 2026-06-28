@@ -85,6 +85,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1971,https://leetcode.com/problems/find-if-path-exists-in-graph,Find if Path Exists in Graph,Easy,55.1%,48.6%
 2472,https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings,Maximum Number of Non-overlapping Palindrome Substrings,Hard,44.6%,48.6%
 2667,https://leetcode.com/problems/create-hello-world-function,Create Hello World Function,Easy,81.9%,48.6%
+193,https://leetcode.com/problems/valid-phone-numbers,Valid Phone Numbers,Easy,30.0%,46.8%
+451,https://leetcode.com/problems/sort-characters-by-frequency,Sort Characters By Frequency,Medium,75.5%,46.8%
+493,https://leetcode.com/problems/reverse-pairs,Reverse Pairs,Hard,34.6%,46.8%
+518,https://leetcode.com/problems/coin-change-ii,Coin Change II,Medium,59.7%,46.8%
+3737,https://leetcode.com/problems/count-subarrays-with-majority-element-i,Count Subarrays With Majority Element I,Medium,75.7%,46.8%
 18,https://leetcode.com/problems/4sum,4Sum,Medium,40.6%,46.3%
 61,https://leetcode.com/problems/rotate-list,Rotate List,Medium,42.6%,46.3%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,20.9%,42.0%
@@ -137,6 +142,30 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1929,https://leetcode.com/problems/concatenation-of-array,Concatenation of Array,Easy,90.4%,42.0%
 2385,https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected,Amount of Time for Binary Tree to Be Infected,Medium,65.3%,42.0%
 2571,https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0,Minimum Operations to Reduce an Integer to 0,Medium,62.0%,42.0%
+92,https://leetcode.com/problems/reverse-linked-list-ii,Reverse Linked List II,Medium,51.8%,37.7%
+110,https://leetcode.com/problems/balanced-binary-tree,Balanced Binary Tree,Easy,58.6%,37.7%
+120,https://leetcode.com/problems/triangle,Triangle,Medium,59.9%,37.7%
+124,https://leetcode.com/problems/binary-tree-maximum-path-sum,Binary Tree Maximum Path Sum,Hard,42.4%,37.7%
+137,https://leetcode.com/problems/single-number-ii,Single Number II,Medium,67.3%,37.7%
+438,https://leetcode.com/problems/find-all-anagrams-in-a-string,Find All Anagrams in a String,Medium,54.0%,37.7%
+448,https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array,Find All Numbers Disappeared in an Array,Easy,64.3%,37.7%
+503,https://leetcode.com/problems/next-greater-element-ii,Next Greater Element II,Medium,68.6%,37.7%
+516,https://leetcode.com/problems/longest-palindromic-subsequence,Longest Palindromic Subsequence,Medium,65.6%,37.7%
+526,https://leetcode.com/problems/beautiful-arrangement,Beautiful Arrangement,Medium,64.8%,37.7%
+620,https://leetcode.com/problems/not-boring-movies,Not Boring Movies,Easy,75.1%,37.7%
+684,https://leetcode.com/problems/redundant-connection,Redundant Connection,Medium,67.8%,37.7%
+763,https://leetcode.com/problems/partition-labels,Partition Labels,Medium,81.9%,37.7%
+785,https://leetcode.com/problems/is-graph-bipartite,Is Graph Bipartite?,Medium,59.5%,37.7%
+930,https://leetcode.com/problems/binary-subarrays-with-sum,Binary Subarrays With Sum,Medium,69.2%,37.7%
+1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,59.3%,37.7%
+1283,https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold,Find the Smallest Divisor Given a Threshold,Medium,66.2%,37.7%
+1365,https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number,How Many Numbers Are Smaller Than the Current Number,Easy,87.4%,37.7%
+1696,https://leetcode.com/problems/jump-game-vi,Jump Game VI,Medium,46.5%,37.7%
+2161,https://leetcode.com/problems/partition-array-according-to-given-pivot,Partition Array According to Given Pivot,Medium,90.8%,37.7%
+2418,https://leetcode.com/problems/sort-the-people,Sort the People,Easy,84.8%,37.7%
+3699,https://leetcode.com/problems/number-of-zigzag-arrays-i,Number of ZigZag Arrays I,Hard,50.8%,37.7%
+3761,https://leetcode.com/problems/minimum-absolute-distance-between-mirror-pairs,Minimum Absolute Distance Between Mirror Pairs,Medium,59.2%,37.7%
+3946,https://leetcode.com/problems/maximum-number-of-items-from-sale-i,Maximum Number of Items From Sale I,Medium,37.2%,37.7%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,36.5%,37.5%
 39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,74.9%,37.5%
 40,https://leetcode.com/problems/combination-sum-ii,Combination Sum II,Medium,57.8%,37.5%

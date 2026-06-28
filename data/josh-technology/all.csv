@@ -41,3 +41,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1171,https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list,Remove Zero Sum Consecutive Nodes from Linked List,Medium,53.1%,57.0%
 1448,https://leetcode.com/problems/count-good-nodes-in-binary-tree,Count Good Nodes in Binary Tree,Medium,73.8%,57.0%
 2606,https://leetcode.com/problems/find-the-substring-with-maximum-cost,Find the Substring With Maximum Cost,Medium,57.9%,57.0%
+102,https://leetcode.com/problems/binary-tree-level-order-traversal,Binary Tree Level Order Traversal,Medium,72.9%,55.6%
+929,https://leetcode.com/problems/unique-email-addresses,Unique Email Addresses,Easy,67.9%,55.6%

@@ -3,11 +3,21 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3575,https://leetcode.com/problems/maximum-good-subtree-score,Maximum Good Subtree Score,Hard,44.1%,100.0%
 176,https://leetcode.com/problems/second-highest-salary,Second Highest Salary,Medium,47.0%,91.3%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.4%,91.3%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,57.0%,91.0%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.9%,91.0%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.3%,85.8%
 75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,69.6%,78.9%
 283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,63.8%,78.9%
 319,https://leetcode.com/problems/bulb-switcher,Bulb Switcher,Medium,55.9%,78.9%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.3%,78.9%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,60.3%,78.3%
+35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,51.5%,78.3%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.3%,78.3%
+125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.6%,78.3%
+155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.3%,78.3%
+207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,51.7%,78.3%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.2%,78.3%
+2680,https://leetcode.com/problems/maximum-or,Maximum OR,Medium,43.3%,78.3%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,66.8%,75.0%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,74.5%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,74.5%

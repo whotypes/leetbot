@@ -23,6 +23,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 465,https://leetcode.com/problems/optimal-account-balancing,Optimal Account Balancing,Hard,50.4%,60.1%
 657,https://leetcode.com/problems/robot-return-to-origin,Robot Return to Origin,Easy,78.1%,60.1%
 945,https://leetcode.com/problems/minimum-increment-to-make-array-unique,Minimum Increment to Make Array Unique,Medium,60.6%,60.1%
+706,https://leetcode.com/problems/design-hashmap,Design HashMap,Easy,66.7%,55.8%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,51.1%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,51.1%
 46,https://leetcode.com/problems/permutations,Permutations,Medium,81.8%,51.1%
@@ -49,6 +50,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1832,https://leetcode.com/problems/check-if-the-sentence-is-pangram,Check if the Sentence Is Pangram,Easy,83.9%,50.0%
 2375,https://leetcode.com/problems/construct-smallest-number-from-di-string,Construct Smallest Number From DI String,Medium,85.8%,50.0%
 3371,https://leetcode.com/problems/identify-the-largest-outlier-in-an-array,Identify the Largest Outlier in an Array,Medium,35.8%,50.0%
+207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,51.7%,47.4%
+1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,Capacity To Ship Packages Within D Days,Medium,74.2%,47.4%
+1535,https://leetcode.com/problems/find-the-winner-of-an-array-game,Find the Winner of an Array Game,Medium,56.9%,47.4%
+2097,https://leetcode.com/problems/valid-arrangement-of-pairs,Valid Arrangement of Pairs,Hard,66.6%,47.4%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,46.4%,37.5%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,19.4%,37.5%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,42.4%,37.5%

@@ -8,6 +8,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2491,https://leetcode.com/problems/divide-players-into-teams-of-equal-skill,Divide Players Into Teams of Equal Skill,Medium,68.9%,95.9%
 239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.7%,91.1%
 1464,https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array,Maximum Product of Two Elements in an Array,Easy,83.3%,87.5%
+2895,https://leetcode.com/problems/minimum-processing-time,Minimum Processing Time,Medium,70.5%,80.2%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,77.7%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.2%,77.7%
 1208,https://leetcode.com/problems/get-equal-substrings-within-budget,Get Equal Substrings Within Budget,Medium,59.6%,77.7%

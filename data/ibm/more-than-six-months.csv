@@ -38,6 +38,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1518,https://leetcode.com/problems/water-bottles,Water Bottles,Easy,72.6%,61.2%
 2696,https://leetcode.com/problems/minimum-string-length-after-removing-substrings,Minimum String Length After Removing Substrings,Easy,77.2%,61.2%
 2950,https://leetcode.com/problems/number-of-divisible-substrings,Number of Divisible Substrings,Medium,74.7%,61.2%
+76,https://leetcode.com/problems/minimum-window-substring,Minimum Window Substring,Hard,47.8%,59.3%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,55.8%
 98,https://leetcode.com/problems/validate-binary-search-tree,Validate Binary Search Tree,Medium,35.6%,55.8%
 238,https://leetcode.com/problems/product-of-array-except-self,Product of Array Except Self,Medium,68.8%,55.8%
@@ -153,6 +154,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1046,https://leetcode.com/problems/last-stone-weight,Last Stone Weight,Easy,66.5%,38.9%
 2220,https://leetcode.com/problems/minimum-bit-flips-to-convert-number,Minimum Bit Flips to Convert Number,Easy,87.9%,38.9%
 2273,https://leetcode.com/problems/find-resultant-array-after-removing-anagrams,Find Resultant Array After Removing Anagrams,Easy,69.9%,38.9%
+71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,50.8%,38.0%
+152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,36.6%,38.0%
+322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.6%,38.0%
+680,https://leetcode.com/problems/valid-palindrome-ii,Valid Palindrome II,Easy,44.4%,38.0%
+1877,https://leetcode.com/problems/minimize-maximum-pair-sum-in-array,Minimize Maximum Pair Sum in Array,Medium,83.3%,38.0%
+2405,https://leetcode.com/problems/optimal-partition-of-string,Optimal Partition of String,Medium,78.5%,38.0%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,77.3%,37.5%
 189,https://leetcode.com/problems/rotate-array,Rotate Array,Medium,43.2%,37.5%
 202,https://leetcode.com/problems/happy-number,Happy Number,Easy,58.2%,37.5%

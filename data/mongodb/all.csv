@@ -12,6 +12,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 57,https://leetcode.com/problems/insert-interval,Insert Interval,Medium,45.1%,72.9%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,72.9%
 2034,https://leetcode.com/problems/stock-price-fluctuation,Stock Price Fluctuation ,Medium,49.0%,72.9%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,52.1%,72.6%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,62.9%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,62.9%
 133,https://leetcode.com/problems/clone-graph,Clone Graph,Medium,65.1%,62.9%

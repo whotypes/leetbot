@@ -47,6 +47,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 934,https://leetcode.com/problems/shortest-bridge,Shortest Bridge,Medium,58.7%,62.5%
 983,https://leetcode.com/problems/minimum-cost-for-tickets,Minimum Cost For Tickets,Medium,67.4%,62.5%
 1293,https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination,Shortest Path in a Grid with Obstacles Elimination,Hard,45.7%,62.5%
+134,https://leetcode.com/problems/gas-station,Gas Station,Medium,48.2%,61.4%
+437,https://leetcode.com/problems/path-sum-iii,Path Sum III,Medium,46.5%,61.4%
 438,https://leetcode.com/problems/find-all-anagrams-in-a-string,Find All Anagrams in a String,Medium,53.8%,55.5%
 706,https://leetcode.com/problems/design-hashmap,Design HashMap,Easy,66.6%,55.5%
 904,https://leetcode.com/problems/fruit-into-baskets,Fruit Into Baskets,Medium,51.1%,55.5%
@@ -86,6 +88,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1352,https://leetcode.com/problems/product-of-the-last-k-numbers,Product of the Last K Numbers,Medium,62.9%,54.3%
 1669,https://leetcode.com/problems/merge-in-between-linked-lists,Merge In Between Linked Lists,Medium,83.0%,54.3%
 2817,https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint,Minimum Absolute Difference Between Elements With Constraint,Medium,37.5%,54.3%
+43,https://leetcode.com/problems/multiply-strings,Multiply Strings,Medium,44.3%,52.1%
+124,https://leetcode.com/problems/binary-tree-maximum-path-sum,Binary Tree Maximum Path Sum,Hard,42.4%,52.1%
+428,https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree,Serialize and Deserialize N-ary Tree,Hard,68.9%,52.1%
+432,https://leetcode.com/problems/all-oone-data-structure,All O'one Data Structure,Hard,44.3%,52.1%
+1043,https://leetcode.com/problems/partition-array-for-maximum-sum,Partition Array for Maximum Sum,Medium,77.5%,52.1%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,50.0%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,45.6%,50.0%
 45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,41.6%,50.0%

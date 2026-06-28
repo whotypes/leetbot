@@ -42,6 +42,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,54.5%,53.3%
 802,https://leetcode.com/problems/find-eventual-safe-states,Find Eventual Safe States,Medium,70.7%,53.3%
 2477,https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital,Minimum Fuel Cost to Report to the Capital,Medium,65.4%,53.3%
+871,https://leetcode.com/problems/minimum-number-of-refueling-stops,Minimum Number of Refueling Stops,Hard,41.6%,52.8%
+1915,https://leetcode.com/problems/number-of-wonderful-substrings,Number of Wonderful Substrings,Medium,66.6%,52.8%
+1966,https://leetcode.com/problems/binary-searchable-numbers-in-an-unsorted-array,Binary Searchable Numbers in an Unsorted Array,Medium,64.0%,52.8%
+2503,https://leetcode.com/problems/maximum-number-of-points-from-grid-queries,Maximum Number of Points From Grid Queries,Hard,59.3%,52.8%
+2948,https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements,Make Lexicographically Smallest Array by Swapping Elements,Medium,60.3%,52.8%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,50.4%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,50.4%
 212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,38.4%,50.4%

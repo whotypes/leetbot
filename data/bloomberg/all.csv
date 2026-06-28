@@ -693,6 +693,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3494,https://leetcode.com/problems/find-the-minimum-amount-of-time-to-brew-potions,Find the Minimum Amount of Time to Brew Potions,Medium,62.7%,18.2%
 3542,https://leetcode.com/problems/minimum-operations-to-convert-all-elements-to-zero,Minimum Operations to Convert All Elements to Zero,Medium,53.0%,18.2%
 3583,https://leetcode.com/problems/count-special-triplets,Count Special Triplets,Medium,47.1%,18.2%
+1840,https://leetcode.com/problems/maximum-building-height,Maximum Building Height,Hard,67.1%,18.0%
+1871,https://leetcode.com/problems/jump-game-vii,Jump Game VII,Medium,35.6%,18.0%
+2196,https://leetcode.com/problems/create-binary-tree-from-descriptions,Create Binary Tree From Descriptions,Medium,83.9%,18.0%
+3753,https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii,Total Waviness of Numbers in Range II,Hard,56.6%,18.0%
 89,https://leetcode.com/problems/gray-code,Gray Code,Medium,64.7%,13.8%
 95,https://leetcode.com/problems/unique-binary-search-trees-ii,Unique Binary Search Trees II,Medium,62.3%,13.8%
 96,https://leetcode.com/problems/unique-binary-search-trees,Unique Binary Search Trees,Medium,63.6%,13.8%
@@ -883,6 +887,13 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3714,https://leetcode.com/problems/longest-balanced-substring-ii,Longest Balanced Substring II,Medium,42.0%,13.8%
 3783,https://leetcode.com/problems/mirror-distance-of-an-integer,Mirror Distance of an Integer,Easy,91.5%,13.8%
 396,https://leetcode.com/problems/rotate-function,Rotate Function,Medium,54.1%,13.7%
+299,https://leetcode.com/problems/bulls-and-cows,Bulls and Cows,Medium,52.6%,13.6%
+2144,https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount,Minimum Cost of Buying Candies With Discount,Easy,71.6%,13.6%
+3020,https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset,Find the Maximum Number of Elements in Subset,Medium,42.3%,13.6%
+3559,https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-ii,Number of Ways to Assign Edge Weights II,Hard,72.6%,13.6%
+3612,https://leetcode.com/problems/process-string-with-special-operations-i,Process String with Special Operations I,Medium,71.4%,13.6%
+3633,https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-i,Earliest Finish Time for Land and Water Rides I,Easy,73.0%,13.6%
+3700,https://leetcode.com/problems/number-of-zigzag-arrays-ii,Number of ZigZag Arrays II,Hard,67.7%,13.6%
 188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,12.5%
 193,https://leetcode.com/problems/valid-phone-numbers,Valid Phone Numbers,Easy,27.6%,12.5%
 341,https://leetcode.com/problems/flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,65.3%,12.5%
@@ -1335,3 +1346,22 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3731,https://leetcode.com/problems/find-missing-elements,Find Missing Elements,Easy,83.0%,8.5%
 3776,https://leetcode.com/problems/minimum-moves-to-balance-circular-array,Minimum Moves to Balance Circular Array,Medium,40.2%,8.5%
 3848,https://leetcode.com/problems/check-digitorial-permutation,Check Digitorial Permutation,Medium,46.7%,8.5%
+192,https://leetcode.com/problems/word-frequency,Word Frequency,Medium,29.4%,8.4%
+194,https://leetcode.com/problems/transpose-file,Transpose File,Medium,32.3%,8.4%
+598,https://leetcode.com/problems/range-addition-ii,Range Addition II,Easy,58.9%,8.4%
+690,https://leetcode.com/problems/employee-importance,Employee Importance,Medium,69.6%,8.4%
+801,https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing,Minimum Swaps To Make Sequences Increasing,Hard,41.7%,8.4%
+1188,https://leetcode.com/problems/design-bounded-blocking-queue,Design Bounded Blocking Queue,Medium,73.8%,8.4%
+1189,https://leetcode.com/problems/maximum-number-of-balloons,Maximum Number of Balloons,Easy,64.1%,8.4%
+1208,https://leetcode.com/problems/get-equal-substrings-within-budget,Get Equal Substrings Within Budget,Medium,59.8%,8.4%
+1277,https://leetcode.com/problems/count-square-submatrices-with-all-ones,Count Square Submatrices with All Ones,Medium,80.7%,8.4%
+1497,https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k,Check If Array Pairs Are Divisible by k,Medium,46.2%,8.4%
+1654,https://leetcode.com/problems/minimum-jumps-to-reach-home,Minimum Jumps to Reach Home,Medium,30.9%,8.4%
+1833,https://leetcode.com/problems/maximum-ice-cream-bars,Maximum Ice Cream Bars,Medium,77.2%,8.4%
+1952,https://leetcode.com/problems/three-divisors,Three Divisors,Easy,64.5%,8.4%
+2034,https://leetcode.com/problems/stock-price-fluctuation,Stock Price Fluctuation ,Medium,49.1%,8.4%
+2952,https://leetcode.com/problems/minimum-number-of-coins-to-be-added,Minimum Number of Coins to be Added,Medium,58.3%,8.4%
+3193,https://leetcode.com/problems/count-the-number-of-inversions,Count the Number of Inversions,Hard,31.5%,8.4%
+3699,https://leetcode.com/problems/number-of-zigzag-arrays-i,Number of ZigZag Arrays I,Hard,50.8%,8.4%
+3737,https://leetcode.com/problems/count-subarrays-with-majority-element-i,Count Subarrays With Majority Element I,Medium,75.7%,8.4%
+3838,https://leetcode.com/problems/weighted-word-mapping,Weighted Word Mapping,Easy,90.6%,8.4%

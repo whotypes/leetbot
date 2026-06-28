@@ -8,3 +8,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 204,https://leetcode.com/problems/count-primes,Count Primes,Medium,36.0%,80.8%
 509,https://leetcode.com/problems/fibonacci-number,Fibonacci Number,Easy,74.1%,80.8%
 1250,https://leetcode.com/problems/check-if-it-is-a-good-array,Check If It Is a Good Array,Hard,63.7%,80.8%
+2751,https://leetcode.com/problems/robot-collisions,Robot Collisions,Hard,61.6%,80.4%

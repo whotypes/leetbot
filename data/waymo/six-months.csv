@@ -5,6 +5,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.4%,92.4%
 359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.8%,88.7%
 528,https://leetcode.com/problems/random-pick-with-weight,Random Pick with Weight,Medium,49.0%,88.7%
+10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,31.1%,81.1%
+164,https://leetcode.com/problems/maximum-gap,Maximum Gap,Medium,52.4%,81.1%
 253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.2%,75.0%
 1197,https://leetcode.com/problems/minimum-knight-moves,Minimum Knight Moves,Medium,41.4%,75.0%
 162,https://leetcode.com/problems/find-peak-element,Find Peak Element,Medium,46.5%,62.5%

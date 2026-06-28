@@ -23,3 +23,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.5%,74.9%
 905,https://leetcode.com/problems/sort-array-by-parity,Sort Array By Parity,Easy,76.5%,74.9%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.8%,74.8%
+680,https://leetcode.com/problems/valid-palindrome-ii,Valid Palindrome II,Easy,44.4%,74.8%
+3208,https://leetcode.com/problems/alternating-groups-ii,Alternating Groups II,Medium,60.0%,74.8%

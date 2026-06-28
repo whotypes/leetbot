@@ -17,6 +17,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1146,https://leetcode.com/problems/snapshot-array,Snapshot Array,Medium,36.7%,71.9%
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,79.6%,66.7%
 227,https://leetcode.com/problems/basic-calculator-ii,Basic Calculator II,Medium,46.8%,66.7%
+670,https://leetcode.com/problems/maximum-swap,Maximum Swap,Medium,52.1%,66.4%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,62.4%,62.5%
 88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,53.1%,62.5%
 123,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii,Best Time to Buy and Sell Stock III,Hard,51.4%,62.5%
@@ -32,6 +33,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 428,https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree,Serialize and Deserialize N-ary Tree,Hard,68.7%,60.1%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.2%,60.1%
 713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.2%,60.1%
+2150,https://leetcode.com/problems/find-all-lonely-numbers-in-the-array,Find All Lonely Numbers in the Array,Medium,63.4%,56.6%
+2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.3%,56.6%
+3408,https://leetcode.com/problems/design-task-manager,Design Task Manager,Medium,48.9%,56.6%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,39.1%,54.8%
 477,https://leetcode.com/problems/total-hamming-distance,Total Hamming Distance,Medium,54.9%,54.8%
 621,https://leetcode.com/problems/task-scheduler,Task Scheduler,Medium,63.1%,54.8%

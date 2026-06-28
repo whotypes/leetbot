@@ -13,3 +13,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1917,https://leetcode.com/problems/leetcodify-friends-recommendations,Leetcodify Friends Recommendations,Hard,28.7%,53.6%
 1919,https://leetcode.com/problems/leetcodify-similar-friends,Leetcodify Similar Friends,Hard,43.2%,53.6%
 295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,54.5%,53.5%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.3%,52.1%

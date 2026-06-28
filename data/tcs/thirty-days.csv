@@ -4,6 +4,14 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.8%,100.0%
 152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,36.3%,100.0%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,66.8%,100.0%
+387,https://leetcode.com/problems/first-unique-character-in-a-string,First Unique Character in a String,Easy,65.7%,94.2%
 766,https://leetcode.com/problems/toeplitz-matrix,Toeplitz Matrix,Easy,69.7%,87.4%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,38.1%,86.6%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,77.5%
 283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,63.8%,77.5%
+34,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,49.1%,76.0%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.3%,76.0%
+111,https://leetcode.com/problems/minimum-depth-of-binary-tree,Minimum Depth of Binary Tree,Easy,53.2%,76.0%
+189,https://leetcode.com/problems/rotate-array,Rotate Array,Medium,45.1%,76.0%
+234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.2%,76.0%
+3689,https://leetcode.com/problems/maximum-total-subarray-value-i,Maximum Total Subarray Value I,Medium,71.9%,76.0%

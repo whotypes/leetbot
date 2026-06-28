@@ -4,5 +4,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2235,https://leetcode.com/problems/add-two-integers,Add Two Integers,Easy,88.0%,82.6%
 961,https://leetcode.com/problems/n-repeated-element-in-size-2n-array,N-Repeated Element in Size 2N Array,Easy,79.9%,82.5%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,72.3%
+54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,57.1%,72.3%
 62,https://leetcode.com/problems/unique-paths,Unique Paths,Medium,66.8%,72.3%
 387,https://leetcode.com/problems/first-unique-character-in-a-string,First Unique Character in a String,Easy,65.4%,72.3%

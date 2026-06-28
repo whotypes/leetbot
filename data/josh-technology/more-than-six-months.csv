@@ -39,3 +39,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1171,https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list,Remove Zero Sum Consecutive Nodes from Linked List,Medium,53.1%,57.3%
 1448,https://leetcode.com/problems/count-good-nodes-in-binary-tree,Count Good Nodes in Binary Tree,Medium,73.8%,57.3%
 2606,https://leetcode.com/problems/find-the-substring-with-maximum-cost,Find the Substring With Maximum Cost,Medium,57.9%,57.3%
+70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.2%,57.2%

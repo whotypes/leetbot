@@ -24,6 +24,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2672,https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color,Number of Adjacent Elements With the Same Color,Medium,59.4%,77.7%
 3078,https://leetcode.com/problems/match-alphanumerical-pattern-in-matrix-i,Match Alphanumerical Pattern in Matrix I,Medium,64.5%,77.7%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,75.2%
+3915,https://leetcode.com/problems/maximum-sum-of-alternating-subsequence-with-distance-at-least-k,Maximum Sum of Alternating Subsequence With Distance at Least K,Hard,32.1%,72.8%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,72.3%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,72.3%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,72.3%
@@ -51,6 +52,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3649,https://leetcode.com/problems/number-of-perfect-pairs,Number of Perfect Pairs,Medium,33.9%,55.5%
 3651,https://leetcode.com/problems/minimum-cost-path-with-teleportations,Minimum Cost Path with Teleportations,Hard,45.6%,55.5%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,50.0%
+2466,https://leetcode.com/problems/count-ways-to-build-good-strings,Count Ways To Build Good Strings,Medium,58.9%,48.7%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,48.6%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,38.6%,48.6%
 67,https://leetcode.com/problems/add-binary,Add Binary,Easy,57.9%,48.6%
@@ -81,6 +83,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 79,https://leetcode.com/problems/word-search,Word Search,Medium,47.2%,39.0%
 85,https://leetcode.com/problems/maximal-rectangle,Maximal Rectangle,Hard,58.6%,39.0%
 88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,54.7%,39.0%
+102,https://leetcode.com/problems/binary-tree-level-order-traversal,Binary Tree Level Order Traversal,Medium,72.9%,39.0%
 123,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii,Best Time to Buy and Sell Stock III,Hard,53.6%,39.0%
 125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.2%,39.0%
 128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.1%,39.0%
@@ -95,6 +98,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 179,https://leetcode.com/problems/largest-number,Largest Number,Medium,42.9%,39.0%
 189,https://leetcode.com/problems/rotate-array,Rotate Array,Medium,44.8%,39.0%
 199,https://leetcode.com/problems/binary-tree-right-side-view,Binary Tree Right Side View,Medium,70.0%,39.0%
+212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,38.6%,39.0%
 213,https://leetcode.com/problems/house-robber-ii,House Robber II,Medium,44.8%,39.0%
 214,https://leetcode.com/problems/shortest-palindrome,Shortest Palindrome,Hard,42.4%,39.0%
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,39.0%
@@ -121,16 +125,20 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 974,https://leetcode.com/problems/subarray-sums-divisible-by-k,Subarray Sums Divisible by K,Medium,56.2%,39.0%
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,39.0%
 1046,https://leetcode.com/problems/last-stone-weight,Last Stone Weight,Easy,66.4%,39.0%
+1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,59.3%,39.0%
 1497,https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k,Check If Array Pairs Are Divisible by k,Medium,46.2%,39.0%
 1743,https://leetcode.com/problems/restore-the-array-from-adjacent-pairs,Restore the Array From Adjacent Pairs,Medium,75.0%,39.0%
 1752,https://leetcode.com/problems/check-if-array-is-sorted-and-rotated,Check if Array Is Sorted and Rotated,Easy,56.0%,39.0%
 1876,https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters,Substrings of Size Three with Distinct Characters,Easy,76.7%,39.0%
 1922,https://leetcode.com/problems/count-good-numbers,Count Good Numbers,Medium,57.6%,39.0%
 2021,https://leetcode.com/problems/brightest-position-on-street,Brightest Position on Street,Medium,60.6%,39.0%
+2439,https://leetcode.com/problems/minimize-maximum-of-array,Minimize Maximum of Array,Medium,46.6%,39.0%
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,39.0%
 2530,https://leetcode.com/problems/maximal-score-after-applying-k-operations,Maximal Score After Applying K Operations,Medium,64.0%,39.0%
 2544,https://leetcode.com/problems/alternating-digit-sum,Alternating Digit Sum,Easy,69.0%,39.0%
+2583,https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree,Kth Largest Sum in a Binary Tree,Medium,59.0%,39.0%
 2593,https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements,Find Score of an Array After Marking All Elements,Medium,64.5%,39.0%
+2771,https://leetcode.com/problems/longest-non-decreasing-subarray-from-two-arrays,Longest Non-decreasing Subarray From Two Arrays,Medium,31.3%,39.0%
 3034,https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i,Number of Subarrays That Match a Pattern I,Medium,68.5%,39.0%
 3433,https://leetcode.com/problems/count-mentions-per-user,Count Mentions Per User,Medium,50.8%,39.0%
 3652,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-using-strategy,Best Time to Buy and Sell Stock using Strategy,Medium,59.8%,39.0%

@@ -50,6 +50,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1220,https://leetcode.com/problems/count-vowels-permutation,Count Vowels Permutation,Hard,61.5%,37.5%
 1297,https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring,Maximum Number of Occurrences of a Substring,Medium,53.6%,37.5%
 1598,https://leetcode.com/problems/crawler-log-folder,Crawler Log Folder,Easy,71.6%,37.5%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.3%,32.4%
+3953,https://leetcode.com/problems/maximum-score-with-co-prime-element,Maximum Score with Co-Prime Element,Hard,27.4%,32.4%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.1%,32.0%
 34,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,48.7%,32.0%
 44,https://leetcode.com/problems/wildcard-matching,Wildcard Matching,Hard,31.8%,32.0%

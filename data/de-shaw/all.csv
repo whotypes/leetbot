@@ -53,6 +53,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,41.6%,50.0%
 221,https://leetcode.com/problems/maximal-square,Maximal Square,Medium,48.9%,50.0%
 402,https://leetcode.com/problems/remove-k-digits,Remove K Digits,Medium,35.1%,50.0%
+74,https://leetcode.com/problems/search-a-2d-matrix,Search a 2D Matrix,Medium,54.2%,46.0%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,45.5%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,45.5%
 168,https://leetcode.com/problems/excel-sheet-column-title,Excel Sheet Column Title,Easy,46.3%,45.5%
@@ -94,6 +95,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1139,https://leetcode.com/problems/largest-1-bordered-square,Largest 1-Bordered Square,Medium,51.2%,37.5%
 1584,https://leetcode.com/problems/min-cost-to-connect-all-points,Min Cost to Connect All Points,Medium,69.2%,37.5%
 2719,https://leetcode.com/problems/count-of-integers,Count of Integers,Hard,37.1%,37.5%
+99,https://leetcode.com/problems/recover-binary-search-tree,Recover Binary Search Tree,Medium,60.0%,37.1%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,36.7%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,36.7%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,36.7%

@@ -98,6 +98,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1948,https://leetcode.com/problems/delete-duplicate-folders-in-system,Delete Duplicate Folders in System,Hard,77.5%,46.3%
 2461,https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k,Maximum Sum of Distinct Subarrays With Length K,Medium,43.0%,46.3%
 2539,https://leetcode.com/problems/count-the-number-of-good-subsequences,Count the Number of Good Subsequences,Medium,48.2%,46.3%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.2%,45.8%
 19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,49.2%,37.5%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,62.4%,37.5%
 136,https://leetcode.com/problems/single-number,Single Number,Easy,76.1%,37.5%
@@ -172,3 +173,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,37.3%
 445,https://leetcode.com/problems/add-two-numbers-ii,Add Two Numbers II,Medium,62.6%,37.1%
 863,https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree,All Nodes Distance K in Binary Tree,Medium,67.6%,37.1%
+622,https://leetcode.com/problems/design-circular-queue,Design Circular Queue,Medium,54.9%,36.9%
+743,https://leetcode.com/problems/network-delay-time,Network Delay Time,Medium,60.8%,36.9%
+930,https://leetcode.com/problems/binary-subarrays-with-sum,Binary Subarrays With Sum,Medium,69.2%,36.9%
+1053,https://leetcode.com/problems/previous-permutation-with-one-swap,Previous Permutation With One Swap,Medium,49.2%,36.9%
+1195,https://leetcode.com/problems/fizz-buzz-multithreaded,Fizz Buzz Multithreaded,Medium,74.8%,36.9%
+2360,https://leetcode.com/problems/longest-cycle-in-a-graph,Longest Cycle in a Graph,Hard,50.8%,36.9%

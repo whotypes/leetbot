@@ -384,11 +384,16 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2877,https://leetcode.com/problems/create-a-dataframe-from-list,Create a DataFrame from List,Easy,81.4%,25.0%
 117,https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii,Populating Next Right Pointers in Each Node II,Medium,57.6%,19.3%
 261,https://leetcode.com/problems/graph-valid-tree,Graph Valid Tree,Medium,50.0%,19.3%
+824,https://leetcode.com/problems/goat-latin,Goat Latin,Easy,70.1%,19.3%
+871,https://leetcode.com/problems/minimum-number-of-refueling-stops,Minimum Number of Refueling Stops,Hard,41.6%,19.3%
+1233,https://leetcode.com/problems/remove-sub-folders-from-the-filesystem,Remove Sub-Folders from the Filesystem,Medium,78.6%,19.3%
 1268,https://leetcode.com/problems/search-suggestions-system,Search Suggestions System,Medium,65.2%,19.3%
 1639,https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary,Number of Ways to Form a Target String Given a Dictionary,Hard,56.5%,19.3%
 1901,https://leetcode.com/problems/find-a-peak-element-ii,Find a Peak Element II,Medium,54.8%,19.3%
+1915,https://leetcode.com/problems/number-of-wonderful-substrings,Number of Wonderful Substrings,Medium,66.6%,19.3%
 1966,https://leetcode.com/problems/binary-searchable-numbers-in-an-unsorted-array,Binary Searchable Numbers in an Unsorted Array,Medium,63.8%,19.3%
 2477,https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital,Minimum Fuel Cost to Report to the Capital,Medium,65.4%,19.3%
+2948,https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements,Make Lexicographically Smallest Array by Swapping Elements,Medium,60.3%,19.3%
 3356,https://leetcode.com/problems/zero-array-transformation-ii,Zero Array Transformation II,Medium,43.6%,19.3%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,19.1%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,19.1%

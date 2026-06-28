@@ -236,6 +236,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2351,https://leetcode.com/problems/first-letter-to-appear-twice,First Letter to Appear Twice,Easy,75.0%,33.8%
 3074,https://leetcode.com/problems/apple-redistribution-into-boxes,Apple Redistribution into Boxes,Easy,78.5%,33.8%
 3163,https://leetcode.com/problems/string-compression-iii,String Compression III,Medium,67.0%,33.8%
+109,https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree,Convert Sorted List to Binary Search Tree,Medium,66.9%,33.1%
 27,https://leetcode.com/problems/remove-element,Remove Element,Easy,61.7%,25.9%
 29,https://leetcode.com/problems/divide-two-integers,Divide Two Integers,Medium,19.7%,25.9%
 37,https://leetcode.com/problems/sudoku-solver,Sudoku Solver,Hard,65.4%,25.9%
@@ -333,6 +334,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 986,https://leetcode.com/problems/interval-list-intersections,Interval List Intersections,Medium,73.0%,25.5%
 1870,https://leetcode.com/problems/minimum-speed-to-arrive-on-time,Minimum Speed to Arrive on Time,Medium,47.9%,25.5%
 2150,https://leetcode.com/problems/find-all-lonely-numbers-in-the-array,Find All Lonely Numbers in the Array,Medium,63.0%,25.5%
+338,https://leetcode.com/problems/counting-bits,Counting Bits,Easy,80.7%,25.3%
+365,https://leetcode.com/problems/water-and-jug-problem,Water and Jug Problem,Medium,45.8%,25.3%
+731,https://leetcode.com/problems/my-calendar-ii,My Calendar II,Medium,63.3%,25.3%
+1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,59.3%,25.3%
+1854,https://leetcode.com/problems/maximum-population-year,Maximum Population Year,Easy,64.3%,25.3%
+2435,https://leetcode.com/problems/paths-in-matrix-whose-sum-is-divisible-by-k,Paths in Matrix Whose Sum Is Divisible by K,Hard,58.7%,25.3%
 16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,47.0%,25.0%
 30,https://leetcode.com/problems/substring-with-concatenation-of-all-words,Substring with Concatenation of All Words,Hard,33.1%,25.0%
 43,https://leetcode.com/problems/multiply-strings,Multiply Strings,Medium,42.4%,25.0%

@@ -21,5 +21,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,53.2%
 386,https://leetcode.com/problems/lexicographical-numbers,Lexicographical Numbers,Medium,76.2%,53.2%
 496,https://leetcode.com/problems/next-greater-element-i,Next Greater Element I,Easy,76.0%,53.2%
+546,https://leetcode.com/problems/remove-boxes,Remove Boxes,Hard,49.5%,53.2%
 763,https://leetcode.com/problems/partition-labels,Partition Labels,Medium,81.9%,53.2%
 1482,https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets,Minimum Number of Days to Make m Bouquets,Medium,56.4%,53.2%

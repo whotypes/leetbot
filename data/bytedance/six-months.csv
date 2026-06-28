@@ -9,6 +9,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 540,https://leetcode.com/problems/single-element-in-a-sorted-array,Single Element in a Sorted Array,Medium,59.2%,100.0%
 721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.2%,100.0%
 934,https://leetcode.com/problems/shortest-bridge,Shortest Bridge,Medium,59.4%,100.0%
+300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,59.6%,88.3%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,49.5%,87.5%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,46.4%,75.0%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,29.4%,75.0%

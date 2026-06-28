@@ -59,3 +59,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2544,https://leetcode.com/problems/alternating-digit-sum,Alternating Digit Sum,Easy,69.0%,38.4%
 2672,https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color,Number of Adjacent Elements With the Same Color,Medium,59.4%,38.4%
 3042,https://leetcode.com/problems/count-prefix-and-suffix-pairs-i,Count Prefix and Suffix Pairs I,Easy,77.8%,38.4%
+332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,44.7%,37.6%

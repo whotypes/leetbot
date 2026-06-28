@@ -12,6 +12,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2833,https://leetcode.com/problems/furthest-point-from-origin,Furthest Point From Origin,Easy,71.3%,64.2%
 2961,https://leetcode.com/problems/double-modular-exponentiation,Double Modular Exponentiation,Medium,48.0%,64.2%
 151,https://leetcode.com/problems/reverse-words-in-a-string,Reverse Words in a String,Medium,56.4%,55.9%
+1482,https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets,Minimum Number of Days to Make m Bouquets,Medium,56.7%,55.9%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,55.8%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,55.8%
 70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.0%,55.8%
