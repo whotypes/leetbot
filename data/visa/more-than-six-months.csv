@@ -24,6 +24,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 206,https://leetcode.com/problems/reverse-linked-list,Reverse Linked List,Easy,80.5%,64.0%
 539,https://leetcode.com/problems/minimum-time-difference,Minimum Time Difference,Medium,62.6%,64.0%
 1389,https://leetcode.com/problems/create-target-array-in-the-given-order,Create Target Array in the Given Order,Easy,86.5%,64.0%
+2964,https://leetcode.com/problems/number-of-divisible-triplet-sums,Number of Divisible Triplet Sums,Medium,67.6%,63.0%
 79,https://leetcode.com/problems/word-search,Word Search,Medium,45.4%,62.5%
 796,https://leetcode.com/problems/rotate-string,Rotate String,Easy,64.1%,62.5%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.6%,58.7%
@@ -34,6 +35,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3552,https://leetcode.com/problems/grid-teleportation-traversal,Grid Teleportation Traversal,Medium,23.5%,58.7%
 1314,https://leetcode.com/problems/matrix-block-sum,Matrix Block Sum,Medium,76.5%,58.4%
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,80.3%,58.0%
+3651,https://leetcode.com/problems/minimum-cost-path-with-teleportations,Minimum Cost Path with Teleportations,Hard,45.0%,57.6%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,52.0%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,52.0%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,52.0%
@@ -52,6 +54,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 415,https://leetcode.com/problems/add-strings,Add Strings,Easy,52.2%,51.1%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,51.1%
 3019,https://leetcode.com/problems/number-of-changing-keys,Number of Changing Keys,Easy,80.8%,51.1%
+846,https://leetcode.com/problems/hand-of-straights,Hand of Straights,Medium,58.4%,50.7%
+1648,https://leetcode.com/problems/sell-diminishing-valued-colored-balls,Sell Diminishing-Valued Colored Balls,Medium,30.4%,50.7%
+2491,https://leetcode.com/problems/divide-players-into-teams-of-equal-skill,Divide Players Into Teams of Equal Skill,Medium,68.9%,50.7%
+3649,https://leetcode.com/problems/number-of-perfect-pairs,Number of Perfect Pairs,Medium,34.4%,50.7%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,59.3%,50.0%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,50.0%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,62.4%,50.0%
@@ -121,3 +127,13 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.3%,41.6%
 2544,https://leetcode.com/problems/alternating-digit-sum,Alternating Digit Sum,Easy,69.2%,41.6%
 3433,https://leetcode.com/problems/count-mentions-per-user,Count Mentions Per User,Medium,50.8%,41.6%
+55,https://leetcode.com/problems/jump-game,Jump Game,Medium,41.5%,41.1%
+88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,55.6%,41.1%
+125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,54.2%,41.1%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.2%,41.1%
+387,https://leetcode.com/problems/first-unique-character-in-a-string,First Unique Character in a String,Easy,66.2%,41.1%
+435,https://leetcode.com/problems/non-overlapping-intervals,Non-overlapping Intervals,Medium,57.7%,41.1%
+503,https://leetcode.com/problems/next-greater-element-ii,Next Greater Element II,Medium,69.1%,41.1%
+974,https://leetcode.com/problems/subarray-sums-divisible-by-k,Subarray Sums Divisible by K,Medium,56.7%,41.1%
+1922,https://leetcode.com/problems/count-good-numbers,Count Good Numbers,Medium,58.1%,41.1%
+3069,https://leetcode.com/problems/distribute-elements-into-two-arrays-i,Distribute Elements Into Two Arrays I,Easy,83.7%,41.1%

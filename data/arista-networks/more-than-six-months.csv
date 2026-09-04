@@ -17,6 +17,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 788,https://leetcode.com/problems/rotated-digits,Rotated Digits,Medium,56.9%,73.8%
 1710,https://leetcode.com/problems/maximum-units-on-a-truck,Maximum Units on a Truck,Easy,74.8%,73.8%
 2182,https://leetcode.com/problems/construct-string-with-repeat-limit,Construct String With Repeat Limit,Medium,70.8%,73.8%
+1351,https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix,Count Negative Numbers in a Sorted Matrix,Easy,79.7%,68.4%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,63.1%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,63.1%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,63.1%

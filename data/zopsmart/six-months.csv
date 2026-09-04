@@ -6,3 +6,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,51.8%,75.0%
 3602,https://leetcode.com/problems/hexadecimal-and-hexatrigesimal-conversion,Hexadecimal and Hexatrigesimal Conversion,Easy,79.2%,75.0%
 93,https://leetcode.com/problems/restore-ip-addresses,Restore IP Addresses,Medium,56.3%,64.1%
+25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,67.1%,62.5%

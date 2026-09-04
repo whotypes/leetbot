@@ -16,4 +16,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 185,https://leetcode.com/problems/department-top-three-salaries,Department Top Three Salaries,Hard,60.3%,63.6%
 268,https://leetcode.com/problems/missing-number,Missing Number,Easy,71.9%,63.6%
 647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,72.7%,63.6%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,68.1%,62.9%
+367,https://leetcode.com/problems/valid-perfect-square,Valid Perfect Square,Easy,45.1%,62.9%
 209,https://leetcode.com/problems/minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,51.7%,61.9%

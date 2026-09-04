@@ -2,6 +2,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2791,https://leetcode.com/problems/count-paths-that-can-form-a-palindrome-in-a-tree,Count Paths That Can Form a Palindrome in a Tree,Hard,51.8%,100.0%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,45.4%,87.5%
 76,https://leetcode.com/problems/minimum-window-substring,Minimum Window Substring,Hard,47.4%,86.9%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.8%,77.2%
 97,https://leetcode.com/problems/interleaving-string,Interleaving String,Medium,43.9%,76.4%
 995,https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips,Minimum Number of K Consecutive Bit Flips,Hard,62.3%,76.4%
 2488,https://leetcode.com/problems/count-subarrays-with-median-k,Count Subarrays With Median K,Hard,48.6%,76.4%

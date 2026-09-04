@@ -1,8 +1,11 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.8%,100.0%
 767,https://leetcode.com/problems/reorganize-string,Reorganize String,Medium,56.3%,100.0%
+3161,https://leetcode.com/problems/block-placement-queries,Block Placement Queries,Hard,41.1%,100.0%
 723,https://leetcode.com/problems/candy-crush,Candy Crush,Medium,77.3%,87.5%
 1434,https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other,Number of Ways to Wear Different Hats to Each Other,Hard,45.9%,85.0%
 208,https://leetcode.com/problems/implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,68.1%,75.0%
 210,https://leetcode.com/problems/course-schedule-ii,Course Schedule II,Medium,53.6%,75.0%
 621,https://leetcode.com/problems/task-scheduler,Task Scheduler,Medium,61.7%,75.0%
+796,https://leetcode.com/problems/rotate-string,Rotate String,Easy,66.6%,72.0%
+3078,https://leetcode.com/problems/match-alphanumerical-pattern-in-matrix-i,Match Alphanumerical Pattern in Matrix I,Medium,64.6%,72.0%

@@ -83,6 +83,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2432,https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task,The Employee That Worked on the Longest Task,Easy,51.7%,48.3%
 2506,https://leetcode.com/problems/count-pairs-of-similar-strings,Count Pairs Of Similar Strings,Easy,73.7%,48.3%
 3627,https://leetcode.com/problems/maximum-median-sum-of-subsequences-of-size-3,Maximum Median Sum of Subsequences of Size 3,Medium,65.1%,48.3%
+2697,https://leetcode.com/problems/lexicographically-smallest-palindrome,Lexicographically Smallest Palindrome,Easy,81.8%,42.4%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,41.9%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.1%,41.9%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,38.6%,41.9%
@@ -137,6 +138,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2571,https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0,Minimum Operations to Reduce an Integer to 0,Medium,57.7%,37.5%
 2614,https://leetcode.com/problems/prime-in-diagonal,Prime In Diagonal,Easy,36.3%,37.5%
 3124,https://leetcode.com/problems/find-longest-calls,Find Longest Calls,Medium,63.1%,37.5%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.8%,33.5%
+142,https://leetcode.com/problems/linked-list-cycle-ii,Linked List Cycle II,Medium,59.1%,33.5%
+196,https://leetcode.com/problems/delete-duplicate-emails,Delete Duplicate Emails,Easy,66.7%,33.5%
+974,https://leetcode.com/problems/subarray-sums-divisible-by-k,Subarray Sums Divisible by K,Medium,56.7%,33.5%
+1648,https://leetcode.com/problems/sell-diminishing-valued-colored-balls,Sell Diminishing-Valued Colored Balls,Medium,30.4%,33.5%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,33.0%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,33.0%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,33.0%

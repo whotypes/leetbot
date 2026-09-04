@@ -1,2 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.8%,100.0%
 202,https://leetcode.com/problems/happy-number,Happy Number,Easy,59.5%,100.0%
+236,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree,Lowest Common Ancestor of a Binary Tree,Medium,70.1%,81.0%
+235,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree,Lowest Common Ancestor of a Binary Search Tree,Medium,71.3%,75.0%
+3998,https://leetcode.com/problems/transform-binary-string-using-subsequence-sort,Transform Binary String Using Subsequence Sort,Medium,38.0%,75.0%

@@ -1,8 +1,13 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,100.0%
+7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,32.5%,100.0%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,59.3%,100.0%
+14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,48.3%,100.0%
+26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,63.7%,100.0%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.8%,100.0%
 152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,36.3%,100.0%
+206,https://leetcode.com/problems/reverse-linked-list,Reverse Linked List,Easy,81.0%,100.0%
+215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,69.3%,100.0%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,66.8%,100.0%
 387,https://leetcode.com/problems/first-unique-character-in-a-string,First Unique Character in a String,Easy,65.7%,94.2%
 766,https://leetcode.com/problems/toeplitz-matrix,Toeplitz Matrix,Easy,69.7%,87.4%

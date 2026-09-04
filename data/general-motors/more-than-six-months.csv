@@ -4,6 +4,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 208,https://leetcode.com/problems/implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,69.4%,65.1%
 64,https://leetcode.com/problems/minimum-path-sum,Minimum Path Sum,Medium,68.1%,59.9%
 1404,https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,63.7%,53.0%
+297,https://leetcode.com/problems/serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,61.1%,52.7%
+689,https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,60.0%,52.7%
 41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,42.8%,52.6%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,52.6%
 1570,https://leetcode.com/problems/dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,89.9%,52.6%

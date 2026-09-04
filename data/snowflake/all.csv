@@ -78,6 +78,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 947,https://leetcode.com/problems/most-stones-removed-with-same-row-or-column,Most Stones Removed with Same Row or Column,Medium,62.9%,45.7%
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,45.7%
 1494,https://leetcode.com/problems/parallel-courses-ii,Parallel Courses II,Hard,30.9%,45.7%
+75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,70.2%,37.8%
+94,https://leetcode.com/problems/binary-tree-inorder-traversal,Binary Tree Inorder Traversal,Easy,80.6%,37.8%
+394,https://leetcode.com/problems/decode-string,Decode String,Medium,63.2%,37.8%
+427,https://leetcode.com/problems/construct-quad-tree,Construct Quad Tree,Medium,78.6%,37.8%
+821,https://leetcode.com/problems/shortest-distance-to-a-character,Shortest Distance to a Character,Easy,73.0%,37.8%
+934,https://leetcode.com/problems/shortest-bridge,Shortest Bridge,Medium,59.8%,37.8%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,37.1%,37.5%
 151,https://leetcode.com/problems/reverse-words-in-a-string,Reverse Words in a String,Medium,52.3%,37.5%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,37.5%

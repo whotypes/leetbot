@@ -5,3 +5,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1162,https://leetcode.com/problems/as-far-from-land-as-possible,As Far from Land as Possible,Medium,52.3%,87.6%
 912,https://leetcode.com/problems/sort-an-array,Sort an Array,Medium,55.9%,77.7%
 68,https://leetcode.com/problems/text-justification,Text Justification,Hard,51.1%,77.5%
+295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,55.0%,77.4%

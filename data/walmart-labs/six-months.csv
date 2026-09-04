@@ -26,6 +26,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,51.3%,74.0%
 332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,44.5%,74.0%
 567,https://leetcode.com/problems/permutation-in-string,Permutation in String,Medium,48.7%,74.0%
+210,https://leetcode.com/problems/course-schedule-ii,Course Schedule II,Medium,56.2%,70.7%
+287,https://leetcode.com/problems/find-the-duplicate-number,Find the Duplicate Number,Medium,64.8%,70.7%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,67.3%,70.7%
+716,https://leetcode.com/problems/max-stack,Max Stack,Hard,46.0%,70.7%
+740,https://leetcode.com/problems/delete-and-earn,Delete and Earn,Medium,57.5%,70.7%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.6%,70.5%
 75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,69.6%,70.5%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.8%,70.5%

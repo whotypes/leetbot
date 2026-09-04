@@ -9,6 +9,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.1%,78.2%
 295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,54.4%,78.2%
 380,https://leetcode.com/problems/insert-delete-getrandom-o1,Insert Delete GetRandom O(1),Medium,55.3%,78.2%
+410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,61.3%,70.6%
+1912,https://leetcode.com/problems/design-movie-rental-system,Design Movie Rental System,Hard,62.1%,70.6%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,67.8%
 126,https://leetcode.com/problems/word-ladder-ii,Word Ladder II,Hard,27.6%,67.8%
 127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,45.4%,67.8%

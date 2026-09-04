@@ -9,6 +9,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,86.5%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,86.5%
 2603,https://leetcode.com/problems/collect-coins-in-a-tree,Collect Coins in a Tree,Hard,40.0%,86.5%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,48.0%,75.9%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,75.8%
 98,https://leetcode.com/problems/validate-binary-search-tree,Validate Binary Search Tree,Medium,35.6%,75.8%
 139,https://leetcode.com/problems/word-break,Word Break,Medium,49.4%,75.8%

@@ -4,10 +4,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 92,https://leetcode.com/problems/reverse-linked-list-ii,Reverse Linked List II,Medium,51.4%,84.7%
 257,https://leetcode.com/problems/binary-tree-paths,Binary Tree Paths,Easy,68.5%,84.7%
 438,https://leetcode.com/problems/find-all-anagrams-in-a-string,Find All Anagrams in a String,Medium,53.6%,84.7%
+300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,59.9%,83.9%
 83,https://leetcode.com/problems/remove-duplicates-from-sorted-list,Remove Duplicates from Sorted List,Easy,55.0%,75.0%
 268,https://leetcode.com/problems/missing-number,Missing Number,Easy,71.9%,73.4%
 528,https://leetcode.com/problems/random-pick-with-weight,Random Pick with Weight,Medium,49.0%,73.4%
 1321,https://leetcode.com/problems/restaurant-growth,Restaurant Growth,Medium,58.6%,73.4%
+713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.9%,67.9%
 535,https://leetcode.com/problems/encode-and-decode-tinyurl,Encode and Decode TinyURL,Medium,86.6%,64.5%
 2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,64.5%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,67.0%,62.5%

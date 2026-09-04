@@ -27,6 +27,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 415,https://leetcode.com/problems/add-strings,Add Strings,Easy,52.1%,51.9%
 539,https://leetcode.com/problems/minimum-time-difference,Minimum Time Difference,Medium,62.6%,51.9%
 1166,https://leetcode.com/problems/design-file-system,Design File System,Medium,65.1%,51.9%
+2817,https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint,Minimum Absolute Difference Between Elements With Constraint,Medium,38.1%,50.6%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,50.0%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,67.0%,50.0%
 25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,63.3%,50.0%
@@ -60,3 +61,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2672,https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color,Number of Adjacent Elements With the Same Color,Medium,59.4%,38.4%
 3042,https://leetcode.com/problems/count-prefix-and-suffix-pairs-i,Count Prefix and Suffix Pairs I,Easy,77.8%,38.4%
 332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,44.7%,37.6%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,48.1%,37.1%
+647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,73.2%,37.1%
+2023,https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target,Number of Pairs of Strings With Concatenation Equal to Target,Medium,75.5%,37.1%
+2141,https://leetcode.com/problems/maximum-running-time-of-n-computers,Maximum Running Time of N Computers,Hard,56.3%,37.1%
+3019,https://leetcode.com/problems/number-of-changing-keys,Number of Changing Keys,Easy,80.5%,37.1%

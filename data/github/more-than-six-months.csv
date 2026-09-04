@@ -3,3 +3,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2849,https://leetcode.com/problems/determine-if-a-cell-is-reachable-at-a-given-time,Determine if a Cell Is Reachable at a Given Time,Medium,37.1%,100.0%
 645,https://leetcode.com/problems/set-mismatch,Set Mismatch,Easy,43.8%,90.0%
 1531,https://leetcode.com/problems/string-compression-ii,String Compression II,Hard,52.2%,89.7%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,48.0%,89.5%

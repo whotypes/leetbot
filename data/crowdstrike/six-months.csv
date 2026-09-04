@@ -1,4 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,73.2%,100.0%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,100.0%
 271,https://leetcode.com/problems/encode-and-decode-strings,Encode and Decode Strings,Medium,51.5%,83.2%
 443,https://leetcode.com/problems/string-compression,String Compression,Medium,59.9%,83.2%

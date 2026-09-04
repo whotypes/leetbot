@@ -2,5 +2,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,100.0%
 210,https://leetcode.com/problems/course-schedule-ii,Course Schedule II,Medium,55.5%,100.0%
 383,https://leetcode.com/problems/ransom-note,Ransom Note,Easy,66.1%,100.0%
+1087,https://leetcode.com/problems/brace-expansion,Brace Expansion,Medium,66.9%,100.0%
+1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,52.1%,100.0%
 1268,https://leetcode.com/problems/search-suggestions-system,Search Suggestions System,Medium,65.1%,100.0%
 1610,https://leetcode.com/problems/maximum-number-of-visible-points,Maximum Number of Visible Points,Hard,38.3%,93.1%

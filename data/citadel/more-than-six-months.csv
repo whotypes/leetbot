@@ -71,6 +71,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.5%,47.4%
 155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.3%,47.4%
 348,https://leetcode.com/problems/design-tic-tac-toe,Design Tic-Tac-Toe,Medium,58.7%,47.4%
+1244,https://leetcode.com/problems/design-a-leaderboard,Design A Leaderboard,Medium,68.0%,47.0%
+3484,https://leetcode.com/problems/design-spreadsheet,Design Spreadsheet,Medium,73.5%,47.0%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,46.8%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,46.8%
 17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,65.9%,46.8%

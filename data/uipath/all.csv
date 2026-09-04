@@ -4,6 +4,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2826,https://leetcode.com/problems/sorting-three-groups,Sorting Three Groups,Medium,43.0%,100.0%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,75.0%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,71.9%
+968,https://leetcode.com/problems/binary-tree-cameras,Binary Tree Cameras,Hard,48.1%,64.2%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,62.4%
 312,https://leetcode.com/problems/burst-balloons,Burst Balloons,Hard,63.3%,62.4%
 424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,59.5%,62.4%

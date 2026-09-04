@@ -51,6 +51,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2432,https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task,The Employee That Worked on the Longest Task,Easy,51.7%,55.8%
 2506,https://leetcode.com/problems/count-pairs-of-similar-strings,Count Pairs Of Similar Strings,Easy,73.7%,55.8%
 3295,https://leetcode.com/problems/report-spam-message,Report Spam Message,Medium,48.6%,55.8%
+881,https://leetcode.com/problems/boats-to-save-people,Boats to Save People,Medium,62.4%,52.7%
+1526,https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array,Minimum Number of Increments on Subarrays to Form a Target Array,Hard,78.3%,52.7%
+3627,https://leetcode.com/problems/maximum-median-sum-of-subsequences-of-size-3,Maximum Median Sum of Subsequences of Size 3,Medium,64.7%,52.7%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,65.3%,50.0%
 349,https://leetcode.com/problems/intersection-of-two-arrays,Intersection of Two Arrays,Easy,76.6%,50.0%
 713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,53.0%,50.0%
@@ -88,6 +91,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2964,https://leetcode.com/problems/number-of-divisible-triplet-sums,Number of Divisible Triplet Sums,Medium,67.5%,49.0%
 3107,https://leetcode.com/problems/minimum-operations-to-make-median-of-array-equal-to-k,Minimum Operations to Make Median of Array Equal to K,Medium,47.8%,49.0%
 3175,https://leetcode.com/problems/find-the-first-player-to-win-k-games-in-a-row,Find The First Player to win K Games in a Row,Medium,40.2%,49.0%
+32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,39.6%,46.1%
+215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,69.3%,46.1%
+1685,https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array,Sum of Absolute Differences in a Sorted Array,Medium,68.6%,46.1%
+1758,https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string,Minimum Changes To Make Alternating Binary String,Easy,67.9%,46.1%
+2193,https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome,Minimum Number of Moves to Make Palindrome,Hard,53.1%,46.1%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,39.4%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,39.4%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,39.4%
@@ -177,3 +185,13 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2571,https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0,Minimum Operations to Reduce an Integer to 0,Medium,57.7%,37.5%
 2614,https://leetcode.com/problems/prime-in-diagonal,Prime In Diagonal,Easy,36.3%,37.5%
 3124,https://leetcode.com/problems/find-longest-calls,Find Longest Calls,Medium,63.1%,37.5%
+2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,49.3%,37.0%
+181,https://leetcode.com/problems/employees-earning-more-than-their-managers,Employees Earning More Than Their Managers,Easy,73.9%,37.0%
+371,https://leetcode.com/problems/sum-of-two-integers,Sum of Two Integers,Medium,55.8%,37.0%
+485,https://leetcode.com/problems/max-consecutive-ones,Max Consecutive Ones,Easy,66.0%,37.0%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.5%,37.0%
+1312,https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome,Minimum Insertion Steps to Make a String Palindrome,Hard,74.4%,37.0%
+1513,https://leetcode.com/problems/number-of-substrings-with-only-1s,Number of Substrings With Only 1s,Medium,57.3%,37.0%
+2116,https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid,Check if a Parentheses String Can Be Valid,Medium,45.3%,37.0%
+2429,https://leetcode.com/problems/minimize-xor,Minimize XOR,Medium,62.3%,37.0%
+3521,https://leetcode.com/problems/find-product-recommendation-pairs,Find Product Recommendation Pairs,Medium,62.7%,37.0%

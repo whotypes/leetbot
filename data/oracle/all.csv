@@ -231,6 +231,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2448,https://leetcode.com/problems/minimum-cost-to-make-array-equal,Minimum Cost to Make Array Equal,Hard,46.7%,32.2%
 2561,https://leetcode.com/problems/rearranging-fruits,Rearranging Fruits,Hard,57.3%,32.2%
 3366,https://leetcode.com/problems/minimum-array-sum,Minimum Array Sum,Medium,31.3%,32.2%
+18,https://leetcode.com/problems/4sum,4Sum,Medium,41.6%,25.9%
+721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,62.0%,25.9%
+1057,https://leetcode.com/problems/campus-bikes,Campus Bikes,Medium,59.1%,25.9%
 60,https://leetcode.com/problems/permutation-sequence,Permutation Sequence,Hard,50.1%,25.0%
 85,https://leetcode.com/problems/maximal-rectangle,Maximal Rectangle,Hard,54.0%,25.0%
 100,https://leetcode.com/problems/same-tree,Same Tree,Easy,65.3%,25.0%

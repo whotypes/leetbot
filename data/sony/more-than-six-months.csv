@@ -1,4 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.8%,100.0%
 528,https://leetcode.com/problems/random-pick-with-weight,Random Pick with Weight,Medium,49.0%,100.0%
 1402,https://leetcode.com/problems/reducing-dishes,Reducing Dishes,Hard,76.4%,100.0%
 1512,https://leetcode.com/problems/number-of-good-pairs,Number of Good Pairs,Easy,89.8%,100.0%

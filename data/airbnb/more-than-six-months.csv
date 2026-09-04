@@ -19,6 +19,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 219,https://leetcode.com/problems/contains-duplicate-ii,Contains Duplicate II,Easy,51.1%,56.1%
 269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,37.2%,56.1%
 3076,https://leetcode.com/problems/shortest-uncommon-substring-in-an-array,Shortest Uncommon Substring in an Array,Medium,50.4%,56.1%
+721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,62.0%,53.5%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,50.3%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,50.3%
 212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,38.4%,50.3%
@@ -29,6 +30,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 166,https://leetcode.com/problems/fraction-to-recurring-decimal,Fraction to Recurring Decimal,Medium,26.3%,50.0%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,46.7%,50.0%
 341,https://leetcode.com/problems/flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,65.3%,50.0%
+727,https://leetcode.com/problems/minimum-window-subsequence,Minimum Window Subsequence,Hard,43.9%,45.4%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,42.2%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,42.2%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,42.2%

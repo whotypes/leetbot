@@ -47,5 +47,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3703,https://leetcode.com/problems/remove-k-balanced-substrings,Remove K-Balanced Substrings,Medium,32.6%,50.7%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.2%,50.6%
 125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.3%,50.6%
+735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,49.0%,49.4%
 313,https://leetcode.com/problems/super-ugly-number,Super Ugly Number,Medium,46.3%,48.9%
 345,https://leetcode.com/problems/reverse-vowels-of-a-string,Reverse Vowels of a String,Easy,61.6%,48.9%

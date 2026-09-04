@@ -12,6 +12,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,56.1%,75.0%
 1845,https://leetcode.com/problems/seat-reservation-manager,Seat Reservation Manager,Medium,66.5%,75.0%
 347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.4%,74.5%
+189,https://leetcode.com/problems/rotate-array,Rotate Array,Medium,45.4%,71.5%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,70.9%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,70.9%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.5%,70.9%

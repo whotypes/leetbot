@@ -1,4 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,58.1%,100.0%
+9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.9%,100.0%
 180,https://leetcode.com/problems/consecutive-numbers,Consecutive Numbers,Medium,48.6%,100.0%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.2%,100.0%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.8%,89.1%

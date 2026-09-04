@@ -6,6 +6,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,63.8%,70.9%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,70.0%
 169,https://leetcode.com/problems/majority-element,Majority Element,Easy,66.2%,70.0%
+1331,https://leetcode.com/problems/rank-transform-of-an-array,Rank Transform of an Array,Easy,74.0%,67.4%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,66.0%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.2%,64.8%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,63.6%
@@ -104,6 +105,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1004,https://leetcode.com/problems/max-consecutive-ones-iii,Max Consecutive Ones III,Medium,66.1%,37.5%
 1137,https://leetcode.com/problems/n-th-tribonacci-number,N-th Tribonacci Number,Easy,63.5%,37.5%
 2373,https://leetcode.com/problems/largest-local-values-in-a-matrix,Largest Local Values in a Matrix,Easy,87.8%,37.5%
+215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,69.3%,37.1%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,20.9%,32.9%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,32.9%
 41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,42.8%,32.9%
@@ -144,6 +146,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.2%,32.6%
 443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.2%,32.6%
 3689,https://leetcode.com/problems/maximum-total-subarray-value-i,Maximum Total Subarray Value I,Medium,71.9%,32.6%
+394,https://leetcode.com/problems/decode-string,Decode String,Medium,63.2%,31.6%
+735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,49.0%,31.6%
+860,https://leetcode.com/problems/lemonade-change,Lemonade Change,Easy,59.4%,31.6%
+2951,https://leetcode.com/problems/find-the-peaks,Find the Peaks,Easy,75.2%,31.6%
+3731,https://leetcode.com/problems/find-missing-elements,Find Missing Elements,Easy,88.5%,31.6%
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,54.0%,25.5%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,25.5%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,25.5%
@@ -266,3 +273,30 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1838,https://leetcode.com/problems/frequency-of-the-most-frequent-element,Frequency of the Most Frequent Element,Medium,44.2%,25.0%
 2704,https://leetcode.com/problems/to-be-or-not-to-be,To Be Or Not To Be,Easy,63.0%,25.0%
 2798,https://leetcode.com/problems/number-of-employees-who-met-the-target,Number of Employees Who Met the Target,Easy,87.6%,25.0%
+25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,67.1%,24.1%
+134,https://leetcode.com/problems/gas-station,Gas Station,Medium,48.7%,24.1%
+177,https://leetcode.com/problems/nth-highest-salary,Nth Highest Salary,Medium,40.1%,24.1%
+203,https://leetcode.com/problems/remove-linked-list-elements,Remove Linked List Elements,Easy,55.4%,24.1%
+205,https://leetcode.com/problems/isomorphic-strings,Isomorphic Strings,Easy,49.0%,24.1%
+292,https://leetcode.com/problems/nim-game,Nim Game,Easy,60.4%,24.1%
+345,https://leetcode.com/problems/reverse-vowels-of-a-string,Reverse Vowels of a String,Easy,62.2%,24.1%
+383,https://leetcode.com/problems/ransom-note,Ransom Note,Easy,66.4%,24.1%
+503,https://leetcode.com/problems/next-greater-element-ii,Next Greater Element II,Medium,69.1%,24.1%
+572,https://leetcode.com/problems/subtree-of-another-tree,Subtree of Another Tree,Easy,52.1%,24.1%
+632,https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists,Smallest Range Covering Elements from K Lists,Hard,70.4%,24.1%
+645,https://leetcode.com/problems/set-mismatch,Set Mismatch,Easy,43.3%,24.1%
+692,https://leetcode.com/problems/top-k-frequent-words,Top K Frequent Words,Medium,60.6%,24.1%
+700,https://leetcode.com/problems/search-in-a-binary-search-tree,Search in a Binary Search Tree,Easy,83.1%,24.1%
+733,https://leetcode.com/problems/flood-fill,Flood Fill,Easy,68.9%,24.1%
+881,https://leetcode.com/problems/boats-to-save-people,Boats to Save People,Medium,62.4%,24.1%
+901,https://leetcode.com/problems/online-stock-span,Online Stock Span,Medium,69.7%,24.1%
+904,https://leetcode.com/problems/fruit-into-baskets,Fruit Into Baskets,Medium,52.4%,24.1%
+987,https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree,Vertical Order Traversal of a Binary Tree,Hard,54.6%,24.1%
+1402,https://leetcode.com/problems/reducing-dishes,Reducing Dishes,Hard,76.8%,24.1%
+1464,https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array,Maximum Product of Two Elements in an Array,Easy,85.0%,24.1%
+1523,https://leetcode.com/problems/count-odd-numbers-in-an-interval-range,Count Odd Numbers in an Interval Range,Easy,54.8%,24.1%
+1806,https://leetcode.com/problems/minimum-number-of-operations-to-reinitialize-a-permutation,Minimum Number of Operations to Reinitialize a Permutation,Medium,72.8%,24.1%
+1829,https://leetcode.com/problems/maximum-xor-for-each-query,Maximum XOR for Each Query,Medium,84.6%,24.1%
+2009,https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous,Minimum Number of Operations to Make Array Continuous,Hard,51.7%,24.1%
+2965,https://leetcode.com/problems/find-missing-and-repeated-values,Find Missing and Repeated Values,Easy,83.0%,24.1%
+3658,https://leetcode.com/problems/gcd-of-odd-and-even-sums,GCD of Odd and Even Sums,Easy,89.9%,24.1%

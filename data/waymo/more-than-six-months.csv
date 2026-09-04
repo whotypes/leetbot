@@ -6,6 +6,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 317,https://leetcode.com/problems/shortest-distance-from-all-buildings,Shortest Distance from All Buildings,Hard,44.9%,70.5%
 631,https://leetcode.com/problems/design-excel-sum-formula,Design Excel Sum Formula,Hard,39.9%,70.5%
 1197,https://leetcode.com/problems/minimum-knight-moves,Minimum Knight Moves,Medium,41.9%,70.5%
+871,https://leetcode.com/problems/minimum-number-of-refueling-stops,Minimum Number of Refueling Stops,Hard,41.9%,70.0%
+1944,https://leetcode.com/problems/number-of-visible-people-in-a-queue,Number of Visible People in a Queue,Hard,73.5%,70.0%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,64.4%,61.3%
 68,https://leetcode.com/problems/text-justification,Text Justification,Hard,50.9%,61.3%
 84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,49.7%,61.3%
@@ -14,3 +16,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.8%,61.3%
 939,https://leetcode.com/problems/minimum-area-rectangle,Minimum Area Rectangle,Medium,55.4%,61.3%
 1296,https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers,Divide Array in Sets of K Consecutive Numbers,Medium,59.2%,61.3%
+10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,31.7%,60.6%
+269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,37.3%,60.6%
+1631,https://leetcode.com/problems/path-with-minimum-effort,Path With Minimum Effort,Medium,64.0%,60.6%
+2008,https://leetcode.com/problems/maximum-earnings-from-taxi,Maximum Earnings From Taxi,Medium,46.8%,60.6%

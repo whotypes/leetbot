@@ -75,6 +75,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3016,https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii,Minimum Number of Pushes to Type Word II,Medium,80.0%,49.3%
 3209,https://leetcode.com/problems/number-of-subarrays-with-and-value-of-k,Number of Subarrays With AND Value of K,Hard,35.2%,49.3%
 3281,https://leetcode.com/problems/maximize-score-of-numbers-in-ranges,Maximize Score of Numbers in Ranges,Medium,35.7%,49.3%
+322,https://leetcode.com/problems/coin-change,Coin Change,Medium,49.1%,41.2%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,60.6%,41.2%
+1898,https://leetcode.com/problems/maximum-number-of-removable-characters,Maximum Number of Removable Characters,Medium,47.8%,41.2%
+3316,https://leetcode.com/problems/find-maximum-removals-from-source-string,Find Maximum Removals From Source String,Medium,39.0%,41.2%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,40.4%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,40.4%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,40.4%

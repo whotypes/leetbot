@@ -1,4 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,47.3%,100.0%
 796,https://leetcode.com/problems/rotate-string,Rotate String,Easy,65.4%,100.0%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,89.3%
 1953,https://leetcode.com/problems/maximum-number-of-weeks-for-which-you-can-work,Maximum Number of Weeks for Which You Can Work,Medium,42.4%,89.3%

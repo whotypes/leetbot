@@ -791,6 +791,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 707,https://leetcode.com/problems/design-linked-list,Design Linked List,Medium,30.4%,15.6%
 840,https://leetcode.com/problems/magic-squares-in-grid,Magic Squares In Grid,Medium,55.2%,15.6%
 1411,https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid,Number of Ways to Paint N × 3 Grid,Hard,80.6%,15.6%
+329,https://leetcode.com/problems/longest-increasing-path-in-a-matrix,Longest Increasing Path in a Matrix,Hard,57.0%,15.4%
+673,https://leetcode.com/problems/number-of-longest-increasing-subsequence,Number of Longest Increasing Subsequence,Medium,52.7%,15.4%
+1680,https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers,Concatenation of Consecutive Binary Numbers,Medium,66.7%,15.4%
+3014,https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i,Minimum Number of Pushes to Type Word I,Easy,77.4%,15.4%
+3047,https://leetcode.com/problems/find-the-largest-area-of-square-inside-two-rectangles,Find the Largest Area of Square Inside Two Rectangles,Medium,66.8%,15.4%
+3471,https://leetcode.com/problems/find-the-largest-almost-missing-integer,Find the Largest Almost Missing Integer,Easy,49.3%,15.4%
 188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,12.5%
 193,https://leetcode.com/problems/valid-phone-numbers,Valid Phone Numbers,Easy,27.6%,12.5%
 269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,36.7%,12.5%
@@ -1263,3 +1269,41 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3699,https://leetcode.com/problems/number-of-zigzag-arrays-i,Number of ZigZag Arrays I,Hard,50.8%,9.9%
 3776,https://leetcode.com/problems/minimum-moves-to-balance-circular-array,Minimum Moves to Balance Circular Array,Medium,40.5%,9.9%
 3783,https://leetcode.com/problems/mirror-distance-of-an-integer,Mirror Distance of an Integer,Easy,91.5%,9.9%
+107,https://leetcode.com/problems/binary-tree-level-order-traversal-ii,Binary Tree Level Order Traversal II,Medium,69.0%,9.7%
+147,https://leetcode.com/problems/insertion-sort-list,Insertion Sort List,Medium,60.1%,9.7%
+223,https://leetcode.com/problems/rectangle-area,Rectangle Area,Medium,50.2%,9.7%
+335,https://leetcode.com/problems/self-crossing,Self Crossing,Hard,36.2%,9.7%
+385,https://leetcode.com/problems/mini-parser,Mini Parser,Medium,43.5%,9.7%
+487,https://leetcode.com/problems/max-consecutive-ones-ii,Max Consecutive Ones II,Medium,52.1%,9.7%
+777,https://leetcode.com/problems/swap-adjacent-in-lr-string,Swap Adjacent in LR String,Medium,38.4%,9.7%
+799,https://leetcode.com/problems/champagne-tower,Champagne Tower,Medium,64.0%,9.7%
+833,https://leetcode.com/problems/find-and-replace-in-string,Find And Replace in String,Medium,50.7%,9.7%
+868,https://leetcode.com/problems/binary-gap,Binary Gap,Easy,74.4%,9.7%
+932,https://leetcode.com/problems/beautiful-array,Beautiful Array,Medium,70.5%,9.7%
+961,https://leetcode.com/problems/n-repeated-element-in-size-2n-array,N-Repeated Element in Size 2N Array,Easy,80.0%,9.7%
+1081,https://leetcode.com/problems/smallest-subsequence-of-distinct-characters,Smallest Subsequence of Distinct Characters,Medium,70.6%,9.7%
+1160,https://leetcode.com/problems/find-words-that-can-be-formed-by-characters,Find Words That Can Be Formed by Characters,Easy,71.7%,9.7%
+1226,https://leetcode.com/problems/the-dining-philosophers,The Dining Philosophers,Medium,54.3%,9.7%
+1337,https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix,The K Weakest Rows in a Matrix,Easy,74.5%,9.7%
+1542,https://leetcode.com/problems/find-longest-awesome-substring,Find Longest Awesome Substring,Hard,47.5%,9.7%
+1622,https://leetcode.com/problems/fancy-sequence,Fancy Sequence,Hard,41.6%,9.7%
+1696,https://leetcode.com/problems/jump-game-vi,Jump Game VI,Medium,46.6%,9.7%
+1718,https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence,Construct the Lexicographically Largest Valid Sequence,Medium,72.7%,9.7%
+1748,https://leetcode.com/problems/sum-of-unique-elements,Sum of Unique Elements,Easy,80.3%,9.7%
+2013,https://leetcode.com/problems/detect-squares,Detect Squares,Medium,53.0%,9.7%
+2076,https://leetcode.com/problems/process-restricted-friend-requests,Process Restricted Friend Requests,Hard,61.7%,9.7%
+2078,https://leetcode.com/problems/two-furthest-houses-with-different-colors,Two Furthest Houses With Different Colors,Easy,71.7%,9.7%
+2257,https://leetcode.com/problems/count-unguarded-cells-in-the-grid,Count Unguarded Cells in the Grid,Medium,69.2%,9.7%
+2452,https://leetcode.com/problems/words-within-two-edits-of-dictionary,Words Within Two Edits of Dictionary,Medium,73.3%,9.7%
+2948,https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements,Make Lexicographically Smallest Array by Swapping Elements,Medium,66.5%,9.7%
+3314,https://leetcode.com/problems/construct-the-minimum-bitwise-array-i,Construct the Minimum Bitwise Array I,Easy,85.0%,9.7%
+3517,https://leetcode.com/problems/smallest-palindromic-rearrangement-i,Smallest Palindromic Rearrangement I,Medium,74.3%,9.7%
+3532,https://leetcode.com/problems/path-existence-queries-in-a-graph-i,Path Existence Queries in a Graph I,Medium,70.2%,9.7%
+3640,https://leetcode.com/problems/trionic-array-ii,Trionic Array II,Hard,47.1%,9.7%
+3649,https://leetcode.com/problems/number-of-perfect-pairs,Number of Perfect Pairs,Medium,34.4%,9.7%
+3650,https://leetcode.com/problems/minimum-cost-path-with-edge-reversals,Minimum Cost Path with Edge Reversals,Medium,61.5%,9.7%
+3658,https://leetcode.com/problems/gcd-of-odd-and-even-sums,GCD of Odd and Even Sums,Easy,89.9%,9.7%
+3714,https://leetcode.com/problems/longest-balanced-substring-ii,Longest Balanced Substring II,Medium,41.9%,9.7%
+3718,https://leetcode.com/problems/smallest-missing-multiple-of-k,Smallest Missing Multiple of K,Easy,71.5%,9.7%
+3731,https://leetcode.com/problems/find-missing-elements,Find Missing Elements,Easy,88.5%,9.7%
+3848,https://leetcode.com/problems/check-digitorial-permutation,Check Digitorial Permutation,Medium,47.0%,9.7%

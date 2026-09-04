@@ -30,6 +30,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.1%,53.7%
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,53.7%
 1757,https://leetcode.com/problems/recyclable-and-low-fat-products,Recyclable and Low Fat Products,Easy,88.7%,53.7%
+3622,https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product,Check Divisibility by Digit Sum and Product,Easy,74.6%,52.0%
 1732,https://leetcode.com/problems/find-the-highest-altitude,Find the Highest Altitude,Easy,84.7%,50.3%
 3699,https://leetcode.com/problems/number-of-zigzag-arrays-i,Number of ZigZag Arrays I,Hard,50.8%,50.3%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,43.0%,50.0%
@@ -59,6 +60,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1004,https://leetcode.com/problems/max-consecutive-ones-iii,Max Consecutive Ones III,Medium,67.6%,49.1%
 1929,https://leetcode.com/problems/concatenation-of-array,Concatenation of Array,Easy,90.4%,49.1%
 3474,https://leetcode.com/problems/lexicographically-smallest-generated-string,Lexicographically Smallest Generated String,Hard,53.5%,49.1%
+3875,https://leetcode.com/problems/construct-uniform-parity-array-i,Construct Uniform Parity Array I,Easy,86.1%,48.4%
 1344,https://leetcode.com/problems/angle-between-hands-of-a-clock,Angle Between Hands of a Clock,Medium,69.6%,45.8%
 3161,https://leetcode.com/problems/block-placement-queries,Block Placement Queries,Hard,41.5%,45.8%
 29,https://leetcode.com/problems/divide-two-integers,Divide Two Integers,Medium,19.8%,44.9%
@@ -75,6 +77,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1838,https://leetcode.com/problems/frequency-of-the-most-frequent-element,Frequency of the Most Frequent Element,Medium,44.8%,44.9%
 2784,https://leetcode.com/problems/check-if-array-is-good,Check if Array is Good,Easy,57.3%,44.9%
 3629,https://leetcode.com/problems/minimum-jumps-to-reach-end-via-prime-teleportation,Minimum Jumps to Reach End via Prime Teleportation,Medium,44.8%,44.9%
+77,https://leetcode.com/problems/combinations,Combinations,Medium,75.1%,44.1%
+1140,https://leetcode.com/problems/stone-game-ii,Stone Game II,Medium,75.7%,44.1%
+1386,https://leetcode.com/problems/cinema-seat-allocation,Cinema Seat Allocation,Medium,56.9%,44.1%
+2996,https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum,Smallest Missing Integer Greater Than Sequential Prefix Sum,Easy,50.1%,44.1%
+3345,https://leetcode.com/problems/smallest-divisible-digit-product-i,Smallest Divisible Digit Product I,Easy,73.0%,44.1%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,43.2%
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,54.0%,43.2%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,43.2%
@@ -116,6 +123,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3633,https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-i,Earliest Finish Time for Land and Water Rides I,Easy,73.0%,39.9%
 3635,https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-ii,Earliest Finish Time for Land and Water Rides II,Medium,64.3%,39.9%
 3737,https://leetcode.com/problems/count-subarrays-with-majority-element-i,Count Subarrays With Majority Element I,Medium,75.7%,39.9%
+1631,https://leetcode.com/problems/path-with-minimum-effort,Path With Minimum Effort,Medium,64.0%,38.6%
+3090,https://leetcode.com/problems/maximum-length-substring-with-two-occurrences,Maximum Length Substring With Two Occurrences,Easy,77.7%,38.6%
+3876,https://leetcode.com/problems/construct-uniform-parity-array-ii,Construct Uniform Parity Array II,Medium,66.3%,38.6%
 19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,49.2%,37.5%
 30,https://leetcode.com/problems/substring-with-concatenation-of-all-words,Substring with Concatenation of All Words,Hard,33.1%,37.5%
 35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,49.2%,37.5%
@@ -310,6 +320,40 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3691,https://leetcode.com/problems/maximum-total-subarray-value-ii,Maximum Total Subarray Value II,Hard,41.7%,31.8%
 3700,https://leetcode.com/problems/number-of-zigzag-arrays-ii,Number of ZigZag Arrays II,Hard,67.7%,31.8%
 3962,https://leetcode.com/problems/maximum-subarray-sum-after-at-most-k-swaps,Maximum Subarray Sum After at Most K Swaps,Hard,13.6%,31.8%
+32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,39.6%,30.9%
+39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,77.1%,30.9%
+80,https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii,Remove Duplicates from Sorted Array II,Medium,65.2%,30.9%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.6%,30.9%
+134,https://leetcode.com/problems/gas-station,Gas Station,Medium,48.7%,30.9%
+174,https://leetcode.com/problems/dungeon-game,Dungeon Game,Hard,42.1%,30.9%
+182,https://leetcode.com/problems/duplicate-emails,Duplicate Emails,Easy,74.3%,30.9%
+203,https://leetcode.com/problems/remove-linked-list-elements,Remove Linked List Elements,Easy,55.4%,30.9%
+303,https://leetcode.com/problems/range-sum-query-immutable,Range Sum Query - Immutable,Easy,73.4%,30.9%
+400,https://leetcode.com/problems/nth-digit,Nth Digit,Medium,38.9%,30.9%
+680,https://leetcode.com/problems/valid-palindrome-ii,Valid Palindrome II,Easy,44.7%,30.9%
+684,https://leetcode.com/problems/redundant-connection,Redundant Connection,Medium,68.2%,30.9%
+713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.9%,30.9%
+759,https://leetcode.com/problems/employee-free-time,Employee Free Time,Hard,73.0%,30.9%
+827,https://leetcode.com/problems/making-a-large-island,Making A Large Island,Hard,57.2%,30.9%
+877,https://leetcode.com/problems/stone-game,Stone Game,Medium,77.0%,30.9%
+881,https://leetcode.com/problems/boats-to-save-people,Boats to Save People,Medium,62.4%,30.9%
+901,https://leetcode.com/problems/online-stock-span,Online Stock Span,Medium,69.7%,30.9%
+933,https://leetcode.com/problems/number-of-recent-calls,Number of Recent Calls,Easy,79.0%,30.9%
+1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,52.1%,30.9%
+1101,https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends,The Earliest Moment When Everyone Become Friends,Medium,66.1%,30.9%
+1155,https://leetcode.com/problems/number-of-dice-rolls-with-target-sum,Number of Dice Rolls With Target Sum,Medium,62.6%,30.9%
+1431,https://leetcode.com/problems/kids-with-the-greatest-number-of-candies,Kids With the Greatest Number of Candies,Easy,88.0%,30.9%
+1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,58.0%,30.9%
+1518,https://leetcode.com/problems/water-bottles,Water Bottles,Easy,72.6%,30.9%
+1672,https://leetcode.com/problems/richest-customer-wealth,Richest Customer Wealth,Easy,88.8%,30.9%
+1752,https://leetcode.com/problems/check-if-array-is-sorted-and-rotated,Check if Array Is Sorted and Rotated,Easy,57.7%,30.9%
+2213,https://leetcode.com/problems/longest-substring-of-one-repeating-character,Longest Substring of One Repeating Character,Hard,65.5%,30.9%
+2958,https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency,Length of Longest Subarray With at Most K Frequency,Medium,60.6%,30.9%
+3026,https://leetcode.com/problems/maximum-good-subarray-sum,Maximum Good Subarray Sum,Medium,22.4%,30.9%
+3348,https://leetcode.com/problems/smallest-divisible-digit-product-ii,Smallest Divisible Digit Product II,Hard,45.2%,30.9%
+3471,https://leetcode.com/problems/find-the-largest-almost-missing-integer,Find the Largest Almost Missing Integer,Easy,49.3%,30.9%
+3568,https://leetcode.com/problems/minimum-moves-to-clean-the-classroom,Minimum Moves to Clean the Classroom,Medium,58.6%,30.9%
+3738,https://leetcode.com/problems/longest-non-decreasing-subarray-after-replacing-at-most-one-element,Longest Non-Decreasing Subarray After Replacing at Most One Element,Medium,22.9%,30.9%
 41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,41.2%,25.0%
 50,https://leetcode.com/problems/powx-n,"Pow(x, n)",Medium,37.2%,25.0%
 66,https://leetcode.com/problems/plus-one,Plus One,Easy,47.7%,25.0%

@@ -24,3 +24,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 546,https://leetcode.com/problems/remove-boxes,Remove Boxes,Hard,49.5%,53.2%
 763,https://leetcode.com/problems/partition-labels,Partition Labels,Medium,81.9%,53.2%
 1482,https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets,Minimum Number of Days to Make m Bouquets,Medium,56.4%,53.2%
+2241,https://leetcode.com/problems/design-an-atm-machine,Design an ATM Machine,Medium,46.2%,51.9%

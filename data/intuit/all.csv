@@ -5,6 +5,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,82.7%
 2467,https://leetcode.com/problems/most-profitable-path-in-a-tree,Most Profitable Path in a Tree,Medium,67.3%,82.7%
 3148,https://leetcode.com/problems/maximum-difference-score-in-a-grid,Maximum Difference Score in a Grid,Medium,47.9%,82.7%
+174,https://leetcode.com/problems/dungeon-game,Dungeon Game,Hard,42.1%,80.9%
 66,https://leetcode.com/problems/plus-one,Plus One,Easy,49.9%,80.7%
 1698,https://leetcode.com/problems/number-of-distinct-substrings-in-a-string,Number of Distinct Substrings in a String,Medium,64.7%,80.7%
 3619,https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k,Count Islands With Total Value Divisible by K,Medium,56.3%,80.7%
@@ -88,3 +89,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2812,https://leetcode.com/problems/find-the-safest-path-in-a-grid,Find the Safest Path in a Grid,Medium,48.7%,42.8%
 546,https://leetcode.com/problems/remove-boxes,Remove Boxes,Hard,49.5%,42.6%
 729,https://leetcode.com/problems/my-calendar-i,My Calendar I,Medium,58.3%,42.5%
+62,https://leetcode.com/problems/unique-paths,Unique Paths,Medium,67.2%,42.4%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.2%,42.4%
+135,https://leetcode.com/problems/candy,Candy,Hard,49.2%,42.4%
+185,https://leetcode.com/problems/department-top-three-salaries,Department Top Three Salaries,Hard,61.6%,42.4%
+269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,37.3%,42.4%

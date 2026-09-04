@@ -28,6 +28,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 951,https://leetcode.com/problems/flip-equivalent-binary-trees,Flip Equivalent Binary Trees,Medium,69.5%,55.1%
 981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,55.1%
 2244,https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks,Minimum Rounds to Complete All Tasks,Medium,63.3%,55.1%
+1828,https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle,Queries on Number of Points Inside a Circle,Medium,86.9%,54.3%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,46.6%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,46.6%
 114,https://leetcode.com/problems/flatten-binary-tree-to-linked-list,Flatten Binary Tree to Linked List,Medium,70.6%,46.6%
@@ -43,3 +44,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,46.6%
 1091,https://leetcode.com/problems/shortest-path-in-binary-matrix,Shortest Path in Binary Matrix,Medium,51.4%,46.6%
 695,https://leetcode.com/problems/max-area-of-island,Max Area of Island,Medium,74.0%,46.4%
+314,https://leetcode.com/problems/binary-tree-vertical-order-traversal,Binary Tree Vertical Order Traversal,Medium,57.9%,45.7%

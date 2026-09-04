@@ -12,3 +12,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 196,https://leetcode.com/problems/delete-duplicate-emails,Delete Duplicate Emails,Easy,65.9%,69.8%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.5%,60.8%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.3%,60.8%
+21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.8%,59.0%
+22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,79.1%,59.0%

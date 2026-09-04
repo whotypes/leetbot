@@ -57,3 +57,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 94,https://leetcode.com/problems/binary-tree-inorder-traversal,Binary Tree Inorder Traversal,Easy,80.2%,42.9%
 110,https://leetcode.com/problems/balanced-binary-tree,Balanced Binary Tree,Easy,58.6%,42.9%
 2360,https://leetcode.com/problems/longest-cycle-in-a-graph,Longest Cycle in a Graph,Hard,50.8%,42.9%
+91,https://leetcode.com/problems/decode-ways,Decode Ways,Medium,38.5%,40.8%
+190,https://leetcode.com/problems/reverse-bits,Reverse Bits,Easy,69.3%,40.8%
+1145,https://leetcode.com/problems/binary-tree-coloring-game,Binary Tree Coloring Game,Medium,53.1%,40.8%

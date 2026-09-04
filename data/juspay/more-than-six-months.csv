@@ -13,4 +13,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,49.9%
 1717,https://leetcode.com/problems/maximum-score-from-removing-substrings,Maximum Score From Removing Substrings,Medium,66.5%,49.9%
 735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,47.9%,49.8%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,52.7%,49.7%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.7%,48.9%

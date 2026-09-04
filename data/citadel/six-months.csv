@@ -6,8 +6,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,49.5%,87.5%
 239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,47.7%,87.5%
 647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,71.8%,87.5%
+981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,50.2%,86.8%
 150,https://leetcode.com/problems/evaluate-reverse-polish-notation,Evaluate Reverse Polish Notation,Medium,57.6%,86.2%
 348,https://leetcode.com/problems/design-tic-tac-toe,Design Tic-Tac-Toe,Medium,58.8%,86.2%
+588,https://leetcode.com/problems/design-in-memory-file-system,Design In-Memory File System,Hard,48.3%,76.3%
 155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.0%,75.3%
 1004,https://leetcode.com/problems/max-consecutive-ones-iii,Max Consecutive Ones III,Medium,67.6%,75.3%
 1244,https://leetcode.com/problems/design-a-leaderboard,Design A Leaderboard,Medium,68.1%,75.3%

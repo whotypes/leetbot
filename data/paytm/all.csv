@@ -10,6 +10,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.0%,90.8%
 142,https://leetcode.com/problems/linked-list-cycle-ii,Linked List Cycle II,Medium,57.7%,82.2%
 2950,https://leetcode.com/problems/number-of-divisible-substrings,Number of Divisible Substrings,Medium,74.7%,82.2%
+1081,https://leetcode.com/problems/smallest-subsequence-of-distinct-characters,Smallest Subsequence of Distinct Characters,Medium,70.6%,69.3%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,69.0%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,69.0%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,69.0%

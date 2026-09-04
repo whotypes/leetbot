@@ -79,6 +79,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,58.0%,50.0%
 917,https://leetcode.com/problems/reverse-only-letters,Reverse Only Letters,Easy,67.0%,50.0%
 1470,https://leetcode.com/problems/shuffle-the-array,Shuffle the Array,Easy,88.9%,50.0%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,60.6%,49.4%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,43.9%
 26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,62.7%,43.9%
 37,https://leetcode.com/problems/sudoku-solver,Sudoku Solver,Hard,65.4%,43.9%
@@ -110,6 +111,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1732,https://leetcode.com/problems/find-the-highest-altitude,Find the Highest Altitude,Easy,83.9%,43.9%
 1854,https://leetcode.com/problems/maximum-population-year,Maximum Population Year,Easy,63.9%,43.9%
 2221,https://leetcode.com/problems/find-triangular-sum-of-an-array,Find Triangular Sum of an Array,Medium,82.0%,43.9%
+67,https://leetcode.com/problems/add-binary,Add Binary,Easy,58.6%,39.6%
+104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,78.6%,39.6%
+905,https://leetcode.com/problems/sort-array-by-parity,Sort Array By Parity,Easy,76.7%,39.6%
+1291,https://leetcode.com/problems/sequential-digits,Sequential Digits,Medium,68.6%,39.6%
 24,https://leetcode.com/problems/swap-nodes-in-pairs,Swap Nodes in Pairs,Medium,67.4%,37.5%
 25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,63.3%,37.5%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,43.3%,37.5%

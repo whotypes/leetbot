@@ -6,6 +6,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 402,https://leetcode.com/problems/remove-k-digits,Remove K Digits,Medium,35.1%,100.0%
 638,https://leetcode.com/problems/shopping-offers,Shopping Offers,Medium,51.9%,100.0%
 658,https://leetcode.com/problems/find-k-closest-elements,Find K Closest Elements,Medium,48.8%,100.0%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.5%,100.0%
 934,https://leetcode.com/problems/shortest-bridge,Shortest Bridge,Medium,58.7%,100.0%
 44,https://leetcode.com/problems/wildcard-matching,Wildcard Matching,Hard,30.1%,87.5%
 362,https://leetcode.com/problems/design-hit-counter,Design Hit Counter,Medium,69.2%,87.5%

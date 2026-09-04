@@ -19,6 +19,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,62.5%
 1312,https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome,Minimum Insertion Steps to Make a String Palindrome,Hard,72.7%,62.5%
 1686,https://leetcode.com/problems/stone-game-vi,Stone Game VI,Medium,59.2%,62.5%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.2%,61.3%
+295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,55.0%,61.3%
+354,https://leetcode.com/problems/russian-doll-envelopes,Russian Doll Envelopes,Hard,38.2%,61.3%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,59.1%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,59.1%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.1%,59.1%

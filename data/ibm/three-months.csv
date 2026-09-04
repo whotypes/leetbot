@@ -4,6 +4,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 636,https://leetcode.com/problems/exclusive-time-of-functions,Exclusive Time of Functions,Medium,64.9%,100.0%
 1283,https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold,Find the Smallest Divisor Given a Threshold,Medium,63.9%,100.0%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.2%,97.1%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,60.8%,88.1%
+14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,48.3%,88.1%
+142,https://leetcode.com/problems/linked-list-cycle-ii,Linked List Cycle II,Medium,59.1%,88.1%
+2697,https://leetcode.com/problems/lexicographically-smallest-palindrome,Lexicographically Smallest Palindrome,Easy,81.8%,88.1%
 1888,https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating,Minimum Number of Flips to Make the Binary String Alternating,Medium,53.5%,85.7%
 2414,https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring,Length of the Longest Alphabetical Continuous Substring,Medium,61.0%,76.3%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,73.2%

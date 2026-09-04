@@ -78,6 +78,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,36.8%
 1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,61.2%,36.8%
 1413,https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum,Minimum Value to Get Positive Step by Step Sum,Easy,64.7%,36.8%
+1665,https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks,Minimum Initial Energy to Finish Tasks,Hard,76.6%,34.3%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,33.0%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,33.0%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.6%,33.0%
@@ -185,6 +186,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1636,https://leetcode.com/problems/sort-array-by-increasing-frequency,Sort Array by Increasing Frequency,Easy,80.3%,25.0%
 1662,https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent,Check If Two String Arrays are Equivalent,Easy,85.8%,25.0%
 2933,https://leetcode.com/problems/high-access-employees,High-Access Employees,Medium,46.3%,25.0%
+136,https://leetcode.com/problems/single-number,Single Number,Easy,78.3%,22.7%
+150,https://leetcode.com/problems/evaluate-reverse-polish-notation,Evaluate Reverse Polish Notation,Medium,58.6%,22.7%
+208,https://leetcode.com/problems/implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,70.0%,22.7%
+722,https://leetcode.com/problems/remove-comments,Remove Comments,Medium,40.5%,22.7%
+738,https://leetcode.com/problems/monotone-increasing-digits,Monotone Increasing Digits,Medium,50.0%,22.7%
 973,https://leetcode.com/problems/k-closest-points-to-origin,K Closest Points to Origin,Medium,69.1%,22.0%
 1277,https://leetcode.com/problems/count-square-submatrices-with-all-ones,Count Square Submatrices with All Ones,Medium,80.7%,22.0%
 678,https://leetcode.com/problems/valid-parenthesis-string,Valid Parenthesis String,Medium,40.1%,21.8%

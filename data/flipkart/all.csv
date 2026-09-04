@@ -124,6 +124,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2750,https://leetcode.com/problems/ways-to-split-array-into-good-subarrays,Ways to Split Array Into Good Subarrays,Medium,35.0%,43.5%
 2751,https://leetcode.com/problems/robot-collisions,Robot Collisions,Hard,61.6%,43.5%
 677,https://leetcode.com/problems/map-sum-pairs,Map Sum Pairs,Medium,57.2%,42.8%
+19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,52.5%,42.3%
+219,https://leetcode.com/problems/contains-duplicate-ii,Contains Duplicate II,Easy,51.9%,42.3%
+354,https://leetcode.com/problems/russian-doll-envelopes,Russian Doll Envelopes,Hard,38.2%,42.3%
+851,https://leetcode.com/problems/loud-and-rich,Loud and Rich,Medium,64.1%,42.3%
 45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,41.6%,37.5%
 57,https://leetcode.com/problems/insert-interval,Insert Interval,Medium,43.6%,37.5%
 63,https://leetcode.com/problems/unique-paths-ii,Unique Paths II,Medium,43.3%,37.5%

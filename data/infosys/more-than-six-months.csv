@@ -34,6 +34,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,62.5%
 268,https://leetcode.com/problems/missing-number,Missing Number,Easy,70.3%,62.5%
 540,https://leetcode.com/problems/single-element-in-a-sorted-array,Single Element in a Sorted Array,Medium,59.2%,62.5%
+300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,59.9%,58.5%
 18,https://leetcode.com/problems/4sum,4Sum,Medium,40.5%,57.4%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,57.4%
 26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,62.7%,57.4%
@@ -150,3 +151,14 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1929,https://leetcode.com/problems/concatenation-of-array,Concatenation of Array,Easy,90.2%,39.2%
 2259,https://leetcode.com/problems/remove-digit-from-number-to-maximize-result,Remove Digit From Number to Maximize Result,Easy,48.6%,39.2%
 2872,https://leetcode.com/problems/maximum-number-of-k-divisible-components,Maximum Number of K-Divisible Components,Hard,74.0%,39.2%
+6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,55.0%,38.0%
+27,https://leetcode.com/problems/remove-element,Remove Element,Easy,62.5%,38.0%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.8%,38.0%
+135,https://leetcode.com/problems/candy,Candy,Hard,49.2%,38.0%
+209,https://leetcode.com/problems/minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,52.8%,38.0%
+213,https://leetcode.com/problems/house-robber-ii,House Robber II,Medium,45.5%,38.0%
+224,https://leetcode.com/problems/basic-calculator,Basic Calculator,Hard,47.2%,38.0%
+328,https://leetcode.com/problems/odd-even-linked-list,Odd Even Linked List,Medium,62.8%,38.0%
+643,https://leetcode.com/problems/maximum-average-subarray-i,Maximum Average Subarray I,Easy,49.1%,38.0%
+1819,https://leetcode.com/problems/number-of-different-subsequences-gcds,Number of Different Subsequences GCDs,Hard,47.2%,38.0%
+3702,https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor,Longest Subsequence With Non-Zero Bitwise XOR,Medium,55.5%,38.0%

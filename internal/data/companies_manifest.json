@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T21:01:46Z",
+  "generatedAt": "2026-09-04T06:42:22Z",
   "source": "leetcode-problemsetCompanyTags",
   "companies": [
     {
@@ -11,12 +11,20 @@
       "name": "1Kosmos"
     },
     {
+      "slug": "23andme",
+      "name": "23andMe"
+    },
+    {
       "slug": "360",
       "name": "360"
     },
     {
       "slug": "6sense",
       "name": "6sense"
+    },
+    {
+      "slug": "a10-networks",
+      "name": "A10 Networks"
     },
     {
       "slug": "abbyy",
@@ -31,8 +39,16 @@
       "name": "Accenture"
     },
     {
+      "slug": "accolade",
+      "name": "Accolade"
+    },
+    {
       "slug": "accolite",
       "name": "Accolite"
+    },
+    {
+      "slug": "accolite-digital",
+      "name": "Accolite Digital"
     },
     {
       "slug": "acko",
@@ -57,6 +73,10 @@
     {
       "slug": "adp",
       "name": "ADP"
+    },
+    {
+      "slug": "adyen",
+      "name": "Adyen"
     },
     {
       "slug": "aetion",
@@ -121,6 +141,14 @@
     {
       "slug": "alation",
       "name": "Alation"
+    },
+    {
+      "slug": "alfa-bank",
+      "name": "Alfa-Bank"
+    },
+    {
+      "slug": "algotech",
+      "name": "Algotech"
     },
     {
       "slug": "alibaba",
@@ -195,6 +223,10 @@
       "name": "Ancestry"
     },
     {
+      "slug": "anchorage",
+      "name": "Anchorage"
+    },
+    {
       "slug": "andela",
       "name": "Andela"
     },
@@ -259,6 +291,10 @@
       "name": "AppLovin"
     },
     {
+      "slug": "appperfect",
+      "name": "AppPerfect"
+    },
+    {
       "slug": "appsflyer",
       "name": "Appsflyer"
     },
@@ -268,7 +304,7 @@
     },
     {
       "slug": "appviewx",
-      "name": "Appviewx"
+      "name": "AppViewX"
     },
     {
       "slug": "aptiv",
@@ -296,7 +332,7 @@
     },
     {
       "slug": "arm",
-      "name": "Arm"
+      "name": "Arm Holdings"
     },
     {
       "slug": "asana",
@@ -369,6 +405,10 @@
     {
       "slug": "axon",
       "name": "Axon"
+    },
+    {
+      "slug": "badoo",
+      "name": "Badoo"
     },
     {
       "slug": "baidu",
@@ -448,7 +488,7 @@
     },
     {
       "slug": "blackberry",
-      "name": "BlackBerry"
+      "name": "Blackberry"
     },
     {
       "slug": "blackbuck",
@@ -489,6 +529,10 @@
     {
       "slug": "blue-yonder",
       "name": "Blue Yonder"
+    },
+    {
+      "slug": "bmw",
+      "name": "BMW Group"
     },
     {
       "slug": "bnp-paribas",
@@ -605,6 +649,10 @@
     {
       "slug": "capital-one",
       "name": "Capital One"
+    },
+    {
+      "slug": "capitol-one",
+      "name": "Capitol One"
     },
     {
       "slug": "careem",
@@ -931,6 +979,10 @@
       "name": "D2L"
     },
     {
+      "slug": "daffodil",
+      "name": "Daffodil Software"
+    },
+    {
       "slug": "dailyhunt",
       "name": "DailyHunt"
     },
@@ -977,6 +1029,10 @@
     {
       "slug": "deepmind",
       "name": "DeepMind"
+    },
+    {
+      "slug": "deepseek",
+      "name": "DeepSeek"
     },
     {
       "slug": "delhivery",
@@ -1303,6 +1359,10 @@
       "name": "Flexport"
     },
     {
+      "slug": "flextrade-systems",
+      "name": "FlexTrade Systems"
+    },
+    {
       "slug": "flipkart",
       "name": "Flipkart"
     },
@@ -1361,6 +1421,10 @@
     {
       "slug": "gainsight",
       "name": "GainSight"
+    },
+    {
+      "slug": "galadrim",
+      "name": "Galadrim"
     },
     {
       "slug": "gameskraft",
@@ -1435,6 +1499,10 @@
       "name": "GlassDoor"
     },
     {
+      "slug": "glean",
+      "name": "Glean"
+    },
+    {
       "slug": "globallogic",
       "name": "GlobalLogic"
     },
@@ -1485,6 +1553,10 @@
     {
       "slug": "graviton",
       "name": "Graviton"
+    },
+    {
+      "slug": "greyorange",
+      "name": "GreyOrange"
     },
     {
       "slug": "grid-dynamics",
@@ -1544,7 +1616,7 @@
     },
     {
       "slug": "heb",
-      "name": "HEB"
+      "name": "Heb"
     },
     {
       "slug": "helix",
@@ -1647,16 +1719,28 @@
       "name": "Hulu"
     },
     {
+      "slug": "hyperbots",
+      "name": "Hyperbots"
+    },
+    {
       "slug": "hyperverge",
-      "name": "Hyperverge"
+      "name": "HyperVerge"
     },
     {
       "slug": "ibm",
       "name": "IBM"
     },
     {
+      "slug": "idfc-bank",
+      "name": "IDFC Bank"
+    },
+    {
       "slug": "iit-bombay",
       "name": "IIT Bombay"
+    },
+    {
+      "slug": "illumio",
+      "name": "Illumio"
     },
     {
       "slug": "imc",
@@ -1676,7 +1760,7 @@
     },
     {
       "slug": "incture",
-      "name": "Incture"
+      "name": "Incture Technologies"
     },
     {
       "slug": "indeed",
@@ -1915,6 +1999,10 @@
       "name": "Lauda"
     },
     {
+      "slug": "leantaas",
+      "name": "LeanTaas"
+    },
+    {
       "slug": "lendingclub",
       "name": "LendingClub"
     },
@@ -1973,6 +2061,10 @@
     {
       "slug": "lti",
       "name": "LTIMindtree"
+    },
+    {
+      "slug": "ltk",
+      "name": "LTK"
     },
     {
       "slug": "lucid",
@@ -2103,8 +2195,16 @@
       "name": "Meta"
     },
     {
+      "slug": "metromile",
+      "name": "Metromile"
+    },
+    {
       "slug": "micro1",
       "name": "micro1"
+    },
+    {
+      "slug": "micron",
+      "name": "Micron Technology"
     },
     {
       "slug": "microsoft",
@@ -2175,6 +2275,10 @@
       "name": "MongoDB"
     },
     {
+      "slug": "moodys",
+      "name": "Moody's"
+    },
+    {
       "slug": "moonshot-ai",
       "name": "Moonshot AI"
     },
@@ -2192,7 +2296,7 @@
     },
     {
       "slug": "motorola",
-      "name": "Motorola"
+      "name": "Motorola Mobility"
     },
     {
       "slug": "motorola-solutions",
@@ -2281,6 +2385,10 @@
     {
       "slug": "ncr",
       "name": "NCR"
+    },
+    {
+      "slug": "nebius",
+      "name": "Nebius"
     },
     {
       "slug": "nerdwallet",
@@ -2463,8 +2571,16 @@
       "name": "OLX"
     },
     {
+      "slug": "omnissa",
+      "name": "Omnissa"
+    },
+    {
       "slug": "onetrust",
       "name": "OneTrust"
+    },
+    {
+      "slug": "onlyfans",
+      "name": "OnlyFans"
     },
     {
       "slug": "openai",
@@ -2583,6 +2699,10 @@
       "name": "People.ai"
     },
     {
+      "slug": "perplexity",
+      "name": "Perplexity"
+    },
+    {
       "slug": "persistent-systems",
       "name": "persistent systems"
     },
@@ -2621,6 +2741,10 @@
     {
       "slug": "pinterest",
       "name": "Pinterest"
+    },
+    {
+      "slug": "piramal-group",
+      "name": "Piramal Group"
     },
     {
       "slug": "plaid",
@@ -2683,6 +2807,10 @@
       "name": "Pramp"
     },
     {
+      "slug": "priceline",
+      "name": "Priceline.com"
+    },
+    {
       "slug": "procore",
       "name": "Procore"
     },
@@ -2720,7 +2848,11 @@
     },
     {
       "slug": "qburst",
-      "name": "QBurst"
+      "name": "Qburst"
+    },
+    {
+      "slug": "qrt",
+      "name": "QRT"
     },
     {
       "slug": "quadeye",
@@ -2795,6 +2927,10 @@
       "name": "RBC"
     },
     {
+      "slug": "realtorcom",
+      "name": "Realtor.com"
+    },
+    {
       "slug": "red-hat",
       "name": "Red Hat"
     },
@@ -2817,6 +2953,10 @@
     {
       "slug": "remitly",
       "name": "Remitly"
+    },
+    {
+      "slug": "remotestate",
+      "name": "RemoteState"
     },
     {
       "slug": "retailmenot",
@@ -2861,6 +3001,10 @@
     {
       "slug": "rocket-money",
       "name": "Rocket Money"
+    },
+    {
+      "slug": "rocketlane",
+      "name": "RocketLane"
     },
     {
       "slug": "rokt",
@@ -2911,8 +3055,16 @@
       "name": "SAP"
     },
     {
+      "slug": "sap-labs",
+      "name": "SAP Labs"
+    },
+    {
       "slug": "sberbank",
       "name": "Sberbank"
+    },
+    {
+      "slug": "scalar-ai",
+      "name": "Scalar AI"
     },
     {
       "slug": "scale-ai",
@@ -3087,6 +3239,10 @@
       "name": "SpaceX"
     },
     {
+      "slug": "xai",
+      "name": "SpaceXAI"
+    },
+    {
       "slug": "spinny",
       "name": "spinny"
     },
@@ -3097,6 +3253,10 @@
     {
       "slug": "spotify",
       "name": "Spotify"
+    },
+    {
+      "slug": "spotnana",
+      "name": "Spotnana"
     },
     {
       "slug": "sprinklr",
@@ -3151,6 +3311,10 @@
       "name": "Sumo Logic"
     },
     {
+      "slug": "supermoney",
+      "name": "SuperMoney"
+    },
+    {
       "slug": "surveymonkey",
       "name": "SurveyMonkey"
     },
@@ -3171,12 +3335,20 @@
       "name": "Symantec"
     },
     {
+      "slug": "symphony-ai",
+      "name": "Symphony AI"
+    },
+    {
       "slug": "synology",
       "name": "Synology"
     },
     {
       "slug": "synopsys",
       "name": "Synopsys"
+    },
+    {
+      "slug": "t-mobile",
+      "name": "T-mobile"
     },
     {
       "slug": "ta-digital",
@@ -3199,12 +3371,12 @@
       "name": "Target"
     },
     {
-      "slug": "tata",
-      "name": "Tata"
-    },
-    {
       "slug": "1mg",
       "name": "Tata 1mg"
+    },
+    {
+      "slug": "tata",
+      "name": "Tata Group"
     },
     {
       "slug": "tcs",
@@ -3213,6 +3385,10 @@
     {
       "slug": "tech-mahindra",
       "name": "Tech Mahindra"
+    },
+    {
+      "slug": "techolution",
+      "name": "Techolution"
     },
     {
       "slug": "tejas-networks",
@@ -3231,8 +3407,16 @@
       "name": "Telstra"
     },
     {
+      "slug": "temu",
+      "name": "Temu"
+    },
+    {
       "slug": "tencent",
       "name": "Tencent"
+    },
+    {
+      "slug": "tennr",
+      "name": "Tennr"
     },
     {
       "slug": "teradata",
@@ -3447,6 +3631,10 @@
       "name": "Unbxd"
     },
     {
+      "slug": "unifyapps",
+      "name": "UnifyApps"
+    },
+    {
       "slug": "unity",
       "name": "Unity"
     },
@@ -3472,7 +3660,7 @@
     },
     {
       "slug": "usaa",
-      "name": "Usaa"
+      "name": "USAA"
     },
     {
       "slug": "ust",
@@ -3493,6 +3681,10 @@
     {
       "slug": "vassar-labs",
       "name": "Vassar Labs"
+    },
+    {
+      "slug": "veeam",
+      "name": "Veeam"
     },
     {
       "slug": "veeva",
@@ -3535,6 +3727,10 @@
       "name": "Visa"
     },
     {
+      "slug": "vishal-mega-mart",
+      "name": "Vishal mega mart"
+    },
+    {
       "slug": "vk",
       "name": "VK"
     },
@@ -3555,12 +3751,20 @@
       "name": "Voleon"
     },
     {
+      "slug": "voletic-technologies",
+      "name": "Voletic Technologies"
+    },
+    {
       "slug": "vonage",
       "name": "Vonage"
     },
     {
       "slug": "vymo",
       "name": "Vymo"
+    },
+    {
+      "slug": "wallmart",
+      "name": "Wallmart"
     },
     {
       "slug": "walmart-labs",
@@ -3609,6 +3813,10 @@
     {
       "slug": "wework",
       "name": "WeWork"
+    },
+    {
+      "slug": "wex",
+      "name": "WEX"
     },
     {
       "slug": "whatfix",
@@ -3661,6 +3869,10 @@
     {
       "slug": "wix",
       "name": "Wix"
+    },
+    {
+      "slug": "wizeline",
+      "name": "Wizeline"
     },
     {
       "slug": "wolverine-trading",
@@ -3737,6 +3949,10 @@
     {
       "slug": "zappos",
       "name": "Zappos"
+    },
+    {
+      "slug": "zapro",
+      "name": "Zapro"
     },
     {
       "slug": "zemoso",
@@ -3825,6 +4041,14 @@
     {
       "slug": "zuora",
       "name": "Zuora"
+    },
+    {
+      "slug": "zupee",
+      "name": "Zupee"
+    },
+    {
+      "slug": "zversal",
+      "name": "Zversal"
     },
     {
       "slug": "zynga",

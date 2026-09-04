@@ -14,3 +14,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,72.7%,56.8%
 1215,https://leetcode.com/problems/stepping-numbers,Stepping Numbers,Medium,48.4%,56.8%
 204,https://leetcode.com/problems/count-primes,Count Primes,Medium,36.0%,56.7%
+329,https://leetcode.com/problems/longest-increasing-path-in-a-matrix,Longest Increasing Path in a Matrix,Hard,57.0%,56.1%

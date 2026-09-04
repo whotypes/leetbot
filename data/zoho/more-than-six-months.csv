@@ -59,6 +59,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 463,https://leetcode.com/problems/island-perimeter,Island Perimeter,Easy,74.4%,51.8%
 498,https://leetcode.com/problems/diagonal-traverse,Diagonal Traverse,Medium,67.1%,51.8%
 989,https://leetcode.com/problems/add-to-array-form-of-integer,Add to Array-Form of Integer,Easy,45.5%,51.8%
+1689,https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers,Partitioning Into Minimum Number Of Deci-Binary Numbers,Medium,90.5%,50.8%
 46,https://leetcode.com/problems/permutations,Permutations,Medium,80.8%,50.0%
 136,https://leetcode.com/problems/single-number,Single Number,Easy,76.1%,50.0%
 273,https://leetcode.com/problems/integer-to-english-words,Integer to English Words,Hard,34.4%,50.0%
@@ -96,6 +97,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1732,https://leetcode.com/problems/find-the-highest-altitude,Find the Highest Altitude,Easy,83.9%,45.3%
 1854,https://leetcode.com/problems/maximum-population-year,Maximum Population Year,Easy,63.9%,45.3%
 2221,https://leetcode.com/problems/find-triangular-sum-of-an-array,Find Triangular Sum of an Array,Medium,82.0%,45.3%
+66,https://leetcode.com/problems/plus-one,Plus One,Easy,50.5%,41.0%
+115,https://leetcode.com/problems/distinct-subsequences,Distinct Subsequences,Hard,52.5%,41.0%
+392,https://leetcode.com/problems/is-subsequence,Is Subsequence,Easy,49.4%,41.0%
+402,https://leetcode.com/problems/remove-k-digits,Remove K Digits,Medium,37.6%,41.0%
+557,https://leetcode.com/problems/reverse-words-in-a-string-iii,Reverse Words in a String III,Easy,84.1%,41.0%
+747,https://leetcode.com/problems/largest-number-at-least-twice-of-others,Largest Number At Least Twice of Others,Easy,53.1%,41.0%
 25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,63.3%,37.5%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,43.3%,37.5%
 80,https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii,Remove Duplicates from Sorted Array II,Medium,63.0%,37.5%

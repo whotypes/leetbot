@@ -1,8 +1,14 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+741,https://leetcode.com/problems/cherry-pickup,Cherry Pickup,Hard,40.4%,100.0%
 754,https://leetcode.com/problems/reach-a-number,Reach a Number,Medium,45.0%,100.0%
 664,https://leetcode.com/problems/strange-printer,Strange Printer,Hard,60.9%,84.6%
 488,https://leetcode.com/problems/zuma-game,Zuma Game,Hard,29.8%,79.6%
 1377,https://leetcode.com/problems/frog-position-after-t-seconds,Frog Position After T Seconds,Hard,38.4%,79.6%
+1192,https://leetcode.com/problems/critical-connections-in-a-network,Critical Connections in a Network,Hard,60.5%,73.9%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,60.6%,64.3%
+1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,Capacity To Ship Packages Within D Days,Medium,74.6%,64.3%
+1248,https://leetcode.com/problems/count-number-of-nice-subarrays,Count Number of Nice Subarrays,Medium,75.7%,64.3%
+3948,https://leetcode.com/problems/lexicographically-maximum-mex-array,Lexicographically Maximum MEX Array,Hard,57.2%,64.3%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,38.6%,64.2%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,64.2%
 684,https://leetcode.com/problems/redundant-connection,Redundant Connection,Medium,67.5%,64.2%

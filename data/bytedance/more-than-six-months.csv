@@ -26,6 +26,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1081,https://leetcode.com/problems/smallest-subsequence-of-distinct-characters,Smallest Subsequence of Distinct Characters,Medium,63.3%,58.9%
 1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,59.1%,58.9%
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,58.9%
+68,https://leetcode.com/problems/text-justification,Text Justification,Hard,52.1%,51.1%
+450,https://leetcode.com/problems/delete-node-in-a-bst,Delete Node in a BST,Medium,55.3%,51.1%
 16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,48.8%,50.8%
 55,https://leetcode.com/problems/jump-game,Jump Game,Medium,41.1%,50.8%
 239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.9%,50.8%

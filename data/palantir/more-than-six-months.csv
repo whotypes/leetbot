@@ -8,6 +8,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 245,https://leetcode.com/problems/shortest-word-distance-iii,Shortest Word Distance III,Medium,59.5%,60.1%
 721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.2%,60.1%
 1202,https://leetcode.com/problems/smallest-string-with-swaps,Smallest String With Swaps,Medium,60.5%,60.1%
+443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.7%,56.0%
 219,https://leetcode.com/problems/contains-duplicate-ii,Contains Duplicate II,Easy,51.1%,54.6%
 981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,54.6%
 2539,https://leetcode.com/problems/count-the-number-of-good-subsequences,Count the Number of Good Subsequences,Medium,48.2%,54.6%
@@ -26,3 +27,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2312,https://leetcode.com/problems/selling-pieces-of-wood,Selling Pieces of Wood,Hard,52.8%,46.8%
 2964,https://leetcode.com/problems/number-of-divisible-triplet-sums,Number of Divisible Triplet Sums,Medium,67.5%,46.8%
 244,https://leetcode.com/problems/shortest-word-distance-ii,Shortest Word Distance II,Medium,62.9%,43.9%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,57.3%,43.7%

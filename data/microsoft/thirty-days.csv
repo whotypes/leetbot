@@ -1,5 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,100.0%
+1335,https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule,Minimum Difficulty of a Job Schedule,Hard,59.8%,86.7%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,79.9%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.7%,75.9%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,57.0%,75.9%
@@ -15,6 +16,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1932,https://leetcode.com/problems/merge-bsts-to-create-single-bst,Merge BSTs to Create Single BST,Hard,38.8%,72.6%
 2553,https://leetcode.com/problems/separate-the-digits-in-an-array,Separate the Digits in an Array,Easy,85.8%,72.6%
 2784,https://leetcode.com/problems/check-if-array-is-good,Check if Array is Good,Easy,57.3%,72.6%
+189,https://leetcode.com/problems/rotate-array,Rotate Array,Medium,45.4%,72.2%
+269,https://leetcode.com/problems/alien-dictionary,Alien Dictionary,Hard,37.3%,72.2%
+283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,64.3%,72.2%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,60.6%,72.2%
+1929,https://leetcode.com/problems/concatenation-of-array,Concatenation of Array,Easy,90.0%,72.2%
 74,https://leetcode.com/problems/search-a-2d-matrix,Search a 2D Matrix,Medium,54.2%,68.3%
 451,https://leetcode.com/problems/sort-characters-by-frequency,Sort Characters By Frequency,Medium,75.5%,68.3%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,66.8%
@@ -31,6 +37,21 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 169,https://leetcode.com/problems/majority-element,Majority Element,Easy,65.8%,62.5%
 875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,49.1%,62.5%
 2040,https://leetcode.com/problems/kth-smallest-product-of-two-sorted-arrays,Kth Smallest Product of Two Sorted Arrays,Hard,49.1%,62.5%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.8%,60.8%
+144,https://leetcode.com/problems/binary-tree-preorder-traversal,Binary Tree Preorder Traversal,Easy,76.6%,60.8%
+303,https://leetcode.com/problems/range-sum-query-immutable,Range Sum Query - Immutable,Easy,73.4%,60.8%
+322,https://leetcode.com/problems/coin-change,Coin Change,Medium,49.1%,60.8%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,67.3%,60.8%
+402,https://leetcode.com/problems/remove-k-digits,Remove K Digits,Medium,37.6%,60.8%
+503,https://leetcode.com/problems/next-greater-element-ii,Next Greater Element II,Medium,69.1%,60.8%
+516,https://leetcode.com/problems/longest-palindromic-subsequence,Longest Palindromic Subsequence,Medium,65.9%,60.8%
+645,https://leetcode.com/problems/set-mismatch,Set Mismatch,Easy,43.3%,60.8%
+1802,https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array,Maximum Value at a Given Index in a Bounded Array,Medium,38.8%,60.8%
+2213,https://leetcode.com/problems/longest-substring-of-one-repeating-character,Longest Substring of One Repeating Character,Hard,65.5%,60.8%
+2667,https://leetcode.com/problems/create-hello-world-function,Create Hello World Function,Easy,81.9%,60.8%
+3345,https://leetcode.com/problems/smallest-divisible-digit-product-i,Smallest Divisible Digit Product I,Easy,73.0%,60.8%
+3471,https://leetcode.com/problems/find-the-largest-almost-missing-integer,Find the Largest Almost Missing Integer,Easy,49.3%,60.8%
+3718,https://leetcode.com/problems/smallest-missing-multiple-of-k,Smallest Missing Multiple of K,Easy,71.5%,60.8%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.5%,57.7%
 39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,76.7%,57.7%
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,80.3%,57.7%

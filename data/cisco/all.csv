@@ -69,6 +69,14 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 877,https://leetcode.com/problems/stone-game,Stone Game,Medium,71.7%,37.5%
 1464,https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array,Maximum Product of Two Elements in an Array,Easy,83.3%,37.5%
 1472,https://leetcode.com/problems/design-browser-history,Design Browser History,Medium,77.8%,37.5%
+9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.9%,36.5%
+127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,46.5%,36.5%
+242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.6%,36.5%
+525,https://leetcode.com/problems/contiguous-array,Contiguous Array,Medium,52.3%,36.5%
+540,https://leetcode.com/problems/single-element-in-a-sorted-array,Single Element in a Sorted Array,Medium,59.4%,36.5%
+646,https://leetcode.com/problems/maximum-length-of-pair-chain,Maximum Length of Pair Chain,Medium,62.1%,36.5%
+787,https://leetcode.com/problems/cheapest-flights-within-k-stops,Cheapest Flights Within K Stops,Medium,42.5%,36.5%
+981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,50.2%,36.5%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,35.8%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,35.8%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,35.8%

@@ -16,3 +16,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.2%,75.3%
 876,https://leetcode.com/problems/middle-of-the-linked-list,Middle of the Linked List,Easy,81.8%,75.3%
 283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,64.0%,75.1%
+12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,71.6%,71.2%
+234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.7%,71.2%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,67.3%,71.2%

@@ -6,6 +6,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 787,https://leetcode.com/problems/cheapest-flights-within-k-stops,Cheapest Flights Within K Stops,Medium,41.7%,88.9%
 1169,https://leetcode.com/problems/invalid-transactions,Invalid Transactions,Medium,32.4%,88.8%
 161,https://leetcode.com/problems/one-edit-distance,One Edit Distance,Medium,34.6%,67.1%
+1604,https://leetcode.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period,Alert Using Same Key-Card Three or More Times in a One Hour Period,Medium,46.4%,67.1%
 2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,67.1%
 2050,https://leetcode.com/problems/parallel-courses-iii,Parallel Courses III,Hard,66.8%,67.1%
 2768,https://leetcode.com/problems/number-of-black-blocks,Number of Black Blocks,Medium,41.7%,67.1%

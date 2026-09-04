@@ -17,6 +17,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 206,https://leetcode.com/problems/reverse-linked-list,Reverse Linked List,Easy,79.3%,62.5%
 584,https://leetcode.com/problems/find-customer-referee,Find Customer Referee,Easy,71.7%,62.5%
 1148,https://leetcode.com/problems/article-views-i,Article Views I,Easy,77.1%,62.5%
+67,https://leetcode.com/problems/add-binary,Add Binary,Easy,58.6%,61.2%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,55.5%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,55.5%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,55.5%
@@ -39,3 +40,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.2%,54.4%
 183,https://leetcode.com/problems/customers-who-never-order,Customers Who Never Order,Easy,71.8%,54.4%
 189,https://leetcode.com/problems/rotate-array,Rotate Array,Medium,44.9%,54.4%
+242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.6%,51.8%
+402,https://leetcode.com/problems/remove-k-digits,Remove K Digits,Medium,37.6%,51.8%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,48.1%,51.8%
+581,https://leetcode.com/problems/shortest-unsorted-continuous-subarray,Shortest Unsorted Continuous Subarray,Medium,38.6%,51.8%

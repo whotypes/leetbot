@@ -5,3 +5,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 987,https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree,Vertical Order Traversal of a Binary Tree,Hard,53.6%,89.5%
 1248,https://leetcode.com/problems/count-number-of-nice-subarrays,Count Number of Nice Subarrays,Medium,75.0%,89.5%
 2942,https://leetcode.com/problems/find-words-containing-character,Find Words Containing Character,Easy,90.4%,89.5%
+359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.9%,77.2%

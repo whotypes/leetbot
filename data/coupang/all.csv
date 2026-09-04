@@ -39,6 +39,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 74,https://leetcode.com/problems/search-a-2d-matrix,Search a 2D Matrix,Medium,52.4%,62.5%
 227,https://leetcode.com/problems/basic-calculator-ii,Basic Calculator II,Medium,45.9%,62.5%
 787,https://leetcode.com/problems/cheapest-flights-within-k-stops,Cheapest Flights Within K Stops,Medium,40.5%,62.5%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.5%,57.6%
+2861,https://leetcode.com/problems/maximum-number-of-alloys,Maximum Number of Alloys,Medium,41.0%,57.6%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,53.3%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,53.3%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,53.3%

@@ -40,6 +40,14 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1465,https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,Medium,41.4%,61.9%
 1944,https://leetcode.com/problems/number-of-visible-people-in-a-queue,Number of Visible People in a Queue,Hard,72.9%,61.9%
 2062,https://leetcode.com/problems/count-vowel-substrings-of-a-string,Count Vowel Substrings of a String,Easy,73.1%,61.9%
+8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,21.7%,54.1%
+452,https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons,Minimum Number of Arrows to Burst Balloons,Medium,61.9%,54.1%
+713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.9%,54.1%
+904,https://leetcode.com/problems/fruit-into-baskets,Fruit Into Baskets,Medium,52.4%,54.1%
+2116,https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid,Check if a Parentheses String Can Be Valid,Medium,45.3%,54.1%
+2434,https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string,Using a Robot to Print the Lexicographically Smallest String,Medium,62.2%,54.1%
+2866,https://leetcode.com/problems/beautiful-towers-ii,Beautiful Towers II,Medium,36.7%,54.1%
+2904,https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string,Shortest and Lexicographically Smallest Beautiful String,Medium,59.9%,54.1%
 98,https://leetcode.com/problems/validate-binary-search-tree,Validate Binary Search Tree,Medium,35.8%,51.6%
 895,https://leetcode.com/problems/maximum-frequency-stack,Maximum Frequency Stack,Hard,66.8%,51.6%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,51.5%

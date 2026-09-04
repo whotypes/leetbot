@@ -25,6 +25,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 886,https://leetcode.com/problems/possible-bipartition,Possible Bipartition,Medium,52.5%,66.5%
 1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.7%,66.5%
 2565,https://leetcode.com/problems/subsequence-with-the-minimum-score,Subsequence With the Minimum Score,Hard,32.5%,62.5%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.6%,56.8%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.2%,56.8%
+713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.9%,56.8%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,56.1%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,56.1%
 76,https://leetcode.com/problems/minimum-window-substring,Minimum Window Substring,Hard,47.4%,56.1%

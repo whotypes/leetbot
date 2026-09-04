@@ -12,6 +12,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,66.5%
 789,https://leetcode.com/problems/escape-the-ghosts,Escape The Ghosts,Medium,63.6%,66.5%
 1162,https://leetcode.com/problems/as-far-from-land-as-possible,As Far from Land as Possible,Medium,52.3%,66.5%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,58.1%,63.8%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,60.1%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,51.2%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,51.2%

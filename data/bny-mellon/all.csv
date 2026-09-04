@@ -3,11 +3,16 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1465,https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,Medium,41.4%,97.7%
 2615,https://leetcode.com/problems/sum-of-distances,Sum of Distances,Medium,50.1%,97.7%
 3012,https://leetcode.com/problems/minimize-length-of-array-using-operations,Minimize Length of Array Using Operations,Medium,35.8%,97.7%
+741,https://leetcode.com/problems/cherry-pickup,Cherry Pickup,Hard,40.4%,82.2%
 924,https://leetcode.com/problems/minimize-malware-spread,Minimize Malware Spread,Hard,43.1%,76.0%
 1326,https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden,Minimum Number of Taps to Open to Water a Garden,Hard,50.7%,75.0%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,52.7%,74.8%
+460,https://leetcode.com/problems/lfu-cache,LFU Cache,Hard,50.2%,74.8%
+3948,https://leetcode.com/problems/lexicographically-maximum-mex-array,Lexicographically Maximum MEX Array,Hard,57.2%,74.8%
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,69.2%
 853,https://leetcode.com/problems/car-fleet,Car Fleet,Medium,55.0%,69.2%
 898,https://leetcode.com/problems/bitwise-ors-of-subarrays,Bitwise ORs of Subarrays,Medium,56.8%,69.2%
+3177,https://leetcode.com/problems/find-the-maximum-length-of-a-good-subsequence-ii,Find the Maximum Length of a Good Subsequence II,Hard,25.4%,64.4%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,37.1%,62.5%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,36.0%,62.5%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,62.5%

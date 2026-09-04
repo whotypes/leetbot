@@ -6,3 +6,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 815,https://leetcode.com/problems/bus-routes,Bus Routes,Hard,47.3%,100.0%
 1055,https://leetcode.com/problems/shortest-way-to-form-string,Shortest Way to Form String,Medium,61.7%,100.0%
 1564,https://leetcode.com/problems/put-boxes-into-the-warehouse-i,Put Boxes Into the Warehouse I,Medium,67.5%,100.0%
+43,https://leetcode.com/problems/multiply-strings,Multiply Strings,Medium,44.7%,78.7%
+410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,61.3%,78.7%
+494,https://leetcode.com/problems/target-sum,Target Sum,Medium,52.8%,78.7%

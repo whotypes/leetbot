@@ -42,6 +42,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 400,https://leetcode.com/problems/nth-digit,Nth Digit,Medium,38.0%,59.2%
 509,https://leetcode.com/problems/fibonacci-number,Fibonacci Number,Easy,74.1%,59.2%
 962,https://leetcode.com/problems/maximum-width-ramp,Maximum Width Ramp,Medium,55.9%,59.2%
+81,https://leetcode.com/problems/search-in-rotated-sorted-array-ii,Search in Rotated Sorted Array II,Medium,40.5%,54.1%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,52.2%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,52.2%
 19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,51.4%,52.2%
@@ -69,6 +70,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 27,https://leetcode.com/problems/remove-element,Remove Element,Easy,60.2%,50.0%
 28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,45.1%,50.0%
 229,https://leetcode.com/problems/majority-element-ii,Majority Element II,Medium,54.6%,50.0%
+199,https://leetcode.com/problems/binary-tree-right-side-view,Binary Tree Right Side View,Medium,71.1%,44.2%
+396,https://leetcode.com/problems/rotate-function,Rotate Function,Medium,54.1%,44.2%
+977,https://leetcode.com/problems/squares-of-a-sorted-array,Squares of a Sorted Array,Easy,74.1%,44.2%
+2011,https://leetcode.com/problems/final-value-of-variable-after-performing-operations,Final Value of Variable After Performing Operations,Easy,90.6%,44.2%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,39.0%,43.5%
 178,https://leetcode.com/problems/rank-scores,Rank Scores,Medium,68.0%,43.5%
 560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,47.6%,43.5%

@@ -1,4 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,54.2%,100.0%
 2271,https://leetcode.com/problems/maximum-white-tiles-covered-by-a-carpet,Maximum White Tiles Covered by a Carpet,Medium,35.8%,100.0%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,88.6%
 509,https://leetcode.com/problems/fibonacci-number,Fibonacci Number,Easy,74.1%,88.6%

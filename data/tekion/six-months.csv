@@ -1,9 +1,15 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,55.9%,100.0%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,38.6%,100.0%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,52.2%,100.0%
 410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,58.3%,100.0%
+967,https://leetcode.com/problems/numbers-with-same-consecutive-differences,Numbers With Same Consecutive Differences,Medium,59.4%,100.0%
+1004,https://leetcode.com/problems/max-consecutive-ones-iii,Max Consecutive Ones III,Medium,68.4%,100.0%
 1366,https://leetcode.com/problems/rank-teams-by-votes,Rank Teams by Votes,Medium,60.1%,100.0%
 1574,https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted,Shortest Subarray to be Removed to Make Array Sorted,Medium,51.3%,100.0%
+3203,https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees,Find Minimum Diameter After Merging Two Trees,Hard,56.8%,100.0%
+3900,https://leetcode.com/problems/longest-balanced-substring-after-one-swap,Longest Balanced Substring After One Swap,Medium,14.3%,100.0%
+3948,https://leetcode.com/problems/lexicographically-maximum-mex-array,Lexicographically Maximum MEX Array,Hard,57.2%,100.0%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,65.3%,87.5%
 127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,43.1%,87.5%
 1352,https://leetcode.com/problems/product-of-the-last-k-numbers,Product of the Last K Numbers,Medium,62.8%,87.5%

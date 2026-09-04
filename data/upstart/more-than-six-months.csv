@@ -2,5 +2,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,100.0%
 71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,50.4%,75.5%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,43.3%,75.0%
+36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,65.0%,67.4%
 120,https://leetcode.com/problems/triangle,Triangle,Medium,59.9%,67.3%
 304,https://leetcode.com/problems/range-sum-query-2d-immutable,Range Sum Query 2D - Immutable,Medium,58.2%,67.3%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,73.2%,59.6%

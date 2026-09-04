@@ -21,6 +21,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 210,https://leetcode.com/problems/course-schedule-ii,Course Schedule II,Medium,53.6%,75.0%
 212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,37.4%,75.0%
 253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.2%,75.0%
+2232,https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression,Minimize Result by Adding Parentheses to Expression,Medium,68.4%,71.0%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,69.5%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,69.5%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,69.5%
@@ -43,6 +44,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 680,https://leetcode.com/problems/valid-palindrome-ii,Valid Palindrome II,Easy,44.2%,62.1%
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,62.1%
 1743,https://leetcode.com/problems/restore-the-array-from-adjacent-pairs,Restore the Array From Adjacent Pairs,Medium,75.0%,62.1%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.2%,52.8%
+443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.7%,52.8%
+556,https://leetcode.com/problems/next-greater-element-iii,Next Greater Element III,Medium,35.6%,52.8%
 16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,48.4%,51.8%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,51.8%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,51.8%

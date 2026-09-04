@@ -26,5 +26,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1455,https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence,Check If a Word Occurs As a Prefix of Any Word in a Sentence,Easy,68.8%,95.4%
 2038,https://leetcode.com/problems/remove-colored-pieces-if-both-neighbors-are-the-same-color,Remove Colored Pieces if Both Neighbors are the Same Color,Medium,63.1%,95.4%
 528,https://leetcode.com/problems/random-pick-with-weight,Random Pick with Weight,Medium,48.3%,75.0%
+1413,https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum,Minimum Value to Get Positive Step by Step Sum,Easy,64.9%,58.5%
 2904,https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string,Shortest and Lexicographically Smallest Beautiful String,Medium,41.0%,54.7%
 2696,https://leetcode.com/problems/minimum-string-length-after-removing-substrings,Minimum String Length After Removing Substrings,Easy,77.1%,50.0%

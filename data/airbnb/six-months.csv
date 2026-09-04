@@ -4,6 +4,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.2%,89.1%
 638,https://leetcode.com/problems/shopping-offers,Shopping Offers,Medium,52.4%,84.0%
 1298,https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes,Maximum Candies You Can Get from Boxes,Hard,67.7%,84.0%
+1125,https://leetcode.com/problems/smallest-sufficient-team,Smallest Sufficient Team,Hard,55.8%,83.0%
 3076,https://leetcode.com/problems/shortest-uncommon-substring-in-an-array,Shortest Uncommon Substring in an Array,Medium,50.4%,77.3%
 251,https://leetcode.com/problems/flatten-2d-vector,Flatten 2D Vector,Medium,50.2%,75.0%
 713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,53.0%,75.0%

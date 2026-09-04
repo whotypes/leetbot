@@ -3,8 +3,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,100.0%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.2%,100.0%
 347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,66.3%,100.0%
+410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,61.3%,100.0%
 803,https://leetcode.com/problems/bricks-falling-when-hit,Bricks Falling When Hit,Hard,35.8%,100.0%
 827,https://leetcode.com/problems/making-a-large-island,Making A Large Island,Hard,55.2%,100.0%
+253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.8%,89.6%
+815,https://leetcode.com/problems/bus-routes,Bus Routes,Hard,47.5%,89.6%
+1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,Capacity To Ship Packages Within D Days,Medium,74.6%,89.6%
 362,https://leetcode.com/problems/design-hit-counter,Design Hit Counter,Medium,69.7%,81.7%
 123,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii,Best Time to Buy and Sell Stock III,Hard,51.4%,75.0%
 127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,43.1%,75.0%

@@ -8,3 +8,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3123,https://leetcode.com/problems/find-edges-in-shortest-paths,Find Edges in Shortest Paths,Hard,46.5%,77.9%
 353,https://leetcode.com/problems/design-snake-game,Design Snake Game,Medium,40.0%,77.5%
 696,https://leetcode.com/problems/count-binary-substrings,Count Binary Substrings,Easy,70.4%,77.5%
+1559,https://leetcode.com/problems/detect-cycles-in-2d-grid,Detect Cycles in 2D Grid,Medium,63.6%,77.2%

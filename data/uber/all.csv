@@ -171,6 +171,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2508,https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even,Add Edges to Make Degrees of All Nodes Even,Hard,35.9%,48.3%
 2768,https://leetcode.com/problems/number-of-black-blocks,Number of Black Blocks,Medium,41.7%,48.3%
 3868,https://leetcode.com/problems/minimum-cost-to-equalize-arrays-using-swaps,Minimum Cost to Equalize Arrays Using Swaps,Medium,48.5%,48.3%
+4001,https://leetcode.com/problems/aggregate-two-time-series,Aggregate Two Time Series,Medium,58.0%,47.9%
 127,https://leetcode.com/problems/word-ladder,Word Ladder,Hard,45.4%,45.9%
 174,https://leetcode.com/problems/dungeon-game,Dungeon Game,Hard,41.2%,45.9%
 239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.7%,45.9%
@@ -265,6 +266,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2197,https://leetcode.com/problems/replace-non-coprime-numbers-in-array,Replace Non-Coprime Numbers in Array,Hard,57.7%,32.1%
 2251,https://leetcode.com/problems/number-of-flowers-in-full-bloom,Number of Flowers in Full Bloom,Hard,57.8%,32.1%
 2861,https://leetcode.com/problems/maximum-number-of-alloys,Maximum Number of Alloys,Medium,40.8%,32.1%
+3367,https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals,Maximize Sum of Weights after Edge Removals,Hard,31.9%,28.1%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,26.5%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,26.5%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,26.5%
@@ -382,6 +384,15 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2483,https://leetcode.com/problems/minimum-penalty-for-a-shop,Minimum Penalty for a Shop,Medium,67.6%,25.0%
 2610,https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions,Convert an Array Into a 2D Array With Conditions,Medium,86.3%,25.0%
 2877,https://leetcode.com/problems/create-a-dataframe-from-list,Create a DataFrame from List,Easy,81.4%,25.0%
+272,https://leetcode.com/problems/closest-binary-search-tree-value-ii,Closest Binary Search Tree Value II,Hard,61.3%,20.5%
+435,https://leetcode.com/problems/non-overlapping-intervals,Non-overlapping Intervals,Medium,57.7%,20.5%
+652,https://leetcode.com/problems/find-duplicate-subtrees,Find Duplicate Subtrees,Medium,60.9%,20.5%
+866,https://leetcode.com/problems/prime-palindrome,Prime Palindrome,Medium,28.6%,20.5%
+968,https://leetcode.com/problems/binary-tree-cameras,Binary Tree Cameras,Hard,48.1%,20.5%
+1020,https://leetcode.com/problems/number-of-enclaves,Number of Enclaves,Medium,72.2%,20.5%
+1046,https://leetcode.com/problems/last-stone-weight,Last Stone Weight,Easy,66.8%,20.5%
+2226,https://leetcode.com/problems/maximum-candies-allocated-to-k-children,Maximum Candies Allocated to K Children,Medium,49.9%,20.5%
+2336,https://leetcode.com/problems/smallest-number-in-infinite-set,Smallest Number in Infinite Set,Medium,70.7%,20.5%
 117,https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii,Populating Next Right Pointers in Each Node II,Medium,57.6%,19.3%
 261,https://leetcode.com/problems/graph-valid-tree,Graph Valid Tree,Medium,50.0%,19.3%
 824,https://leetcode.com/problems/goat-latin,Goat Latin,Easy,70.1%,19.3%

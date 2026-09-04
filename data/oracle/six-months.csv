@@ -1,6 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,100.0%
 3438,https://leetcode.com/problems/find-valid-pair-of-adjacent-digits-in-string,Find Valid Pair of Adjacent Digits in String,Easy,59.7%,87.5%
+18,https://leetcode.com/problems/4sum,4Sum,Medium,41.6%,79.5%
+721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,62.0%,79.5%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,76.8%
 460,https://leetcode.com/problems/lfu-cache,LFU Cache,Hard,49.0%,76.8%
 1797,https://leetcode.com/problems/design-authentication-manager,Design Authentication Manager,Medium,57.9%,75.0%

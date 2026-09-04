@@ -1,5 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2998,https://leetcode.com/problems/minimum-number-of-operations-to-make-x-and-y-equal,Minimum Number of Operations to Make X and Y Equal,Medium,48.6%,100.0%
+1799,https://leetcode.com/problems/maximize-score-after-n-operations,Maximize Score After N Operations,Hard,57.9%,96.9%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,80.1%
 3026,https://leetcode.com/problems/maximum-good-subarray-sum,Maximum Good Subarray Sum,Medium,21.7%,73.9%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,65.1%

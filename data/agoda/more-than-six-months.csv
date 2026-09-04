@@ -10,6 +10,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 554,https://leetcode.com/problems/brick-wall,Brick Wall,Medium,55.9%,75.0%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,73.4%
 844,https://leetcode.com/problems/backspace-string-compare,Backspace String Compare,Easy,49.9%,73.4%
+75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,70.2%,68.1%
+1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,61.8%,68.1%
 394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.5%,66.5%
 724,https://leetcode.com/problems/find-pivot-index,Find Pivot Index,Easy,62.5%,66.5%
 726,https://leetcode.com/problems/number-of-atoms,Number of Atoms,Hard,65.1%,66.5%
@@ -47,3 +49,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2734,https://leetcode.com/problems/lexicographically-smallest-string-after-substring-operation,Lexicographically Smallest String After Substring Operation,Medium,34.9%,56.8%
 3178,https://leetcode.com/problems/find-the-child-who-has-the-ball-after-k-seconds,Find the Child Who Has the Ball After K Seconds,Easy,62.0%,56.8%
 300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,59.4%,54.4%
+55,https://leetcode.com/problems/jump-game,Jump Game,Medium,41.5%,52.2%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,48.1%,52.2%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.5%,52.2%
+1331,https://leetcode.com/problems/rank-transform-of-an-array,Rank Transform of an Array,Easy,74.0%,52.2%

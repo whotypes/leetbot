@@ -28,6 +28,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,53.2%
 415,https://leetcode.com/problems/add-strings,Add Strings,Easy,52.1%,53.2%
 3034,https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i,Number of Subarrays That Match a Pattern I,Medium,68.5%,53.2%
+2237,https://leetcode.com/problems/count-positions-on-street-with-required-brightness,Count Positions on Street With Required Brightness,Medium,62.5%,52.6%
 79,https://leetcode.com/problems/word-search,Word Search,Medium,45.4%,50.0%
 212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,37.4%,50.0%
 539,https://leetcode.com/problems/minimum-time-difference,Minimum Time Difference,Medium,62.6%,48.8%
@@ -41,6 +42,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2021,https://leetcode.com/problems/brightest-position-on-street,Brightest Position on Street,Medium,60.6%,43.3%
 2023,https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target,Number of Pairs of Strings With Concatenation Equal to Target,Medium,75.4%,43.3%
 3072,https://leetcode.com/problems/distribute-elements-into-two-arrays-ii,Distribute Elements Into Two Arrays II,Hard,30.5%,43.3%
+3208,https://leetcode.com/problems/alternating-groups-ii,Alternating Groups II,Medium,60.0%,42.7%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,37.5%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,67.0%,37.5%
 25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,63.3%,37.5%

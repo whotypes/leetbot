@@ -32,6 +32,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 695,https://leetcode.com/problems/max-area-of-island,Max Area of Island,Medium,73.9%,60.2%
 981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,60.2%
 1233,https://leetcode.com/problems/remove-sub-folders-from-the-filesystem,Remove Sub-Folders from the Filesystem,Medium,78.6%,60.2%
+243,https://leetcode.com/problems/shortest-word-distance,Shortest Word Distance,Easy,66.4%,55.5%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,55.3%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,55.3%
 71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,50.4%,55.3%
@@ -94,6 +95,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 408,https://leetcode.com/problems/valid-word-abbreviation,Valid Word Abbreviation,Easy,37.0%,40.1%
 435,https://leetcode.com/problems/non-overlapping-intervals,Non-overlapping Intervals,Medium,57.0%,40.1%
 622,https://leetcode.com/problems/design-circular-queue,Design Circular Queue,Medium,54.4%,40.1%
+641,https://leetcode.com/problems/design-circular-deque,Design Circular Deque,Medium,65.0%,40.1%
 729,https://leetcode.com/problems/my-calendar-i,My Calendar I,Medium,58.3%,40.1%
 741,https://leetcode.com/problems/cherry-pickup,Cherry Pickup,Hard,39.4%,40.1%
 787,https://leetcode.com/problems/cheapest-flights-within-k-stops,Cheapest Flights Within K Stops,Medium,41.7%,40.1%
@@ -107,5 +109,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1631,https://leetcode.com/problems/path-with-minimum-effort,Path With Minimum Effort,Medium,63.1%,40.1%
 1898,https://leetcode.com/problems/maximum-number-of-removable-characters,Maximum Number of Removable Characters,Medium,47.1%,40.1%
 2265,https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree,Count Nodes Equal to Average of Subtree,Medium,86.8%,40.1%
+2458,https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries,Height of Binary Tree After Subtree Removal Queries,Hard,54.9%,40.1%
 2467,https://leetcode.com/problems/most-profitable-path-in-a-tree,Most Profitable Path in a Tree,Medium,67.3%,40.1%
 3177,https://leetcode.com/problems/find-the-maximum-length-of-a-good-subsequence-ii,Find the Maximum Length of a Good Subsequence II,Hard,25.2%,40.1%

@@ -44,3 +44,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2930,https://leetcode.com/problems/number-of-strings-which-can-be-rearranged-to-contain-substring,Number of Strings Which Can Be Rearranged to Contain Substring,Medium,56.8%,58.9%
 2953,https://leetcode.com/problems/count-complete-substrings,Count Complete Substrings,Hard,30.3%,58.9%
 2959,https://leetcode.com/problems/number-of-possible-sets-of-closing-branches,Number of Possible Sets of Closing Branches,Hard,50.8%,58.9%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.8%,58.2%

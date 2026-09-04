@@ -5,8 +5,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2374,https://leetcode.com/problems/node-with-highest-edge-score,Node With Highest Edge Score,Medium,49.3%,82.3%
 3409,https://leetcode.com/problems/longest-subsequence-with-decreasing-adjacent-difference,Longest Subsequence With Decreasing Adjacent Difference,Medium,16.8%,82.3%
 3842,https://leetcode.com/problems/toggle-light-bulbs,Toggle Light Bulbs,Easy,71.9%,75.8%
+2009,https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous,Minimum Number of Operations to Make Array Continuous,Hard,51.7%,65.1%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,61.6%
 239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.7%,61.6%
+2087,https://leetcode.com/problems/minimum-cost-homecoming-of-a-robot-in-a-grid,Minimum Cost Homecoming of a Robot in a Grid,Medium,51.9%,60.5%
 134,https://leetcode.com/problems/gas-station,Gas Station,Medium,47.9%,55.7%
 1857,https://leetcode.com/problems/largest-color-value-in-a-directed-graph,Largest Color Value in a Directed Graph,Hard,57.3%,55.7%
 3515,https://leetcode.com/problems/shortest-path-in-a-weighted-tree,Shortest Path in a Weighted Tree,Hard,42.3%,55.7%
@@ -18,3 +20,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,36.3%,47.4%
 735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,47.7%,47.4%
 1717,https://leetcode.com/problems/maximum-score-from-removing-substrings,Maximum Score From Removing Substrings,Medium,66.5%,47.4%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,60.8%,46.6%

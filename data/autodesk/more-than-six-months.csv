@@ -9,6 +9,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3019,https://leetcode.com/problems/number-of-changing-keys,Number of Changing Keys,Easy,80.6%,85.0%
 93,https://leetcode.com/problems/restore-ip-addresses,Restore IP Addresses,Medium,53.4%,75.0%
 300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,58.0%,75.0%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,52.7%,73.9%
+139,https://leetcode.com/problems/word-break,Word Break,Medium,49.8%,73.9%
+200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,65.1%,73.9%
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,69.0%,73.4%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,73.2%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.8%,73.2%

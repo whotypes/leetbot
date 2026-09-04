@@ -1,6 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 316,https://leetcode.com/problems/remove-duplicate-letters,Remove Duplicate Letters,Medium,53.1%,100.0%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,88.2%
+38,https://leetcode.com/problems/count-and-say,Count and Say,Medium,63.8%,88.2%
 3035,https://leetcode.com/problems/maximum-palindromes-after-operations,Maximum Palindromes After Operations,Medium,46.2%,88.2%
 1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,Capacity To Ship Packages Within D Days,Medium,72.3%,87.5%
 1334,https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance,Find the City With the Smallest Number of Neighbors at a Threshold Distance,Medium,70.6%,87.5%
@@ -21,22 +22,29 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 73,https://leetcode.com/problems/set-matrix-zeroes,Set Matrix Zeroes,Medium,60.9%,75.0%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,75.0%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,68.0%
+8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,21.7%,68.0%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,68.0%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,68.0%
 28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,46.5%,68.0%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,68.0%
 198,https://leetcode.com/problems/house-robber,House Robber,Medium,53.1%,68.0%
 230,https://leetcode.com/problems/kth-smallest-element-in-a-bst,Kth Smallest Element in a BST,Medium,76.7%,68.0%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,49.2%,68.0%
 255,https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree,Verify Preorder Sequence in Binary Search Tree,Medium,51.7%,68.0%
 443,https://leetcode.com/problems/string-compression,String Compression,Medium,59.9%,68.0%
 697,https://leetcode.com/problems/degree-of-an-array,Degree of an Array,Easy,58.3%,68.0%
 724,https://leetcode.com/problems/find-pivot-index,Find Pivot Index,Easy,62.5%,68.0%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.5%,68.0%
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,68.0%
 1101,https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends,The Earliest Moment When Everyone Become Friends,Medium,66.0%,68.0%
 1151,https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together,Minimum Swaps to Group All 1's Together,Medium,61.2%,68.0%
 1328,https://leetcode.com/problems/break-a-palindrome,Break a Palindrome,Medium,51.6%,68.0%
+1413,https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum,Minimum Value to Get Positive Step by Step Sum,Easy,64.9%,68.0%
+1423,https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards,Maximum Points You Can Obtain from Cards,Medium,58.3%,68.0%
 1451,https://leetcode.com/problems/rearrange-words-in-a-sentence,Rearrange Words in a Sentence,Medium,67.0%,68.0%
+1465,https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts,Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts,Medium,41.5%,68.0%
 1481,https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals,Least Number of Unique Integers after K Removals,Medium,63.8%,68.0%
+1507,https://leetcode.com/problems/reformat-date,Reformat Date,Easy,68.9%,68.0%
 1560,https://leetcode.com/problems/most-visited-sector-in-a-circular-track,Most Visited Sector in  a Circular Track,Easy,59.9%,68.0%
 1611,https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero,Minimum One Bit Operations to Make Integers Zero,Hard,78.3%,68.0%
 2006,https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k,Count Number of Pairs With Absolute Difference K,Easy,85.4%,68.0%

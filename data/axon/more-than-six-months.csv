@@ -4,6 +4,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1396,https://leetcode.com/problems/design-underground-system,Design Underground System,Medium,74.5%,90.1%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,62.5%,87.5%
 97,https://leetcode.com/problems/interleaving-string,Interleaving String,Medium,43.9%,74.3%
+72,https://leetcode.com/problems/edit-distance,Edit Distance,Medium,61.2%,62.2%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,56.0%
 125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.2%,56.0%
 973,https://leetcode.com/problems/k-closest-points-to-origin,K Closest Points to Origin,Medium,68.9%,56.0%

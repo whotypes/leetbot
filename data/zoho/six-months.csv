@@ -12,6 +12,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 463,https://leetcode.com/problems/island-perimeter,Island Perimeter,Easy,73.6%,87.5%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,80.9%
 739,https://leetcode.com/problems/daily-temperatures,Daily Temperatures,Medium,68.6%,80.9%
+4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,47.5%,80.2%
+6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,55.0%,80.2%
+41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,43.7%,80.2%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,60.6%,80.2%
+905,https://leetcode.com/problems/sort-array-by-parity,Sort Array By Parity,Easy,76.7%,80.2%
+1291,https://leetcode.com/problems/sequential-digits,Sequential Digits,Medium,68.6%,80.2%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,62.4%,75.0%
 51,https://leetcode.com/problems/n-queens,N-Queens,Hard,73.1%,75.0%
 55,https://leetcode.com/problems/jump-game,Jump Game,Medium,39.6%,75.0%

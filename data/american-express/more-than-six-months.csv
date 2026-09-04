@@ -1,5 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2997,https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k,Minimum Number of Operations to Make Array XOR Equal to K,Medium,85.4%,100.0%
+4016,https://leetcode.com/problems/maximum-area-of-two-non-overlapping-square-submatrices,Maximum Area of Two Non-Overlapping Square Submatrices,Medium,40.8%,91.2%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,87.5%
 1647,https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique,Minimum Deletions to Make Character Frequencies Unique,Medium,61.5%,77.6%
 258,https://leetcode.com/problems/add-digits,Add Digits,Easy,68.0%,75.0%
@@ -9,6 +10,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.0%,70.6%
 1224,https://leetcode.com/problems/maximum-equal-frequency,Maximum Equal Frequency,Hard,38.1%,70.6%
 1304,https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero,Find N Unique Integers Sum up to Zero,Easy,78.5%,70.6%
+23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,60.4%,67.4%
 1253,https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix,Reconstruct a 2-Row Binary Matrix,Medium,47.8%,62.5%
 180,https://leetcode.com/problems/consecutive-numbers,Consecutive Numbers,Medium,48.6%,60.9%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,60.8%

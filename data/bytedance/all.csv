@@ -49,6 +49,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 989,https://leetcode.com/problems/add-to-array-form-of-integer,Add to Array-Form of Integer,Easy,45.1%,50.0%
 1802,https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array,Maximum Value at a Given Index in a Bounded Array,Medium,38.8%,50.0%
 2420,https://leetcode.com/problems/find-all-good-indices,Find All Good Indices,Medium,39.9%,50.0%
+15,https://leetcode.com/problems/3sum,3Sum,Medium,39.8%,48.5%
+22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,79.1%,48.5%
+152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,37.0%,48.5%
+199,https://leetcode.com/problems/binary-tree-right-side-view,Binary Tree Right Side View,Medium,71.1%,48.5%
 239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.9%,47.6%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,46.9%
 16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,48.4%,46.9%

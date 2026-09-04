@@ -9,6 +9,14 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,60.3%,70.5%
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,70.5%
 1048,https://leetcode.com/problems/longest-string-chain,Longest String Chain,Medium,63.0%,70.5%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,38.6%,63.4%
+17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,66.8%,63.4%
+134,https://leetcode.com/problems/gas-station,Gas Station,Medium,48.7%,63.4%
+368,https://leetcode.com/problems/largest-divisible-subset,Largest Divisible Subset,Medium,50.1%,63.4%
+719,https://leetcode.com/problems/find-k-th-smallest-pair-distance,Find K-th Smallest Pair Distance,Hard,46.8%,63.4%
+3203,https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees,Find Minimum Diameter After Merging Two Trees,Hard,56.8%,63.4%
+3900,https://leetcode.com/problems/longest-balanced-substring-after-one-swap,Longest Balanced Substring After One Swap,Medium,14.3%,63.4%
+3948,https://leetcode.com/problems/lexicographically-maximum-mex-array,Lexicographically Maximum MEX Array,Hard,57.2%,63.4%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,54.2%,62.5%
 55,https://leetcode.com/problems/jump-game,Jump Game,Medium,39.6%,62.5%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,55.4%,62.5%

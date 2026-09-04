@@ -14,6 +14,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3029,https://leetcode.com/problems/minimum-time-to-revert-word-to-initial-state-i,Minimum Time to Revert Word to Initial State I,Medium,42.4%,93.4%
 3031,https://leetcode.com/problems/minimum-time-to-revert-word-to-initial-state-ii,Minimum Time to Revert Word to Initial State II,Hard,35.2%,93.4%
 3414,https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals,Maximum Score of Non-overlapping Intervals,Hard,31.2%,93.4%
+1031,https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays,Maximum Sum of Two Non-Overlapping Subarrays,Medium,61.4%,82.3%
+134,https://leetcode.com/problems/gas-station,Gas Station,Medium,48.7%,77.6%
 907,https://leetcode.com/problems/sum-of-subarray-minimums,Sum of Subarray Minimums,Medium,38.5%,75.9%
 2751,https://leetcode.com/problems/robot-collisions,Robot Collisions,Hard,56.1%,75.0%
 205,https://leetcode.com/problems/isomorphic-strings,Isomorphic Strings,Easy,48.3%,70.3%
@@ -27,6 +29,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 763,https://leetcode.com/problems/partition-labels,Partition Labels,Medium,81.6%,62.5%
 1981,https://leetcode.com/problems/minimize-the-difference-between-target-and-chosen-elements,Minimize the Difference Between Target and Chosen Elements,Medium,35.9%,62.5%
 2086,https://leetcode.com/problems/minimum-number-of-food-buckets-to-feed-the-hamsters,Minimum Number of Food Buckets to Feed the Hamsters,Medium,47.1%,62.5%
+4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,47.5%,54.4%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,52.7%,54.4%
+373,https://leetcode.com/problems/find-k-pairs-with-smallest-sums,Find K Pairs with Smallest Sums,Medium,42.3%,54.4%
+863,https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree,All Nodes Distance K in Binary Tree,Medium,68.1%,54.4%
+1526,https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array,Minimum Number of Increments on Subarrays to Form a Target Array,Hard,78.3%,54.4%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,53.0%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,38.6%,53.0%
 41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,42.8%,53.0%

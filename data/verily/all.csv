@@ -6,6 +6,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 939,https://leetcode.com/problems/minimum-area-rectangle,Minimum Area Rectangle,Medium,55.4%,92.2%
 1048,https://leetcode.com/problems/longest-string-chain,Longest String Chain,Medium,63.0%,92.2%
 2115,https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies,Find All Possible Recipes from Given Supplies,Medium,56.9%,92.2%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,49.2%,82.2%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,81.1%
 202,https://leetcode.com/problems/happy-number,Happy Number,Easy,59.5%,81.1%
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,81.1%

@@ -1,6 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 334,https://leetcode.com/problems/increasing-triplet-subsequence,Increasing Triplet Subsequence,Medium,39.1%,100.0%
 1290,https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer,Convert Binary Number in a Linked List to Integer,Easy,82.3%,100.0%
+735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,49.0%,88.6%
+2208,https://leetcode.com/problems/minimum-operations-to-halve-array-sum,Minimum Operations to Halve Array Sum,Medium,50.5%,88.6%
 65,https://leetcode.com/problems/valid-number,Valid Number,Hard,21.7%,87.5%
 92,https://leetcode.com/problems/reverse-linked-list-ii,Reverse Linked List II,Medium,49.7%,87.5%
 895,https://leetcode.com/problems/maximum-frequency-stack,Maximum Frequency Stack,Hard,66.3%,87.5%

@@ -31,6 +31,13 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1675,https://leetcode.com/problems/minimize-deviation-in-array,Minimize Deviation in Array,Hard,54.0%,59.2%
 2035,https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference,Partition Array Into Two Arrays to Minimize Sum Difference,Hard,23.3%,59.2%
 2662,https://leetcode.com/problems/minimum-cost-of-a-path-with-special-roads,Minimum Cost of a Path With Special Roads,Medium,43.0%,59.2%
+4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,47.5%,54.1%
+48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,80.7%,54.1%
+72,https://leetcode.com/problems/edit-distance,Edit Distance,Medium,61.2%,54.1%
+855,https://leetcode.com/problems/exam-room,Exam Room,Medium,43.8%,54.1%
+956,https://leetcode.com/problems/tallest-billboard,Tallest Billboard,Hard,51.9%,54.1%
+991,https://leetcode.com/problems/broken-calculator,Broken Calculator,Medium,56.5%,54.1%
+1391,https://leetcode.com/problems/check-if-there-is-a-valid-path-in-a-grid,Check if There is a Valid Path in a Grid,Medium,64.5%,54.1%
 45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,43.0%,53.4%
 410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,60.8%,53.4%
 502,https://leetcode.com/problems/ipo,IPO,Hard,53.6%,53.4%

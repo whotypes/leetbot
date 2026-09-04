@@ -1,6 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2264,https://leetcode.com/problems/largest-3-same-digit-number-in-string,Largest 3-Same-Digit Number in String,Easy,72.7%,100.0%
 3161,https://leetcode.com/problems/block-placement-queries,Block Placement Queries,Hard,18.5%,73.4%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,58.1%,67.7%
+852,https://leetcode.com/problems/peak-index-in-a-mountain-array,Peak Index in a Mountain Array,Medium,66.7%,67.7%
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,54.0%,64.5%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,64.5%
 1584,https://leetcode.com/problems/min-cost-to-connect-all-points,Min Cost to Connect All Points,Medium,70.8%,64.5%

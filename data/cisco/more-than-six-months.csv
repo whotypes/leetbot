@@ -44,6 +44,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 486,https://leetcode.com/problems/predict-the-winner,Predict the Winner,Medium,56.2%,44.8%
 2047,https://leetcode.com/problems/number-of-valid-words-in-a-sentence,Number of Valid Words in a Sentence,Easy,31.1%,44.8%
 2081,https://leetcode.com/problems/sum-of-k-mirror-numbers,Sum of k-Mirror Numbers,Hard,63.6%,44.8%
+207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,52.2%,37.7%
+242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.6%,37.7%
 62,https://leetcode.com/problems/unique-paths,Unique Paths,Medium,65.9%,37.5%
 63,https://leetcode.com/problems/unique-paths-ii,Unique Paths II,Medium,43.3%,37.5%
 70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,53.6%,37.5%

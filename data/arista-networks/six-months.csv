@@ -2,7 +2,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,43.0%,100.0%
 82,https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii,Remove Duplicates from Sorted List II,Medium,51.7%,100.0%
 268,https://leetcode.com/problems/missing-number,Missing Number,Easy,71.9%,100.0%
+460,https://leetcode.com/problems/lfu-cache,LFU Cache,Hard,50.2%,100.0%
 510,https://leetcode.com/problems/inorder-successor-in-bst-ii,Inorder Successor in BST II,Medium,61.1%,100.0%
+3399,https://leetcode.com/problems/smallest-substring-with-identical-characters-ii,Smallest Substring With Identical Characters II,Hard,40.8%,100.0%
 46,https://leetcode.com/problems/permutations,Permutations,Medium,80.8%,87.5%
 79,https://leetcode.com/problems/word-search,Word Search,Medium,45.4%,87.5%
 104,https://leetcode.com/problems/maximum-depth-of-binary-tree,Maximum Depth of Binary Tree,Easy,77.2%,87.5%

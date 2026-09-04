@@ -3,6 +3,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,71.1%,100.0%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,49.5%,100.0%
 69,https://leetcode.com/problems/sqrtx,Sqrt(x),Easy,40.5%,100.0%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,57.3%,100.0%
 394,https://leetcode.com/problems/decode-string,Decode String,Medium,61.3%,100.0%
 1344,https://leetcode.com/problems/angle-between-hands-of-a-clock,Angle Between Hands of a Clock,Medium,69.6%,100.0%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,77.3%,87.5%

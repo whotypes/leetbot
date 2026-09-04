@@ -22,6 +22,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.8%,55.8%
 739,https://leetcode.com/problems/daily-temperatures,Daily Temperatures,Medium,68.7%,55.8%
 1481,https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals,Least Number of Unique Integers after K Removals,Medium,63.8%,55.8%
+19,https://leetcode.com/problems/remove-nth-node-from-end-of-list,Remove Nth Node From End of List,Medium,52.5%,54.9%
+88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,55.6%,54.9%
+143,https://leetcode.com/problems/reorder-list,Reorder List,Medium,66.2%,54.9%
+152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,37.0%,54.9%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.5%,54.5%
 169,https://leetcode.com/problems/majority-element,Majority Element,Easy,66.4%,54.5%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.5%,53.8%

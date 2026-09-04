@@ -2,3 +2,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 71,https://leetcode.com/problems/simplify-path,Simplify Path,Medium,50.4%,100.0%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,38.1%,89.8%
 1760,https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag,Minimum Limit of Balls in a Bag,Medium,66.3%,89.8%
+49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,73.2%,89.2%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.2%,89.2%
+2563,https://leetcode.com/problems/count-the-number-of-fair-pairs,Count the Number of Fair Pairs,Medium,52.6%,89.2%

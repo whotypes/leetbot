@@ -4,3 +4,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,49.1%,100.0%
 151,https://leetcode.com/problems/reverse-words-in-a-string,Reverse Words in a String,Medium,56.2%,82.9%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,38.8%,82.6%
+73,https://leetcode.com/problems/set-matrix-zeroes,Set Matrix Zeroes,Medium,63.5%,82.4%

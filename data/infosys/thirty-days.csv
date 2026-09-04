@@ -2,10 +2,33 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.6%,100.0%
 200,https://leetcode.com/problems/number-of-islands,Number of Islands,Medium,64.4%,100.0%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.3%,100.0%
+860,https://leetcode.com/problems/lemonade-change,Lemonade Change,Easy,59.4%,100.0%
 992,https://leetcode.com/problems/subarrays-with-k-different-integers,Subarrays with K Different Integers,Hard,66.1%,100.0%
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.9%,100.0%
+1563,https://leetcode.com/problems/stone-game-v,Stone Game V,Hard,59.0%,94.8%
+1004,https://leetcode.com/problems/max-consecutive-ones-iii,Max Consecutive Ones III,Medium,68.4%,88.5%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.5%,87.9%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,39.1%,87.9%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.3%,87.9%
 176,https://leetcode.com/problems/second-highest-salary,Second Highest Salary,Medium,47.0%,87.9%
 319,https://leetcode.com/problems/bulb-switcher,Bulb Switcher,Medium,55.9%,87.9%
+72,https://leetcode.com/problems/edit-distance,Edit Distance,Medium,61.2%,80.4%
+152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,37.0%,80.4%
+518,https://leetcode.com/problems/coin-change-ii,Coin Change II,Medium,59.2%,80.4%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.5%,80.4%
+1775,https://leetcode.com/problems/equal-sum-arrays-with-minimum-number-of-operations,Equal Sum Arrays With Minimum Number of Operations,Medium,54.9%,80.4%
+1872,https://leetcode.com/problems/stone-game-viii,Stone Game VIII,Hard,74.9%,80.4%
+55,https://leetcode.com/problems/jump-game,Jump Game,Medium,41.5%,68.9%
+70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.3%,68.9%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,57.3%,68.9%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.6%,68.9%
+179,https://leetcode.com/problems/largest-number,Largest Number,Medium,43.7%,68.9%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,49.2%,68.9%
+327,https://leetcode.com/problems/count-of-range-sum,Count of Range Sum,Hard,39.8%,68.9%
+354,https://leetcode.com/problems/russian-doll-envelopes,Russian Doll Envelopes,Hard,38.2%,68.9%
+453,https://leetcode.com/problems/minimum-moves-to-equal-array-elements,Minimum Moves to Equal Array Elements,Medium,59.1%,68.9%
+583,https://leetcode.com/problems/delete-operation-for-two-strings,Delete Operation for Two Strings,Medium,66.2%,68.9%
+1043,https://leetcode.com/problems/partition-array-for-maximum-sum,Partition Array for Maximum Sum,Medium,77.6%,68.9%
+1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,58.0%,68.9%
+1510,https://leetcode.com/problems/stone-game-iv,Stone Game IV,Hard,65.2%,68.9%
+2370,https://leetcode.com/problems/longest-ideal-subsequence,Longest Ideal Subsequence,Medium,46.6%,68.9%

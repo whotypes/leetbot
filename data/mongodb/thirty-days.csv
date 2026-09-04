@@ -1,2 +1,4 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-1146,https://leetcode.com/problems/snapshot-array,"Snapshot Array",Medium,36.7%,100.0%
+1146,https://leetcode.com/problems/snapshot-array,Snapshot Array,Medium,36.7%,100.0%
+1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,58.0%,100.0%
+2591,https://leetcode.com/problems/distribute-money-to-maximum-children,Distribute Money to Maximum Children,Easy,20.8%,100.0%

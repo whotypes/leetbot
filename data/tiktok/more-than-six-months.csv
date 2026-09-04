@@ -299,6 +299,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2506,https://leetcode.com/problems/count-pairs-of-similar-strings,Count Pairs Of Similar Strings,Easy,73.7%,34.0%
 2523,https://leetcode.com/problems/closest-prime-numbers-in-range,Closest Prime Numbers in Range,Medium,51.7%,34.0%
 2673,https://leetcode.com/problems/make-costs-of-paths-equal-in-a-binary-tree,Make Costs of Paths Equal in a Binary Tree,Medium,58.4%,34.0%
+291,https://leetcode.com/problems/word-pattern-ii,Word Pattern II,Medium,49.1%,27.3%
+1827,https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing,Minimum Operations to Make the Array Increasing,Easy,82.4%,27.3%
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,80.3%,26.0%
 325,https://leetcode.com/problems/maximum-size-subarray-sum-equals-k,Maximum Size Subarray Sum Equals k,Medium,50.9%,26.0%
 696,https://leetcode.com/problems/count-binary-substrings,Count Binary Substrings,Easy,70.5%,26.0%

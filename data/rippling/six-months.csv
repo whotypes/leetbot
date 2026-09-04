@@ -2,5 +2,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,100.0%
 3484,https://leetcode.com/problems/design-spreadsheet,Design Spreadsheet,Medium,67.6%,100.0%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,85.4%
+3067,https://leetcode.com/problems/count-pairs-of-connectable-servers-in-a-weighted-tree-network,Count Pairs of Connectable Servers in a Weighted Tree Network,Medium,55.6%,84.3%
+526,https://leetcode.com/problems/beautiful-arrangement,Beautiful Arrangement,Medium,64.9%,77.8%
+1839,https://leetcode.com/problems/longest-substring-of-all-vowels-in-order,Longest Substring Of All Vowels in Order,Medium,52.4%,68.7%
+2434,https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string,Using a Robot to Print the Lexicographically Smallest String,Medium,62.2%,68.7%
+3829,https://leetcode.com/problems/design-ride-sharing-system,Design Ride Sharing System,Medium,62.7%,68.7%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,66.2%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,66.2%

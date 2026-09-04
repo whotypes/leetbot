@@ -1,4 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,38.6%,100.0%
 55,https://leetcode.com/problems/jump-game,Jump Game,Medium,40.8%,100.0%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,100.0%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,88.2%

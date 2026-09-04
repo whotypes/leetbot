@@ -14,6 +14,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,65.9%
 239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,48.7%,65.9%
 39,https://leetcode.com/problems/combination-sum,Combination Sum,Medium,74.9%,62.5%
+70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.3%,59.1%
+202,https://leetcode.com/problems/happy-number,Happy Number,Easy,60.2%,59.1%
+359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.9%,59.1%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,56.0%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,56.0%
 25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,65.9%,56.0%

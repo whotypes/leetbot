@@ -30,6 +30,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 212,https://leetcode.com/problems/word-search-ii,Word Search II,Hard,38.4%,67.1%
 981,https://leetcode.com/problems/time-based-key-value-store,Time Based Key-Value Store,Medium,49.9%,67.1%
 2571,https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0,Minimum Operations to Reduce an Integer to 0,Medium,62.0%,67.1%
+2812,https://leetcode.com/problems/find-the-safest-path-in-a-grid,Find the Safest Path in a Grid,Medium,57.4%,65.3%
 207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,51.3%,62.9%
 399,https://leetcode.com/problems/evaluate-division,Evaluate Division,Medium,64.1%,62.9%
 410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,60.3%,62.9%
@@ -72,6 +73,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2444,https://leetcode.com/problems/count-subarrays-with-fixed-bounds,Count Subarrays With Fixed Bounds,Hard,69.4%,50.0%
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,48.6%,50.0%
 3034,https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i,Number of Subarrays That Match a Pattern I,Medium,67.0%,50.0%
+1639,https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary,Number of Ways to Form a Target String Given a Dictionary,Hard,56.3%,48.8%
+3367,https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals,Maximize Sum of Weights after Edge Removals,Hard,31.9%,48.8%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.8%,44.7%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,45.1%,44.7%
 174,https://leetcode.com/problems/dungeon-game,Dungeon Game,Hard,41.6%,44.7%

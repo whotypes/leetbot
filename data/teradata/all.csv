@@ -1,5 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 135,https://leetcode.com/problems/candy,Candy,Hard,46.9%,100.0%
 546,https://leetcode.com/problems/remove-boxes,Remove Boxes,Hard,49.4%,100.0%
+2528,https://leetcode.com/problems/maximize-the-minimum-powered-city,Maximize the Minimum Powered City,Hard,61.4%,100.0%
 3766,https://leetcode.com/problems/minimum-operations-to-make-binary-palindrome,Minimum Operations to Make Binary Palindrome,Medium,51.9%,95.3%
+1402,https://leetcode.com/problems/reducing-dishes,Reducing Dishes,Hard,76.8%,67.8%
 1885,https://leetcode.com/problems/count-pairs-in-two-arrays,Count Pairs in Two Arrays,Medium,60.3%,66.0%

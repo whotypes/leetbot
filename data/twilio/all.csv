@@ -3,6 +3,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 965,https://leetcode.com/problems/univalued-binary-tree,Univalued Binary Tree,Easy,73.0%,96.0%
 1507,https://leetcode.com/problems/reformat-date,Reformat Date,Easy,68.4%,96.0%
 2559,https://leetcode.com/problems/count-vowel-strings-in-ranges,Count Vowel Strings in Ranges,Medium,67.8%,76.0%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,39.9%,64.0%
+1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,61.8%,64.0%
 17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,64.0%,62.5%
 41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,41.2%,62.5%
 44,https://leetcode.com/problems/wildcard-matching,Wildcard Matching,Hard,30.1%,62.5%

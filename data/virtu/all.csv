@@ -4,3 +4,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1271,https://leetcode.com/problems/hexspeak,Hexspeak,Easy,58.3%,96.3%
 1180,https://leetcode.com/problems/count-substrings-with-only-one-distinct-letter,Count Substrings with Only One Distinct Letter,Easy,80.9%,94.9%
 1759,https://leetcode.com/problems/count-number-of-homogenous-substrings,Count Number of Homogenous Substrings,Medium,57.4%,93.4%
+20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.8%,56.4%
+392,https://leetcode.com/problems/is-subsequence,Is Subsequence,Easy,49.4%,56.4%
+465,https://leetcode.com/problems/optimal-account-balancing,Optimal Account Balancing,Hard,50.7%,56.4%

@@ -1,2 +1,5 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
-32,https://leetcode.com/problems/longest-valid-parentheses,"Longest Valid Parentheses",Hard,36.5%,100.0%
+1,https://leetcode.com/problems/two-sum,Two Sum,Easy,58.1%,100.0%
+32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,36.5%,100.0%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,67.3%,100.0%
+121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,57.3%,88.7%

@@ -195,6 +195,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2258,https://leetcode.com/problems/escape-the-spreading-fire,Escape the Spreading Fire,Hard,38.1%,36.1%
 2571,https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0,Minimum Operations to Reduce an Integer to 0,Medium,62.0%,36.1%
 2672,https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color,Number of Adjacent Elements With the Same Color,Medium,59.4%,36.1%
+864,https://leetcode.com/problems/shortest-path-to-get-all-keys,Shortest Path to Get All Keys,Hard,55.1%,32.2%
+2503,https://leetcode.com/problems/maximum-number-of-points-from-grid-queries,Maximum Number of Points From Grid Queries,Hard,59.2%,32.2%
+2861,https://leetcode.com/problems/maximum-number-of-alloys,Maximum Number of Alloys,Medium,41.0%,32.2%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,30.5%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,20.9%,30.5%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,30.5%
@@ -419,6 +422,22 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2925,https://leetcode.com/problems/maximum-score-after-applying-operations-on-a-tree,Maximum Score After Applying Operations on a Tree,Medium,46.3%,25.0%
 3005,https://leetcode.com/problems/count-elements-with-maximum-frequency,Count Elements With Maximum Frequency,Easy,77.9%,25.0%
 3042,https://leetcode.com/problems/count-prefix-and-suffix-pairs-i,Count Prefix and Suffix Pairs I,Easy,77.7%,25.0%
+502,https://leetcode.com/problems/ipo,IPO,Hard,53.8%,24.5%
+652,https://leetcode.com/problems/find-duplicate-subtrees,Find Duplicate Subtrees,Medium,60.9%,24.5%
+696,https://leetcode.com/problems/count-binary-substrings,Count Binary Substrings,Easy,70.6%,24.5%
+968,https://leetcode.com/problems/binary-tree-cameras,Binary Tree Cameras,Hard,48.1%,24.5%
+987,https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree,Vertical Order Traversal of a Binary Tree,Hard,54.6%,24.5%
+1046,https://leetcode.com/problems/last-stone-weight,Last Stone Weight,Easy,66.8%,24.5%
+1197,https://leetcode.com/problems/minimum-knight-moves,Minimum Knight Moves,Medium,42.1%,24.5%
+1233,https://leetcode.com/problems/remove-sub-folders-from-the-filesystem,Remove Sub-Folders from the Filesystem,Medium,78.6%,24.5%
+1244,https://leetcode.com/problems/design-a-leaderboard,Design A Leaderboard,Medium,68.0%,24.5%
+2076,https://leetcode.com/problems/process-restricted-friend-requests,Process Restricted Friend Requests,Hard,61.7%,24.5%
+2092,https://leetcode.com/problems/find-all-people-with-secret,Find All People With Secret,Hard,48.4%,24.5%
+2226,https://leetcode.com/problems/maximum-candies-allocated-to-k-children,Maximum Candies Allocated to K Children,Medium,49.9%,24.5%
+2336,https://leetcode.com/problems/smallest-number-in-infinite-set,Smallest Number in Infinite Set,Medium,70.7%,24.5%
+2389,https://leetcode.com/problems/longest-subsequence-with-limited-sum,Longest Subsequence With Limited Sum,Easy,73.8%,24.5%
+2561,https://leetcode.com/problems/rearranging-fruits,Rearranging Fruits,Hard,57.2%,24.5%
+3629,https://leetcode.com/problems/minimum-jumps-to-reach-end-via-prime-teleportation,Minimum Jumps to Reach End via Prime Teleportation,Medium,44.4%,24.5%
 117,https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii,Populating Next Right Pointers in Each Node II,Medium,57.6%,23.1%
 381,https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed,Insert Delete GetRandom O(1) - Duplicates allowed,Hard,36.6%,23.1%
 1101,https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends,The Earliest Moment When Everyone Become Friends,Medium,66.1%,23.1%

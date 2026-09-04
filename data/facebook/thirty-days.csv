@@ -43,6 +43,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 287,https://leetcode.com/problems/find-the-duplicate-number,Find the Duplicate Number,Medium,64.5%,66.9%
 977,https://leetcode.com/problems/squares-of-a-sorted-array,Squares of a Sorted Array,Easy,73.9%,66.9%
 2574,https://leetcode.com/problems/left-and-right-sum-differences,Left and Right Sum Differences,Easy,89.6%,66.9%
+3090,https://leetcode.com/problems/maximum-length-substring-with-two-occurrences,Maximum Length Substring With Two Occurrences,Easy,77.7%,66.6%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,45.6%,62.5%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,43.0%,62.5%
 91,https://leetcode.com/problems/decode-ways,Decode Ways,Medium,36.6%,62.5%
@@ -97,6 +98,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 987,https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree,Vertical Order Traversal of a Binary Tree,Hard,53.6%,60.9%
 1650,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii,Lowest Common Ancestor of a Binary Tree III,Medium,83.0%,60.9%
 1762,https://leetcode.com/problems/buildings-with-an-ocean-view,Buildings With an Ocean View,Medium,80.9%,60.9%
+181,https://leetcode.com/problems/employees-earning-more-than-their-managers,Employees Earning More Than Their Managers,Easy,73.9%,60.0%
+509,https://leetcode.com/problems/fibonacci-number,Fibonacci Number,Easy,74.6%,60.0%
+567,https://leetcode.com/problems/permutation-in-string,Permutation in String,Medium,49.7%,60.0%
 69,https://leetcode.com/problems/sqrtx,Sqrt(x),Easy,42.0%,56.6%
 148,https://leetcode.com/problems/sort-list,Sort List,Medium,64.7%,56.6%
 209,https://leetcode.com/problems/minimum-size-subarray-sum,Minimum Size Subarray Sum,Medium,52.0%,56.6%
@@ -106,6 +110,16 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1148,https://leetcode.com/problems/article-views-i,Article Views I,Easy,76.7%,56.6%
 1732,https://leetcode.com/problems/find-the-highest-altitude,Find the Highest Altitude,Easy,84.7%,56.6%
 3020,https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset,Find the Maximum Number of Elements in Subset,Medium,42.3%,56.6%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,60.8%,50.7%
+32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,39.6%,50.7%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.6%,50.7%
+197,https://leetcode.com/problems/rising-temperature,Rising Temperature,Easy,52.1%,50.7%
+297,https://leetcode.com/problems/serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,61.1%,50.7%
+796,https://leetcode.com/problems/rotate-string,Rotate String,Easy,66.6%,50.7%
+1386,https://leetcode.com/problems/cinema-seat-allocation,Cinema Seat Allocation,Medium,56.9%,50.7%
+1768,https://leetcode.com/problems/merge-strings-alternately,Merge Strings Alternately,Easy,82.1%,50.7%
+3471,https://leetcode.com/problems/find-the-largest-almost-missing-integer,Find the Largest Almost Missing Integer,Easy,49.3%,50.7%
+3875,https://leetcode.com/problems/construct-uniform-parity-array-i,Construct Uniform Parity Array I,Easy,86.1%,50.7%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,46.4%,50.0%
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,51.8%,50.0%
 8,https://leetcode.com/problems/string-to-integer-atoi,String to Integer (atoi),Medium,19.4%,50.0%

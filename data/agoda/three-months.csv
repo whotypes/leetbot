@@ -10,3 +10,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,61.2%,92.7%
 1200,https://leetcode.com/problems/minimum-absolute-difference,Minimum Absolute Difference,Easy,75.1%,82.4%
 3893,https://leetcode.com/problems/maximum-team-size-with-overlapping-intervals,Maximum Team Size with Overlapping Intervals,Medium,58.8%,82.4%
+3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,39.9%,72.1%
+1331,https://leetcode.com/problems/rank-transform-of-an-array,Rank Transform of an Array,Easy,74.0%,72.1%

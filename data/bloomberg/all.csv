@@ -576,6 +576,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3381,https://leetcode.com/problems/maximum-subarray-sum-with-length-divisible-by-k,Maximum Subarray Sum With Length Divisible by K,Medium,49.7%,22.0%
 3719,https://leetcode.com/problems/longest-balanced-subarray-i,Longest Balanced Subarray I,Medium,65.6%,22.0%
 2833,https://leetcode.com/problems/furthest-point-from-origin,Furthest Point From Origin,Easy,77.0%,21.9%
+2434,https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string,Using a Robot to Print the Lexicographically Smallest String,Medium,62.2%,21.4%
+3718,https://leetcode.com/problems/smallest-missing-multiple-of-k,Smallest Missing Multiple of K,Easy,71.5%,21.4%
 59,https://leetcode.com/problems/spiral-matrix-ii,Spiral Matrix II,Medium,74.9%,18.2%
 93,https://leetcode.com/problems/restore-ip-addresses,Restore IP Addresses,Medium,55.8%,18.2%
 109,https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree,Convert Sorted List to Binary Search Tree,Medium,66.4%,18.2%
@@ -697,6 +699,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1871,https://leetcode.com/problems/jump-game-vii,Jump Game VII,Medium,35.6%,18.0%
 2196,https://leetcode.com/problems/create-binary-tree-from-descriptions,Create Binary Tree From Descriptions,Medium,83.9%,18.0%
 3753,https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii,Total Waviness of Numbers in Range II,Hard,56.6%,18.0%
+1291,https://leetcode.com/problems/sequential-digits,Sequential Digits,Medium,68.6%,17.7%
+1510,https://leetcode.com/problems/stone-game-iv,Stone Game IV,Hard,65.2%,17.7%
+2948,https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements,Make Lexicographically Smallest Array by Swapping Elements,Medium,66.5%,17.7%
+3014,https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i,Minimum Number of Pushes to Type Word I,Easy,77.4%,17.7%
+3517,https://leetcode.com/problems/smallest-palindromic-rearrangement-i,Smallest Palindromic Rearrangement I,Medium,74.3%,17.7%
 89,https://leetcode.com/problems/gray-code,Gray Code,Medium,64.7%,13.8%
 95,https://leetcode.com/problems/unique-binary-search-trees-ii,Unique Binary Search Trees II,Medium,62.3%,13.8%
 96,https://leetcode.com/problems/unique-binary-search-trees,Unique Binary Search Trees,Medium,63.6%,13.8%
@@ -894,6 +901,18 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3612,https://leetcode.com/problems/process-string-with-special-operations-i,Process String with Special Operations I,Medium,71.4%,13.6%
 3633,https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-i,Earliest Finish Time for Land and Water Rides I,Easy,73.0%,13.6%
 3700,https://leetcode.com/problems/number-of-zigzag-arrays-ii,Number of ZigZag Arrays II,Hard,67.7%,13.6%
+1081,https://leetcode.com/problems/smallest-subsequence-of-distinct-characters,Smallest Subsequence of Distinct Characters,Medium,70.6%,13.3%
+1260,https://leetcode.com/problems/shift-2d-grid,Shift 2D Grid,Easy,74.5%,13.3%
+1288,https://leetcode.com/problems/remove-covered-intervals,Remove Covered Intervals,Medium,60.2%,13.3%
+1301,https://leetcode.com/problems/number-of-paths-with-max-score,Number of Paths with Max Score,Hard,63.3%,13.3%
+2091,https://leetcode.com/problems/removing-minimum-and-maximum-from-array,Removing Minimum and Maximum From Array,Medium,67.5%,13.3%
+2996,https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum,Smallest Missing Integer Greater Than Sequential Prefix Sum,Easy,50.1%,13.3%
+3090,https://leetcode.com/problems/maximum-length-substring-with-two-occurrences,Maximum Length Substring With Two Occurrences,Easy,77.7%,13.3%
+3116,https://leetcode.com/problems/kth-smallest-amount-with-single-denomination-combination,Kth Smallest Amount With Single Denomination Combination,Hard,50.6%,13.3%
+3336,https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd,Find the Number of Subsequences With Equal GCD,Hard,66.3%,13.3%
+3345,https://leetcode.com/problems/smallest-divisible-digit-product-i,Smallest Divisible Digit Product I,Easy,73.0%,13.3%
+3532,https://leetcode.com/problems/path-existence-queries-in-a-graph-i,Path Existence Queries in a Graph I,Medium,70.2%,13.3%
+3536,https://leetcode.com/problems/maximum-product-of-two-digits,Maximum Product of Two Digits,Easy,75.6%,13.3%
 188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,47.4%,12.5%
 193,https://leetcode.com/problems/valid-phone-numbers,Valid Phone Numbers,Easy,27.6%,12.5%
 341,https://leetcode.com/problems/flatten-nested-list-iterator,Flatten Nested List Iterator,Medium,65.3%,12.5%
@@ -1365,3 +1384,57 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3699,https://leetcode.com/problems/number-of-zigzag-arrays-i,Number of ZigZag Arrays I,Hard,50.8%,8.4%
 3737,https://leetcode.com/problems/count-subarrays-with-majority-element-i,Count Subarrays With Majority Element I,Medium,75.7%,8.4%
 3838,https://leetcode.com/problems/weighted-word-mapping,Weighted Word Mapping,Easy,90.6%,8.4%
+352,https://leetcode.com/problems/data-stream-as-disjoint-intervals,Data Stream as Disjoint Intervals,Hard,60.6%,8.2%
+420,https://leetcode.com/problems/strong-password-checker,Strong Password Checker,Hard,16.4%,8.2%
+504,https://leetcode.com/problems/base-7,Base 7,Easy,55.2%,8.2%
+586,https://leetcode.com/problems/customer-placing-the-largest-number-of-orders,Customer Placing the Largest Number of Orders,Easy,64.7%,8.2%
+637,https://leetcode.com/problems/average-of-levels-in-binary-tree,Average of Levels in Binary Tree,Easy,75.2%,8.2%
+654,https://leetcode.com/problems/maximum-binary-tree,Maximum Binary Tree,Medium,86.5%,8.2%
+668,https://leetcode.com/problems/kth-smallest-number-in-multiplication-table,Kth Smallest Number in Multiplication Table,Hard,54.9%,8.2%
+788,https://leetcode.com/problems/rotated-digits,Rotated Digits,Medium,64.1%,8.2%
+834,https://leetcode.com/problems/sum-of-distances-in-tree,Sum of Distances in Tree,Hard,65.8%,8.2%
+849,https://leetcode.com/problems/maximize-distance-to-closest-person,Maximize Distance to Closest Person,Medium,50.0%,8.2%
+851,https://leetcode.com/problems/loud-and-rich,Loud and Rich,Medium,64.1%,8.2%
+872,https://leetcode.com/problems/leaf-similar-trees,Leaf-Similar Trees,Easy,70.3%,8.2%
+886,https://leetcode.com/problems/possible-bipartition,Possible Bipartition,Medium,53.0%,8.2%
+1050,https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times,Actors and Directors Who Cooperated At Least Three Times,Easy,71.4%,8.2%
+1343,https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold,Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold,Medium,74.1%,8.2%
+1377,https://leetcode.com/problems/frog-position-after-t-seconds,Frog Position After T Seconds,Hard,38.8%,8.2%
+1413,https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum,Minimum Value to Get Positive Step by Step Sum,Easy,64.9%,8.2%
+1483,https://leetcode.com/problems/kth-ancestor-of-a-tree-node,Kth Ancestor of a Tree Node,Hard,39.6%,8.2%
+1542,https://leetcode.com/problems/find-longest-awesome-substring,Find Longest Awesome Substring,Hard,47.5%,8.2%
+1579,https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable,Remove Max Number of Edges to Keep Graph Fully Traversable,Hard,70.1%,8.2%
+1592,https://leetcode.com/problems/rearrange-spaces-between-words,Rearrange Spaces Between Words,Easy,44.4%,8.2%
+1696,https://leetcode.com/problems/jump-game-vi,Jump Game VI,Medium,46.6%,8.2%
+1846,https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging,Maximum Element After Decreasing and Rearranging,Medium,69.2%,8.2%
+1927,https://leetcode.com/problems/sum-game,Sum Game,Medium,63.2%,8.2%
+1967,https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word,Number of Strings That Appear as Substrings in Word,Easy,86.2%,8.2%
+2013,https://leetcode.com/problems/detect-squares,Detect Squares,Medium,53.0%,8.2%
+2076,https://leetcode.com/problems/process-restricted-friend-requests,Process Restricted Friend Requests,Hard,61.7%,8.2%
+2213,https://leetcode.com/problems/longest-substring-of-one-repeating-character,Longest Substring of One Repeating Character,Hard,65.5%,8.2%
+2306,https://leetcode.com/problems/naming-a-company,Naming a Company,Hard,46.6%,8.2%
+2350,https://leetcode.com/problems/shortest-impossible-sequence-of-rolls,Shortest Impossible Sequence of Rolls,Hard,69.3%,8.2%
+2410,https://leetcode.com/problems/maximum-matching-of-players-with-trainers,Maximum Matching of Players With Trainers,Medium,75.5%,8.2%
+2456,https://leetcode.com/problems/most-popular-video-creator,Most Popular Video Creator,Medium,45.6%,8.2%
+2466,https://leetcode.com/problems/count-ways-to-build-good-strings,Count Ways To Build Good Strings,Medium,58.8%,8.2%
+2528,https://leetcode.com/problems/maximize-the-minimum-powered-city,Maximize the Minimum Powered City,Hard,61.4%,8.2%
+2554,https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i,Maximum Number of Integers to Choose From a Range I,Medium,68.0%,8.2%
+2602,https://leetcode.com/problems/minimum-operations-to-make-all-array-elements-equal,Minimum Operations to Make All Array Elements Equal,Medium,38.8%,8.2%
+2607,https://leetcode.com/problems/make-k-subarray-sums-equal,Make K-Subarray Sums Equal,Medium,39.2%,8.2%
+2615,https://leetcode.com/problems/sum-of-distances,Sum of Distances,Medium,50.3%,8.2%
+2958,https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency,Length of Longest Subarray With at Most K Frequency,Medium,60.6%,8.2%
+3016,https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii,Minimum Number of Pushes to Type Word II,Medium,83.1%,8.2%
+3169,https://leetcode.com/problems/count-days-without-meetings,Count Days Without Meetings,Medium,48.3%,8.2%
+3289,https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville,The Two Sneaky Numbers of Digitville,Easy,89.6%,8.2%
+3312,https://leetcode.com/problems/sorted-gcd-pair-queries,Sorted GCD Pair Queries,Hard,58.2%,8.2%
+3324,https://leetcode.com/problems/find-the-sequence-of-strings-appeared-on-the-screen,Find the Sequence of Strings Appeared on the Screen,Medium,79.6%,8.2%
+3483,https://leetcode.com/problems/unique-3-digit-even-numbers,Unique 3-Digit Even Numbers,Easy,69.6%,8.2%
+3499,https://leetcode.com/problems/maximize-active-section-with-trade-i,Maximize Active Section with Trade I,Medium,61.0%,8.2%
+3501,https://leetcode.com/problems/maximize-active-section-with-trade-ii,Maximize Active Section with Trade II,Hard,64.6%,8.2%
+3514,https://leetcode.com/problems/number-of-unique-xor-triplets-ii,Number of Unique XOR Triplets II,Medium,52.7%,8.2%
+3534,https://leetcode.com/problems/path-existence-queries-in-a-graph-ii,Path Existence Queries in a Graph II,Hard,63.7%,8.2%
+3558,https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-i,Number of Ways to Assign Edge Weights I,Medium,63.7%,8.2%
+3620,https://leetcode.com/problems/network-recovery-pathways,Network Recovery Pathways,Hard,50.5%,8.2%
+3702,https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor,Longest Subsequence With Non-Zero Bitwise XOR,Medium,55.5%,8.2%
+3756,https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii,Concatenate Non-Zero Digits and Multiply by Sum II,Medium,42.7%,8.2%
+3867,https://leetcode.com/problems/sum-of-gcd-of-formed-pairs,Sum of GCD of Formed Pairs,Medium,75.0%,8.2%

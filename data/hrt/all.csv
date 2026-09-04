@@ -7,5 +7,12 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2246,https://leetcode.com/problems/longest-path-with-different-adjacent-characters,Longest Path With Different Adjacent Characters,Hard,54.0%,97.8%
 2285,https://leetcode.com/problems/maximum-total-importance-of-roads,Maximum Total Importance of Roads,Medium,69.1%,97.8%
 2508,https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even,Add Edges to Make Degrees of All Nodes Even,Hard,35.9%,97.8%
+2257,https://leetcode.com/problems/count-unguarded-cells-in-the-grid,Count Unguarded Cells in the Grid,Medium,69.2%,97.1%
+2275,https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero,Largest Combination With Bitwise AND Greater Than Zero,Medium,80.7%,97.1%
+2772,https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero,Apply Operations to Make All Array Elements Equal to Zero,Medium,33.8%,97.1%
+3161,https://leetcode.com/problems/block-placement-queries,Block Placement Queries,Hard,41.1%,72.7%
+68,https://leetcode.com/problems/text-justification,Text Justification,Hard,52.1%,62.6%
+243,https://leetcode.com/problems/shortest-word-distance,Shortest Word Distance,Easy,66.4%,62.6%
+2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.7%,62.6%
 722,https://leetcode.com/problems/remove-comments,Remove Comments,Medium,39.4%,62.5%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,60.6%

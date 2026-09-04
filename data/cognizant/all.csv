@@ -54,3 +54,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 169,https://leetcode.com/problems/majority-element,Majority Element,Easy,66.4%,48.1%
 177,https://leetcode.com/problems/nth-highest-salary,Nth Highest Salary,Medium,39.4%,48.1%
 1741,https://leetcode.com/problems/find-total-time-spent-by-each-employee,Find Total Time Spent by Each Employee,Easy,86.4%,48.1%
+28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,47.3%,47.7%
+178,https://leetcode.com/problems/rank-scores,Rank Scores,Medium,68.7%,47.7%
+414,https://leetcode.com/problems/third-maximum-number,Third Maximum Number,Easy,40.3%,47.7%
+584,https://leetcode.com/problems/find-customer-referee,Find Customer Referee,Easy,73.5%,47.7%
+647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,73.2%,47.7%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,59.4%,47.7%
+1164,https://leetcode.com/problems/product-price-at-a-given-date,Product Price at a Given Date,Medium,58.5%,47.7%
+2785,https://leetcode.com/problems/sort-vowels-in-a-string,Sort Vowels in a String,Medium,83.5%,47.7%

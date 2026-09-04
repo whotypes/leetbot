@@ -5,3 +5,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.1%,87.5%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,83.1%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,83.1%
+295,https://leetcode.com/problems/find-median-from-data-stream,Find Median from Data Stream,Hard,55.0%,72.7%

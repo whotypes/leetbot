@@ -7,6 +7,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2559,https://leetcode.com/problems/count-vowel-strings-in-ranges,Count Vowel Strings in Ranges,Medium,67.8%,87.5%
 754,https://leetcode.com/problems/reach-a-number,Reach a Number,Medium,45.0%,86.5%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,70.8%,83.2%
+11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,60.8%,77.3%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,75.1%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,75.1%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,75.1%
@@ -18,6 +19,13 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 680,https://leetcode.com/problems/valid-palindrome-ii,Valid Palindrome II,Easy,44.2%,69.7%
 881,https://leetcode.com/problems/boats-to-save-people,Boats to Save People,Medium,61.7%,69.7%
 3627,https://leetcode.com/problems/maximum-median-sum-of-subsequences-of-size-3,Maximum Median Sum of Subsequences of Size 3,Medium,65.1%,69.7%
+14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,48.3%,66.4%
+142,https://leetcode.com/problems/linked-list-cycle-ii,Linked List Cycle II,Medium,59.1%,66.4%
+196,https://leetcode.com/problems/delete-duplicate-emails,Delete Duplicate Emails,Easy,66.7%,66.4%
+242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.6%,66.4%
+696,https://leetcode.com/problems/count-binary-substrings,Count Binary Substrings,Easy,70.6%,66.4%
+876,https://leetcode.com/problems/middle-of-the-linked-list,Middle of the Linked List,Easy,82.4%,66.4%
+2697,https://leetcode.com/problems/lexicographically-smallest-palindrome,Lexicographically Smallest Palindrome,Easy,81.8%,66.4%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.5%,62.8%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,62.8%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,38.6%,62.8%

@@ -33,6 +33,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2603,https://leetcode.com/problems/collect-coins-in-a-tree,Collect Coins in a Tree,Hard,40.0%,71.3%
 2929,https://leetcode.com/problems/distribute-candies-among-children-ii,Distribute Candies Among Children II,Medium,55.7%,71.3%
 2948,https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements,Make Lexicographically Smallest Array by Swapping Elements,Medium,60.2%,71.3%
+332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,45.0%,63.5%
+1928,https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time,Minimum Cost to Reach Destination in Time,Hard,42.4%,63.5%
+2444,https://leetcode.com/problems/count-subarrays-with-fixed-bounds,Count Subarrays With Fixed Bounds,Hard,69.2%,63.5%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,63.2%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,63.2%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.5%,63.2%
@@ -60,6 +63,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2858,https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable,Minimum Edge Reversals So Every Node Is Reachable,Hard,59.1%,63.2%
 3186,https://leetcode.com/problems/maximum-total-damage-with-spell-casting,Maximum Total Damage With Spell Casting,Medium,45.1%,63.2%
 213,https://leetcode.com/problems/house-robber-ii,House Robber II,Medium,43.7%,62.5%
+297,https://leetcode.com/problems/serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,61.1%,52.3%
+486,https://leetcode.com/problems/predict-the-winner,Predict the Winner,Medium,59.9%,52.3%
+1443,https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree,Minimum Time to Collect All Apples in a Tree,Medium,63.9%,52.3%
+1537,https://leetcode.com/problems/get-the-maximum-score,Get the Maximum Score,Hard,41.5%,52.3%
 862,https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k,Shortest Subarray with Sum at Least K,Hard,32.8%,52.0%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,51.9%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,51.9%

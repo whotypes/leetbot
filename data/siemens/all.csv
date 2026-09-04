@@ -10,6 +10,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,70.9%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,70.9%
 218,https://leetcode.com/problems/the-skyline-problem,The Skyline Problem,Hard,45.2%,70.9%
+6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,55.0%,65.1%
+162,https://leetcode.com/problems/find-peak-element,Find Peak Element,Medium,47.2%,65.1%
+344,https://leetcode.com/problems/reverse-string,Reverse String,Easy,81.3%,65.1%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,62.5%
 61,https://leetcode.com/problems/rotate-list,Rotate List,Medium,40.1%,62.5%
 179,https://leetcode.com/problems/largest-number,Largest Number,Medium,41.4%,62.5%

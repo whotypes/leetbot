@@ -20,3 +20,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 642,https://leetcode.com/problems/design-search-autocomplete-system,Design Search Autocomplete System,Hard,49.9%,71.1%
 1650,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii,Lowest Common Ancestor of a Binary Tree III,Medium,83.0%,68.2%
 443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.2%,63.8%
+133,https://leetcode.com/problems/clone-graph,Clone Graph,Medium,66.1%,63.6%
+140,https://leetcode.com/problems/word-break-ii,Word Break II,Hard,56.1%,63.6%

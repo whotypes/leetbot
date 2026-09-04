@@ -6,6 +6,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,82.0%
 394,https://leetcode.com/problems/decode-string,Decode String,Medium,62.5%,82.0%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,51.6%,70.4%
+483,https://leetcode.com/problems/smallest-good-base,Smallest Good Base,Hard,47.3%,64.5%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,61.1%
 62,https://leetcode.com/problems/unique-paths,Unique Paths,Medium,66.8%,61.1%
 171,https://leetcode.com/problems/excel-sheet-column-number,Excel Sheet Column Number,Easy,67.6%,61.1%

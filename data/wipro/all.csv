@@ -11,6 +11,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.1%,75.0%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,70.5%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.0%,70.5%
+344,https://leetcode.com/problems/reverse-string,Reverse String,Easy,81.3%,62.8%
+415,https://leetcode.com/problems/add-strings,Add Strings,Easy,52.2%,62.8%
+557,https://leetcode.com/problems/reverse-words-in-a-string-iii,Reverse Words in a String III,Easy,84.1%,62.8%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,65.0%,62.5%
 55,https://leetcode.com/problems/jump-game,Jump Game,Medium,39.6%,62.5%
 70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,53.6%,62.5%

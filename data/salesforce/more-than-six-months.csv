@@ -31,6 +31,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 740,https://leetcode.com/problems/delete-and-earn,Delete and Earn,Medium,57.2%,61.7%
 2488,https://leetcode.com/problems/count-subarrays-with-median-k,Count Subarrays With Median K,Hard,48.6%,61.7%
 2964,https://leetcode.com/problems/number-of-divisible-triplet-sums,Number of Divisible Triplet Sums,Medium,67.5%,61.7%
+3035,https://leetcode.com/problems/maximum-palindromes-after-operations,Maximum Palindromes After Operations,Medium,47.2%,58.7%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,58.3%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,58.3%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,58.3%
@@ -71,6 +72,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1552,https://leetcode.com/problems/magnetic-force-between-two-balls,Magnetic Force Between Two Balls,Medium,72.0%,49.5%
 2231,https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity,Largest Number After Digit Swaps by Parity,Easy,65.3%,49.5%
 2451,https://leetcode.com/problems/odd-string-difference,Odd String Difference,Easy,61.9%,49.5%
+207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,52.2%,49.3%
+2603,https://leetcode.com/problems/collect-coins-in-a-tree,Collect Coins in a Tree,Hard,40.0%,44.8%
+3634,https://leetcode.com/problems/minimum-removals-to-balance-array,Minimum Removals to Balance Array,Medium,47.8%,44.8%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,43.2%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,43.2%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,43.2%
@@ -222,3 +226,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 678,https://leetcode.com/problems/valid-parenthesis-string,Valid Parenthesis String,Medium,40.2%,32.5%
 1245,https://leetcode.com/problems/tree-diameter,Tree Diameter,Medium,61.3%,32.5%
 2065,https://leetcode.com/problems/maximum-path-quality-of-a-graph,Maximum Path Quality of a Graph,Hard,62.5%,32.5%
+22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,79.1%,31.2%
+312,https://leetcode.com/problems/burst-balloons,Burst Balloons,Hard,64.3%,31.2%
+934,https://leetcode.com/problems/shortest-bridge,Shortest Bridge,Medium,59.8%,31.2%
+1008,https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal,Construct Binary Search Tree from Preorder Traversal,Medium,84.6%,31.2%
+1839,https://leetcode.com/problems/longest-substring-of-all-vowels-in-order,Longest Substring Of All Vowels in Order,Medium,52.4%,31.2%
+2062,https://leetcode.com/problems/count-vowel-substrings-of-a-string,Count Vowel Substrings of a String,Easy,73.5%,31.2%
+2534,https://leetcode.com/problems/time-taken-to-cross-the-door,Time Taken to Cross the Door,Hard,50.5%,31.2%
+3366,https://leetcode.com/problems/minimum-array-sum,Minimum Array Sum,Medium,31.7%,31.2%

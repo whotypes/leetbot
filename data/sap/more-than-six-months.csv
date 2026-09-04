@@ -21,6 +21,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,60.5%,62.5%
 739,https://leetcode.com/problems/daily-temperatures,Daily Temperatures,Medium,67.5%,62.5%
 1953,https://leetcode.com/problems/maximum-number-of-weeks-for-which-you-can-work,Maximum Number of Weeks for Which You Can Work,Medium,41.4%,62.5%
+234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.7%,59.1%
+236,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree,Lowest Common Ancestor of a Binary Tree,Medium,70.1%,59.1%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,54.9%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,54.9%
 33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,44.4%,54.9%

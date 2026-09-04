@@ -1,6 +1,8 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,100.0%
 115,https://leetcode.com/problems/distinct-subsequences,Distinct Subsequences,Hard,51.8%,100.0%
+122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.6%,100.0%
+713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.9%,100.0%
 1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.7%,100.0%
 3513,https://leetcode.com/problems/number-of-unique-xor-triplets-i,Number of Unique XOR Triplets I,Medium,25.0%,100.0%
 3514,https://leetcode.com/problems/number-of-unique-xor-triplets-ii,Number of Unique XOR Triplets II,Medium,29.6%,100.0%

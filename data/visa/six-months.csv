@@ -4,6 +4,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 68,https://leetcode.com/problems/text-justification,Text Justification,Hard,50.9%,95.0%
 1861,https://leetcode.com/problems/rotating-the-box,Rotating the Box,Medium,79.1%,87.5%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,84.8%
+32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,39.6%,81.0%
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,79.6%,80.2%
 2964,https://leetcode.com/problems/number-of-divisible-triplet-sums,Number of Divisible Triplet Sums,Medium,67.5%,80.2%
 636,https://leetcode.com/problems/exclusive-time-of-functions,Exclusive Time of Functions,Medium,66.2%,79.9%
@@ -15,6 +16,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3649,https://leetcode.com/problems/number-of-perfect-pairs,Number of Perfect Pairs,Medium,33.9%,74.6%
 3651,https://leetcode.com/problems/minimum-cost-path-with-teleportations,Minimum Cost Path with Teleportations,Hard,45.6%,74.6%
 2466,https://leetcode.com/problems/count-ways-to-build-good-strings,Count Ways To Build Good Strings,Medium,58.9%,74.0%
+2434,https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string,Using a Robot to Print the Lexicographically Smallest String,Medium,62.2%,69.9%
 526,https://leetcode.com/problems/beautiful-arrangement,Beautiful Arrangement,Medium,64.8%,68.2%
 1529,https://leetcode.com/problems/minimum-suffix-flips,Minimum Suffix Flips,Medium,73.9%,68.2%
 1631,https://leetcode.com/problems/path-with-minimum-effort,Path With Minimum Effort,Medium,63.2%,68.2%

@@ -30,3 +30,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 529,https://leetcode.com/problems/minesweeper,Minesweeper,Medium,68.2%,62.5%
 694,https://leetcode.com/problems/number-of-distinct-islands,Number of Distinct Islands,Medium,62.3%,62.5%
 818,https://leetcode.com/problems/race-car,Race Car,Hard,44.2%,62.5%
+91,https://leetcode.com/problems/decode-ways,Decode Ways,Medium,38.5%,61.8%
+1145,https://leetcode.com/problems/binary-tree-coloring-game,Binary Tree Coloring Game,Medium,53.1%,61.8%

@@ -1,5 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1647,https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique,Minimum Deletions to Make Character Frequencies Unique,Medium,61.5%,100.0%
+4016,https://leetcode.com/problems/maximum-area-of-two-non-overlapping-square-submatrices,Maximum Area of Two Non-Overlapping Square Submatrices,Medium,40.8%,100.0%
 1224,https://leetcode.com/problems/maximum-equal-frequency,Maximum Equal Frequency,Hard,38.1%,97.8%
 3013,https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-ii,Divide an Array Into Subarrays With Minimum Cost II,Hard,54.7%,97.8%
 1201,https://leetcode.com/problems/ugly-number-iii,Ugly Number III,Medium,31.4%,95.5%
@@ -13,6 +14,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,82.7%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.0%,78.2%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,72.6%
+2850,https://leetcode.com/problems/minimum-moves-to-spread-stones-over-grid,Minimum Moves to Spread Stones Over Grid,Medium,46.0%,69.0%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,65.5%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,65.5%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,65.5%
@@ -26,4 +28,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 142,https://leetcode.com/problems/linked-list-cycle-ii,Linked List Cycle II,Medium,57.7%,55.5%
 189,https://leetcode.com/problems/rotate-array,Rotate Array,Medium,44.8%,55.5%
 205,https://leetcode.com/problems/isomorphic-strings,Isomorphic Strings,Easy,48.3%,55.5%
+23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,60.4%,52.8%
+56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,52.7%,52.8%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,49.2%,52.8%
+347,https://leetcode.com/problems/top-k-frequent-elements,Top K Frequent Elements,Medium,67.3%,52.8%
+1250,https://leetcode.com/problems/check-if-it-is-a-good-array,Check If It Is a Good Array,Hard,65.8%,52.8%
 1253,https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix,Reconstruct a 2-Row Binary Matrix,Medium,47.8%,50.0%

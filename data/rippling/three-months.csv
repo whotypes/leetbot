@@ -1,2 +1,6 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,100.0%
+3067,https://leetcode.com/problems/count-pairs-of-connectable-servers-in-a-weighted-tree-network,Count Pairs of Connectable Servers in a Weighted Tree Network,Medium,55.6%,94.5%
+526,https://leetcode.com/problems/beautiful-arrangement,Beautiful Arrangement,Medium,64.9%,87.5%
+1839,https://leetcode.com/problems/longest-substring-of-all-vowels-in-order,Longest Substring Of All Vowels in Order,Medium,52.4%,77.6%
+2434,https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string,Using a Robot to Print the Lexicographically Smallest String,Medium,62.2%,77.6%

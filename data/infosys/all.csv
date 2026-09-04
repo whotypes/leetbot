@@ -52,6 +52,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,79.6%,64.6%
 70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.0%,64.6%
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.0%,64.6%
+860,https://leetcode.com/problems/lemonade-change,Lemonade Change,Easy,59.4%,64.2%
+3971,https://leetcode.com/problems/maximum-total-value,Maximum Total Value,Hard,29.7%,64.2%
+3984,https://leetcode.com/problems/divisible-game,Divisible Game,Medium,42.4%,61.5%
 994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,58.5%,61.0%
 2259,https://leetcode.com/problems/remove-digit-from-number-to-maximize-result,Remove Digit From Number to Maximize Result,Easy,48.4%,61.0%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,56.7%
@@ -79,9 +82,18 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,59.3%,51.4%
 344,https://leetcode.com/problems/reverse-string,Reverse String,Easy,80.7%,51.4%
 704,https://leetcode.com/problems/binary-search,Binary Search,Easy,60.8%,51.4%
+152,https://leetcode.com/problems/maximum-product-subarray,Maximum Product Subarray,Medium,37.0%,50.8%
+403,https://leetcode.com/problems/frog-jump,Frog Jump,Hard,47.6%,50.8%
+1563,https://leetcode.com/problems/stone-game-v,Stone Game V,Hard,59.0%,50.8%
 131,https://leetcode.com/problems/palindrome-partitioning,Palindrome Partitioning,Medium,72.4%,50.0%
 268,https://leetcode.com/problems/missing-number,Missing Number,Easy,70.3%,50.0%
 540,https://leetcode.com/problems/single-element-in-a-sorted-array,Single Element in a Sorted Array,Medium,59.2%,50.0%
+91,https://leetcode.com/problems/decode-ways,Decode Ways,Medium,38.5%,45.7%
+132,https://leetcode.com/problems/palindrome-partitioning-ii,Palindrome Partitioning II,Hard,37.9%,45.7%
+329,https://leetcode.com/problems/longest-increasing-path-in-a-matrix,Longest Increasing Path in a Matrix,Hard,57.0%,45.7%
+518,https://leetcode.com/problems/coin-change-ii,Coin Change II,Medium,59.2%,45.7%
+852,https://leetcode.com/problems/peak-index-in-a-mountain-array,Peak Index in a Mountain Array,Medium,66.7%,45.7%
+2279,https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks,Maximum Bags With Full Capacity of Rocks,Medium,68.3%,45.7%
 6,https://leetcode.com/problems/zigzag-conversion,Zigzag Conversion,Medium,54.0%,44.7%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,30.8%,44.7%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,44.7%
@@ -106,6 +118,17 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 992,https://leetcode.com/problems/subarrays-with-k-different-integers,Subarrays with K Different Integers,Hard,68.0%,44.7%
 1838,https://leetcode.com/problems/frequency-of-the-most-frequent-element,Frequency of the Most Frequent Element,Medium,44.8%,44.7%
 2163,https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements,Minimum Difference in Sums After Removal of Elements,Hard,69.7%,44.7%
+16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,49.3%,39.3%
+101,https://leetcode.com/problems/symmetric-tree,Symmetric Tree,Easy,61.9%,39.3%
+123,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii,Best Time to Buy and Sell Stock III,Hard,54.7%,39.3%
+239,https://leetcode.com/problems/sliding-window-maximum,Sliding Window Maximum,Hard,49.2%,39.3%
+343,https://leetcode.com/problems/integer-break,Integer Break,Medium,62.7%,39.3%
+735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,49.0%,39.3%
+983,https://leetcode.com/problems/minimum-cost-for-tickets,Minimum Cost For Tickets,Medium,67.5%,39.3%
+1043,https://leetcode.com/problems/partition-array-for-maximum-sum,Partition Array for Maximum Sum,Medium,77.6%,39.3%
+1710,https://leetcode.com/problems/maximum-units-on-a-truck,Maximum Units on a Truck,Easy,75.2%,39.3%
+1775,https://leetcode.com/problems/equal-sum-arrays-with-minimum-number-of-operations,Equal Sum Arrays With Minimum Number of Operations,Medium,54.9%,39.3%
+1963,https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced,Minimum Number of Swaps to Make the String Balanced,Medium,78.0%,39.3%
 205,https://leetcode.com/problems/isomorphic-strings,Isomorphic Strings,Easy,47.0%,37.5%
 287,https://leetcode.com/problems/find-the-duplicate-number,Find the Duplicate Number,Medium,63.0%,37.5%
 709,https://leetcode.com/problems/to-lower-case,To Lower Case,Easy,84.2%,37.5%
@@ -195,3 +218,49 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1752,https://leetcode.com/problems/check-if-array-is-sorted-and-rotated,Check if Array Is Sorted and Rotated,Easy,57.5%,33.5%
 1768,https://leetcode.com/problems/merge-strings-alternately,Merge Strings Alternately,Easy,82.1%,33.5%
 2680,https://leetcode.com/problems/maximum-or,Maximum OR,Medium,43.3%,33.5%
+17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,66.8%,30.5%
+27,https://leetcode.com/problems/remove-element,Remove Element,Easy,62.5%,30.5%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,48.0%,30.5%
+185,https://leetcode.com/problems/department-top-three-salaries,Department Top Three Salaries,Hard,61.6%,30.5%
+188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,51.2%,30.5%
+197,https://leetcode.com/problems/rising-temperature,Rising Temperature,Easy,52.1%,30.5%
+206,https://leetcode.com/problems/reverse-linked-list,Reverse Linked List,Easy,81.0%,30.5%
+224,https://leetcode.com/problems/basic-calculator,Basic Calculator,Hard,47.2%,30.5%
+279,https://leetcode.com/problems/perfect-squares,Perfect Squares,Medium,56.9%,30.5%
+312,https://leetcode.com/problems/burst-balloons,Burst Balloons,Hard,64.3%,30.5%
+315,https://leetcode.com/problems/count-of-smaller-numbers-after-self,Count of Smaller Numbers After Self,Hard,44.0%,30.5%
+327,https://leetcode.com/problems/count-of-range-sum,Count of Range Sum,Hard,39.8%,30.5%
+354,https://leetcode.com/problems/russian-doll-envelopes,Russian Doll Envelopes,Hard,38.2%,30.5%
+396,https://leetcode.com/problems/rotate-function,Rotate Function,Medium,54.1%,30.5%
+416,https://leetcode.com/problems/partition-equal-subset-sum,Partition Equal Subset Sum,Medium,50.0%,30.5%
+453,https://leetcode.com/problems/minimum-moves-to-equal-array-elements,Minimum Moves to Equal Array Elements,Medium,59.1%,30.5%
+523,https://leetcode.com/problems/continuous-subarray-sum,Continuous Subarray Sum,Medium,31.6%,30.5%
+643,https://leetcode.com/problems/maximum-average-subarray-i,Maximum Average Subarray I,Easy,49.1%,30.5%
+689,https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,60.0%,30.5%
+713,https://leetcode.com/problems/subarray-product-less-than-k,Subarray Product Less Than K,Medium,54.9%,30.5%
+714,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee,Best Time to Buy and Sell Stock with Transaction Fee,Medium,72.6%,30.5%
+740,https://leetcode.com/problems/delete-and-earn,Delete and Earn,Medium,57.5%,30.5%
+871,https://leetcode.com/problems/minimum-number-of-refueling-stops,Minimum Number of Refueling Stops,Hard,41.9%,30.5%
+907,https://leetcode.com/problems/sum-of-subarray-minimums,Sum of Subarray Minimums,Medium,39.0%,30.5%
+1005,https://leetcode.com/problems/maximize-sum-of-array-after-k-negations,Maximize Sum Of Array After K Negations,Easy,54.3%,30.5%
+1029,https://leetcode.com/problems/two-city-scheduling,Two City Scheduling,Medium,68.9%,30.5%
+1048,https://leetcode.com/problems/longest-string-chain,Longest String Chain,Medium,63.5%,30.5%
+1049,https://leetcode.com/problems/last-stone-weight-ii,Last Stone Weight II,Medium,60.8%,30.5%
+1081,https://leetcode.com/problems/smallest-subsequence-of-distinct-characters,Smallest Subsequence of Distinct Characters,Medium,70.6%,30.5%
+1217,https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position,Minimum Cost to Move Chips to The Same Position,Easy,73.2%,30.5%
+1221,https://leetcode.com/problems/split-a-string-in-balanced-strings,Split a String in Balanced Strings,Easy,87.6%,30.5%
+1335,https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule,Minimum Difficulty of a Job Schedule,Hard,59.8%,30.5%
+1341,https://leetcode.com/problems/movie-rating,Movie Rating,Medium,44.3%,30.5%
+1388,https://leetcode.com/problems/pizza-with-3n-slices,Pizza With 3n Slices,Hard,54.4%,30.5%
+1423,https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards,Maximum Points You Can Obtain from Cards,Medium,58.3%,30.5%
+1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,58.0%,30.5%
+1510,https://leetcode.com/problems/stone-game-iv,Stone Game IV,Hard,65.2%,30.5%
+1703,https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones,Minimum Adjacent Swaps for K Consecutive Ones,Hard,42.7%,30.5%
+1749,https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray,Maximum Absolute Sum of Any Subarray,Medium,70.7%,30.5%
+1856,https://leetcode.com/problems/maximum-subarray-min-product,Maximum Subarray Min-Product,Medium,40.9%,30.5%
+2251,https://leetcode.com/problems/number-of-flowers-in-full-bloom,Number of Flowers in Full Bloom,Hard,58.1%,30.5%
+2370,https://leetcode.com/problems/longest-ideal-subsequence,Longest Ideal Subsequence,Medium,46.6%,30.5%
+2653,https://leetcode.com/problems/sliding-subarray-beauty,Sliding Subarray Beauty,Medium,37.8%,30.5%
+3471,https://leetcode.com/problems/find-the-largest-almost-missing-integer,Find the Largest Almost Missing Integer,Easy,49.3%,30.5%
+3702,https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor,Longest Subsequence With Non-Zero Bitwise XOR,Medium,55.5%,30.5%
+3987,https://leetcode.com/problems/minimum-total-cost-to-process-all-elements,Minimum Total Cost to Process All Elements,Medium,24.9%,30.5%

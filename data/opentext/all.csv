@@ -3,6 +3,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3662,https://leetcode.com/problems/filter-characters-by-frequency,Filter Characters by Frequency,Easy,86.1%,95.1%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,37.1%,75.0%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,73.6%
+560,https://leetcode.com/problems/subarray-sum-equals-k,Subarray Sum Equals K,Medium,48.1%,67.3%
+1652,https://leetcode.com/problems/defuse-the-bomb,Defuse the Bomb,Easy,79.5%,67.3%
+1823,https://leetcode.com/problems/find-the-winner-of-the-circular-game,Find the Winner of the Circular Game,Medium,82.3%,67.3%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,64.7%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,64.7%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,55.4%,62.5%

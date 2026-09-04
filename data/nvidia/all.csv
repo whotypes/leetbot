@@ -173,6 +173,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,37.3%
 445,https://leetcode.com/problems/add-two-numbers-ii,Add Two Numbers II,Medium,62.6%,37.1%
 863,https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree,All Nodes Distance K in Binary Tree,Medium,67.6%,37.1%
+17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,66.8%,37.0%
+41,https://leetcode.com/problems/first-missing-positive,First Missing Positive,Hard,43.7%,37.0%
+398,https://leetcode.com/problems/random-pick-index,Random Pick Index,Medium,65.2%,37.0%
+428,https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree,Serialize and Deserialize N-ary Tree,Hard,69.0%,37.0%
+692,https://leetcode.com/problems/top-k-frequent-words,Top K Frequent Words,Medium,60.6%,37.0%
 622,https://leetcode.com/problems/design-circular-queue,Design Circular Queue,Medium,54.9%,36.9%
 743,https://leetcode.com/problems/network-delay-time,Network Delay Time,Medium,60.8%,36.9%
 930,https://leetcode.com/problems/binary-subarrays-with-sum,Binary Subarrays With Sum,Medium,69.2%,36.9%

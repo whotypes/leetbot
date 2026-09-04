@@ -39,3 +39,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 141,https://leetcode.com/problems/linked-list-cycle,Linked List Cycle,Easy,54.6%,55.6%
 332,https://leetcode.com/problems/reconstruct-itinerary,Reconstruct Itinerary,Hard,44.7%,55.6%
 359,https://leetcode.com/problems/logger-rate-limiter,Logger Rate Limiter,Easy,76.9%,55.6%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,38.6%,55.2%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.5%,55.2%

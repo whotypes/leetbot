@@ -46,10 +46,13 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3200,https://leetcode.com/problems/maximum-height-of-a-triangle,Maximum Height of a Triangle,Easy,44.3%,61.5%
 3540,https://leetcode.com/problems/minimum-time-to-visit-all-houses,Minimum Time to Visit All Houses,Medium,69.1%,61.5%
 740,https://leetcode.com/problems/delete-and-earn,Delete and Earn,Medium,57.2%,59.4%
+761,https://leetcode.com/problems/special-binary-string,Special Binary String,Hard,79.4%,57.5%
+1309,https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping,Decrypt String from Alphabet to Integer Mapping,Easy,80.7%,57.5%
 124,https://leetcode.com/problems/binary-tree-maximum-path-sum,Binary Tree Maximum Path Sum,Hard,42.2%,56.9%
 1143,https://leetcode.com/problems/longest-common-subsequence,Longest Common Subsequence,Medium,59.1%,56.9%
 1268,https://leetcode.com/problems/search-suggestions-system,Search Suggestions System,Medium,65.2%,56.9%
 3313,https://leetcode.com/problems/find-the-last-marked-nodes-in-tree,Find the Last Marked Nodes in Tree,Hard,56.3%,56.9%
+855,https://leetcode.com/problems/exam-room,Exam Room,Medium,43.8%,55.1%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,54.2%
 25,https://leetcode.com/problems/reverse-nodes-in-k-group,Reverse Nodes in k-Group,Hard,65.9%,54.2%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,54.2%
@@ -255,3 +258,17 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1962,https://leetcode.com/problems/remove-stones-to-minimize-the-total,Remove Stones to Minimize the Total,Medium,65.8%,28.2%
 2366,https://leetcode.com/problems/minimum-replacements-to-sort-the-array,Minimum Replacements to Sort the Array,Hard,53.1%,28.2%
 2858,https://leetcode.com/problems/minimum-edge-reversals-so-every-node-is-reachable,Minimum Edge Reversals So Every Node Is Reachable,Hard,59.8%,28.2%
+40,https://leetcode.com/problems/combination-sum-ii,Combination Sum II,Medium,60.1%,27.7%
+45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,43.4%,27.7%
+109,https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree,Convert Sorted List to Binary Search Tree,Medium,67.3%,27.7%
+128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.2%,27.7%
+131,https://leetcode.com/problems/palindrome-partitioning,Palindrome Partitioning,Medium,74.6%,27.7%
+567,https://leetcode.com/problems/permutation-in-string,Permutation in String,Medium,49.7%,27.7%
+904,https://leetcode.com/problems/fruit-into-baskets,Fruit Into Baskets,Medium,52.4%,27.7%
+1008,https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal,Construct Binary Search Tree from Preorder Traversal,Medium,84.6%,27.7%
+1344,https://leetcode.com/problems/angle-between-hands-of-a-clock,Angle Between Hands of a Clock,Medium,69.9%,27.7%
+1353,https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended,Maximum Number of Events That Can Be Attended,Medium,39.1%,27.7%
+2204,https://leetcode.com/problems/distance-to-a-cycle-in-undirected-graph,Distance to a Cycle in Undirected Graph,Hard,73.4%,27.7%
+2385,https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected,Amount of Time for Binary Tree to Be Infected,Medium,66.0%,27.7%
+2551,https://leetcode.com/problems/put-marbles-in-bags,Put Marbles in Bags,Hard,72.0%,27.7%
+2718,https://leetcode.com/problems/sum-of-matrix-after-queries,Sum of Matrix After Queries,Medium,32.5%,27.7%

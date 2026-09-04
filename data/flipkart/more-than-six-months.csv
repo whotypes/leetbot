@@ -49,6 +49,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2952,https://leetcode.com/problems/minimum-number-of-coins-to-be-added,Minimum Number of Coins to be Added,Medium,58.1%,65.4%
 124,https://leetcode.com/problems/binary-tree-maximum-path-sum,Binary Tree Maximum Path Sum,Hard,41.3%,62.5%
 719,https://leetcode.com/problems/find-k-th-smallest-pair-distance,Find K-th Smallest Pair Distance,Hard,45.8%,62.5%
+417,https://leetcode.com/problems/pacific-atlantic-water-flow,Pacific Atlantic Water Flow,Medium,61.4%,61.4%
 16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,48.4%,53.9%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,53.9%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,68.2%,53.9%
@@ -108,6 +109,9 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 503,https://leetcode.com/problems/next-greater-element-ii,Next Greater Element II,Medium,68.6%,51.5%
 543,https://leetcode.com/problems/diameter-of-binary-tree,Diameter of Binary Tree,Easy,65.7%,51.5%
 677,https://leetcode.com/problems/map-sum-pairs,Map Sum Pairs,Medium,57.2%,51.5%
+5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,38.6%,50.9%
+54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,57.8%,50.9%
+138,https://leetcode.com/problems/copy-list-with-random-pointer,Copy List with Random Pointer,Medium,63.6%,50.9%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,50.0%
 26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,60.5%,50.0%
 45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,41.6%,50.0%

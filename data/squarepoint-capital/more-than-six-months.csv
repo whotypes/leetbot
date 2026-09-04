@@ -6,6 +6,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,77.8%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,47.2%,77.8%
 224,https://leetcode.com/problems/basic-calculator,Basic Calculator,Hard,46.8%,77.8%
+42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,68.1%,77.6%
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.1%,75.0%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,46.7%,75.0%
 992,https://leetcode.com/problems/subarrays-with-k-different-integers,Subarrays with K Different Integers,Hard,66.1%,75.0%
@@ -23,3 +24,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1605,https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums,Find Valid Matrix Given Row and Column Sums,Medium,82.6%,61.1%
 2918,https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros,Minimum Equal Sum of Two Arrays After Replacing Zeros,Medium,50.2%,61.1%
 765,https://leetcode.com/problems/couples-holding-hands,Couples Holding Hands,Hard,59.5%,61.0%
+1326,https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden,Minimum Number of Taps to Open to Water a Garden,Hard,51.1%,60.7%
+1824,https://leetcode.com/problems/minimum-sideway-jumps,Minimum Sideway Jumps,Medium,52.0%,60.7%

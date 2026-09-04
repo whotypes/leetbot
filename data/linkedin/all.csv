@@ -131,6 +131,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1386,https://leetcode.com/problems/cinema-seat-allocation,Cinema Seat Allocation,Medium,44.4%,30.8%
 1882,https://leetcode.com/problems/process-tasks-using-servers,Process Tasks Using Servers,Medium,41.9%,30.8%
 2964,https://leetcode.com/problems/number-of-divisible-triplet-sums,Number of Divisible Triplet Sums,Medium,67.5%,30.8%
+3367,https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals,Maximize Sum of Weights after Edge Removals,Hard,31.9%,27.0%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,25.8%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,25.8%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,64.4%,25.8%
@@ -165,6 +166,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.4%,25.0%
 1974,https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter,Minimum Time to Type Word Using Special Typewriter,Easy,77.8%,25.0%
 2034,https://leetcode.com/problems/stock-price-fluctuation,Stock Price Fluctuation,Medium,48.2%,25.0%
+234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.7%,20.1%
+1297,https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring,Maximum Number of Occurrences of a Substring,Medium,54.9%,20.1%
 863,https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree,All Nodes Distance K in Binary Tree,Medium,67.8%,19.3%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,19.0%
 18,https://leetcode.com/problems/4sum,4Sum,Medium,40.5%,19.0%

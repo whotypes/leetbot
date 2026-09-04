@@ -21,6 +21,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 365,https://leetcode.com/problems/water-and-jug-problem,Water and Jug Problem,Medium,45.4%,49.8%
 1298,https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes,Maximum Candies You Can Get from Boxes,Hard,67.7%,49.8%
 1620,https://leetcode.com/problems/coordinate-with-maximum-network-quality,Coordinate With Maximum Network Quality,Medium,39.5%,49.8%
+98,https://leetcode.com/problems/validate-binary-search-tree,Validate Binary Search Tree,Medium,36.3%,42.6%
 2101,https://leetcode.com/problems/detonate-the-maximum-bombs,Detonate the Maximum Bombs,Medium,50.1%,42.2%
 208,https://leetcode.com/problems/implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,69.4%,42.1%
 253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.6%,42.1%

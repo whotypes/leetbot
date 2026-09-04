@@ -1,6 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,100.0%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.5%,94.2%
+283,https://leetcode.com/problems/move-zeroes,Move Zeroes,Easy,64.3%,94.1%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,44.0%,87.5%
 125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,51.2%,87.5%
 176,https://leetcode.com/problems/second-highest-salary,Second Highest Salary,Medium,44.1%,87.5%
@@ -13,3 +14,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1741,https://leetcode.com/problems/find-total-time-spent-by-each-employee,Find Total Time Spent by Each Employee,Easy,86.4%,76.9%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,76.1%
 175,https://leetcode.com/problems/combine-two-tables,Combine Two Tables,Easy,79.5%,76.1%
+28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,47.3%,75.7%
+178,https://leetcode.com/problems/rank-scores,Rank Scores,Medium,68.7%,75.7%
+584,https://leetcode.com/problems/find-customer-referee,Find Customer Referee,Easy,73.5%,75.7%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,59.4%,75.7%

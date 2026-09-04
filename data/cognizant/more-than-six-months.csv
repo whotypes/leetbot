@@ -15,6 +15,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.0%,67.4%
 1068,https://leetcode.com/problems/product-sales-analysis-i,Product Sales Analysis I,Easy,85.7%,67.4%
 1148,https://leetcode.com/problems/article-views-i,Article Views I,Easy,76.7%,67.4%
+169,https://leetcode.com/problems/majority-element,Majority Element,Easy,66.5%,64.0%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,62.5%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,42.4%,62.5%
 21,https://leetcode.com/problems/merge-two-sorted-lists,Merge Two Sorted Lists,Easy,67.0%,62.5%
@@ -48,3 +49,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1200,https://leetcode.com/problems/minimum-absolute-difference,Minimum Absolute Difference,Easy,75.1%,56.9%
 175,https://leetcode.com/problems/combine-two-tables,Combine Two Tables,Easy,79.7%,55.2%
 443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.2%,55.2%
+31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,46.1%,54.1%
+1164,https://leetcode.com/problems/product-price-at-a-given-date,Product Price at a Given Date,Medium,58.5%,54.1%

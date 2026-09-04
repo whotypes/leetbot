@@ -14,6 +14,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 739,https://leetcode.com/problems/daily-temperatures,Daily Temperatures,Medium,68.6%,75.0%
 1487,https://leetcode.com/problems/making-file-names-unique,Making File Names Unique,Medium,38.6%,75.0%
 1554,https://leetcode.com/problems/strings-differ-by-one-character,Strings Differ by One Character,Medium,39.9%,75.0%
+875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.5%,71.4%
 49,https://leetcode.com/problems/group-anagrams,Group Anagrams,Medium,72.6%,71.2%
 126,https://leetcode.com/problems/word-ladder-ii,Word Ladder II,Hard,27.7%,71.2%
 1190,https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses,Reverse Substrings Between Each Pair of Parentheses,Medium,72.0%,71.2%

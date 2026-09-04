@@ -21,6 +21,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 300,https://leetcode.com/problems/longest-increasing-subsequence,Longest Increasing Subsequence,Medium,59.3%,71.9%
 827,https://leetcode.com/problems/making-a-large-island,Making A Large Island,Hard,56.5%,71.9%
 1462,https://leetcode.com/problems/course-schedule-iv,Course Schedule IV,Medium,59.8%,71.9%
+340,https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters,Longest Substring with At Most K Distinct Characters,Medium,50.1%,67.2%
+3161,https://leetcode.com/problems/block-placement-queries,Block Placement Queries,Hard,41.1%,67.2%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,64.6%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,64.6%
 32,https://leetcode.com/problems/longest-valid-parentheses,Longest Valid Parentheses,Hard,38.6%,64.6%
@@ -49,6 +51,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1293,https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination,Shortest Path in a Grid with Obstacles Elimination,Hard,45.7%,62.5%
 134,https://leetcode.com/problems/gas-station,Gas Station,Medium,48.2%,61.4%
 437,https://leetcode.com/problems/path-sum-iii,Path Sum III,Medium,46.5%,61.4%
+1834,https://leetcode.com/problems/single-threaded-cpu,Single-Threaded CPU,Medium,48.1%,57.1%
 438,https://leetcode.com/problems/find-all-anagrams-in-a-string,Find All Anagrams in a String,Medium,53.8%,55.5%
 706,https://leetcode.com/problems/design-hashmap,Design HashMap,Easy,66.6%,55.5%
 904,https://leetcode.com/problems/fruit-into-baskets,Fruit Into Baskets,Medium,51.1%,55.5%

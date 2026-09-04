@@ -17,3 +17,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1242,https://leetcode.com/problems/web-crawler-multithreaded,Web Crawler Multithreaded,Medium,51.2%,50.0%
 2373,https://leetcode.com/problems/largest-local-values-in-a-matrix,Largest Local Values in a Matrix,Easy,87.7%,50.0%
 3484,https://leetcode.com/problems/design-spreadsheet,Design Spreadsheet,Medium,74.2%,50.0%
+146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,48.0%,49.1%

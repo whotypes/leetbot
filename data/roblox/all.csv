@@ -66,3 +66,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,59.8%,37.5%
 2038,https://leetcode.com/problems/remove-colored-pieces-if-both-neighbors-are-the-same-color,Remove Colored Pieces if Both Neighbors are the Same Color,Medium,62.9%,37.5%
 2625,https://leetcode.com/problems/flatten-deeply-nested-array,Flatten Deeply Nested Array,Medium,64.6%,37.5%
+435,https://leetcode.com/problems/non-overlapping-intervals,Non-overlapping Intervals,Medium,57.7%,37.2%
+796,https://leetcode.com/problems/rotate-string,Rotate String,Easy,66.6%,37.2%
+3078,https://leetcode.com/problems/match-alphanumerical-pattern-in-matrix-i,Match Alphanumerical Pattern in Matrix I,Medium,64.6%,37.2%

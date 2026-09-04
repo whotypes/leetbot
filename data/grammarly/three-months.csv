@@ -11,3 +11,4 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 966,https://leetcode.com/problems/vowel-spellchecker,Vowel Spellchecker,Medium,61.4%,82.6%
 1047,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string,Remove All Adjacent Duplicates In String,Easy,73.1%,82.6%
 2054,https://leetcode.com/problems/two-best-non-overlapping-events,Two Best Non-Overlapping Events,Medium,64.0%,82.6%
+79,https://leetcode.com/problems/word-search,Word Search,Medium,48.1%,69.7%

@@ -9,6 +9,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 44,https://leetcode.com/problems/wildcard-matching,Wildcard Matching,Hard,30.1%,62.5%
 726,https://leetcode.com/problems/number-of-atoms,Number of Atoms,Hard,65.0%,62.5%
 2488,https://leetcode.com/problems/count-subarrays-with-median-k,Count Subarrays With Median K,Hard,45.7%,62.5%
+765,https://leetcode.com/problems/couples-holding-hands,Couples Holding Hands,Hard,59.7%,62.0%
 2604,https://leetcode.com/problems/minimum-time-to-eat-all-grains,Minimum Time to Eat All Grains,Hard,40.7%,58.4%
 2622,https://leetcode.com/problems/cache-with-time-limit,Cache With Time Limit,Medium,76.1%,58.4%
 2627,https://leetcode.com/problems/debounce,Debounce,Medium,91.7%,58.4%

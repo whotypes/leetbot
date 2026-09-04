@@ -11,3 +11,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 344,https://leetcode.com/problems/reverse-string,Reverse String,Easy,80.7%,69.0%
 125,https://leetcode.com/problems/valid-palindrome,Valid Palindrome,Easy,53.6%,66.3%
 268,https://leetcode.com/problems/missing-number,Missing Number,Easy,72.2%,66.3%
+9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,60.9%,65.8%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.8%,65.8%
+151,https://leetcode.com/problems/reverse-words-in-a-string,Reverse Words in a String,Medium,57.7%,65.8%
+647,https://leetcode.com/problems/palindromic-substrings,Palindromic Substrings,Medium,73.2%,65.8%

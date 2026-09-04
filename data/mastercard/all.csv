@@ -1,6 +1,7 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,100.0%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,100.0%
+664,https://leetcode.com/problems/strange-printer,Strange Printer,Hard,61.0%,100.0%
 51,https://leetcode.com/problems/n-queens,N-Queens,Hard,75.9%,86.3%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,86.2%
 322,https://leetcode.com/problems/coin-change,Coin Change,Medium,48.3%,86.2%
@@ -12,5 +13,6 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 242,https://leetcode.com/problems/valid-anagram,Valid Anagram,Easy,68.0%,75.3%
 518,https://leetcode.com/problems/coin-change-ii,Coin Change II,Medium,60.1%,75.3%
 48,https://leetcode.com/problems/rotate-image,Rotate Image,Medium,78.1%,75.0%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.8%,75.0%
 78,https://leetcode.com/problems/subsets,Subsets,Medium,81.0%,75.0%
 135,https://leetcode.com/problems/candy,Candy,Hard,46.9%,75.0%

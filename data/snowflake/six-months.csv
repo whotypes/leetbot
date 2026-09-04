@@ -47,6 +47,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 687,https://leetcode.com/problems/longest-univalue-path,Longest Univalue Path,Medium,42.7%,62.5%
 1233,https://leetcode.com/problems/remove-sub-folders-from-the-filesystem,Remove Sub-Folders from the Filesystem,Medium,75.8%,62.5%
 2851,https://leetcode.com/problems/string-transformation,String Transformation,Hard,25.5%,62.5%
+427,https://leetcode.com/problems/construct-quad-tree,Construct Quad Tree,Medium,78.6%,59.3%
+2265,https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree,Count Nodes Equal to Average of Subtree,Medium,86.8%,59.3%
 10,https://leetcode.com/problems/regular-expression-matching,Regular Expression Matching,Hard,29.4%,50.0%
 52,https://leetcode.com/problems/n-queens-ii,N-Queens II,Hard,76.9%,50.0%
 116,https://leetcode.com/problems/populating-next-right-pointers-in-each-node,Populating Next Right Pointers in Each Node,Medium,65.6%,50.0%

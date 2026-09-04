@@ -142,13 +142,21 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3034,https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i,Number of Subarrays That Match a Pattern I,Medium,68.5%,39.0%
 3433,https://leetcode.com/problems/count-mentions-per-user,Count Mentions Per User,Medium,50.8%,39.0%
 3652,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-using-strategy,Best Time to Buy and Sell Stock using Strategy,Medium,59.8%,39.0%
+55,https://leetcode.com/problems/jump-game,Jump Game,Medium,41.5%,38.9%
+188,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv,Best Time to Buy and Sell Stock IV,Hard,51.2%,38.9%
+443,https://leetcode.com/problems/string-compression,String Compression,Medium,60.7%,38.9%
 526,https://leetcode.com/problems/beautiful-arrangement,Beautiful Arrangement,Medium,64.8%,38.9%
+1004,https://leetcode.com/problems/max-consecutive-ones-iii,Max Consecutive Ones III,Medium,68.4%,38.9%
 1011,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days,Capacity To Ship Packages Within D Days,Medium,73.9%,38.9%
 1529,https://leetcode.com/problems/minimum-suffix-flips,Minimum Suffix Flips,Medium,73.9%,38.9%
 1631,https://leetcode.com/problems/path-with-minimum-effort,Path With Minimum Effort,Medium,63.2%,38.9%
 1696,https://leetcode.com/problems/jump-game-vi,Jump Game VI,Medium,46.4%,38.9%
+1930,https://leetcode.com/problems/unique-length-3-palindromic-subsequences,Unique Length-3 Palindromic Subsequences,Medium,73.8%,38.9%
+2434,https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string,Using a Robot to Print the Lexicographically Smallest String,Medium,62.2%,38.9%
 2484,https://leetcode.com/problems/count-palindromic-subsequences,Count Palindromic Subsequences,Hard,41.2%,38.9%
+2537,https://leetcode.com/problems/count-the-number-of-good-subarrays,Count the Number of Good Subarrays,Medium,65.7%,38.9%
 3035,https://leetcode.com/problems/maximum-palindromes-after-operations,Maximum Palindromes After Operations,Medium,46.5%,38.9%
+3069,https://leetcode.com/problems/distribute-elements-into-two-arrays-i,Distribute Elements Into Two Arrays I,Easy,83.7%,38.9%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,59.3%,37.5%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,68.8%,37.5%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,62.4%,37.5%

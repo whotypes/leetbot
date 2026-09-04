@@ -69,6 +69,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1209,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii,Remove All Adjacent Duplicates in String II,Medium,61.2%,48.4%
 1251,https://leetcode.com/problems/average-selling-price,Average Selling Price,Easy,37.3%,48.4%
 2062,https://leetcode.com/problems/count-vowel-substrings-of-a-string,Count Vowel Substrings of a String,Easy,73.1%,48.4%
+74,https://leetcode.com/problems/search-a-2d-matrix,Search a 2D Matrix,Medium,54.4%,40.3%
+169,https://leetcode.com/problems/majority-element,Majority Element,Easy,66.5%,40.3%
+394,https://leetcode.com/problems/decode-string,Decode String,Medium,63.2%,40.3%
+1319,https://leetcode.com/problems/number-of-operations-to-make-network-connected,Number of Operations to Make Network Connected,Medium,67.2%,40.3%
 28,https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string,Find the Index of the First Occurrence in a String,Easy,46.8%,40.1%
 435,https://leetcode.com/problems/non-overlapping-intervals,Non-overlapping Intervals,Medium,57.3%,40.1%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,39.3%

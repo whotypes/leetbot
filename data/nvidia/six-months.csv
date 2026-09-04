@@ -11,6 +11,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,84.5%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,84.5%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,84.5%
+1328,https://leetcode.com/problems/break-a-palindrome,Break a Palindrome,Medium,51.6%,78.8%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,76.6%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.4%,76.6%
 75,https://leetcode.com/problems/sort-colors,Sort Colors,Medium,69.5%,76.6%

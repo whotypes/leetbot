@@ -178,4 +178,10 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2560,https://leetcode.com/problems/house-robber-iv,House Robber IV,Medium,64.7%,23.0%
 3113,https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum,Find the Number of Subarrays Where Boundary Elements Are Maximum,Hard,33.2%,23.0%
 128,https://leetcode.com/problems/longest-consecutive-sequence,Longest Consecutive Sequence,Medium,47.1%,22.8%
+84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,50.8%,22.7%
+153,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array,Find Minimum in Rotated Sorted Array,Medium,55.3%,22.7%
+234,https://leetcode.com/problems/palindrome-linked-list,Palindrome Linked List,Easy,58.7%,22.7%
+490,https://leetcode.com/problems/the-maze,The Maze,Medium,60.5%,22.7%
+752,https://leetcode.com/problems/open-the-lock,Open the Lock,Medium,61.5%,22.7%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,59.4%,22.7%
 296,https://leetcode.com/problems/best-meeting-point,Best Meeting Point,Hard,61.5%,22.5%

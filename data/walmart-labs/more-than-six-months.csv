@@ -146,6 +146,18 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3005,https://leetcode.com/problems/count-elements-with-maximum-frequency,Count Elements With Maximum Frequency,Easy,79.8%,45.7%
 3090,https://leetcode.com/problems/maximum-length-substring-with-two-occurrences,Maximum Length Substring With Two Occurrences,Easy,65.4%,45.7%
 3179,https://leetcode.com/problems/find-the-n-th-value-after-k-seconds,Find the N-th Value After K Seconds,Medium,53.9%,45.7%
+17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,66.8%,44.8%
+26,https://leetcode.com/problems/remove-duplicates-from-sorted-array,Remove Duplicates from Sorted Array,Easy,63.7%,44.8%
+70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.3%,44.8%
+314,https://leetcode.com/problems/binary-tree-vertical-order-traversal,Binary Tree Vertical Order Traversal,Medium,57.9%,44.8%
+550,https://leetcode.com/problems/game-play-analysis-iv,Game Play Analysis IV,Medium,42.3%,44.8%
+621,https://leetcode.com/problems/task-scheduler,Task Scheduler,Medium,63.8%,44.8%
+815,https://leetcode.com/problems/bus-routes,Bus Routes,Hard,47.5%,44.8%
+987,https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree,Vertical Order Traversal of a Binary Tree,Hard,54.6%,44.8%
+1041,https://leetcode.com/problems/robot-bounded-in-circle,Robot Bounded In Circle,Medium,56.6%,44.8%
+1192,https://leetcode.com/problems/critical-connections-in-a-network,Critical Connections in a Network,Hard,60.5%,44.8%
+1642,https://leetcode.com/problems/furthest-building-you-can-reach,Furthest Building You Can Reach,Medium,51.1%,44.8%
+1926,https://leetcode.com/problems/nearest-exit-from-entrance-in-maze,Nearest Exit from Entrance in Maze,Medium,49.1%,44.8%
 395,https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters,Longest Substring with At Least K Repeating Characters,Medium,46.3%,44.3%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,46.4%,37.5%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,59.3%,37.5%

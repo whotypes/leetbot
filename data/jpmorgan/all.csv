@@ -44,6 +44,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1974,https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter,Minimum Time to Type Word Using Special Typewriter,Easy,78.6%,56.9%
 3147,https://leetcode.com/problems/taking-maximum-energy-from-the-mystic-dungeon,Taking Maximum Energy From the Mystic Dungeon,Medium,61.0%,56.9%
 2895,https://leetcode.com/problems/minimum-processing-time,Minimum Processing Time,Medium,70.5%,55.8%
+33,https://leetcode.com/problems/search-in-rotated-sorted-array,Search in Rotated Sorted Array,Medium,45.6%,54.1%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,50.4%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,50.4%
 115,https://leetcode.com/problems/distinct-subsequences,Distinct Subsequences,Hard,51.8%,50.4%
@@ -58,6 +59,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 509,https://leetcode.com/problems/fibonacci-number,Fibonacci Number,Easy,73.1%,50.0%
 739,https://leetcode.com/problems/daily-temperatures,Daily Temperatures,Medium,67.5%,50.0%
 2448,https://leetcode.com/problems/minimum-cost-to-make-array-equal,Minimum Cost to Make Array Equal,Hard,46.4%,50.0%
+15,https://leetcode.com/problems/3sum,3Sum,Medium,39.8%,47.7%
+2231,https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity,Largest Number After Digit Swaps by Parity,Easy,65.7%,47.7%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,41.4%
 11,https://leetcode.com/problems/container-with-most-water,Container With Most Water,Medium,59.9%,41.4%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,41.4%
@@ -89,6 +92,22 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 3159,https://leetcode.com/problems/find-occurrences-of-an-element-in-an-array,Find Occurrences of an Element in an Array,Medium,73.3%,41.4%
 912,https://leetcode.com/problems/sort-an-array,Sort an Array,Medium,55.9%,41.0%
 88,https://leetcode.com/problems/merge-sorted-array,Merge Sorted Array,Easy,55.1%,40.5%
+16,https://leetcode.com/problems/3sum-closest,3Sum Closest,Medium,49.3%,38.8%
+35,https://leetcode.com/problems/search-insert-position,Search Insert Position,Easy,52.2%,38.8%
+45,https://leetcode.com/problems/jump-game-ii,Jump Game II,Medium,43.4%,38.8%
+55,https://leetcode.com/problems/jump-game,Jump Game,Medium,41.5%,38.8%
+72,https://leetcode.com/problems/edit-distance,Edit Distance,Medium,61.2%,38.8%
+143,https://leetcode.com/problems/reorder-list,Reorder List,Medium,66.2%,38.8%
+252,https://leetcode.com/problems/meeting-rooms,Meeting Rooms,Easy,59.6%,38.8%
+424,https://leetcode.com/problems/longest-repeating-character-replacement,Longest Repeating Character Replacement,Medium,60.6%,38.8%
+516,https://leetcode.com/problems/longest-palindromic-subsequence,Longest Palindromic Subsequence,Medium,65.9%,38.8%
+540,https://leetcode.com/problems/single-element-in-a-sorted-array,Single Element in a Sorted Array,Medium,59.4%,38.8%
+724,https://leetcode.com/problems/find-pivot-index,Find Pivot Index,Easy,63.7%,38.8%
+735,https://leetcode.com/problems/asteroid-collision,Asteroid Collision,Medium,49.0%,38.8%
+994,https://leetcode.com/problems/rotting-oranges,Rotting Oranges,Medium,59.4%,38.8%
+1047,https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string,Remove All Adjacent Duplicates In String,Easy,74.0%,38.8%
+1834,https://leetcode.com/problems/single-threaded-cpu,Single-Threaded CPU,Medium,48.1%,38.8%
+2914,https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful,Minimum Number of Changes to Make Binary String Beautiful,Medium,76.3%,38.8%
 9,https://leetcode.com/problems/palindrome-number,Palindrome Number,Easy,59.3%,37.5%
 12,https://leetcode.com/problems/integer-to-roman,Integer to Roman,Medium,68.8%,37.5%
 17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,64.0%,37.5%

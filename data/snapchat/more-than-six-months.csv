@@ -119,3 +119,5 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 752,https://leetcode.com/problems/open-the-lock,Open the Lock,Medium,61.4%,51.8%
 875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,50.2%,51.8%
 2258,https://leetcode.com/problems/escape-the-spreading-fire,Escape the Spreading Fire,Hard,38.5%,51.8%
+886,https://leetcode.com/problems/possible-bipartition,Possible Bipartition,Medium,53.0%,49.2%
+947,https://leetcode.com/problems/most-stones-removed-with-same-row-or-column,Most Stones Removed with Same Row or Column,Medium,63.4%,49.2%

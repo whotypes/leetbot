@@ -32,6 +32,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 256,https://leetcode.com/problems/paint-house,Paint House,Medium,64.4%,58.3%
 528,https://leetcode.com/problems/random-pick-with-weight,Random Pick with Weight,Medium,49.0%,58.3%
 636,https://leetcode.com/problems/exclusive-time-of-functions,Exclusive Time of Functions,Medium,66.2%,58.3%
+1297,https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring,Maximum Number of Occurrences of a Substring,Medium,54.9%,56.9%
+3367,https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals,Maximize Sum of Weights after Edge Removals,Hard,31.9%,56.9%
 34,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array,Find First and Last Position of Element in Sorted Array,Medium,48.7%,53.7%
 46,https://leetcode.com/problems/permutations,Permutations,Medium,81.8%,53.7%
 460,https://leetcode.com/problems/lfu-cache,LFU Cache,Hard,49.0%,53.7%

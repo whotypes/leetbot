@@ -12,11 +12,13 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 68,https://leetcode.com/problems/text-justification,Text Justification,Hard,50.9%,87.0%
 2232,https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression,Minimize Result by Adding Parentheses to Expression,Medium,68.3%,82.2%
 2502,https://leetcode.com/problems/design-memory-allocator,Design Memory Allocator,Medium,50.1%,82.1%
+2237,https://leetcode.com/problems/count-positions-on-street-with-required-brightness,Count Positions on Street With Required Brightness,Medium,62.5%,76.7%
 2043,https://leetcode.com/problems/simple-bank-system,Simple Bank System,Medium,69.7%,75.7%
 56,https://leetcode.com/problems/merge-intervals,Merge Intervals,Medium,49.5%,75.0%
 84,https://leetcode.com/problems/largest-rectangle-in-histogram,Largest Rectangle in Histogram,Hard,47.6%,75.0%
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,45.4%,75.0%
 2672,https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color,Number of Adjacent Elements With the Same Color,Medium,56.1%,75.0%
+3208,https://leetcode.com/problems/alternating-groups-ii,Alternating Groups II,Medium,60.0%,70.7%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.6%,66.8%
 723,https://leetcode.com/problems/candy-crush,Candy Crush,Medium,77.4%,66.8%
 896,https://leetcode.com/problems/monotonic-array,Monotonic Array,Easy,62.3%,66.8%

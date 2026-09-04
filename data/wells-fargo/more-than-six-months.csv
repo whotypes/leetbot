@@ -1,12 +1,14 @@
 ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1307,https://leetcode.com/problems/verbal-arithmetic-puzzle,Verbal Arithmetic Puzzle,Hard,34.8%,100.0%
 2812,https://leetcode.com/problems/find-the-safest-path-in-a-grid,Find the Safest Path in a Grid,Medium,48.4%,87.5%
+696,https://leetcode.com/problems/count-binary-substrings,Count Binary Substrings,Easy,70.6%,85.7%
 796,https://leetcode.com/problems/rotate-string,Rotate String,Easy,65.4%,81.6%
 2892,https://leetcode.com/problems/minimizing-array-after-replacing-pairs-with-their-product,Minimizing Array After Replacing Pairs With Their Product,Medium,40.7%,81.6%
 2904,https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string,Shortest and Lexicographically Smallest Beautiful String,Medium,41.0%,81.6%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,37.2%,75.0%
 38,https://leetcode.com/problems/count-and-say,Count and Say,Medium,60.7%,75.0%
 122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,69.6%,75.0%
+93,https://leetcode.com/problems/restore-ip-addresses,Restore IP Addresses,Medium,57.0%,74.4%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,70.9%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,70.9%
 53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.2%,70.9%

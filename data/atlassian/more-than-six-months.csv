@@ -51,6 +51,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1268,https://leetcode.com/problems/search-suggestions-system,Search Suggestions System,Medium,65.1%,37.5%
 2065,https://leetcode.com/problems/maximum-path-quality-of-a-graph,Maximum Path Quality of a Graph,Hard,59.8%,37.5%
 2235,https://leetcode.com/problems/add-two-integers,Add Two Integers,Easy,88.1%,37.5%
+235,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree,Lowest Common Ancestor of a Binary Search Tree,Medium,71.3%,34.5%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,33.5%
 3,https://leetcode.com/problems/longest-substring-without-repeating-characters,Longest Substring Without Repeating Characters,Medium,38.9%,33.5%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.1%,33.5%

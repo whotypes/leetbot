@@ -6,12 +6,15 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 875,https://leetcode.com/problems/koko-eating-bananas,Koko Eating Bananas,Medium,49.9%,84.4%
 682,https://leetcode.com/problems/baseball-game,Baseball Game,Easy,80.3%,81.4%
 3138,https://leetcode.com/problems/minimum-length-of-anagram-concatenation,Minimum Length of Anagram Concatenation,Medium,39.8%,77.9%
+1703,https://leetcode.com/problems/minimum-adjacent-swaps-for-k-consecutive-ones,Minimum Adjacent Swaps for K Consecutive Ones,Hard,42.7%,72.3%
 5,https://leetcode.com/problems/longest-palindromic-substring,Longest Palindromic Substring,Medium,37.7%,68.8%
 3091,https://leetcode.com/problems/apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k,Apply Operations to Make Sum of Array Greater Than or Equal to k,Medium,44.3%,68.8%
+1027,https://leetcode.com/problems/longest-arithmetic-subsequence,Longest Arithmetic Subsequence,Medium,50.2%,65.5%
 70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,53.6%,62.5%
 14,https://leetcode.com/problems/longest-common-prefix,Longest Common Prefix,Easy,47.4%,62.3%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,62.3%
 238,https://leetcode.com/problems/product-of-array-except-self,Product of Array Except Self,Medium,68.8%,62.3%
+665,https://leetcode.com/problems/non-decreasing-array,Non-decreasing Array,Medium,25.6%,56.0%
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,53.2%
 4,https://leetcode.com/problems/median-of-two-sorted-arrays,Median of Two Sorted Arrays,Hard,46.4%,53.2%
 15,https://leetcode.com/problems/3sum,3Sum,Medium,38.9%,53.2%

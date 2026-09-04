@@ -22,6 +22,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1,https://leetcode.com/problems/two-sum,Two Sum,Easy,57.4%,55.1%
 121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Best Time to Buy and Sell Stock,Easy,56.7%,55.1%
 122,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii,Best Time to Buy and Sell Stock II,Medium,71.0%,55.1%
+1648,https://leetcode.com/problems/sell-diminishing-valued-colored-balls,Sell Diminishing-Valued Colored Balls,Medium,30.4%,54.8%
 1010,https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60,Pairs of Songs With Total Durations Divisible by 60,Medium,53.5%,54.0%
 215,https://leetcode.com/problems/kth-largest-element-in-an-array,Kth Largest Element in an Array,Medium,68.9%,50.2%
 657,https://leetcode.com/problems/robot-return-to-origin,Robot Return to Origin,Easy,78.1%,50.2%
@@ -76,6 +77,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 198,https://leetcode.com/problems/house-robber,House Robber,Medium,53.1%,40.9%
 218,https://leetcode.com/problems/the-skyline-problem,The Skyline Problem,Hard,45.2%,40.9%
 273,https://leetcode.com/problems/integer-to-english-words,Integer to English Words,Hard,35.0%,40.9%
+2791,https://leetcode.com/problems/count-paths-that-can-form-a-palindrome-in-a-tree,Count Paths That Can Form a Palindrome in a Tree,Hard,52.2%,38.9%
 2,https://leetcode.com/problems/add-two-numbers,Add Two Numbers,Medium,48.3%,38.3%
 20,https://leetcode.com/problems/valid-parentheses,Valid Parentheses,Easy,44.1%,38.3%
 22,https://leetcode.com/problems/generate-parentheses,Generate Parentheses,Medium,78.6%,38.3%
@@ -89,6 +91,8 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 1235,https://leetcode.com/problems/maximum-profit-in-job-scheduling,Maximum Profit in Job Scheduling,Hard,54.7%,38.3%
 1446,https://leetcode.com/problems/consecutive-characters,Consecutive Characters,Easy,60.4%,38.3%
 380,https://leetcode.com/problems/insert-delete-getrandom-o1,Insert Delete GetRandom O(1),Medium,55.0%,37.5%
+790,https://leetcode.com/problems/domino-and-tromino-tiling,Domino and Tromino Tiling,Medium,51.2%,35.8%
+2948,https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements,Make Lexicographically Smallest Array by Swapping Elements,Medium,66.5%,35.8%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,35.2%
 31,https://leetcode.com/problems/next-permutation,Next Permutation,Medium,45.1%,35.2%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.6%,35.2%
@@ -229,6 +233,16 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2179,https://leetcode.com/problems/count-good-triplets-in-an-array,Count Good Triplets in an Array,Hard,66.0%,25.0%
 2390,https://leetcode.com/problems/removing-stars-from-a-string,Removing Stars From a String,Medium,78.1%,25.0%
 2933,https://leetcode.com/problems/high-access-employees,High-Access Employees,Medium,46.3%,25.0%
+24,https://leetcode.com/problems/swap-nodes-in-pairs,Swap Nodes in Pairs,Medium,70.2%,20.6%
+126,https://leetcode.com/problems/word-ladder-ii,Word Ladder II,Hard,28.0%,20.6%
+154,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii,Find Minimum in Rotated Sorted Array II,Hard,46.9%,20.6%
+155,https://leetcode.com/problems/min-stack,Min Stack,Medium,58.6%,20.6%
+253,https://leetcode.com/problems/meeting-rooms-ii,Meeting Rooms II,Medium,52.8%,20.6%
+378,https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix,Kth Smallest Element in a Sorted Matrix,Medium,65.0%,20.6%
+493,https://leetcode.com/problems/reverse-pairs,Reverse Pairs,Hard,35.1%,20.6%
+528,https://leetcode.com/problems/random-pick-with-weight,Random Pick with Weight,Medium,49.2%,20.6%
+738,https://leetcode.com/problems/monotone-increasing-digits,Monotone Increasing Digits,Medium,50.0%,20.6%
+1202,https://leetcode.com/problems/smallest-string-with-swaps,Smallest String With Swaps,Medium,61.0%,20.6%
 207,https://leetcode.com/problems/course-schedule,Course Schedule,Medium,51.7%,20.3%
 410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,60.8%,20.3%
 721,https://leetcode.com/problems/accounts-merge,Accounts Merge,Medium,61.5%,20.3%

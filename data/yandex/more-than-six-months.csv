@@ -97,6 +97,11 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 485,https://leetcode.com/problems/max-consecutive-ones,Max Consecutive Ones,Easy,65.0%,36.3%
 938,https://leetcode.com/problems/range-sum-of-bst,Range Sum of BST,Easy,87.6%,36.3%
 1868,https://leetcode.com/problems/product-of-two-run-length-encoded-arrays,Product of Two Run-Length Encoded Arrays,Medium,59.6%,36.3%
+67,https://leetcode.com/problems/add-binary,Add Binary,Easy,58.6%,29.5%
+643,https://leetcode.com/problems/maximum-average-subarray-i,Maximum Average Subarray I,Easy,49.1%,29.5%
+1347,https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram,Minimum Number of Steps to Make Two Strings Anagram,Medium,82.6%,29.5%
+1438,https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,Medium,58.0%,29.5%
+2623,https://leetcode.com/problems/memoize,Memoize,Medium,65.3%,29.5%
 7,https://leetcode.com/problems/reverse-integer,Reverse Integer,Medium,31.8%,28.5%
 13,https://leetcode.com/problems/roman-to-integer,Roman to Integer,Easy,66.5%,28.5%
 24,https://leetcode.com/problems/swap-nodes-in-pairs,Swap Nodes in Pairs,Medium,69.4%,28.5%

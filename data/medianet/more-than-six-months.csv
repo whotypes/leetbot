@@ -12,6 +12,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 2742,https://leetcode.com/problems/painting-the-walls,Painting the Walls,Hard,48.6%,75.0%
 42,https://leetcode.com/problems/trapping-rain-water,Trapping Rain Water,Hard,67.2%,72.2%
 947,https://leetcode.com/problems/most-stones-removed-with-same-row-or-column,Most Stones Removed with Same Row or Column,Medium,62.9%,72.2%
+70,https://leetcode.com/problems/climbing-stairs,Climbing Stairs,Easy,54.3%,66.2%
 1959,https://leetcode.com/problems/minimum-total-space-wasted-with-k-resizing-operations,Minimum Total Space Wasted With K Resizing Operations,Medium,43.8%,65.9%
 2945,https://leetcode.com/problems/find-maximum-non-decreasing-array-length,Find Maximum Non-decreasing Array Length,Hard,18.8%,65.9%
 36,https://leetcode.com/problems/valid-sudoku,Valid Sudoku,Medium,62.4%,62.5%
@@ -20,6 +21,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 146,https://leetcode.com/problems/lru-cache,LRU Cache,Medium,45.4%,62.5%
 193,https://leetcode.com/problems/valid-phone-numbers,Valid Phone Numbers,Easy,27.6%,62.5%
 412,https://leetcode.com/problems/fizz-buzz,Fizz Buzz,Easy,74.5%,62.5%
+53,https://leetcode.com/problems/maximum-subarray,Maximum Subarray,Medium,53.8%,57.3%
 54,https://leetcode.com/problems/spiral-matrix,Spiral Matrix,Medium,56.6%,56.9%
 406,https://leetcode.com/problems/queue-reconstruction-by-height,Queue Reconstruction by Height,Medium,74.7%,56.9%
 668,https://leetcode.com/problems/kth-smallest-number-in-multiplication-table,Kth Smallest Number in Multiplication Table,Hard,54.0%,56.9%

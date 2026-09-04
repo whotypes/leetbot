@@ -16,6 +16,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 719,https://leetcode.com/problems/find-k-th-smallest-pair-distance,Find K-th Smallest Pair Distance,Hard,45.8%,62.5%
 1306,https://leetcode.com/problems/jump-game-iii,Jump Game III,Medium,66.1%,62.5%
 2402,https://leetcode.com/problems/meeting-rooms-iii,Meeting Rooms III,Hard,51.5%,60.5%
+1244,https://leetcode.com/problems/design-a-leaderboard,Design A Leaderboard,Medium,68.0%,53.0%
 311,https://leetcode.com/problems/sparse-matrix-multiplication,Sparse Matrix Multiplication,Medium,69.3%,52.5%
 392,https://leetcode.com/problems/is-subsequence,Is Subsequence,Easy,49.0%,52.5%
 410,https://leetcode.com/problems/split-array-largest-sum,Split Array Largest Sum,Hard,60.3%,52.5%
@@ -33,6 +34,7 @@ ID,URL,Title,Difficulty,Acceptance %,Frequency %
 759,https://leetcode.com/problems/employee-free-time,Employee Free Time,Hard,72.8%,46.8%
 1723,https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs,Find Minimum Time to Finish All Jobs,Hard,45.6%,46.8%
 1996,https://leetcode.com/problems/the-number-of-weak-characters-in-the-game,The Number of Weak Characters in the Game,Medium,44.5%,46.8%
+547,https://leetcode.com/problems/number-of-provinces,Number of Provinces,Medium,71.0%,39.5%
 23,https://leetcode.com/problems/merge-k-sorted-lists,Merge k Sorted Lists,Hard,59.6%,39.1%
 1110,https://leetcode.com/problems/delete-nodes-and-return-forest,Delete Nodes And Return Forest,Medium,72.5%,39.1%
 17,https://leetcode.com/problems/letter-combinations-of-a-phone-number,Letter Combinations of a Phone Number,Medium,65.9%,38.9%
