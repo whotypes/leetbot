@@ -171,15 +171,20 @@ export const SiteBrand = ({
                       </a>
                       .
                     </p>
-                    <p>
-                      Privacy concerns? Read the{' '}
+                    <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
                       <a
                         href="/privacy"
                         className="font-medium text-primary underline underline-offset-4 hover:no-underline"
                       >
                         privacy policy
                       </a>
-                      .
+                      <span className="text-muted-foreground" aria-hidden="true">·</span>
+                      <a
+                        href="/tos"
+                        className="font-medium text-primary underline underline-offset-4 hover:no-underline"
+                      >
+                        terms of service
+                      </a>
                     </p>
                   </div>
                 </DialogDescription>

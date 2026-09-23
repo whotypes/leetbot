@@ -1,8 +1,10 @@
 import App from './App'
 import { PrivacyPage } from './Privacy'
-
-const isPrivacyRoute = () => window.location.pathname === '/privacy'
+import { TosPage } from './Tos'
 
 export const Root = () => {
-  return isPrivacyRoute() ? <PrivacyPage /> : <App />
+  const { pathname } = window.location
+  if (pathname === '/privacy') return <PrivacyPage />
+  if (pathname === '/tos') return <TosPage />
+  return <App />
 }
